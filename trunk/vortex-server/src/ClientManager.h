@@ -10,7 +10,10 @@ under the License.*/
 
 #ifndef CLIENTMANAGER_H_
 #define CLIENTMANAGER_H_
-#include <pthread.h>
+extern "C"
+{
+  #include <pthread.h>
+}
 #include "Event.h"
 #include "TCPSocket.h"
 class ClientManager
@@ -21,10 +24,10 @@ private:
 
 public:
 
-  friend void * thread_handler(void * arg);
-  void handler(TCPSocket);
+  friend void * client_thread_handler(void * arg);
+  friend void client_handler(TCPSocket socket);
   inline pthread_t getClientThread(){return clientThread;}
-  inline Event getEvent(){return Event;}
+  inline Event getEvent(){return event;}
   ClientManager();
   virtual
   ~ClientManager();

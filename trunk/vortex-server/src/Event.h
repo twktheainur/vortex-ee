@@ -10,12 +10,16 @@ under the License.*/
 
 #ifndef EVENT_H_
 #define EVENT_H_
-#include <string>
 #if defined(__WIN32__) || defined(_WIN32)
   #include <winsock.h>
 #else
-  #include <sys/select.h>
+  extern "C"
+  {
+    #include <sys/select.h>
+  }
 #endif
+#include <string>
+using namespace std;
 typedef enum
 {
   EV_NONE,
@@ -35,7 +39,7 @@ class Event
     inline void clear(){event=EV_NONE;}
     inline bool changed(){return event!=EV_NONE;data="";}
   public:
-    Event(event_t event, string data);
+    Event();
     inline void sendEvent(event_t event){this->event=event;}
     inline event_t getEvent(){event_t ev = event;clear();return ev;}
     inline void setData(string data){this->data=data;}

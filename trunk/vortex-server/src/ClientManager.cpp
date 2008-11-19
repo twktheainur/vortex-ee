@@ -21,14 +21,13 @@ ClientManager::~ClientManager()
   // TODO Auto-generated destructor stub
 }
 
-void ClientManager::handler(TCPSocket socket)
+friend void client_handler(TCPSocket socket)
 {
   void * tmp_ptr=(void *)&socket;
-  pthread_t * thread;
-  pthread_create(thread,NULL,client_thread,tmp_ptr);
+  pthread_create(clientThread,NULL,client_thread,tmp_ptr);
 }
 
-friend void * thread_handler(void * arg)
+friend void * client_thread_handler(void * arg)
 {
   TCPSocket local_socket = *((TCPSocket*)socket);
   string buffer;
