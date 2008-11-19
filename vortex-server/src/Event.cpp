@@ -9,6 +9,7 @@ License for the specific language governing rights and limitations
 under the License.*/
 
 #include "Event.h"
+#include <cstdlib>
 
 Event::Event()
 {
@@ -17,8 +18,8 @@ Event::Event()
 
 void Event::wait()
 {
-  struct timeval timer;
-  timer.tv_usec =25000;
+  struct timeval * timer = (struct timeval*)malloc(sizeof(struct timeval));
+  timer->tv_usec =25000;
   while(!changed())
     select(0,NULL,NULL,NULL,timer);
 }

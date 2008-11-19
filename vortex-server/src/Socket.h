@@ -13,6 +13,8 @@ under the License.*/
 #if defined(__WIN32__) || defined(_WIN32)
   #include <winsock.h>
 #else
+extern "C"
+{
   #include <unistd.h>
   #include <sys/types.h>
   #include <sys/socket.h>
@@ -21,10 +23,14 @@ under the License.*/
 
   #include <netdb.h>
   #include <arpa/inet.h>
+}
 #endif
-#include <errno.h>
-#include <string.h>
+extern "C"
+{
+  #include <errno.h>
+}
 
+#include <cstring>
 #include <iostream>
 #include <sstream>
 #include <string>

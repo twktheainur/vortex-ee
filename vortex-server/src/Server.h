@@ -9,20 +9,29 @@ License for the specific language governing rights and limitations
 under the License.*/
 #ifndef SERVER_H_
 #define SERVER_H_
-#include <pthread.h>
+extern "C"
+{
+  #include <pthread.h>
+}
 #include "ClientManager.h"
+#include "TCPServer.h"
 #include <set>
 class Server
 {
 private:
-  pthread_t connection_manager_thread;
-  pthread_t world_manager_thread;
-  pthread_t chat_manager_thread;
-  pthread_t event_manager_thread;
-  set<ClientManager> clients;
+  pthread_t * connection_manager_thread;
+  pthread_t * world_manager_thread;
+  pthread_t * chat_manager_thread;
+  pthread_t * event_manager_thread;
+  static set<ClientManager> clients;
+  static TCPServer * server;
 public:
-	Server();
-	virtual ~Server();
+  Server();
+  static void * connection_manager(void * arg);
+  static void * world_manager(void * arg);
+  static void * chat_manager(void * arg);
+  static void * event_manager(void * arg);
+  virtual ~Server();
 };
 
 #endif /*SERVER_H_*/

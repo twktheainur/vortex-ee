@@ -10,15 +10,20 @@ under the License.*/
 #include <cstdlib>
 #define _REENTRANT
 //#include "TCPServer.h"
-#include "TCPClient.h"
+//#include "TCPClient.h"
 #include "Event.h"
-#include <time.h>
-#include <string.h>
-#include <pthread.h>
+#include "Server.h"
+#include <cstring>
+extern "C"
+{
+  #include <time.h>
+  #include <pthread.h>
+}
 
 int main(int argc, char **argv)
 {
-  string smsg="HELO";
+  Server server;
+  /*string smsg="HELO";
   size_t sz = smsg.size();
   string rmsg; rmsg.resize(3);
   rmsg[2]='\0';
@@ -44,7 +49,7 @@ int main(int argc, char **argv)
   {
     printf("whatm:%s\n",e->what());
     delete e;
-  }
+  }*/
 
   return EXIT_SUCCESS;
 }

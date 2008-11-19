@@ -11,9 +11,17 @@ under the License.*/
 
 Server::Server()
 {
+  int res = pthread_create(connection_manager_thread,NULL,connection_manager,NULL);
 
 }
 
 Server::~Server()
 {
+}
+
+void * Server::connection_manager(void * arg)
+{
+  ClientManager mgr;
+  server = new TCPServer(5,(string)"8080",mgr.client_handler);
+  Server::clients.insert(mgr);
 }
