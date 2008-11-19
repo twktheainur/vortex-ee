@@ -11,49 +11,10 @@ under the License.*/
 #define _REENTRANT
 //#include "TCPServer.h"
 #include "TCPClient.h"
+#include "Event.h"
 #include <time.h>
 #include <string.h>
 #include <pthread.h>
-
-void * client_thread(void * socket)
-{
-  TCPSocket local_socket = *((TCPSocket*)socket);
-  string buffer;
-  buffer.resize(150);
-  buffer[149]='\0';
-  printf("%s:%s Connected.",local_socket.getHost().data(),local_socket.getService().data());
-  string html="<h1 style=\"color:red;\">Welcome on my TCPServer!</h1><p>Google is your friend!</p><a href='http://google.com'>Google!</a>";
-  try
-  {
-    html.resize(200);
-    local_socket >> buffer;
-    printf("|Recieved Data: %s|\n",buffer.data());
-    if(time(NULL)%2==0)
-    {
-      local_socket << "AC";
-      local_socket << html;
-    }
-    else
-      local_socket << "RJ";
-
-
-
-  }
-  catch(exception * e)
-  {
-    printf("Client Thread(recv):%s\n",e->what());
-    delete e;
-  }
-  return (void *)NULL;
-}
-
-void client_handler(TCPSocket socket)
-{
-  void * tmp_ptr=(void *)&socket;
-pthread_t * thread;
-pthread_create(thread,NULL,client_thread,tmp_ptr);
-   //client_thread(tmp_ptr);
-}
 
 int main(int argc, char **argv)
 {

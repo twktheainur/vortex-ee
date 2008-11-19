@@ -9,9 +9,17 @@ License for the specific language governing rights and limitations
 under the License.*/
 #ifndef SERVER_H_
 #define SERVER_H_
-
+#include <pthread.h>
+#include "ClientManager.h"
+#include <set>
 class Server
 {
+private:
+  pthread_t connection_manager_thread;
+  pthread_t world_manager_thread;
+  pthread_t chat_manager_thread;
+  pthread_t event_manager_thread;
+  set<ClientManager> clients;
 public:
 	Server();
 	virtual ~Server();
