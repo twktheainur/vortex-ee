@@ -27,5 +27,5 @@ http://code.google.com/hosting/settings
 svn add _nom.fichier/repertoire_
 ====Si vous avez supprime des fichiers ou voulez les exclure:====
 svn del _nom.fichier/repertoire_
-===Sync avec les server SVN(commit)===
+===Sync avec le server SVN(commit)===
 svn commit (a faire dans le repertoire vortex-ee)
