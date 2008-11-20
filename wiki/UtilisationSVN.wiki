@@ -18,14 +18,14 @@ Quand on demande un mot de passe, donner celui qui vous est donné sur cette pag
 
 http://code.google.com/hosting/settings
 
-==Avant de commencer a traivailler recuperez la derniere revision:
+== Avant de commencer a traivailler recuperez la derniere revision: ==
 (dans vortex-ee) svn update
 
 ==A faire à chaque fois que vous avez fini de travailler sur le code ==
-===Ajout/Supression de fichiers/Repertoires:
-====Si vous avez créé de nouveaux fichiers===
+===Ajout/Supression de fichiers/Repertoires: ===
+====Si vous avez créé de nouveaux fichiers====
 svn add _nom.fichier/repertoire_
-====Si vous avez supprime des fichiers ou voulez les exclure:
+====Si vous avez supprime des fichiers ou voulez les exclure:====
 svn del _nom.fichier/repertoire_
-===Sync avec les server SVN(commit)
+===Sync avec les server SVN(commit)===
 svn commit (a faire dans le repertoire vortex-ee)
