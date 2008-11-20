@@ -10,15 +10,14 @@ Cette page explique en détail comment utiliser svn pour récupérer le code de 
 
 ==Etape préliminaire==
 
-==A faire à chaque fois avant de commencer à travailler sur le code ==
-
 svn checkout https://vortex-ee.googlecode.com/svn/trunk/ vortex-ee --username _votre.nick.gmail_
 
 Quand on demande un mot de passe, donner celui qui vous est donné sur cette page:
 
 http://code.google.com/hosting/settings
 
-== Avant de commencer a traivailler recuperez la derniere revision: ==
+==A faire à chaque fois avant de commencer à travailler sur le code ==
+
 (dans vortex-ee) svn update
 
 ==A faire à chaque fois que vous avez fini de travailler sur le code ==
