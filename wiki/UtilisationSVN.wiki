@@ -18,3 +18,7 @@ Quand on demande un mot de passe, donner celui qui vous est donné sur cette pag
 http://code.google.com/hosting/settings
 
 ==A faire à chaque fois que vous avez fini de travailler sur le code ==
+
+===Si vous avez créé de nouveaux fichiers===
+
+svn add _nom.fichier_
