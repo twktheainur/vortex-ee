@@ -10,6 +10,9 @@ under the License.*/
 #ifndef TCPSOCKET_H
 #define TCPSOCKET_H
 #include "Socket.h"
+#if defined(__WIN32__) || defined(_WIN32)
+  //#include <ws2tcpip.h>
+#endif
 
 #include <string>
 using namespace std;

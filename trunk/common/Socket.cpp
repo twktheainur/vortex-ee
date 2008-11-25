@@ -8,6 +8,8 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 #include "Socket.h"
+#include <pthread.h>
+//#include <ws2tcpip.h>
 /***********************Constructor / Destructor*******************************/
 /*----------------------------Socket Constructor------------------------------*/
 Socket::Socket (string host, string service, int family, int type)
@@ -15,7 +17,7 @@ Socket::Socket (string host, string service, int family, int type)
   #if defined(__WIN32__) || defined(_WIN32)
     WSADATA wsaData;// if this doesn't work
     //WSAData wsaData; // then try this instead
-    if (WSAStartup(MA KEWORD(1, 1), &wsaData) != 0)
+    if (WSAStartup(MA_KEYWORD(1, 1), &wsaData) != 0)
     {
       fprintf(stderr, "WSAStartup failed.\n");
       exit(1);
@@ -27,13 +29,7 @@ Socket::Socket (string host, string service, int family, int type)
 /*------------------------------Socket Destructor-----------------------------*/
 Socket::~Socket()
 {
-  if(close(sockFD)==-1 && errno!=EBADF)
-  {
-    printf("Socket.cpp:26 -- THROWING E_CLOSE_FAIL\n");
-    //throw new ExSocket(E_CLOSE_FAIL);
-  }
-  //freeaddrinfo(info);
-  //info=NULL;
+	printf("socket destructor\n");
   #if defined(__WIN32__) || defined(_WIN32)
     WSACleanup();
   #endif
@@ -65,6 +61,17 @@ Socket::~Socket()
 
  }
 /*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+ void Socket::free()
+ {
+	 if(close(sockFD)==-1 && errno!=EBADF)
+	   {
+	     printf("Socket.cpp:70 -- THROWING E_CLOSE_FAIL\n");
+	     throw new ExSocket(E_CLOSE_FAIL);
+	   }
+	   freeaddrinfo(info);
+	   info=NULL;
+ }
 /*----------------------------------------------------------------------------*/
 int Socket::bind(struct addrinfo * addr)
 {

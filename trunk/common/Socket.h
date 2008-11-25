@@ -11,7 +11,7 @@ under the License.*/
 #define SOCKET_H
 
 #if defined(__WIN32__) || defined(_WIN32)
-  #include <winsock.h>
+  //#include <ws2tcpip.h>
 #else
 extern "C"
 {
@@ -84,6 +84,7 @@ class Socket
     string getService() ;
     void setInfo(struct addrinfo *new_var){info=new_var;}
     struct addrinfo * getInfo(){return info;}
+    void free();
     friend Socket& operator<<(Socket&,std::basic_string<char, std::char_traits<char>, std::allocator<char> > data);
     friend Socket& operator>>(Socket&,std::basic_string<char, std::char_traits<char>, std::allocator<char> > &data);
 protected:
@@ -101,7 +102,6 @@ class ExSocket : public Exception
     ExSocket(int exception,string param="")
     :Exception(exception)
     {
-
       switch(exception)
       {
         case E_GETADDRINFO_FAIL:setError("Unable de retrieve address information:"+param);break;

@@ -10,27 +10,20 @@ under the License.*/
 
 #ifndef CLIENTMANAGER_H_
 #define CLIENTMANAGER_H_
-extern "C"
-{
-  #include <pthread.h>
-}
-#include "Event.h"
-#include "TCPSocket.h"
-class ClientManager
+#include "../../common/Thread.h"
+#include "../../common/Event.h"
+#include "../../common/TCPSocket.h"
+class ClientManager : public Thread
 {
 private:
-  pthread_t clientThread;
   Event event;
+  TCPSocket socket;
 
+  void execute(void * arg);
 public:
-
-  friend void * client_thread_handler(void * arg);
-  friend void client_handler(TCPSocket socket);
-  inline pthread_t getClientThread(){return clientThread;}
+	ClientManager(TCPSocket sock);
+	~ClientManager();
   inline Event getEvent(){return event;}
-  ClientManager();
-  virtual
-  ~ClientManager();
 };
 
 #endif /* CLIENTMANAGER_H_ */

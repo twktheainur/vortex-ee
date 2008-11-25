@@ -7,21 +7,29 @@ Software distributed under the License is distributed on an "AS IS"
 basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
-#include <cstdlib>
-#define _REENTRANT
-//#include "TCPServer.h"
-//#include "TCPClient.h"
-//#include "Event.h"
-#include "Server.h"
-#include <cstring>
-extern "C"
+#ifndef PACKET_H_
+#define PACKET_H_
+#include <bitset>
+using namespace std;
+class Packet
 {
-  #include <time.h>
-}
+public:
+  Packet();
+  void pack();
+  void unpack();
+  virtual void make_header()=0;
+  virtual void make_tail()=0;
+  size_t getPacketSize();
+  size_t getHeaderSize();
+  size_t getTailSize();
+//  bitset & getHeader();
+//  bitset & getData();
+//  bitset & getTail();
+  virtual ~Packet();
+private:
+//  bitset header;
+  string data;
+//  bitset tail;
+};
 
-int main(int argc, char **argv)
-{
-  Server server;
-
-  return EXIT_SUCCESS;
-}
+#endif /* PACKET_H_ */

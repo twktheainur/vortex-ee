@@ -9,16 +9,17 @@ License for the specific language governing rights and limitations
 under the License.*/
 #ifndef EXCEPTION_H_
 #define EXCEPTION_H_
+#include <string>
 class Exception
 {
 public:
   Exception(int exception){id = exception;}
   const char * what() const throw(){return error.data();}
   ~Exception() throw (){};
-  inline string getError(){return error;}
-  inline void setError(string err){error=err;}
+  inline std::string getError(){return error;}
+  inline void setError(std::string err){error=err;}
 private:
-    string error;
+    std::string error;
     int id;
 };
 

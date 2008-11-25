@@ -5,23 +5,30 @@ http://www.mozilla.org/MPL/
 
 Software distributed under the License is distributed on an "AS IS"
 basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
-License for the specific language governing rights and limitations
+License for the	 specific language governing rights and limitations
 under the License.*/
 #include "Server.h"
-
+#include <cstdlib>
 Server::Server()
 {
-  int res = pthread_create(connection_manager_thread,NULL,connection_manager,NULL);
+  connectionManagerThread = new ConnectionManager(this);
+  struct timeval tval;
+  //int i = 1;
+  tval.tv_usec=500000;
+    while(getc(stdin)!='q')
+    {
+      //usleep(1000000);
+      //cout << "DING! : "<< i << endl;
+      //i++;
+    }
 
 }
 
 Server::~Server()
 {
-}
-
-void * Server::connection_manager(void * arg)
-{
-  ClientManager mgr;
-  server = new TCPServer(5,(string)"8080",mgr.client_handler);
-  Server::clients.insert(mgr);
+	delete connectionManagerThread;
+	delete server;
+	std::vector<ClientManager*>::iterator it;
+	for(it=clients.begin();it!=clients.end();it++)
+		delete *it;
 }

@@ -9,9 +9,13 @@ License for the specific language governing rights and limitations
 under the License.*/
 #ifndef TCPSERVER_H_
 #define TCPSERVER_H_
+#include "../../common/Exception.h"
+#include "../../common/TCPSocket.h"
+#include "ConnectionManager.h"
 
-#include "TCPSocket.h"
-#include "Exception.h"
+#if defined(__WIN32__) || defined(_WIN32)
+  #include <winsock2.h>
+#endif
 
 enum TCPServerException
 {
@@ -19,17 +23,15 @@ enum TCPServerException
   E_LISTEN_ERROR,
   E_ACCEPT_ERROR
 };
-
-void default_connection_handler(TCPSocket socket);
-
+class ConnectionManager;
 class TCPServer
 {
 public:
-	TCPServer(int maxClients, string service,void (*incoming_handler)(TCPSocket)=default_connection_handler);
+	TCPServer(int maxClients, string service,ConnectionManager * mgr);
   ~TCPServer();
   void startListener();
 private:
-  void (*incoming_handler)(TCPSocket);
+	ConnectionManager * mgr;
   int nClients;
   int maxClients;
   TCPSocket * socket;
