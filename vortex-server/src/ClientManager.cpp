@@ -10,26 +10,21 @@ under the License.*/
 
 #include "ClientManager.h"
 
-ClientManager::ClientManager()
+ClientManager::ClientManager(TCPSocket sock)
+             :Thread()
 {
-  // TODO Auto-generated constructor stub
-
+	socket = sock;
+  start((void*)(&sock));
 }
 
 ClientManager::~ClientManager()
 {
-  // TODO Auto-generated destructor stub
+  // TODO No need for a destructor
 }
 
-friend void client_handler(TCPSocket socket)
+void  ClientManager::execute(void * arg)
 {
-  void * tmp_ptr=(void *)&socket;
-  pthread_create(clientThread,NULL,client_thread,tmp_ptr);
-}
-
-friend void * client_thread_handler(void * arg)
-{
-  TCPSocket local_socket = *((TCPSocket*)socket);
+  TCPSocket local_socket = *((TCPSocket*)arg);
   string buffer;
   buffer.resize(150);
   buffer[149]='\0';
@@ -42,19 +37,20 @@ friend void * client_thread_handler(void * arg)
     printf("|Recieved Data: %s|\n",buffer.data());
     if(time(NULL)%2==0)
     {
+    	printf("Hey!\n");
       local_socket << "AC";
       local_socket << html;
     }
     else
+    {
+    	printf("Hoy!\n");
       local_socket << "RJ";
-
-
-
+    }
   }
-  catch(exception * e)
+  catch(ExSocket * e)
   {
     printf("Client Thread(recv):%s\n",e->what());
     delete e;
   }
-  return (void *)NULL;
+  local_socket.free();
 }

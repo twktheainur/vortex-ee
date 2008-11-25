@@ -10,8 +10,8 @@ under the License.*/
 #ifndef TCPCLIENT_H_
 #define TCPCLIENT_H_
 
-#include "TCPSocket.h"
-#include "Exception.h"
+#include "../../common/TCPSocket.h"
+#include "../../common/Exception.h"
 enum TCPServerException
 {
   E_SOCKET_ERROR,

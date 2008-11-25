@@ -9,14 +9,14 @@ License for the specific language governing rights and limitations
 under the License.*/
 #include "TCPServer.h"
 
-TCPServer::TCPServer(int maxClients,string service,void (*incoming_handler)(TCPSocket))
+TCPServer::TCPServer(int maxClients,string service,ConnectionManager * mgr)
 {
-  struct addrinfo * p;
-  this->incoming_handler=incoming_handler;
+  this->mgr=mgr;
   nClients=0;
   this->maxClients = maxClients;
   socket = new TCPSocket("",service,ANY_F,maxClients);
-  for(p = socket->getInfo();p!=NULL;p=p->ai_next)
+  struct addrinfo * p=socket->getInfo();
+  for(;p!=NULL;p=p->ai_next)
   {
     try
     {
@@ -40,7 +40,8 @@ TCPServer::TCPServer(int maxClients,string service,void (*incoming_handler)(TCPS
 
 TCPServer::~TCPServer()
 {
-  delete socket;
+  socket->free();
+	delete socket;
 }
 
 void TCPServer::startListener()
@@ -71,8 +72,8 @@ void TCPServer::startListener()
     }
     try
     {
-      incoming_handler(*new_socket);
-      //delete new_socket;
+      mgr->addServerClient(new ClientManager(*new_socket));
+      delete new_socket;
     }
     catch(exception * e)
     {

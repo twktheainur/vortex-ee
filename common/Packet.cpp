@@ -7,21 +7,16 @@ Software distributed under the License is distributed on an "AS IS"
 basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
-#include <cstdlib>
-#define _REENTRANT
-//#include "TCPServer.h"
-//#include "TCPClient.h"
-//#include "Event.h"
-#include "Server.h"
-#include <cstring>
-extern "C"
+
+#include "Packet.h"
+
+Packet::Packet()
 {
-  #include <time.h>
+
+
 }
 
-int main(int argc, char **argv)
+Packet::~Packet()
 {
-  Server server;
 
-  return EXIT_SUCCESS;
 }

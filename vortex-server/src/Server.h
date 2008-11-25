@@ -13,24 +13,30 @@ extern "C"
 {
   #include <pthread.h>
 }
-#include "ClientManager.h"
 #include "TCPServer.h"
-#include <set>
+//#include "ConnectionManager.h"
+#include "WorldManager.h"
+#include "ChatManager.h"
+#include "EventManager.h"
+#include <vector>
+
+class ConnectionManager;
+class TCPServer;
 class Server
 {
 private:
-  pthread_t * connection_manager_thread;
-  pthread_t * world_manager_thread;
-  pthread_t * chat_manager_thread;
-  pthread_t * event_manager_thread;
-  static set<ClientManager> clients;
-  static TCPServer * server;
+  ConnectionManager * connectionManagerThread;
+  WorldManager worldManagerThread;
+  ChatManager chatManagerThread;
+  EventManager eventManagerThread;
+  //Clients will be registered in here by the TCPServer through the ConnectionManager
+  vector<ClientManager *> clients;
+  TCPServer * server;
 public:
+	inline vector<ClientManager *>* getClients(){return &clients;}
+	inline void setServer(TCPServer * serv){server=serv;}
+	inline TCPServer * getServer(){return server;}
   Server();
-  static void * connection_manager(void * arg);
-  static void * world_manager(void * arg);
-  static void * chat_manager(void * arg);
-  static void * event_manager(void * arg);
   virtual ~Server();
 };
 
