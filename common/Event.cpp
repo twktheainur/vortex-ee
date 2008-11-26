@@ -18,8 +18,14 @@ Event::Event()
 
 void Event::wait()
 {
-  struct timeval * timer = (struct timeval*)malloc(sizeof(struct timeval));
-  timer->tv_usec =25000;
-  while(!changed())
-    select(0,NULL,NULL,NULL,timer);
+	try
+	{
+    cond.wait();
+	}
+	catch(Exception * e)
+	{
+		throw;
+	}
 }
+
+

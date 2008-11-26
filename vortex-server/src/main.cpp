@@ -7,21 +7,22 @@ Software distributed under the License is distributed on an "AS IS"
 basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
-#include <cstdlib>
 #define _REENTRANT
-//#include "TCPServer.h"
-//#include "TCPClient.h"
-//#include "Event.h"
 #include "Server.h"
+#include "../../common/Event.h"
+#include "../../common/Mutex.h"
 #include <cstring>
+#include <cstdlib>
 extern "C"
 {
   #include <time.h>
 }
 
+//Global variables
+Event main_event;
+
 int main(int argc, char **argv)
 {
   Server server;
-
   return EXIT_SUCCESS;
 }

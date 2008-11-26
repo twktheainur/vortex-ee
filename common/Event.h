@@ -11,14 +11,17 @@ under the License.*/
 #ifndef EVENT_H_
 #define EVENT_H_
 #if defined(__WIN32__) || defined(_WIN32)
-  #include <winsock.h>
+  #include <winsock2.h>
 #else
   extern "C"
   {
     #include <sys/select.h>
+    #include <pthread.h>
   }
 #endif
 #include <string>
+#include "Mutex.h"
+#include "Cond.h"
 using namespace std;
 typedef enum
 {
@@ -33,6 +36,8 @@ typedef enum
 class Event
 {
   private:
+  	Mutex mutex;
+  	Cond cond;
     event_t event;
     string data;
   protected:
@@ -40,7 +45,7 @@ class Event
     inline bool changed(){return event!=EV_NONE;data="";}
   public:
     Event();
-    inline void sendEvent(event_t event){this->event=event;}
+    inline void sendEvent(event_t &event,string &data){this->event=event;}
     inline event_t getEvent(){event_t ev = event;clear();return ev;}
     inline void setData(string data){this->data=data;}
     inline string getData(){return data;}
