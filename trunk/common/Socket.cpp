@@ -8,7 +8,7 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 #include "Socket.h"
-#include <pthread.h>
+//#include <pthread.h>
 //#include <ws2tcpip.h>
 /***********************Constructor / Destructor*******************************/
 /*----------------------------Socket Constructor------------------------------*/

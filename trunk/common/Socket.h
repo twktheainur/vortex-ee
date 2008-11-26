@@ -11,7 +11,7 @@ under the License.*/
 #define SOCKET_H
 
 #if defined(__WIN32__) || defined(_WIN32)
-  //#include <ws2tcpip.h>
+  #include <ws2tcpip.h>
 #else
 extern "C"
 {
