@@ -9,12 +9,14 @@
 #define CHATMANAGER_H_
 
 #include "../../common/Thread.h"
-
+#include "../../common/Event.h"
 class ChatManager: public Thread
 {
+private:
+ Event * main_event;
 public:
-	ChatManager();
-	virtual ~ChatManager();
+	ChatManager(Event * event);
+	void execute(void * arg);
 };
 
 #endif /* CHATMANAGER_H_ */

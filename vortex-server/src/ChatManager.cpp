@@ -7,13 +7,19 @@
 
 #include "ChatManager.h"
 
-ChatManager::ChatManager()
+ChatManager::ChatManager(Event * event)
 {
-	// TODO Auto-generated constructor stub
-
+  main_event = event;
+  start((void*)this);
 }
-
-ChatManager::~ChatManager()
+void ChatManager::execute(void * arg)
 {
-	// TODO Auto-generated destructor stub
+  ChatManager * pthis = (ChatManager *)arg;
+  event_t event;
+  while(1)
+  {
+  	printf("getevst2\n");
+  	event = pthis->main_event->getEvent();
+  	printf("EVENT recv ChatManager\nTYPE:%d\nDATA:%s\n",event.type,event.data.data());
+  }
 }

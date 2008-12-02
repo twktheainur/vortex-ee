@@ -9,24 +9,30 @@ License for the	 specific language governing rights and limitations
 under the License.*/
 #include "Server.h"
 #include <cstdlib>
-Server::Server()
+Server::Server(Event * event)
 {
+	eventManagerEvent = event;
   connectionManagerThread = new ConnectionManager(this);
-  struct timeval tval;
+  eventManagerThread = new EventManager(event);
+  chatManagerThread = new ChatManager(event);
+
+  //struct timeval tval;
   //int i = 1;
-  tval.tv_usec=500000;
-    while(getc(stdin)!='q')
-    {
+  //tval.tv_usec=500000;
+    while(getc(stdin)!='q');
+  //  {
       //usleep(1000000);
       //cout << "DING! : "<< i << endl;
       //i++;
-    }
+//    }
 
 }
 
 Server::~Server()
 {
 	delete connectionManagerThread;
+	delete eventManagerThread;
+	delete chatManagerThread;
 	delete server;
 	std::vector<ClientManager*>::iterator it;
 	for(it=clients.begin();it!=clients.end();it++)

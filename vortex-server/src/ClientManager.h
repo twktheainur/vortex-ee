@@ -17,11 +17,12 @@ class ClientManager : public Thread
 {
 private:
   Event event;
+  Event * main_event;
   TCPSocket socket;
 
   void execute(void * arg);
 public:
-	ClientManager(TCPSocket sock);
+	ClientManager(TCPSocket sock,Event * event);
 	~ClientManager();
   inline Event getEvent(){return event;}
 };

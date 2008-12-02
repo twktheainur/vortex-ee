@@ -20,6 +20,7 @@ under the License.*/
   }
 #endif
 #include <string>
+#include <queue>
 #include "Mutex.h"
 #include "Cond.h"
 using namespace std;
@@ -30,26 +31,27 @@ typedef enum
   EV_ADD,
   EV_DEL,
   EV_INC_CHAT,
-  EV_OUT_CHAT
-}event_t;
+  EV_OUT_CHAT,
+  EV_OTHER
+}event_type_t;
 
+typedef struct event
+{
+  event_type_t type;
+  string data;
+}event_t;
 class Event
 {
   private:
   	Mutex mutex;
   	Cond cond;
-    event_t event;
-    string data;
-  protected:
-    inline void clear(){event=EV_NONE;}
-    inline bool changed(){return event!=EV_NONE;data="";}
+  	int listeners;
+    queue<event_t> events;
+    void wait();
   public:
     Event();
-    inline void sendEvent(event_t &event,string &data){this->event=event;}
-    inline event_t getEvent(){event_t ev = event;clear();return ev;}
-    inline void setData(string data){this->data=data;}
-    inline string getData(){return data;}
-    void wait();
+    void sendEvent(event_type_t evt,string &data);
+    event_t getEvent();
 };
 
 #endif /* EVENT_H_ */
