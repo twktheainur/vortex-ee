@@ -7,13 +7,20 @@
 
 #include "EventManager.h"
 
-EventManager::EventManager()
+EventManager::EventManager(Event * event)
 {
-	// TODO Auto-generated constructor stub
-
+	this->event=event;
+	start((void *)this);
+}
+void EventManager::execute(void * arg)
+{
+  EventManager * pthis = (EventManager *)arg;
+  event_t event;
+  while(1)
+  {
+  	printf("getevst\n");
+  	event = pthis->event->getEvent();
+  	printf("EVENT recv EvenManager\nTYPE:%d\nDATA:%s\n",event.type,event.data.data());
+  }
 }
 
-EventManager::~EventManager()
-{
-	// TODO Auto-generated destructor stub
-}

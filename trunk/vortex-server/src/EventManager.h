@@ -9,12 +9,16 @@
 #define EVENTMANAGER_H_
 
 #include "../../common/Thread.h"
+#include "../../common/Event.h"
 
 class EventManager: public Thread
 {
+private:
+	//This *HAS* to point to a global variable!s
+  Event * event;
 public:
-	EventManager();
-	virtual ~EventManager();
+	void execute(void * arg);
+	EventManager(Event * event);
 };
 
 #endif /* EVENTMANAGER_H_ */

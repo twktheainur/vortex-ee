@@ -23,6 +23,6 @@ Event main_event;
 
 int main(int argc, char **argv)
 {
-  Server server;
+  Server server(&main_event);
   return EXIT_SUCCESS;
 }

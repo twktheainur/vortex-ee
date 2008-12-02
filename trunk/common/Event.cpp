@@ -9,18 +9,17 @@ License for the specific language governing rights and limitations
 under the License.*/
 
 #include "Event.h"
+#include "Cond.h"
 #include <cstdlib>
 
 Event::Event()
-{
-  clear();
-}
+{}
 
 void Event::wait()
 {
 	try
 	{
-    cond.wait();
+    cond.wait(events.empty());
 	}
 	catch(Exception * e)
 	{
@@ -28,4 +27,34 @@ void Event::wait()
 	}
 }
 
+void Event::sendEvent(event_type_t evt, string & data)
+{
+	event_t event	;
+	event.data=data;
+	event.type=evt;
+	mutex.lock();
+	events.push(event);
+	mutex.unlock();
+  cond.signal();
+}
 
+event_t Event::getEvent()
+{
+	event_t event;
+  mutex.lock();
+  listeners++;
+  if(events.empty())
+  {
+  	mutex.unlock();
+  	wait();
+  	mutex.lock();
+  }
+  event =events.front();
+  if(listeners<=1)
+  {
+  	events.pop();
+  }
+  listeners--;
+  mutex.unlock();
+  return event;
+}

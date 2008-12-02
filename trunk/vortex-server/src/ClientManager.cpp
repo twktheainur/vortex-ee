@@ -10,9 +10,10 @@ under the License.*/
 
 #include "ClientManager.h"
 
-ClientManager::ClientManager(TCPSocket sock)
+ClientManager::ClientManager(TCPSocket sock,Event * event)
              :Thread()
 {
+	main_event=event;
 	socket = sock;
   start((void*)(&sock));
 }
@@ -35,6 +36,7 @@ void  ClientManager::execute(void * arg)
     html.resize(200);
     local_socket >> buffer;
     printf("|Recieved Data: %s|\n",buffer.data());
+    main_event->sendEvent(EV_INC_CHAT,buffer);
     if(time(NULL)%2==0)
     {
     	printf("Hey!\n");

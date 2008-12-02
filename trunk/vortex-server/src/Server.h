@@ -18,6 +18,7 @@ extern "C"
 #include "WorldManager.h"
 #include "ChatManager.h"
 #include "EventManager.h"
+#include "../../common/Event.h"
 #include <vector>
 
 class ConnectionManager;
@@ -26,9 +27,10 @@ class Server
 {
 private:
   ConnectionManager * connectionManagerThread;
-  WorldManager worldManagerThread;
-  ChatManager chatManagerThread;
-  EventManager eventManagerThread;
+  WorldManager * worldManagerThread;
+  ChatManager * chatManagerThread;
+	EventManager * eventManagerThread;
+	Event * eventManagerEvent;
   //Clients will be registered in here by the TCPServer through the ConnectionManager
   vector<ClientManager *> clients;
   TCPServer * server;
@@ -36,8 +38,9 @@ public:
 	inline vector<ClientManager *>* getClients(){return &clients;}
 	inline void setServer(TCPServer * serv){server=serv;}
 	inline TCPServer * getServer(){return server;}
-  Server();
-  virtual ~Server();
+	inline Event * getEventManagerEvent(){return eventManagerEvent;}
+  Server(Event * event);
+  ~Server();
 };
 
 #endif /*SERVER_H_*/

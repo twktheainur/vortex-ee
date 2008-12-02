@@ -18,8 +18,9 @@ class Cond
 {
 private:
   pthread_cond_t cond;
+  Mutex mutex;
 public:
-	void wait(Mutex*);
+	void wait(bool condition=true);
 	void signal();
 	void broadcast();
 	Cond();

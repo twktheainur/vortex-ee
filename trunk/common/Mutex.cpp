@@ -16,7 +16,7 @@ Mutex::Mutex()
 
 Mutex::~Mutex()
 {
-	 if(pthread_mutex_destroy(&mutex)!=0)
+	 if(pthread_mutex_destroy(&mutex)==0)
 	  	throw new ExMutex(E_MUTEXDESTROY_FAIL);
 }
 
