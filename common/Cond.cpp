@@ -15,10 +15,10 @@ Cond::~Cond()
 
 void Cond::wait(bool condition)
 {
-	mutex.lock();
+        if(condition)
+	  mutex.lock();
 	printf("STWAIT\n");
-	if(condition)
-    if(pthread_cond_wait(&cond,&(mutex.getMutex())))
+        if(pthread_cond_wait(&cond,&(mutex.getMutex())))
   	  throw new ExCond(E_WAIT_FAIL);
 	mutex.unlock();
 }

@@ -17,30 +17,30 @@ Event::Event()
 
 void Event::wait()
 {
-	try
-	{
-    cond.wait(events.empty());
-	}
-	catch(Exception * e)
-	{
-		throw;
-	}
+  try
+  {
+     cond.wait(listeners>1);
+  }
+  catch(Exception * e)
+  {
+    throw;
+  }
 }
 
 void Event::sendEvent(event_type_t evt, string & data)
 {
-	event_t event	;
-	event.data=data;
-	event.type=evt;
-	mutex.lock();
-	events.push(event);
-	mutex.unlock();
-  cond.signal();
+  event_t event	;
+  event.data=data;
+  event.type=evt;
+  mutex.lock();
+  events.push(event);
+  mutex.unlock();
+  cond.broadcast();
 }
 
 event_t Event::getEvent()
 {
-	event_t event;
+  event_t event;
   mutex.lock();
   listeners++;
   if(events.empty())
