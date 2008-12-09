@@ -18,7 +18,7 @@ extern "C"
 #include "WorldManager.h"
 #include "ChatManager.h"
 #include "EventManager.h"
-#include "../../common/Event.h"
+#include "../common/Event.h"
 #include <vector>
 
 class ConnectionManager;

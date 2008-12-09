@@ -8,8 +8,8 @@
 #ifndef CHATMANAGER_H_
 #define CHATMANAGER_H_
 
-#include "../../common/Thread.h"
-#include "../../common/Event.h"
+#include "../common/Thread.h"
+#include "../common/Event.h"
 class ChatManager: public Thread
 {
 private:
