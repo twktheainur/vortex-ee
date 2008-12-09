@@ -9,8 +9,8 @@ License for the specific language governing rights and limitations
 under the License.*/
 #ifndef TCPSERVER_H_
 #define TCPSERVER_H_
-#include "../../common/Exception.h"
-#include "../../common/TCPSocket.h"
+#include "../common/Exception.h"
+#include "../common/TCPSocket.h"
 #include "ConnectionManager.h"
 
 #if defined(__WIN32__) || defined(_WIN32)

@@ -8,8 +8,8 @@
 #ifndef CONNECTIONMANAGER_H_
 #define CONNECTIONMANAGER_H_
 
-#include "../../common/Thread.h"
-#include "../../common/Event.h"
+#include "../common/Thread.h"
+#include "../common/Event.h"
 #include "ClientManager.h"
 #include "Server.h"
 class Server;

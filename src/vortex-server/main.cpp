@@ -9,8 +9,8 @@ License for the specific language governing rights and limitations
 under the License.*/
 #define _REENTRANT
 #include "Server.h"
-#include "../../common/Event.h"
-#include "../../common/Mutex.h"
+#include "../common/Event.h"
+#include "../common/Mutex.h"
 #include <cstring>
 #include <cstdlib>
 extern "C"

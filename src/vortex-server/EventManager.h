@@ -8,8 +8,8 @@
 #ifndef EVENTMANAGER_H_
 #define EVENTMANAGER_H_
 
-#include "../../common/Thread.h"
-#include "../../common/Event.h"
+#include "../common/Thread.h"
+#include "../common/Event.h"
 
 class EventManager: public Thread
 {

@@ -10,9 +10,9 @@ under the License.*/
 
 #ifndef CLIENTMANAGER_H_
 #define CLIENTMANAGER_H_
-#include "../../common/Thread.h"
-#include "../../common/Event.h"
-#include "../../common/TCPSocket.h"
+#include "../common/Thread.h"
+#include "../common/Event.h"
+#include "../common/TCPSocket.h"
 class ClientManager : public Thread
 {
 private:
