@@ -1,4 +1,4 @@
-#include "exitlistener.h"
+#include "ExitListener.h"
 
 #ifdef _EXITLISTENER_H
 #include <Ogre.h>
@@ -71,7 +71,7 @@
        }
        return mContinue;
     }
-    
+
     bool ExitListener::keyReleased(const OIS::KeyEvent &e)
     {
            switch (e.key)

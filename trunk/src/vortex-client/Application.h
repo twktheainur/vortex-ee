@@ -4,7 +4,7 @@
 #include <Ogre.h>
 #include <OIS/OIS.h>
 
-#include "exitlistener.h"
+#include "ExitListener.h"
 
 using namespace Ogre;
 
