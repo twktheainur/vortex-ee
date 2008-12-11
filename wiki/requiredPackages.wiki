@@ -1,0 +1,8 @@
+#summary Liste de paquets requis par Vortex.
+
+= Introduction =
+
+Voici la liste de paquetages (packages) que nécessite Vortex.
+
+
+= Liste =
