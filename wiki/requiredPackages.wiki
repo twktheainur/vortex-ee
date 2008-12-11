@@ -6,3 +6,12 @@ Voici la liste de paquetages (packages) que nécessite Vortex.
 
 
 = Liste =
+
+libcegui-mk2-1
+libcegui-mk2-dev
+libois1
+libois-dev
+libfreeimage3
+libfreeimage-dev
+libzzip-0-13
+libzzip-dev
