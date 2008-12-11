@@ -7,32 +7,28 @@
 
 using namespace Ogre;
 
-    void Application::go()
-    {
-        createRoot();
-        defineResources();
-        setupRenderSystem();
-        createRenderWindow();
-        initializeResourceGroups();
-        setupScene();
-        //setupInputSystem();
-        //setupCEGUI();
-        createFrameListener();
-        startRenderLoop();
-    }
+    void Application::go(){
+		createRoot();
+		defineResources();
+		setupRenderSystem();
+		createRenderWindow();
+		initializeResourceGroups();
+		setupScene();
+		//setupInputSystem();
+		//setupCEGUI();
+		createFrameListener();
+		startRenderLoop();}
 
-    Application::~Application()
-    {
-      mInputManager->destroyInputObject(mKeyboard);
-      OIS::InputManager::destroyInputSystem(mInputManager);
+    Application::~Application(){
+		mInputManager->destroyInputObject(mKeyboard);
+		OIS::InputManager::destroyInputSystem(mInputManager);
 
       /*//pour CEGUI :
       delete mRenderer;
       delete mSystem;*/
 
-      delete mListener;
-      delete mRoot;
-    }
+		delete mListener;
+		delete mRoot;}
 
 
     void Application::createRoot()
@@ -137,6 +133,6 @@ using namespace Ogre;
     {
       mRoot->startRendering();
     }
-
+    
 #endif
 

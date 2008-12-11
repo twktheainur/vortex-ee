@@ -4,12 +4,12 @@
 #include <Ogre.h>
 #include <OIS/OIS.h>
 
+using namespace Ogre;
+
 class ExitListener : public FrameListener
 {
 public:
-    ExitListener(RenderWindow* win, Camera* cam, SceneManager *sceneMgr,OIS::Keyboard *keyboard)
-        : mKeyboard(keyboard);
-
+    ExitListener(RenderWindow* win, Camera* cam, SceneManager *sceneMgr,OIS::Keyboard *keyboard);
     bool frameStarted(const FrameEvent &evt);
 
     // MouseListener
