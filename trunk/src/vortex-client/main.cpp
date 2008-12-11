@@ -1,13 +1,8 @@
 #include <Ogre.h>
 #include <OIS/OIS.h>
 
-<<<<<<< .mine
 #include "ExitListener.h"
 #include "Application.h"
-=======
-#include "Application.h"
-#include "ExitListener.h"
->>>>>>> .r39
 
 using namespace Ogre;
 
