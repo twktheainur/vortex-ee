@@ -4,6 +4,8 @@
 #include <Ogre.h>
 #include <OIS/OIS.h>
 
+using namespace Ogre;
+
     ExitListener::ExitListener(RenderWindow* win, Camera* cam, SceneManager *sceneMgr,OIS::Keyboard *keyboard)
         : mKeyboard(keyboard)
     {
@@ -71,7 +73,7 @@
        }
        return mContinue;
     }
-
+    
     bool ExitListener::keyReleased(const OIS::KeyEvent &e)
     {
            switch (e.key)
