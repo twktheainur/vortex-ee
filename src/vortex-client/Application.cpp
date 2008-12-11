@@ -1,4 +1,4 @@
-#include "application.h"
+#include "Application.h"
 
 #ifdef _APPLICATION_H
 
@@ -137,6 +137,6 @@ using namespace Ogre;
     {
       mRoot->startRendering();
     }
-    
+
 #endif
 

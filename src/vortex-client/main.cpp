@@ -1,8 +1,8 @@
 #include <Ogre.h>
 #include <OIS/OIS.h>
 
-#include "application.h"
-#include "exitlistener.h"
+#include "Application.h"
+#include "ExitListener.h"
 
 using namespace Ogre;
 
