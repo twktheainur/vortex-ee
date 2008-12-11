@@ -1,0 +1,9 @@
+#summary Comment compiler et coder pour Vortex avec cmake.
+
+= Introduction =
+
+Cette page vous explique comment compiler et coder pour Vortex avec l'outil CMake.
+
+= Details =
+
+*Prérequis:* Avoir la dernière version du code; pour cela faites un svn {checkout|update} selon votre situation (pour plus de détails: http://code.google.com/p/vortex-ee/source/checkout )
