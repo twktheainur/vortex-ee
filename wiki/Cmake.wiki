@@ -44,7 +44,8 @@ Ce qui devrait donner quelque chose comme:
 
 Nous obtenons un Makefile dans le même répertoire. Il nous suffit ensuite de lancer make:
 
-{{{gardaud@euler:~/vortex-ee$ make
+{{{
+gardaud@euler:~/vortex-ee$ make
 Linking CXX executable bin/vortex-client
 [ 39%] Built target bin/vortex-client
 Scanning dependencies of target vortex-server
