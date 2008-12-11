@@ -45,30 +45,55 @@ Ce qui devrait donner quelque chose comme:
 Nous obtenons un Makefile dans le même répertoire. Il nous suffit ensuite de lancer make:
 
 {{{gardaud@euler:~/vortex-ee$ make
+
 Linking CXX executable bin/vortex-client
+
 [ 39%] Built target bin/vortex-client
+
 Scanning dependencies of target vortex-server
+
 [ 42%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/vortex-server/ChatManager.o
+
 [ 46%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/vortex-server/ClientManager.o
+
 [ 50%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/vortex-server/ConnectionManager.o
+
 [ 53%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/vortex-server/EventManager.o
+
 [ 57%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/vortex-server/main.o
+
 [ 60%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/vortex-server/Server.o
+
 [ 64%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/vortex-server/TCPServer.o
+
 [ 67%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/vortex-server/WorldManager.o
+
 [ 71%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/Cond.o
+
 /home/gardaud/vortex-ee/src/common/Cond.cpp: In member function ‘void Cond::wait(bool)’:
+
 /home/gardaud/vortex-ee/src/common/Cond.cpp:21: warning: taking address of temporary
+
 [ 75%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/Event.o
+
 [ 78%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/Mutex.o
+
 [ 82%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/Packet.o
+
 [ 85%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/Semaphore.o
+
 [ 89%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/Socket.o
+
 [ 92%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/TCPSocket.o
+
 [ 96%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/Thread.o
+
 [100%] Building CXX object CMakeFiles/bin/vortex-server.dir/src/common/UDPSocket.o
+
 Linking CXX executable bin/vortex-server
+
 [100%] Built target bin/vortex-server
+
 }}}
 
 Et voilà, tout est bon, les exécutables se trouvent dans bin/ .
