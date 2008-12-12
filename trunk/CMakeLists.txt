@@ -28,7 +28,11 @@ set(server_source_files ${srvsrc}/ChatManager.cpp  ${srvsrc}/ClientManager.cpp
                         ${srvsrc}/main.cpp  ${srvsrc}/Server.cpp 
                         ${srvsrc}/TCPServer.cpp  ${srvsrc}/WorldManager.cpp)
 
-set(client_source_files ${clisrc}/main.cpp  ${clisrc}/TCPClient.cpp  ${clisrc}/TCPClient.h)
+set(client_source_files ${clisrc}/main.cpp  
+						${clisrc}/TCPClient.cpp  ${clisrc}/TCPClient.h
+						${clisrc}/Application.cpp ${clisrc}/Application.h 
+						${clisrc}/ExitListener.cpp ${clisrc}/ExitListener.h
+						)
 
 set(common_source_files ${comsrc}/Cond.cpp ${comsrc}/Event.cpp ${comsrc}/Mutex.cpp 
                         ${comsrc}/Packet.cpp ${comsrc}/Semaphore.cpp

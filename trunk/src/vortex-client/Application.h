@@ -10,8 +10,8 @@ using namespace Ogre;
 
 class Application{
 	public:
-		void go();
 		~Application();
+		void go();
 
 	private:
 		Root *mRoot;

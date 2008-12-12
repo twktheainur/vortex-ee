@@ -7,7 +7,7 @@
 
 using namespace Ogre;
 
-    void Application::go(){
+	void Application::go(){
 		createRoot();
 		defineResources();
 		setupRenderSystem();
@@ -19,7 +19,7 @@ using namespace Ogre;
 		createFrameListener();
 		startRenderLoop();}
 
-    Application::~Application(){
+	Application::~Application(){
 		mInputManager->destroyInputObject(mKeyboard);
 		OIS::InputManager::destroyInputSystem(mInputManager);
 
@@ -31,48 +31,43 @@ using namespace Ogre;
 		delete mRoot;}
 
 
-    void Application::createRoot()
-    {
-      #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
-        mRoot = new Root(macBundlePath() + "/Contents/Resources/plugins.cfg");
-      #else
-        mRoot = new Root();
-      #endif
-    }
+    void Application::createRoot(){
+		#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
+		mRoot = new Root(macBundlePath() + "/Contents/Resources/plugins.cfg");
+		#else
+		mRoot = new Root();
+		#endif
+		}
 
-    void Application::defineResources()
-    {
-      String secName, typeName, archName;
-      ConfigFile cf;
-      #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
-        cf.load(macBundlePath() + "/Contents/Resources/resources.cfg");
-      #else
-        cf.load("resources.cfg");
-      #endif
-      ConfigFile::SectionIterator seci = cf.getSectionIterator();
-        while (seci.hasMoreElements())
-        {
-          secName = seci.peekNextKey();
-          ConfigFile::SettingsMultiMap *settings = seci.getNext();
-          ConfigFile::SettingsMultiMap::iterator i;
-          for (i = settings->begin(); i != settings->end(); ++i)
-          {
-            typeName = i->first;
-            archName = i->second;
-            #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
-              ResourceGroupManager::getSingleton().addResourceLocation( String(macBundlePath() + "/" + archName), typeName, secName);
-            #else
-              ResourceGroupManager::getSingleton().addResourceLocation( archName, typeName, secName);
-            #endif
-          }
-        }
-    }
+    void Application::defineResources(){
+		String secName, typeName, archName;
+		ConfigFile cf;
+		#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
+		cf.load(macBundlePath() + "/Contents/Resources/resources.cfg");
+		#else
+		cf.load("resources.cfg");
+		#endif
+		ConfigFile::SectionIterator seci = cf.getSectionIterator();
+		while (seci.hasMoreElements()){
+			secName = seci.peekNextKey();
+			ConfigFile::SettingsMultiMap *settings = seci.getNext();
+			ConfigFile::SettingsMultiMap::iterator i;
+			for (i = settings->begin(); i != settings->end(); ++i){
+				typeName = i->first;
+				archName = i->second;
+				#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
+				ResourceGroupManager::getSingleton().addResourceLocation( String(macBundlePath() + "/" + archName), typeName, secName);
+				#else
+				ResourceGroupManager::getSingleton().addResourceLocation( archName, typeName, secName);
+				#endif
+				}
+			}
+		}
 
-    void Application::setupRenderSystem()
-    {
-      if (!mRoot->restoreConfig() && !mRoot->showConfigDialog())
-        throw Exception(52, "User canceled the config dialog!", "Application::setupRenderSystem()");
-    }
+    void Application::setupRenderSystem(){
+		if (!mRoot->restoreConfig() && !mRoot->showConfigDialog())
+		throw Exception(52, "User canceled the config dialog!", "Application::setupRenderSystem()");
+		}
 
     void Application::createRenderWindow()
     {
