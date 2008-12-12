@@ -8,7 +8,7 @@
 #ifndef WORLDMANAGER_H_
 #define WORLDMANAGER_H_
 
-#include "../common/Thread.h"
+#include "Thread.h"
 
 class WorldManager: public Thread
 {

@@ -15,7 +15,7 @@ extern "C"
 }
 #include "TCPServer.h"
 //#include "ConnectionManager.h"
-#include "WorldManager.h"
+#include "../common/WorldManager.h"
 #include "ChatManager.h"
 #include "EventManager.h"
 #include "../common/Event.h"

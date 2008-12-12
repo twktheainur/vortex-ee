@@ -26,7 +26,7 @@ link_directories($(OGRE_LIB_DIR) ${OIS_LIB_DIR})
 set(server_source_files ${srvsrc}/ChatManager.cpp  ${srvsrc}/ClientManager.cpp
                         ${srvsrc}/ConnectionManager.cpp  ${srvsrc}/EventManager.cpp
                         ${srvsrc}/main.cpp  ${srvsrc}/Server.cpp 
-                        ${srvsrc}/TCPServer.cpp  ${srvsrc}/WorldManager.cpp)
+                        ${srvsrc}/TCPServer.cpp)
 
 set(client_source_files ${clisrc}/main.cpp  
 			${clisrc}/TCPClient.cpp  ${clisrc}/TCPClient.h
@@ -36,7 +36,8 @@ set(client_source_files ${clisrc}/main.cpp
 set(common_source_files ${comsrc}/Cond.cpp ${comsrc}/Event.cpp ${comsrc}/Mutex.cpp 
                         ${comsrc}/Packet.cpp ${comsrc}/Semaphore.cpp
                         ${comsrc}/Socket.cpp ${comsrc}/TCPSocket.cpp
-                        ${comsrc}/Thread.cpp ${comsrc}/UDPSocket.cpp)
+                        ${comsrc}/Thread.cpp ${comsrc}/UDPSocket.cpp 
+                        ${comsrc}/WorldManager.cpp)
 
 if(WIN32)
   add_definitions(WIN32)
