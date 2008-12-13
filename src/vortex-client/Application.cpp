@@ -45,7 +45,7 @@ using namespace Ogre;
 		cf.load(macBundlePath() + "/Contents/Resources/resources.cfg");
 		#else
 		puts("Loading resource file...");
-//		cf.load("resources.cfg");
+		cf.load("bin/resources.cfg");
 		puts("Loaded.");
 		#endif
 		ConfigFile::SectionIterator seci = cf.getSectionIterator();
