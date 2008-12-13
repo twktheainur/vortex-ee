@@ -55,6 +55,7 @@ using namespace std;
    E_CLOSE_FAIL,
    E_BIND_FAIL,
    E_SEND_FAIL,
+   E_POLL_FAIL,
    E_RECV_FAIL,
    E_SETSOCKOPT_FAIL
  };
@@ -72,6 +73,7 @@ class Socket
     virtual ~Socket();
     virtual int send(const void * buffer, size_t * length, int flags);
     virtual int recv(void * buffer, size_t length, int flags);
+    void poll_read();
     int bind(struct addrinfo * addr);
     void socket(struct addrinfo * addr);
     void setSockOpt(int level, int optname, void * optval, size_t size);

@@ -29,7 +29,6 @@ Socket::Socket (string host, string service, int family, int type)
 /*------------------------------Socket Destructor-----------------------------*/
 Socket::~Socket()
 {
-	printf("socket destructor\n");
   #if defined(__WIN32__) || defined(_WIN32)
     WSACleanup();
   #endif
@@ -139,6 +138,15 @@ int Socket::recv(void * buffer, size_t length, int flags)
     throw new ExSocket(E_RECV_FAIL);
   }
   return recv_ret;
+}
+/*----------------------------------------------------------------------------*/
+void Socket::poll_read()
+{
+  fd_set fds;
+  FD_ZERO(&fds);
+  FD_SET(sockFD,&fds);
+  if(select((sizeof(fds)*8),&fds,NULL,NULL,NULL)==-1)
+    throw new ExSocket(E_POLL_FAIL);
 }
 /*----------------------------------------------------------------------------*/
 /*---------------------------Stream Operators Definition----------------------*/

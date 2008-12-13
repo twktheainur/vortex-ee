@@ -28,6 +28,7 @@ public:
   void send(string & str);
   void protocolLoop();
 	virtual ~TCPClient();
+	inline TCPSocket * getSocket(){return socket;}
 private:
   TCPSocket * socket;
 };
