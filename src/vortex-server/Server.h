@@ -7,6 +7,7 @@ Software distributed under the License is distributed on an "AS IS"
 basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
+/*CLASS Server: Spawns all the threads of the application and starts the TCPServer*/
 #ifndef SERVER_H_
 #define SERVER_H_
 extern "C"
@@ -26,10 +27,12 @@ class TCPServer;
 class Server
 {
 private:
+	//Thread Classes
   ConnectionManager * connectionManagerThread;
   WorldManager * worldManagerThread;
   ChatManager * chatManagerThread;
 	EventManager * eventManagerThread;
+	//Event interface, has to point to a global scope variable
 	Event * eventManagerEvent;
   //Clients will be registered in here by the TCPServer through the ConnectionManager
   vector<ClientManager *> clients;
@@ -39,6 +42,7 @@ public:
 	inline void setServer(TCPServer * serv){server=serv;}
 	inline TCPServer * getServer(){return server;}
 	inline Event * getEventManagerEvent(){return eventManagerEvent;}
+	//Here event has to point to a global scope variable sharable by threads
   Server(Event * event);
   ~Server();
 };

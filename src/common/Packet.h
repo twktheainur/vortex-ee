@@ -9,7 +9,9 @@ License for the specific language governing rights and limitations
 under the License.*/
 #ifndef PACKET_H_
 #define PACKET_H_
-#include <bitset>
+//#include <bitset>
+#include <cstdlib>
+#include <string>
 using namespace std;
 class Packet
 {

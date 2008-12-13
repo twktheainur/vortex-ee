@@ -11,6 +11,7 @@ under the License.*/
 #include "Server.h"
 #include "../common/Event.h"
 #include "../common/Mutex.h"
+#include "../common/BinBitSet.h"
 #include <cstring>
 #include <cstdlib>
 extern "C"
@@ -19,10 +20,17 @@ extern "C"
 }
 
 //Global variables
-Event main_event;
+//Event main_event;
 
 int main(int argc, char **argv)
 {
-  Server server(&main_event);
+  //Server server(&main_event);
+  BinBitSet set;
+  set.pushBit(1);
+  set.pushBit(1);
+  set.pushBit(1);
+  //set.pushBits("100101");
+  std::cout << "val:" << (int)set.getContainer()[0]<<endl;
+
   return EXIT_SUCCESS;
 }

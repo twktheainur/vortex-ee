@@ -7,27 +7,32 @@
 
 using namespace Ogre;
 
-	void Application::go(){
-		createRoot();		defineResources(); //this segfaults
+	void Application::go()
+  {
+	  createRoot();
+		defineResources();
 		setupRenderSystem();
 		createRenderWindow();
 		initializeResourceGroups();
-		setupScene();
-		//setupInputSystem();
+	  setupScene();
+		setupInputSystem();
 		//setupCEGUI();
 		createFrameListener();
-		startRenderLoop();}
+		startRenderLoop();
+  }
 
-		Application::~Application(){
-		mInputManager->destroyInputObject(mKeyboard);
-		OIS::InputManager::destroyInputSystem(mInputManager);
+	Application::~Application()
+	{
+    mInputManager->destroyInputObject(mKeyboard);
+    OIS::InputManager::destroyInputSystem(mInputManager);
 
-      /*//pour CEGUI :
-      delete mRenderer;	
-      delete mSystem;*/
+    /*//pour CEGUI :
+    delete mRenderer;
+    delete mSystem;*/
 
-		delete mListener;
-		delete mRoot;}
+    delete mListener;
+    delete mRoot;
+	}
 
 
     void Application::createRoot(){
@@ -44,9 +49,7 @@ using namespace Ogre;
 		#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 		cf.load(macBundlePath() + "/Contents/Resources/resources.cfg");
 		#else
-		puts("Loading resource file...");
-		cf.load("bin/resources.cfg");
-		puts("Loaded.");
+		cf.load("resources.cfg");
 		#endif
 		ConfigFile::SectionIterator seci = cf.getSectionIterator();
 		while (seci.hasMoreElements()){
@@ -60,7 +63,6 @@ using namespace Ogre;
 				ResourceGroupManager::getSingleton().addResourceLocation( String(macBundlePath() + "/" + archName), typeName, secName);
 				#else
 				ResourceGroupManager::getSingleton().addResourceLocation( archName, typeName, secName);
-				puts("Ok");
 				#endif
 				}
 			}
@@ -71,9 +73,9 @@ using namespace Ogre;
 		throw Exception(52, "User canceled the config dialog!", "Application::setupRenderSystem()");
 		}
 
-    void Application::createRenderWindow(){
-	    mRoot->initialise(true, "Vortex");
-
+    void Application::createRenderWindow()
+    {
+      mRoot->initialise(true, "Vortex");
     }
 
     void Application::initializeResourceGroups()
@@ -84,13 +86,13 @@ using namespace Ogre;
 
     void Application::setupScene()
     {
-      mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
-      mCamera = mSceneMgr->createCamera("Camera");
-      mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un d�placement correct de la cam�ra (les axes sont invers�s entre quake et ogre)
-      mCamera->setFixedYawAxis(true, Vector3::UNIT_Z);
-      Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
-      mSceneMgr->setWorldGeometry("maps/PT.bsp");//chargmement de la map
-      //mSceneMgr->setSkyBox(true, "cloudy_noon"); //chargement de la skybox
+    	SceneManager *mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
+    	Camera *mCamera = mSceneMgr->createCamera("Camera");
+    	mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un déplacement correct de la caméra (les axes sont inversés entre quake et ogre)
+    	mCamera->setFixedYawAxis(true, Vector3::UNIT_Z);
+    	Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
+    	mSceneMgr->setWorldGeometry("maps/PT.bsp");//chargmement de la map
+    	mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
     }
 
     void Application::setupInputSystem()
@@ -98,7 +100,7 @@ using namespace Ogre;
       size_t windowHnd = 0;
       std::ostringstream windowHndStr;
       OIS::ParamList pl;
-      win = mRoot->getAutoCreatedWindow();
+      RenderWindow *win = mRoot->getAutoCreatedWindow();
 
       win->getCustomAttribute("WINDOW", &windowHnd);
       windowHndStr << windowHnd;
@@ -122,7 +124,7 @@ using namespace Ogre;
 
     void Application::createFrameListener()
     {
-      mListener = new ExitListener(win,mCamera,mSceneMgr,mKeyboard);
+      mListener = new ExitListener(mKeyboard);
       mRoot->addFrameListener(mListener);
     }
 
@@ -130,6 +132,6 @@ using namespace Ogre;
     {
       mRoot->startRendering();
     }
-    
+
 #endif
 
