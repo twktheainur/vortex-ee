@@ -60,6 +60,7 @@ using namespace Ogre;
 				ResourceGroupManager::getSingleton().addResourceLocation( String(macBundlePath() + "/" + archName), typeName, secName);
 				#else
 				ResourceGroupManager::getSingleton().addResourceLocation( archName, typeName, secName);
+				puts("Ok");
 				#endif
 				}
 			}
