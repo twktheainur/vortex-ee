@@ -14,13 +14,14 @@ ClientManager::ClientManager(TCPSocket sock,Event * event)
              :Thread()
 {
 	main_event=event;
+	this->event = new Event();
 	socket = sock;
   start((void*)(&sock));
 }
 
 ClientManager::~ClientManager()
 {
-  // TODO No need for a destructor
+  delete event;
 }
 
 void  ClientManager::execute(void * arg)
@@ -45,7 +46,6 @@ void  ClientManager::execute(void * arg)
     }
     else
     {
-    	printf("Hoy!\n");
       local_socket << "RJ";
     }
   }

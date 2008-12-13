@@ -16,7 +16,7 @@ under the License.*/
 class ClientManager : public Thread
 {
 private:
-  Event event;
+  Event * event;
   Event * main_event;
   TCPSocket socket;
 
@@ -24,7 +24,7 @@ private:
 public:
 	ClientManager(TCPSocket sock,Event * event);
 	~ClientManager();
-  inline Event getEvent(){return event;}
+  inline Event * getEvent(){return event;}
 };
 
 #endif /* CLIENTMANAGER_H_ */

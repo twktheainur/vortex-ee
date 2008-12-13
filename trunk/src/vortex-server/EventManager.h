@@ -14,7 +14,7 @@
 class EventManager: public Thread
 {
 private:
-	//This *HAS* to point to a global variable!s
+	//This *HAS* to point to a global variable!
   Event * event;
 public:
 	void execute(void * arg);

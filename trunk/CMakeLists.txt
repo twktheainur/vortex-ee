@@ -4,7 +4,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
 FIND_PACKAGE(OGRE REQUIRED)
 FIND_PACKAGE(OIS)
 
-set(CMAKE_CXXFLAGS -Wall -Werror -pedantic -fmessage-length=0)
+set(CMAKE_CXXFLAGS -Wall -Werror -pedantic -fmessage-length=0 -Wno-deprecated)
 set(CMAKE_CXXFLAGS_DEBUG -O0 -g3 -c)
 set(CMAKE_CXXFLAGS_RELEASE -02)
 link_libraries(pthread ${OGRE_LIBRARIES} ${OIS_LIBRARIES})
@@ -37,7 +37,7 @@ set(common_source_files ${comsrc}/Cond.cpp ${comsrc}/Event.cpp ${comsrc}/Mutex.c
                         ${comsrc}/Packet.cpp ${comsrc}/Semaphore.cpp
                         ${comsrc}/Socket.cpp ${comsrc}/TCPSocket.cpp
                         ${comsrc}/Thread.cpp ${comsrc}/UDPSocket.cpp 
-                        ${comsrc}/WorldManager.cpp)
+                        ${comsrc}/WorldManager.cpp ${comsrc}/BinBitSet.cpp)
 
 if(WIN32)
   add_definitions(WIN32)

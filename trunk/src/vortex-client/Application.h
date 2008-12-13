@@ -8,22 +8,20 @@
 
 using namespace Ogre;
 
-class Application{
+class Application
+{
 	public:
 		~Application();
 		void go();
 
 	private:
-		Root *mRoot;
-		SceneManager *mSceneMgr;
-		Camera *mCamera;
-		RenderWindow *win;
+    Root *mRoot;
+    OIS::Keyboard *mKeyboard;
+    OIS::InputManager *mInputManager;
+    //CEGUI::OgreCEGUIRenderer *mRenderer;
+    //CEGUI::System *mSystem;
+    ExitListener *mListener;
 
-		ExitListener *mListener;
-
-		OIS::Keyboard *mKeyboard;
-		OIS::InputManager *mInputManager;
-		
 		//CEGUI::OgreCEGUIRenderer *mRenderer;
 		//CEGUI::System *mSystem;
 
