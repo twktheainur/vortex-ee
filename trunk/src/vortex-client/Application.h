@@ -15,14 +15,15 @@ class Application{
 
 	private:
     Root *mRoot;
+    SceneManager *mSceneMgr;
+    
     OIS::Keyboard *mKeyboard;
+    OIS::Mouse *mMouse;
     OIS::InputManager *mInputManager;
-    //CEGUI::OgreCEGUIRenderer *mRenderer;
-    //CEGUI::System *mSystem;
     ExitListener *mListener;
 
-		//CEGUI::OgreCEGUIRenderer *mRenderer;
-		//CEGUI::System *mSystem;
+	//CEGUI::OgreCEGUIRenderer *mRenderer;
+	//CEGUI::System *mSystem;
 
 		void createRoot();
 		void defineResources();
