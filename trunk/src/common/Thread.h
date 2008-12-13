@@ -11,7 +11,8 @@ extern "C"
 
 enum ThreadExceptions
 {
-  E_CREATE_FAIL
+  E_CREATE_FAIL,
+  E_JOIN_FAIL
 };
 
 class Thread
@@ -29,6 +30,7 @@ protected:
 public:
 	Thread();
 	void cancel();
+	void join();
 	~Thread();
 	int start(void * arg);
 };

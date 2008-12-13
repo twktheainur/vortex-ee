@@ -24,6 +24,9 @@ public:
 	TCPClient(string host,string port="");
   int send(const void * buffer, size_t * length, int flags);
   int recv(void * buffer, size_t length, int flags);
+  void recv(string & str);
+  void send(string & str);
+  void protocolLoop();
 	virtual ~TCPClient();
 private:
   TCPSocket * socket;

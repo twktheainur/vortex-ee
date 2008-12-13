@@ -19,6 +19,11 @@ void Thread::cancel()
 {
   pthread_cancel(threadId);
 }
+void Thread::join()
+{
+  pthread_join(threadId,NULL);
+}
+
 int Thread::start(void * arg)
 {
 	setArg(arg);

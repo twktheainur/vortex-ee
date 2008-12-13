@@ -12,7 +12,7 @@ under the License.*/
 TCPClient::TCPClient(string host,string service)
 {
   struct addrinfo * p;
-  socket = new TCPSocket("",service,ANY_F);
+  socket = new TCPSocket(host,service,ANY_F);
   for(p = socket->getInfo();p!=NULL;p=p->ai_next)
   {
     try
@@ -39,7 +39,6 @@ TCPClient::~TCPClient()
   delete socket;
 }
 
-
 int TCPClient::send(const void * buffer, size_t * length, int flags)
 {
   return socket->send(buffer,length,flags);
@@ -47,4 +46,40 @@ int TCPClient::send(const void * buffer, size_t * length, int flags)
 int TCPClient::recv(void * buffer, size_t length, int flags)
 {
   return socket->recv(buffer,length,flags);
+}
+
+void TCPClient::recv(string & data)
+{
+	 try
+	  {
+	    size_t length = data.size();
+	    socket->recv((char *)data.data(),length,0);
+	  }
+	  catch(ExSocket e)
+	  {
+	    throw;
+	  }
+}
+
+void TCPClient::send(string & data)
+{
+	 try
+	  {
+	    size_t length = data.size();
+	    socket->send(data.data(),&length,0);
+	  }
+	  catch(ExSocket e)
+	  {
+	    throw;
+	  }
+}
+
+void TCPClient::protocolLoop()
+{
+	string buffer;
+	buffer.resize(150);
+  while(1)
+  {
+  	recv(buffer);
+  }
 }
