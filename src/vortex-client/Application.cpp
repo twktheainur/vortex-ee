@@ -49,7 +49,9 @@ using namespace Ogre;
 		#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 		cf.load(macBundlePath() + "/Contents/Resources/resources.cfg");
 		#else
+		puts("Loading resource file.");
 		cf.load("resources.cfg");
+		puts("Loaded.");
 		#endif
 		ConfigFile::SectionIterator seci = cf.getSectionIterator();
 		while (seci.hasMoreElements()){
