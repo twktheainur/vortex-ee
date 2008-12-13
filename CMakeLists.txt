@@ -35,6 +35,7 @@ set(client_source_files ${clisrc}/main.cpp
 			${clisrc}/ChatManager.cpp  ${clisrc}/ConnectionManager.cpp  
 			${clisrc}/EventManager.cpp ${clisrc}/ApplicationManager.cpp
                         ${clisrc}/Client.cpp)
+>>>>>>> .r60
 
 set(common_source_files ${comsrc}/Cond.cpp ${comsrc}/Event.cpp ${comsrc}/Mutex.cpp 
                         ${comsrc}/Packet.cpp ${comsrc}/Semaphore.cpp

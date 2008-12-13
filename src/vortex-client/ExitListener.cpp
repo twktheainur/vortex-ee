@@ -6,14 +6,14 @@
 
 using namespace Ogre;
 
-ExitListener::ExitListener(OIS::Keyboard *keyboard)
-    : mKeyboard(keyboard)
-{
+ExitListener::ExitListener(OIS::Keyboard *keyboard): mKeyboard(keyboard){
+
 }
-bool ExitListener::frameStarted(const FrameEvent& evt)
-{
-  mKeyboard->capture();
-  return !mKeyboard->isKeyDown(OIS::KC_ESCAPE);
+
+
+bool ExitListener::frameStarted(const FrameEvent& evt){
+	mKeyboard->capture();
+	return !mKeyboard->isKeyDown(OIS::KC_ESCAPE);
 }
 
 #endif

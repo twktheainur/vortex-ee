@@ -7,33 +7,32 @@
 
 using namespace Ogre;
 
-	void Application::go()
-  {
-	  createRoot();
+	Application::~Application(){
+		mInputManager->destroyInputObject(mKeyboard);
+		OIS::InputManager::destroyInputSystem(mInputManager);
+
+		/*//pour CEGUI :
+		delete mRenderer;
+		delete mSystem;*/
+
+		delete mListener;
+		delete mRoot;
+	}
+
+	void Application::go(){
+		createRoot();
+
+//		mRoot->showConfigDialog(); //affiche la fenêtre de configuration d'OGRE
 		defineResources();
 		setupRenderSystem();
 		createRenderWindow();
 		initializeResourceGroups();
-	  setupScene();
+		setupScene();
 		setupInputSystem();
 		//setupCEGUI();
 		createFrameListener();
 		startRenderLoop();
-  }
-
-	Application::~Application()
-	{
-    mInputManager->destroyInputObject(mKeyboard);
-    OIS::InputManager::destroyInputSystem(mInputManager);
-
-    /*//pour CEGUI :
-    delete mRenderer;
-    delete mSystem;*/
-
-    delete mListener;
-    delete mRoot;
 	}
-
 
     void Application::createRoot(){
 		#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
@@ -41,7 +40,7 @@ using namespace Ogre;
 		#else
 		mRoot = new Root();
 		#endif
-		}
+	}
 
     void Application::defineResources(){
 		String secName, typeName, archName;
@@ -75,8 +74,7 @@ using namespace Ogre;
 		throw Exception(52, "User canceled the config dialog!", "Application::setupRenderSystem()");
 		}
 
-    void Application::createRenderWindow()
-    {
+    void Application::createRenderWindow(){
       mRoot->initialise(true, "Vortex");
     }
 
@@ -88,12 +86,15 @@ using namespace Ogre;
 
     void Application::setupScene()
     {
-    	SceneManager *mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
+		mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
+
     	Camera *mCamera = mSceneMgr->createCamera("Camera");
     	mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un déplacement correct de la caméra (les axes sont inversés entre quake et ogre)
     	mCamera->setFixedYawAxis(true, Vector3::UNIT_Z);
+
     	Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
-    	mSceneMgr->setWorldGeometry("maps/PT.bsp");//chargmement de la map
+
+    	mSceneMgr->setWorldGeometry("maps/PT.bsp");//chargement de la map
     	mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
     }
 
@@ -112,7 +113,7 @@ using namespace Ogre;
       try
        {
            mKeyboard = static_cast<OIS::Keyboard*>(mInputManager->createInputObject(OIS::OISKeyboard, false));
-           //mMouse = static_cast<OIS::Mouse*>(mInputManager->createInputObject(OIS::OISMouse, false));
+           mMouse = static_cast<OIS::Mouse*>(mInputManager->createInputObject(OIS::OISMouse, false));
        }
        catch (const OIS::Exception &e)
        {
@@ -124,10 +125,9 @@ using namespace Ogre;
     {
     }*/
 
-    void Application::createFrameListener()
-    {
-      mListener = new ExitListener(mKeyboard);
-      mRoot->addFrameListener(mListener);
+    void Application::createFrameListener(){
+		mListener = new ExitListener(mKeyboard);
+		mRoot->addFrameListener(mListener);
     }
 
     void Application::startRenderLoop()
