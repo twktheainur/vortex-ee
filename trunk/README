@@ -1,0 +1,11 @@
+Compilation avec Cmake:
+
+Se placer à la racine du répertoire (typiquement ~/vorte-ee )
+Exécuter les commandes suivantes:
+
+cmake . && make
+
+Ensuite, pour exécuter le client:
+
+cd bin
+./vortex-client
