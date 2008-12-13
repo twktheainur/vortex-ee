@@ -20,17 +20,17 @@ extern "C"
 }
 
 //Global variables
-//Event main_event;
+Event main_event;
 
 int main(int argc, char **argv)
 {
-  //Server server(&main_event);
+  Server server(&main_event);
   BinBitSet set;
-  set.pushBit(1);
+  set.pushBit(0);
   set.pushBit(1);
   set.pushBit(1);
   //set.pushBits("100101");
-  std::cout << "val:" << (int)set.getContainer()[0]<<endl;
+  //std::cout << "val:" << set.popBitsS(3)<<endl;
 
   return EXIT_SUCCESS;
 }

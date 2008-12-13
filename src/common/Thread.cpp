@@ -28,7 +28,6 @@ int Thread::start(void * arg)
 {
 	setArg(arg);
 	int ret = pthread_create(&threadId,NULL,Thread::entryPoint,this);
-	std::cout << "Thread Spawned!"<<std::endl;
   return ret;
 }
 

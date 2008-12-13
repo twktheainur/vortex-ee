@@ -12,7 +12,7 @@ under the License.*/
 Client::Client(Event * event)
 {
 	eventManagerEvent = event;
-  //connectionManagerThread = new ConnectionManager(this);
+  connectionManagerThread = new ConnectionManager(this);
   eventManagerThread = new EventManager(event);
   chatManagerThread = new ChatManager(event);
   applicationManagerThread = new ApplicationManager(event);

@@ -80,6 +80,7 @@ void TCPClient::protocolLoop()
 	buffer.resize(150);
   while(1)
   {
+  	socket->poll_read();
   	recv(buffer);
   }
 }

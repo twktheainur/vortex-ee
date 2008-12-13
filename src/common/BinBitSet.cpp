@@ -22,9 +22,9 @@ BinBitSet::~BinBitSet()
 void BinBitSet::pushBit(bool bit)
 {
 	if(bit)
-		container[vectorOffset]^=(1<<(byteOffset-1));//Setting the bit after the last set bit to 1
+		container[vectorOffset]|=(1<<(byteOffset-1));//Setting the bit after the last set bit to 1
 	else
-		container[vectorOffset]&=(1<<(byteOffset-1));//to 0
+		container[vectorOffset]&=~(1<<(byteOffset-1));//to 0
 	byteOffset++;
 	//If the current byte is full we allocate a new one
 	//Resetting the byte Offset
