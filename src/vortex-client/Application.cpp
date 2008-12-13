@@ -8,8 +8,7 @@
 using namespace Ogre;
 
 	void Application::go(){
-		createRoot();
-		defineResources();
+		createRoot();		defineResources(); //this segfaults
 		setupRenderSystem();
 		createRenderWindow();
 		initializeResourceGroups();
@@ -19,12 +18,12 @@ using namespace Ogre;
 		createFrameListener();
 		startRenderLoop();}
 
-	Application::~Application(){
+		Application::~Application(){
 		mInputManager->destroyInputObject(mKeyboard);
 		OIS::InputManager::destroyInputSystem(mInputManager);
 
       /*//pour CEGUI :
-      delete mRenderer;
+      delete mRenderer;	
       delete mSystem;*/
 
 		delete mListener;
@@ -45,7 +44,9 @@ using namespace Ogre;
 		#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 		cf.load(macBundlePath() + "/Contents/Resources/resources.cfg");
 		#else
-		cf.load("resources.cfg");
+		puts("Loading resource file...");
+//		cf.load("resources.cfg");
+		puts("Loaded.");
 		#endif
 		ConfigFile::SectionIterator seci = cf.getSectionIterator();
 		while (seci.hasMoreElements()){
@@ -69,9 +70,9 @@ using namespace Ogre;
 		throw Exception(52, "User canceled the config dialog!", "Application::setupRenderSystem()");
 		}
 
-    void Application::createRenderWindow()
-    {
-      mRoot->initialise(true, "Vortex");
+    void Application::createRenderWindow(){
+	    mRoot->initialise(true, "Vortex");
+
     }
 
     void Application::initializeResourceGroups()
