@@ -8,8 +8,7 @@
 
 using namespace Ogre;
 
-class Application
-{
+class Application{
 	public:
 		~Application();
 		void go();
