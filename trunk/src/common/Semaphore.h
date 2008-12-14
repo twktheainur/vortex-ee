@@ -7,11 +7,16 @@
 
 #ifndef SEMAPHORE_H_
 #define SEMAPHORE_H_
+#ifdef WIN32
+  #include "c:\pthread\include\pthread.h"
+  #include "c:\pthread\include\semaphore.h"
+#else
 extern "C"
 {
   #include <pthread.h>
   #include <semaphore.h>
 }
+#endif
 #include "Exception.h"
 enum SemaphoreException
 {

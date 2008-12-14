@@ -4,10 +4,17 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
 FIND_PACKAGE(OGRE REQUIRED)
 FIND_PACKAGE(OIS)
 
+if(WIN32)
+  set(PTHREADS_LIBRARY c:/Pre-built.2/lib/pthreadGC2.dll)
+  set(PTHREADS_INCLUDE_DIR c:/Pre-built.2/include)
+  set(SOCKET_LIBRARY C:/mingw/lib/libwsock32.a C:/mingw/lib/libws2_32.a)
+  set(SOCKET_INCLUDE C:/mingw/include)
+endif(WIN32)
+
 set(CMAKE_CXXFLAGS -Wall -Werror -pedantic -fmessage-length=0 -Wno-deprecated)
 set(CMAKE_CXXFLAGS_DEBUG -O0 -g3 -c)
 set(CMAKE_CXXFLAGS_RELEASE -02)
-link_libraries(pthread ${OGRE_LIBRARIES} ${OIS_LIBRARIES})
+link_libraries(pthread ${OGRE_LIBRARIES} ${OIS_LIBRARIES} ${PTHREADS_LIBRARY} ${SOCKET_LIBRARY})
 
 add_subdirectory(src)
 
@@ -18,7 +25,7 @@ set(bin_dir bin)
 
 
 include_directories(src/common)
-include_directories(${OGRE_INCLUDE_DIR} ${OIS_INCLUDE_DIR})
+include_directories(${OGRE_INCLUDE_DIR} ${OIS_INCLUDE_DIR} ${PTHREADS_INCLUDE_DIR} ${SOCKET_INCLUDE})
 link_directories($(OGRE_LIB_DIR) ${OIS_LIB_DIR})
 
 
@@ -41,7 +48,7 @@ set(common_source_files ${comsrc}/Cond.cpp ${comsrc}/Event.cpp ${comsrc}/Mutex.c
                         ${comsrc}/WorldManager.cpp ${comsrc}/BinBitSet.cpp)
 
 if(WIN32)
-  add_definitions(WIN32)
+  add_definitions(-DWIN32)
 elseif(APPLE)
   add_definitions(APPLE)
 endif(WIN32)

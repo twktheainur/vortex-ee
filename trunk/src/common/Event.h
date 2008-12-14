@@ -21,6 +21,7 @@ under the License.*/
 #endif
 #include <string>
 #include <queue>
+#include <unistd.h>
 #include "Mutex.h"
 #include "Semaphore.h"
 using namespace std;
