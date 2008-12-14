@@ -122,7 +122,7 @@
 
       try
        {
-           mKeyboard = static_cast<OIS::Keyboard*>(mInputManager->createInputObject(OIS::OISKeyboard, false));
+           //mKeyboard = static_cast<OIS::Keyboard*>(mInputManager->createInputObject(OIS::OISKeyboard, false));
            //mMouse = static_cast<OIS::Mouse*>(mInputManager->createInputObject(OIS::OISMouse, false));
        }
        catch (const OIS::Exception &e)
@@ -141,7 +141,7 @@
       mRoot->addFrameListener(mListener);
 
       // On ne montre pas les frames de stats
-      mListener->showDebugOverlay(false);
+      mListener->showDebugOverlay(true);
     }
 
     void Application::startRenderLoop()
