@@ -24,6 +24,7 @@ TCPClient::TCPClient(string host,string service)
     catch(ExTCPSocket * e)
     {
       printf("TCPClient:%s\n",e->what());
+      puts("Une erreur a été rencontrée. Un serveur est-il actif ?");	
       throw new ExTCPClient(E_CONNECT_ERROR,e->what());
       delete e;
     }
