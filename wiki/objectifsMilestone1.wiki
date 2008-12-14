@@ -2,7 +2,7 @@
 
 = Client =
 
-- Charger Ogre
+- Charger Ogre`*`
 - Afficher la map
 - Pouvoir se déplacer dans la map
 - Gérer les collisions dans la map
