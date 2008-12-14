@@ -4,9 +4,9 @@
 
 - Charger Ogre *fait* http://www.asgbi.org.uk/glasgow2005/images/tick.gif
 
-- Afficher la map *fait*
+- Afficher la map *fait* http://www.asgbi.org.uk/glasgow2005/images/tick.gif
 
-- Pouvoir se déplacer dans la map *fait*
+- Pouvoir se déplacer dans la map *fait* http://www.asgbi.org.uk/glasgow2005/images/tick.gif
 
 - Gérer les collisions dans la map
 
