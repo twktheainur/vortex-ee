@@ -29,9 +29,9 @@ set(server_source_files ${srvsrc}/ChatManager.cpp  ${srvsrc}/ClientManager.cpp
                         ${srvsrc}/TCPServer.cpp)
 
 set(client_source_files ${clisrc}/main.cpp  
-			${clisrc}/TCPClient.cpp  ${clisrc}/TCPClient.h
-			${clisrc}/Application.cpp ${clisrc}/Application.h 
-			${clisrc}/ExitListener.cpp ${clisrc}/ExitListener.h
+			${clisrc}/TCPClient.cpp
+			${clisrc}/Application.cpp
+			${clisrc}/VortexFrameListener.cpp
 			${clisrc}/ChatManager.cpp  ${clisrc}/ConnectionManager.cpp  
 			${clisrc}/EventManager.cpp ${clisrc}/ApplicationManager.cpp
                         ${clisrc}/Client.cpp)
