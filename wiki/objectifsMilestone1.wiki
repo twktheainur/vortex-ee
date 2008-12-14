@@ -19,6 +19,8 @@
 
 - Etablir une connection client/server http://www.asgbi.org.uk/glasgow2005/images/tick.gif *fait*
 
+- Pouvoir spécifier l'adresse IP du serveur auquel se connecter.
+
 - Pouvoir creer des paquets binaires *en cours*
 
 - Etablir un protocole de communication de niveau application
