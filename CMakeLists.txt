@@ -28,10 +28,8 @@ set(server_source_files ${srvsrc}/ChatManager.cpp  ${srvsrc}/ClientManager.cpp
                         ${srvsrc}/main.cpp  ${srvsrc}/Server.cpp 
                         ${srvsrc}/TCPServer.cpp)
 
-set(client_source_files ${clisrc}/main.cpp  
-			${clisrc}/TCPClient.cpp
-			${clisrc}/Application.cpp
-			${clisrc}/VortexFrameListener.cpp
+set(client_source_files ${clisrc}/main.cpp ${clisrc}/TCPClient.cpp
+			${clisrc}/Application.cpp ${clisrc}/VortexFrameListener.cpp
 			${clisrc}/ChatManager.cpp  ${clisrc}/ConnectionManager.cpp  
 			${clisrc}/EventManager.cpp ${clisrc}/ApplicationManager.cpp
                         ${clisrc}/Client.cpp)
