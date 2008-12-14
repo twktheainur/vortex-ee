@@ -2,11 +2,11 @@
 
 = Client =
 
-- Charger Ogre *fait* http://www.asgbi.org.uk/glasgow2005/images/tick.gif
+- Charger Ogre http://www.asgbi.org.uk/glasgow2005/images/tick.gif *fait* 
 
-- Afficher la map *fait* http://www.asgbi.org.uk/glasgow2005/images/tick.gif
+- Afficher la map http://www.asgbi.org.uk/glasgow2005/images/tick.gif *fait* 
 
-- Pouvoir se déplacer dans la map *fait* http://www.asgbi.org.uk/glasgow2005/images/tick.gif
+- Pouvoir se déplacer dans la map http://www.asgbi.org.uk/glasgow2005/images/tick.gif *fait* 
 
 - Gérer les collisions dans la map
 
