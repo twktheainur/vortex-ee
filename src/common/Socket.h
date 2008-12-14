@@ -10,8 +10,9 @@ under the License.*/
 #ifndef SOCKET_H
 #define SOCKET_H
 
-#if defined(__WIN32__) || defined(_WIN32)
+#if defined(__WIN32__) || defined(_WIN32) || defined(WIN32)
   #include <ws2tcpip.h>
+  #include <winsock2.h>
 #else
 extern "C"
 {

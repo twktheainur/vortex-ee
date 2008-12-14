@@ -8,20 +8,24 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 #include "Socket.h"
-//#include <pthread.h>
-//#include <ws2tcpip.h>
 /***********************Constructor / Destructor*******************************/
 /*----------------------------Socket Constructor------------------------------*/
 Socket::Socket (string host, string service, int family, int type)
 {
-  #if defined(__WIN32__) || defined(_WIN32)
-    WSADATA wsaData;// if this doesn't work
-    //WSAData wsaData; // then try this instead
-    if (WSAStartup(MA_KEYWORD(1, 1), &wsaData) != 0)
-    {
-      fprintf(stderr, "WSAStartup failed.\n");
-      exit(1);
-    }
+  #if defined(__WIN32__) || defined(_WIN32) || defined(WIN32)
+ // Must be done at the beginning of every WinSock program
+WSADATA w;    // used to store information about WinSock version
+int error = WSAStartup (0x0202, &w);   // Fill in w
+
+if (error)
+{ // there was an error
+  return;
+}
+if (w.wVersion != 0x0202)
+{ // wrong WinSock version!
+  WSACleanup (); // unload ws2_32.dll
+  return;
+}
   #endif
     initInfo(host,service,family,type);
 }
@@ -54,8 +58,7 @@ Socket::~Socket()
     if((gair = getaddrinfo(passed_host,service.data(),&hints,&info)))
     {
       printf("Socket.cpp:49 -- THROWING E_GETADDRINFO_FAIL\n");
-      strerror_r(errno,err,40);
-      throw new ExSocket(E_GETADDRINFO_FAIL,err);
+      throw new ExSocket(E_GETADDRINFO_FAIL,strerror(errno));
     }
 
  }
