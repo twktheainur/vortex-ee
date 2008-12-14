@@ -16,3 +16,8 @@
 
 
 = Serveur =
+
+- Etablir une connection client/server http://www.asgbi.org.uk/glasgow2005/images/tick.gif *fait*
+- Pouvoir creer des paquets binaires *en cours*
+- Etablir un protocole de communication de niveau application
+- Avoir une representation abstraite du monde, et la garder syncro avec les clients
