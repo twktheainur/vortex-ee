@@ -2,7 +2,7 @@
 
 = Client =
 
-- Charger Ogre *fait*
+- Charger Ogre *fait* http://www.asgbi.org.uk/glasgow2005/images/tick.gif
 
 - Afficher la map *fait*
 
