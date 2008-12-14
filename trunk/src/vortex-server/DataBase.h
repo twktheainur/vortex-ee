@@ -1,21 +1,21 @@
-#ifndef BASE
-#define BASE
+#ifndef DATABASE_H_
+#define DATABASE_H_
 
 class Base
 {
     public:
 		Base();
-		//ouvre la base... peut être des paramètres à ajouter...
-	
+		//ouvre la base... peut ï¿½tre des paramï¿½tres ï¿½ ajouter...
+
 		~Base();
-		//à votre avis?
-	
+		//ï¿½ votre avis?
+
 		bool documentExiste(String id);
 		//renvoie vrai si le document existe deja dans la base
-			
+
 		bool utlisateurExiste(String id);
 		//renvoie vrai si l'utilisateur existe deja dans la base
-	
+
     private:
 
 };
