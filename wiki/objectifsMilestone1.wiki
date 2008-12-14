@@ -1,0 +1,12 @@
+#summary Objectifs pour le milestone 1 de Vortex.
+
+= Client =
+
+- Charger Ogre
+- Afficher la map
+- Pouvoir se déplacer dans la map
+- Gérer les collisions dans la map
+- Afficher les autres utilisateurs connectés dans un overlay
+- Afficher les autres utilisateurs connectés dans la map.
+
+= Serveur =
