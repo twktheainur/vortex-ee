@@ -2,11 +2,11 @@
 
 = Client =
 
-- Charger Ogre
+- Charger Ogre *fait*
 
-- Afficher la map
+- Afficher la map *fait*
 
-- Pouvoir se déplacer dans la map
+- Pouvoir se déplacer dans la map *fait*
 
 - Gérer les collisions dans la map
 
