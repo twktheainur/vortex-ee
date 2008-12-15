@@ -1,5 +1,11 @@
 #summary Objectifs pour le milestone 1 de Vortex.
 
+= Signification =
+
+http://www.asgbi.org.uk/glasgow2005/images/tick.gif - La tâche a été implémentée, seul du debug peut subsister.
+
+http://demos.telerik.com/aspnet/Grid/Examples/Programming/WebMailGrid/Img/Delete.gif - Pas encore implémenté.
+
 = Client =
 
 - Charger Ogre http://www.asgbi.org.uk/glasgow2005/images/tick.gif *fait* 
