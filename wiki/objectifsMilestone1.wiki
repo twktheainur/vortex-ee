@@ -29,7 +29,7 @@ http://www.sfr.de/cms/img/gears.png - En cours d'implémentation.
 
 - Pouvoir spécifier l'adresse IP du serveur auquel se connecter. http://demos.telerik.com/aspnet/Grid/Examples/Programming/WebMailGrid/Img/Delete.gif
 
-- Pouvoir creer des paquets binaires *en cours*
+- Pouvoir creer des paquets binaires http://www.sfr.de/cms/img/gears.png
 
 - Etablir un protocole de communication de niveau application. http://demos.telerik.com/aspnet/Grid/Examples/Programming/WebMailGrid/Img/Delete.gif
 
