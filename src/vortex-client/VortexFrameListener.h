@@ -2,13 +2,13 @@
 #define VORTEXFRAMELISTENER_H_INCLUDED
 
 #include "ExampleFrameListener.h"
-
+#include <unistd.h>
 using namespace Ogre;
 
 class VortexFrameListener : public ExampleFrameListener, public OIS::MouseListener, public OIS::KeyListener
 {
 public:
-    VortexFrameListener(RenderWindow* win, Camera* cam, SceneManager *sceneMgr);
+    VortexFrameListener(RenderWindow* win, Camera* cam,Entity * player, SceneManager *sceneMgr);
 
     bool frameStarted(const FrameEvent &evt);
 
@@ -32,6 +32,10 @@ protected:
 
     SceneManager *mSceneMgr;   // le scne manager courant
     SceneNode *mCamNode;   // le scenenode auquel notre camera et notre modle sont attachs
+
+    SceneNode *mPlayerNode;
+    Entity *mPlayer;
+    AnimationState *mAnimationState;
 
     bool mContinue;        // boolen dfinissant si on continue le rendu
     Vector3 mDirection;     // vecteur dfinissant le dplacement calcul

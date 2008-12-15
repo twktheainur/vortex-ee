@@ -92,12 +92,27 @@
                                   // (les axes sont invers�s entre le moteur quake et ogre)
       mCamera->setFixedYawAxis(true, Vector3::UNIT_Z); // idem (suite)
 
-      SceneNode *node = mSceneMgr->getRootSceneNode()->createChildSceneNode("Node");
-      node = mSceneMgr->getRootSceneNode()->createChildSceneNode("CamNode1", Vector3(-850,150,150)); // on place la cam dans l'entr�e
 
+      mPlayer = mSceneMgr->createEntity( "Man", "man.mesh" );
+
+      SceneNode *node; /*= mSceneMgr->getRootSceneNode()->createChildSceneNode("Node");*/
+      node = mSceneMgr->getRootSceneNode()->createChildSceneNode("CamNode1", Vector3(-850,160,180)); // on place la cam dans l'entr�e
+
+
+      SceneNode * nPlayer; /*= mSceneMgr->getRootSceneNode()->createChildSceneNode("Node");*/
+      nPlayer =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode1", Vector3(-680,160,120));
+
+      node->roll(Degree(-90));
+      //node->pitch(Degree(-20));
       node->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
 
+      nPlayer->pitch(Degree(90));
+      nPlayer->yaw(Degree(90));
+      nPlayer->scale(Vector3(1.5,1.5,1.5));
+      nPlayer->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
+
       node->attachObject(mCamera); // on attache la camera au noeud
+      nPlayer->attachObject(mPlayer);
 
       ////////////////////////////////////////////////////////
       // ici il faudra aussi y attacher le mod�le du joueur //
@@ -119,16 +134,6 @@
       windowHndStr << windowHnd;
       pl.insert(std::make_pair(std::string("WINDOW"), windowHndStr.str()));
       mInputManager = OIS::InputManager::createInputSystem(pl);
-
-      try
-       {
-           //mKeyboard = static_cast<OIS::Keyboard*>(mInputManager->createInputObject(OIS::OISKeyboard, false));
-           //mMouse = static_cast<OIS::Mouse*>(mInputManager->createInputObject(OIS::OISMouse, false));
-       }
-       catch (const OIS::Exception &e)
-       {
-           throw Exception(42, e.eText, "Application::setupInputSystem");
-       }
     }
 
     /*void Application::setupCEGUI()
@@ -137,7 +142,7 @@
 
     void Application::createFrameListener()
     {
-      mListener = new VortexFrameListener(win, mCamera, mSceneMgr);
+      mListener = new VortexFrameListener(win, mCamera,mPlayer, mSceneMgr);
       mRoot->addFrameListener(mListener);
 
       // On ne montre pas les frames de stats

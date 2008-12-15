@@ -54,6 +54,7 @@ private:
     //CEGUI::System *mSystem;
     VortexFrameListener *mListener;
     Camera *mCamera;
+    Entity * mPlayer;
     SceneManager *mSceneMgr;
     RenderWindow *win;
 

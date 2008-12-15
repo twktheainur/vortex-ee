@@ -1,14 +1,20 @@
 #include "VortexFrameListener.h"
 
-    VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam, SceneManager *sceneMgr)
+    VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Entity * player, SceneManager *sceneMgr)
         : ExampleFrameListener(win, cam, true, true)
     {
         // Populate the camera and scene manager containers
         mCamNode = cam->getParentSceneNode();
+        mPlayer = player;
+        mPlayerNode=player->getParentSceneNode();
         mSceneMgr = sceneMgr;
 
-        mRotate = 0.13; // valeur � changer pour la sensibilit� de la souris
-        mMove = 250; // vitesse de d�placement
+        mAnimationState = mPlayer->getAnimationState("marcheAvant");
+        mAnimationState->setLoop(true);
+        mAnimationState->setEnabled(false);
+
+        mRotate = 0.20; // valeur � changer pour la sensibilit� de la souris
+        mMove = 100; // vitesse de d�placement
 
         // bool�en d�finissant si on continue ou non le rendu des images
         mContinue = true;
@@ -27,7 +33,19 @@
         if(mKeyboard)
             mKeyboard->capture();
 
+        mAnimationState->addTime(evt.timeSinceLastFrame);
         mCamNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL); // on met le node � jour � partir du vecteur calcul�
+
+        int y = mDirection.y;
+        int x = mDirection.x;
+        mDirection.y = 0;
+        mDirection.x = -x;
+        mDirection.z = y;
+        mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
+        mDirection.y = y;
+        mDirection.x = x;
+        mDirection.z = 0;
+
 
         return mContinue;
     }
@@ -35,8 +53,9 @@
     // MouseListener
     bool VortexFrameListener::mouseMoved(const OIS::MouseEvent &e)
     {
-        mCamNode->yaw(Degree(-mRotate * e.state.X.rel), Node::TS_WORLD);
+        mCamNode->yaw(Degree(-0.5*mRotate * e.state.X.rel), Node::TS_WORLD);
         mCamNode->pitch(Degree(-mRotate * e.state.Y.rel), Node::TS_LOCAL);
+        mPlayerNode->yaw(Degree(-3*mRotate*e.state.X.rel),Node::TS_WORLD);
         return true;
     }
 
@@ -55,23 +74,34 @@
             case OIS::KC_UP:
             case OIS::KC_W:
                 mDirection.y = mMove; // on avance
+                mAnimationState = mPlayer->getAnimationState("marcheAvant");
+                mAnimationState->setLoop(true);
+                mAnimationState->setEnabled(true);
                 break;
 
             case OIS::KC_DOWN:
             case OIS::KC_S:
                 mDirection.y = -mMove; // on recule
+                mAnimationState = mPlayer->getAnimationState("marcheArriere");
+                mAnimationState->setLoop(true);
+                mAnimationState->setEnabled(true);
                 break;
 
             case OIS::KC_LEFT:
             case OIS::KC_A:
                 mDirection.x = -mMove; // on va � gauche
+                mAnimationState = mPlayer->getAnimationState("marcheDroite");
+                mAnimationState->setLoop(true);
+                mAnimationState->setEnabled(true);
                 break;
 
             case OIS::KC_RIGHT:
             case OIS::KC_D:
                 mDirection.x = mMove; // on va � droite
+                mAnimationState = mPlayer->getAnimationState("marcheGauche");
+                mAnimationState->setLoop(true);
+                mAnimationState->setEnabled(true);
                 break;
-
             default:
                 break;
         }
@@ -87,21 +117,25 @@
        case OIS::KC_UP:
        case OIS::KC_W:
            mDirection.y = 0;
+           mAnimationState->setEnabled(false);
            break;
 
        case OIS::KC_DOWN:
        case OIS::KC_S:
            mDirection.y = 0;
+           mAnimationState->setEnabled(false);
            break;
 
        case OIS::KC_LEFT:
        case OIS::KC_A:
            mDirection.x = 0;
+           mAnimationState->setEnabled(false);
            break;
 
        case OIS::KC_RIGHT:
        case OIS::KC_D:
            mDirection.x = 0;
+           mAnimationState->setEnabled(false);
            break;
 
        default:
