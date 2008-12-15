@@ -13,7 +13,7 @@
         mAnimationState->setLoop(true);
         mAnimationState->setEnabled(false);
 
-        mRotate = 0.20; // valeur � changer pour la sensibilit� de la souris
+        mRotate = 10; // valeur � changer pour la sensibilit� de la souris
         mMove = 100; // vitesse de d�placement
 
         // bool�en d�finissant si on continue ou non le rendu des images
@@ -35,7 +35,9 @@
 
         mAnimationState->addTime(evt.timeSinceLastFrame);
         mCamNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL); // on met le node � jour � partir du vecteur calcul�
+        mPlayerNode->yaw(mAngle,Node::TS_WORLD);
 
+        //Ici on doit swapper les coordonees pour qu'elle soient les memes entre player et camera
         int y = mDirection.y;
         int x = mDirection.x;
         mDirection.y = 0;
@@ -53,14 +55,18 @@
     // MouseListener
     bool VortexFrameListener::mouseMoved(const OIS::MouseEvent &e)
     {
-        mCamNode->yaw(Degree(-0.5*mRotate * e.state.X.rel), Node::TS_WORLD);
-        mCamNode->pitch(Degree(-mRotate * e.state.Y.rel), Node::TS_LOCAL);
-        mPlayerNode->yaw(Degree(-3*mRotate*e.state.X.rel),Node::TS_WORLD);
+    	  if(mMouse->getMouseState().buttonDown(OIS::MB_Right))
+    	  {
+          mCamNode->yaw(Degree(-0.08*mRotate * e.state.X.rel), Node::TS_WORLD);
+          mCamNode->pitch(Degree(-0.08*mRotate * e.state.Y.rel), Node::TS_LOCAL);
+    	  }
+    	  //else
+          //mPlayerNode->yaw(Degree(-3*mRotate*e.state.X.rel),Node::TS_WORLD);
         return true;
     }
 
-    bool VortexFrameListener::mousePressed(const OIS::MouseEvent &e, OIS::MouseButtonID id) { return false; }
-    bool VortexFrameListener::mouseReleased(const OIS::MouseEvent &e, OIS::MouseButtonID id) { return false; }
+    bool VortexFrameListener::mousePressed(const OIS::MouseEvent &e, OIS::MouseButtonID id) { return true; }
+    bool VortexFrameListener::mouseReleased(const OIS::MouseEvent &e, OIS::MouseButtonID id) { return true; }
 
 
     // KeyListener
@@ -89,18 +95,20 @@
 
             case OIS::KC_LEFT:
             case OIS::KC_A:
-                mDirection.x = -mMove; // on va � gauche
-                mAnimationState = mPlayer->getAnimationState("marcheDroite");
-                mAnimationState->setLoop(true);
-                mAnimationState->setEnabled(true);
+                //mDirection.x = -mMove; // on va � gauche
+            	    mAngle = mRotate;
+                //mAnimationState = mPlayer->getAnimationState("marcheDroite");
+                //mAnimationState->setLoop(true);
+                //mAnimationState->setEnabled(true);
                 break;
 
             case OIS::KC_RIGHT:
             case OIS::KC_D:
-                mDirection.x = mMove; // on va � droite
-                mAnimationState = mPlayer->getAnimationState("marcheGauche");
-                mAnimationState->setLoop(true);
-                mAnimationState->setEnabled(true);
+                //mDirection.x = mMove; // on va � droite
+            	  mAngle = -mRotate;
+                //mAnimationState = mPlayer->getAnimationState("marcheGauche");
+                //mAnimationState->setLoop(true);
+                //mAnimationState->setEnabled(true);
                 break;
             default:
                 break;
@@ -129,13 +137,15 @@
        case OIS::KC_LEFT:
        case OIS::KC_A:
            mDirection.x = 0;
-           mAnimationState->setEnabled(false);
+           mAngle=0;
+           //mAnimationState->setEnabled(false);
            break;
 
        case OIS::KC_RIGHT:
        case OIS::KC_D:
            mDirection.x = 0;
-           mAnimationState->setEnabled(false);
+           mAngle=0;
+           //mAnimationState->setEnabled(false);
            break;
 
        default:

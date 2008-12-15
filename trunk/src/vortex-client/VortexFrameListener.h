@@ -27,8 +27,9 @@ public:
     bool keyReleased(const OIS::KeyEvent &e);
 
 protected:
-    Real mRotate;          // constante de rotation
+    Degree mRotate;          // constante de rotation
     Real mMove;            // constante de mouvement
+
 
     SceneManager *mSceneMgr;   // le scne manager courant
     SceneNode *mCamNode;   // le scenenode auquel notre camera et notre modle sont attachs
@@ -39,6 +40,7 @@ protected:
 
     bool mContinue;        // boolen dfinissant si on continue le rendu
     Vector3 mDirection;     // vecteur dfinissant le dplacement calcul
+    Degree mAngle;  // Agle definissant la rotation calculee
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED
