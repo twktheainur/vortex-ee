@@ -65,9 +65,25 @@
         return true;
     }
 
-    bool VortexFrameListener::mousePressed(const OIS::MouseEvent &e, OIS::MouseButtonID id) { return true; }
-    bool VortexFrameListener::mouseReleased(const OIS::MouseEvent &e, OIS::MouseButtonID id) { return true; }
-
+    bool VortexFrameListener::mousePressed(const OIS::MouseEvent &e, OIS::MouseButtonID id)
+    {
+    	if(e.state.buttonDown(OIS::MB_Right) && e.state.buttonDown(OIS::MB_Left))
+    	{
+    		mDirection.y = mMove;
+    		mAnimationState = mPlayer->getAnimationState("marcheAvant");
+    		                mAnimationState->setLoop(true);
+    		                mAnimationState->setEnabled(true);
+    	}
+    }
+    bool VortexFrameListener::mouseReleased(const OIS::MouseEvent &e, OIS::MouseButtonID id)
+    {
+      if(e.state.buttonDown(OIS::MB_Right) ||
+      	 e.state.buttonDown(OIS::MB_Left))
+			{
+        mDirection.y = 0;
+        mAnimationState->setEnabled(false);
+			}
+    }
 
     // KeyListener
     bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)

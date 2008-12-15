@@ -100,7 +100,7 @@
 
 
       SceneNode * nPlayer; /*= mSceneMgr->getRootSceneNode()->createChildSceneNode("Node");*/
-      nPlayer =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode1", Vector3(-680,160,120));
+      nPlayer =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode1", Vector3(-680,160,140));
 
       node->roll(Degree(-90));
       //node->pitch(Degree(-20));
@@ -108,15 +108,17 @@
 
       nPlayer->pitch(Degree(90));
       nPlayer->yaw(Degree(90));
-      nPlayer->scale(Vector3(1.5,1.5,1.5));
+      nPlayer->scale(Vector3(2,2,2));
       nPlayer->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
 
       node->attachObject(mCamera); // on attache la camera au noeud
       nPlayer->attachObject(mPlayer);
 
-      ////////////////////////////////////////////////////////
-      // ici il faudra aussi y attacher le mod�le du joueur //
-      ////////////////////////////////////////////////////////
+      //TMP:
+      //mSceneMgr->setAmbientLight(ColourValue(0,0,0));
+      Light * light = mSceneMgr->createLight("L1");
+      light->setType(Light::LT_POINT);
+      light->setPosition(Vector3(-600,160,200));
 
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
       mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
