@@ -8,6 +8,8 @@
 
 - Pouvoir se déplacer dans la map http://www.sfr.de/cms/img/gears.png (la camera bug encore un peu) 
 
+- Pouvoir spécifier l'adresse IP du serveur auquel se connecter. http://www.sfr.de/cms/img/gears.png
+
 - Gérer les collisions dans la map http://demos.telerik.com/aspnet/Grid/Examples/Programming/WebMailGrid/Img/Delete.gif
 
 - Afficher les autres utilisateurs connectés dans un overlay. http://demos.telerik.com/aspnet/Grid/Examples/Programming/WebMailGrid/Img/Delete.gif
@@ -18,8 +20,6 @@
 = Serveur =
 
 - Etablir une connection client/server http://www.asgbi.org.uk/glasgow2005/images/tick.gif
-
-- Pouvoir spécifier l'adresse IP du serveur auquel se connecter. http://demos.telerik.com/aspnet/Grid/Examples/Programming/WebMailGrid/Img/Delete.gif
 
 - Pouvoir creer des paquets binaires http://www.sfr.de/cms/img/gears.png
 
