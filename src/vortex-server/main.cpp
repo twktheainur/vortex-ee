@@ -24,13 +24,12 @@ Event main_event;
 
 int main(int argc, char **argv)
 {
-  Server server(&main_event);
-  BinBitSet set;
-  set.pushBit(0);
-  set.pushBit(1);
-  set.pushBit(1);
-  //set.pushBits("100101");
-  //std::cout << "val:" << set.popBitsS(3)<<endl;
+  //Server server(&main_event);
+	BinBitSet set;
+  char a = 154;
+  set.pushBits<unsigned char>(a);
+  //set.pushBitsS("100101");
+  std::cout << "val:" << (int)set.popBits<unsigned char>() <<endl;
 
   return EXIT_SUCCESS;
 }

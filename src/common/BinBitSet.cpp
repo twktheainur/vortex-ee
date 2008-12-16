@@ -37,17 +37,6 @@ void BinBitSet::pushBit(bool bit)
 	}
 }
 
-void BinBitSet::pushBits(std::string bits)
-{
-	//Anything other than 0 or 1 will set a bit to 1
-  for(int i=0;i<bits.size();i++)
-  {
-  	printf("B:%d\n",bits[bits.size()-1-i]-'0');
-    pushBit(bits.size()-1-i);
-  }
-}
-
-
 bool BinBitSet::popBit()
 {
 	bool bit_val;
@@ -69,21 +58,26 @@ long BinBitSet::popBitsL(size_t n)
 	long ret=0;
 	if(n>sizeof(long)*8)
 		return 0; //Overflow
-  for(int i=0;i<n;i++)
+  for(int i=0;i<=n;i++)
   {
   	bool bit = popBit();
   	if(bit)
-  		ret+=(1<<(i));
+  		ret+=(1<<(n-i));
   }
   return ret;
 }
-std::string BinBitSet::popBitsS(size_t n)
+//Get a subset of the container vector
+vector<unsigned char> BinBitSet::getSubBinBitSet(size_t start,size_t length)
 {
-  std::string ret;
-  ret.resize(n);
-  for(int i=0;i<n;i++)
-  {
-    ret[n-1-i]=popBit()+'0';
-  }
-  return ret;
+	vector <unsigned char> new_cont;
+	std::vector<unsigned char>::iterator it;
+	if(start<=container.size())
+	{
+    for(it = container.begin();
+        *it!=container[start] &&    it!=container.end() &&    *it!=container[length]; it++);
+
+	  if(it!=container.end())
+      new_cont.assign(it,(container.size()>=length)?container.end():container.begin()+start+length);
+	}
+	return new_cont;
 }
