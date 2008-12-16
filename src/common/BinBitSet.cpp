@@ -7,6 +7,13 @@
 
 #include "BinBitSet.h"
 #include <iostream>
+BinBitSet::BinBitSet(vector<unsigned char> vect)
+{
+	byteOffset=1;
+  vectorOffset=0;
+  container=vect;
+  container.push_back(0);
+}
 BinBitSet::BinBitSet()
 {
 	byteOffset=1;

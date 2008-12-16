@@ -8,7 +8,7 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 #include "TCPClient.h"
-
+#include "../common/BinBitSet.h"
 TCPClient::TCPClient(string host,string service)
 {
   struct addrinfo * p;
@@ -24,7 +24,7 @@ TCPClient::TCPClient(string host,string service)
     catch(ExTCPSocket * e)
     {
       printf("TCPClient:%s\n",e->what());
-      puts("Une erreur a été rencontrée. Un serveur est-il actif ?");	
+      puts("Une erreur a été rencontrée. Un serveur est-il actif ?");
       throw new ExTCPClient(E_CONNECT_ERROR,e->what());
       delete e;
     }
@@ -77,11 +77,24 @@ void TCPClient::send(string & data)
 
 void TCPClient::protocolLoop()
 {
-	string buffer;
-	buffer.resize(150);
-  while(1)
-  {
-  	socket->poll_read();
-  	recv(buffer);
-  }
+	vector<unsigned char> toto;
+	toto.reserve(3);
+  //while(1)
+  //{
+
+  	//while(1)
+  	//{
+  		try
+  		{
+  	  	//socket->poll_read();
+  		  //recv(&toto,3,0);
+  		}
+  		catch(...)
+  		{}
+
+  	BinBitSet set;
+  	long test1 = set.popBitsL(3);
+  	short test = set.popBits<short>();
+  	cout << test1 << endl << test << endl;
+  //}
 }

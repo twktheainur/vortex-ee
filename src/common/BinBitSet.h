@@ -43,6 +43,7 @@ public:
 	//string popBitsS(size_t n);
 	long popBitsL(size_t n);
 
+	BinBitSet(vector<unsigned char> vect);
 	BinBitSet();
 	virtual ~BinBitSet();
 
