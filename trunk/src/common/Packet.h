@@ -12,26 +12,44 @@ under the License.*/
 //#include <bitset>
 #include <cstdlib>
 #include <string>
+#include <vector>
+#include "BinBitSet.h"
 using namespace std;
 class Packet
 {
 public:
   Packet();
-  void pack();
-  void unpack();
-  virtual void make_header()=0;
-  virtual void make_tail()=0;
-  size_t getPacketSize();
-  size_t getHeaderSize();
-  size_t getTailSize();
-//  bitset & getHeader();
-//  bitset & getData();
-//  bitset & getTail();
   virtual ~Packet();
+
+
+  virtual size_t getPacketSize()=0;
+  virtual size_t getHeaderSize()=0;
+  virtual size_t getTailSize()=0;
+  virtual size_t getDataSize()=0;
+
+  virtual void make_header()=0;
+  inline vector<unsigned char>
+  getHeader()
+  {
+  	return container.getSubBinBitSet(0,getHeaderSize());
+  }
+
+  void pack();
+  inline vector<unsigned char>
+  unpack()
+  {
+  	return container.getSubBinBitSet(getHeaderSize(),getDataSize());
+  }
+
+  virtual void make_tail()=0;
+  inline vector<unsigned char>
+  getTail()
+  {
+  	return container.getSubBinBitSet(getHeaderSize()+getDataSize(),getTailSize());
+  }
+
 private:
-//  bitset header;
-  string data;
-//  bitset tail;
+  BinBitSet container;
 };
 
 #endif /* PACKET_H_ */
