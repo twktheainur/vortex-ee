@@ -86,36 +86,31 @@
     void Application::setupScene()
     {
       mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
-      mCamera = mSceneMgr->createCamera("Camera"); // on cr�� la camera
+      mCamera = mSceneMgr->createCamera("Camera"); // on cree la camera
       mCamera->setNearClipDistance(5);
-      mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un d�placement correct de la cam�ra
-                                  // (les axes sont invers�s entre le moteur quake et ogre)
+      //mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un deplacement correct de la camera
+                                  // (les axes sont inverses entre le moteur quake et ogre)
       mCamera->setFixedYawAxis(true, Vector3::UNIT_Z); // idem (suite)
+      SceneNode * playerNode;
+      playerNode =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode", Vector3(-680,160,127));
+      mPlayer = mSceneMgr->createEntity( "Player", "man.mesh" );
+      playerNode->pitch(Degree(90));
+      playerNode->yaw(Degree(90));
+      playerNode->scale(Vector3(2,2,2));
+      playerNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
+      playerNode->attachObject(mPlayer); // on attache le modèle au noeud
+
+      SceneNode *camNode;
+      camNode = playerNode->createChildSceneNode("CamNode", Vector3(0,40,-73)); // on place la cam dans l'entree
+      camNode->pitch(Degree(200));
+      camNode->roll(Degree(180));
+      camNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
+      //mCamera->setAutoTracking(true, playerNode);
+
+      camNode->attachObject(mCamera); // on attache la camera au noeud
 
 
-      mPlayer = mSceneMgr->createEntity( "Man", "man.mesh" );
 
-      SceneNode *node; /*= mSceneMgr->getRootSceneNode()->createChildSceneNode("Node");*/
-      node = mSceneMgr->getRootSceneNode()->createChildSceneNode("CamNode1", Vector3(-850,160,180)); // on place la cam dans l'entr�e
-
-
-      SceneNode * nPlayer; /*= mSceneMgr->getRootSceneNode()->createChildSceneNode("Node");*/
-      nPlayer =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode1", Vector3(-680,160,140));
-
-      node->roll(Degree(-90));
-      //node->pitch(Degree(-20));
-      node->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
-
-      nPlayer->pitch(Degree(90));
-      nPlayer->yaw(Degree(90));
-      nPlayer->scale(Vector3(2,2,2));
-      nPlayer->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
-
-      node->attachObject(mCamera); // on attache la camera au noeud
-      nPlayer->attachObject(mPlayer);
-
-      //TMP:
-      //mSceneMgr->setAmbientLight(ColourValue(0,0,0));
       Light * light = mSceneMgr->createLight("L1");
       light->setType(Light::LT_POINT);
       light->setPosition(Vector3(-600,160,200));
@@ -148,7 +143,7 @@
       mRoot->addFrameListener(mListener);
 
       // On ne montre pas les frames de stats
-      mListener->showDebugOverlay(true);
+      mListener->showDebugOverlay(false);
     }
 
     void Application::startRenderLoop()

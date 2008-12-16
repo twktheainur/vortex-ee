@@ -34,7 +34,7 @@
             mKeyboard->capture();
 
         mAnimationState->addTime(evt.timeSinceLastFrame);
-        mCamNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL); // on met le node � jour � partir du vecteur calcul�
+        //mCamNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL); // on met le node � jour � partir du vecteur calcul�
         mPlayerNode->yaw(mAngle,Node::TS_WORLD);
 
         //Ici on doit swapper les coordonees pour qu'elle soient les memes entre player et camera
@@ -57,8 +57,9 @@
     {
     	  if(mMouse->getMouseState().buttonDown(OIS::MB_Right))
     	  {
-          mCamNode->yaw(Degree(-0.08*mRotate * e.state.X.rel), Node::TS_WORLD);
-          mCamNode->pitch(Degree(-0.08*mRotate * e.state.Y.rel), Node::TS_LOCAL);
+           // mCamNode->yaw(Degree(-0.08*mRotate * e.state.X.rel), Node::TS_WORLD);
+            mCamNode->pitch(Degree(-0.08*mRotate * e.state.Y.rel), Node::TS_LOCAL);
+            mPlayerNode->yaw(Degree(-0.08*mRotate * e.state.X.rel), Node::TS_WORLD);
     	  }
     	  //else
           //mPlayerNode->yaw(Degree(-3*mRotate*e.state.X.rel),Node::TS_WORLD);
@@ -96,6 +97,7 @@
             case OIS::KC_UP:
             case OIS::KC_W:
                 mDirection.y = mMove; // on avance
+                mAnimationState->setEnabled(false);
                 mAnimationState = mPlayer->getAnimationState("marcheAvant");
                 mAnimationState->setLoop(true);
                 mAnimationState->setEnabled(true);
@@ -103,7 +105,8 @@
 
             case OIS::KC_DOWN:
             case OIS::KC_S:
-                mDirection.y = -mMove; // on recule
+                mDirection.y = -mMove/1.5; // on recule
+                mAnimationState->setEnabled(false);
                 mAnimationState = mPlayer->getAnimationState("marcheArriere");
                 mAnimationState->setLoop(true);
                 mAnimationState->setEnabled(true);
@@ -111,20 +114,22 @@
 
             case OIS::KC_LEFT:
             case OIS::KC_A:
-                //mDirection.x = -mMove; // on va � gauche
-            	    mAngle = mRotate;
-                //mAnimationState = mPlayer->getAnimationState("marcheDroite");
-                //mAnimationState->setLoop(true);
-                //mAnimationState->setEnabled(true);
+                mDirection.x = -mMove/1.5; // on va � gauche
+                // mAngle = mRotate;
+                mAnimationState->setEnabled(false);
+                mAnimationState = mPlayer->getAnimationState("marcheGauche");
+                mAnimationState->setLoop(true);
+                mAnimationState->setEnabled(true);
                 break;
 
             case OIS::KC_RIGHT:
             case OIS::KC_D:
-                //mDirection.x = mMove; // on va � droite
-            	  mAngle = -mRotate;
-                //mAnimationState = mPlayer->getAnimationState("marcheGauche");
-                //mAnimationState->setLoop(true);
-                //mAnimationState->setEnabled(true);
+                mDirection.x = mMove/1.5; // on va � droite
+            	// mAngle = -mRotate;
+                mAnimationState->setEnabled(false);
+                mAnimationState = mPlayer->getAnimationState("marcheDroite");
+                mAnimationState->setLoop(true);
+                mAnimationState->setEnabled(true);
                 break;
             default:
                 break;
@@ -154,14 +159,14 @@
        case OIS::KC_A:
            mDirection.x = 0;
            mAngle=0;
-           //mAnimationState->setEnabled(false);
+           mAnimationState->setEnabled(false);
            break;
 
        case OIS::KC_RIGHT:
        case OIS::KC_D:
            mDirection.x = 0;
            mAngle=0;
-           //mAnimationState->setEnabled(false);
+           mAnimationState->setEnabled(false);
            break;
 
        default:

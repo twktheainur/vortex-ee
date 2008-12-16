@@ -1,3 +1,4 @@
+
 #ifndef VORTEXFRAMELISTENER_H_INCLUDED
 #define VORTEXFRAMELISTENER_H_INCLUDED
 
@@ -31,12 +32,13 @@ protected:
     Real mMove;            // constante de mouvement
 
 
-    SceneManager *mSceneMgr;   // le scne manager courant
-    SceneNode *mCamNode;   // le scenenode auquel notre camera et notre modle sont attachs
+    SceneManager *mSceneMgr;   // le scene manager courant
+    SceneNode *mCamNode;   // le node auquel notre camera est attachee
 
-    SceneNode *mPlayerNode;
+    SceneNode *mPlayerNode; // le node auquel le modele est attache
     Entity *mPlayer;
     AnimationState *mAnimationState;
+    AnimationState *mAnimationStateSave;
 
     bool mContinue;        // boolen dfinissant si on continue le rendu
     Vector3 mDirection;     // vecteur dfinissant le dplacement calcul
