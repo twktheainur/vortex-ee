@@ -79,22 +79,30 @@ void TCPClient::protocolLoop()
 {
 	vector<unsigned char> toto;
 	toto.reserve(3);
-  //while(1)
-  //{
+	string test;
+	test.resize(150);
+	test="The dice has been cast now, the world will be changed forever!";
+	BinBitSet set;
+  set.pushBit(0);
+	set.pushBit(1);
+	set.pushBit(0);
+	set.pushBits<short>(345);
 
-  	//while(1)
-  	//{
-  		try
-  		{
-  	  	//socket->poll_read();
-  		  //recv(&toto,3,0);
-  		}
-  		catch(...)
-  		{}
+ while(1)
+  {
+    //try
+    //{
 
-  	BinBitSet set;
-  	long test1 = set.popBitsL(3);
-  	short test = set.popBits<short>();
-  	cout << test1 << endl << test << endl;
-  //}
+  		//send(test);
+  		usleep(1000000);
+  		cout << test <<endl;
+    //}
+  	//catch(...)
+  	//{}
+  }
+
+
+  	//long test1 = set.popBitsL(3);
+  	//short test = set.popBits<short>();
+  	//cout << test1 << endl << test << endl;
 }

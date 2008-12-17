@@ -110,10 +110,36 @@
       camNode->attachObject(mCamera); // on attache la camera au noeud
 
 
+        Light * light1 = mSceneMgr->createLight("L1");
+        light1->setType(Light::LT_POINT);
+        light1->setPosition(Vector3(-728,-88,188));
+        light1->setDiffuseColour(0.5,0.4,0.4);
+        light1->setSpecularColour(0.5,0.4,0.4);
 
-      Light * light = mSceneMgr->createLight("L1");
-      light->setType(Light::LT_POINT);
-      light->setPosition(Vector3(-600,160,200));
+        Light * light2 = mSceneMgr->createLight("L2");
+        light2->setType(Light::LT_POINT);
+        light2->setPosition(Vector3(-88,324,200));
+        light2->setDiffuseColour(0.5,0.4,0.4);
+        light2->setSpecularColour(0.5,0.4,0.4);
+
+        Light * light3 = mSceneMgr->createLight("L3");
+        light3->setType(Light::LT_POINT);
+        light3->setPosition(Vector3(-192,-204,196));
+        light3->setDiffuseColour(0.5,0.4,0.4);
+        light3->setSpecularColour(0.5,0.4,0.4);
+
+        Light * light4 = mSceneMgr->createLight("L4");
+        light4->setType(Light::LT_POINT);
+        light4->setPosition(Vector3(768,152,108));
+        light4->setDiffuseColour(2, 1, 1);
+        light4->setSpecularColour(2, 1, 1);
+
+        Light * light5 = mSceneMgr->createLight("L5");
+        light5->setType(Light::LT_POINT);
+        light5->setPosition(Vector3(776,-204,396));
+        light5->setDiffuseColour(0.5,0.3,0.3);
+        light5->setSpecularColour(0.5,0.3,0.3);
+
 
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
       mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map

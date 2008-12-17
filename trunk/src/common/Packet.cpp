@@ -13,10 +13,6 @@ under the License.*/
 Packet::Packet()
 {
 
-
+//TODO USELESS!
 }
 
-Packet::~Packet()
-{
-
-}
