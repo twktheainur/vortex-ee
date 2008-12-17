@@ -1,4 +1,3 @@
-
 #ifndef VORTEXFRAMELISTENER_H_INCLUDED
 #define VORTEXFRAMELISTENER_H_INCLUDED
 
@@ -38,7 +37,6 @@ protected:
     SceneNode *mPlayerNode; // le node auquel le modele est attache
     Entity *mPlayer;
     AnimationState *mAnimationState;
-    AnimationState *mAnimationStateSave;
 
     bool mContinue;        // boolen dfinissant si on continue le rendu
     Vector3 mDirection;     // vecteur dfinissant le dplacement calcul

@@ -143,13 +143,15 @@ int Socket::recv(void * buffer, size_t length, int flags)
   return recv_ret;
 }
 /*----------------------------------------------------------------------------*/
-void Socket::poll_read()
+int Socket::poll_read()
 {
+	int ret;
   fd_set fds;
   FD_ZERO(&fds);
   FD_SET(sockFD,&fds);
-  if(select((sizeof(fds)*8),&fds,NULL,NULL,NULL)==-1)
+  if(ret=(select(sockFD+1,&fds,NULL,NULL,NULL))==-1)
     throw new ExSocket(E_POLL_FAIL);
+  return ret;
 }
 /*----------------------------------------------------------------------------*/
 /*---------------------------Stream Operators Definition----------------------*/

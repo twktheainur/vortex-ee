@@ -19,34 +19,13 @@ class Packet
 {
 public:
   Packet();
-  virtual ~Packet();
 
-
-  virtual size_t getPacketSize()=0;
+  inline size_t getPacketSize()
+  {
+  	return getHeaderSize() + getDataSize();
+  }
   virtual size_t getHeaderSize()=0;
-  virtual size_t getTailSize()=0;
   virtual size_t getDataSize()=0;
-
-  virtual void make_header()=0;
-  inline vector<unsigned char>
-  getHeader()
-  {
-  	return container.getSubBinBitSet(0,getHeaderSize());
-  }
-
-  void pack();
-  inline vector<unsigned char>
-  unpack()
-  {
-  	return container.getSubBinBitSet(getHeaderSize(),getDataSize());
-  }
-
-  virtual void make_tail()=0;
-  inline vector<unsigned char>
-  getTail()
-  {
-  	return container.getSubBinBitSet(getHeaderSize()+getDataSize(),getTailSize());
-  }
 
 private:
   BinBitSet container;

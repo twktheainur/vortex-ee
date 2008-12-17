@@ -74,7 +74,7 @@ class Socket
     virtual ~Socket();
     virtual int send(const void * buffer, size_t * length, int flags);
     virtual int recv(void * buffer, size_t length, int flags);
-    void poll_read();
+    int poll_read();
     int bind(struct addrinfo * addr);
     void socket(struct addrinfo * addr);
     void setSockOpt(int level, int optname, void * optval, size_t size);
