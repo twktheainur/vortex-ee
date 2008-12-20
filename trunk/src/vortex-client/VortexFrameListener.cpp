@@ -1,8 +1,15 @@
 #include "VortexFrameListener.h"
 
     VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Entity * player, SceneManager *sceneMgr)
-        : ExampleFrameListener(win, cam, true, true)
     {
+      mInputManager = InputManager::getSingletonPtr();
+      mInputManager->initialise( win );
+      mInputManager->addKeyListener( this, "VortexFrameListener" );
+      mInputManager->addMouseListener( this, "VortexFrameListener" );
+      mMouse = mInputManager->getMouse();
+      mKeyboard = mInputManager->getKeyboard();
+
+        
         // Populate the camera and scene manager containers
         mCamNode = cam->getParentSceneNode();
         mPlayer = player;
@@ -19,8 +26,6 @@
         // bool�en d�finissant si on continue ou non le rendu des images
         mContinue = true;
 
-        mMouse->setEventCallback(this);
-        mKeyboard->setEventCallback(this);
 
         mDirection = Vector3::ZERO;
     }
@@ -28,11 +33,7 @@
     bool VortexFrameListener::frameStarted(const FrameEvent &evt)
     {
         // d'abord on capture les actions effectu�es � la souris et au clavier
-        if(mMouse)
-            mMouse->capture();
-        if(mKeyboard)
-            mKeyboard->capture();
-
+        mInputManager->capture();
         mAnimationState->addTime(evt.timeSinceLastFrame);
         //mCamNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL); // on met le node � jour � partir du vecteur calcul�
         mPlayerNode->yaw(mAngle,Node::TS_WORLD);

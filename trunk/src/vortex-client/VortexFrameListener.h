@@ -1,11 +1,14 @@
 #ifndef VORTEXFRAMELISTENER_H_INCLUDED
 #define VORTEXFRAMELISTENER_H_INCLUDED
 
-#include "ExampleFrameListener.h"
 #include <unistd.h>
+#include <Ogre.h>
+#include "InputManager.h"
+
+
 using namespace Ogre;
 
-class VortexFrameListener : public ExampleFrameListener, public OIS::MouseListener, public OIS::KeyListener
+class VortexFrameListener : public FrameListener, public OIS::MouseListener, public OIS::KeyListener
 {
 public:
     VortexFrameListener(RenderWindow* win, Camera* cam,Entity * player, SceneManager *sceneMgr);
@@ -27,6 +30,11 @@ public:
     bool keyReleased(const OIS::KeyEvent &e);
 
 protected:
+    
+    InputManager * mInputManager;
+    OIS::Mouse*    mMouse;
+    OIS::Keyboard* mKeyboard;
+    
     Degree mRotate;          // constante de rotation
     Real mMove;            // constante de mouvement
 

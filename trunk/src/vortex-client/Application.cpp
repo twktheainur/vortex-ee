@@ -168,8 +168,6 @@
       mListener = new VortexFrameListener(win, mCamera,mPlayer, mSceneMgr);
       mRoot->addFrameListener(mListener);
 
-      // On ne montre pas les frames de stats
-      mListener->showDebugOverlay(false);
     }
 
     void Application::startRenderLoop()
