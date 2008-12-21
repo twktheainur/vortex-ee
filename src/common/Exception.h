@@ -10,17 +10,20 @@ under the License.*/
 #ifndef EXCEPTION_H_
 #define EXCEPTION_H_
 #include <string>
-class Exception
+namespace vortex
 {
-public:
-  Exception(int exception){id = exception;}
-  const char * what() const throw(){return error.data();}
-  ~Exception() throw (){};
-  inline std::string getError(){return error;}
-  inline void setError(std::string err){error=err;}
-private:
-    std::string error;
-    int id;
-};
+  class Exception
+  {
+  public:
+    Exception(int exception){id = exception;}
+    const char * what() const throw(){return error.data();}
+    ~Exception() throw (){};
+    inline std::string getError(){return error;}
+    inline void setError(std::string err){error=err;}
+  private:
+      std::string error;
+      int id;
+  };
+}
 
 #endif /*EXCEPTION_H_*/

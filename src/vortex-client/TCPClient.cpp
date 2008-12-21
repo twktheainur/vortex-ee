@@ -8,7 +8,7 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 #include "TCPClient.h"
-#include "../common/BinBitSet.h"
+
 TCPClient::TCPClient(string host,string service)
 {
   struct addrinfo * p;
@@ -77,32 +77,5 @@ void TCPClient::send(string & data)
 
 void TCPClient::protocolLoop()
 {
-	vector<unsigned char> toto;
-	toto.reserve(3);
-	string test;
-	test.resize(150);
-	test="The dice has been cast now, the world will be changed forever!";
-	BinBitSet set;
-  set.pushBit(0);
-	set.pushBit(1);
-	set.pushBit(0);
-	set.pushBits<short>(345);
-
- while(1)
-  {
-    //try
-    //{
-
-  		//send(test);
-  		usleep(1000000);
-  		cout << test <<endl;
-    //}
-  	//catch(...)
-  	//{}
-  }
-
-
-  	//long test1 = set.popBitsL(3);
-  	//short test = set.popBits<short>();
-  	//cout << test1 << endl << test << endl;
+  
 }

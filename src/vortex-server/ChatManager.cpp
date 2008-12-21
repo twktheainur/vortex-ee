@@ -15,7 +15,7 @@ ChatManager::ChatManager(Event * event)
 void ChatManager::execute(void * arg)
 {
   ChatManager * pthis = (ChatManager *)arg;
-  event_t event;
+  event_data_t event;
   while(1)
   {
   	event = pthis->main_event->getEvent();

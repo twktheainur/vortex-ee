@@ -11,9 +11,9 @@ if(WIN32)
   set(SOCKET_INCLUDE C:/mingw/include)
 endif(WIN32)
 
-set(CMAKE_CXXFLAGS -Wall -Werror -pedantic -fmessage-length=0 -Wno-deprecated)
-set(CMAKE_CXXFLAGS_DEBUG -O0 -g3 -c)
-set(CMAKE_CXXFLAGS_RELEASE -02)
+set(CMAKE_CXX_FLAGS "-Wall  -fmessage-length=0 -Wno-deprecated")
+set(CMAKE_CXX_FLAGS_DEBUG -O0 -g3 -c)
+set(CMAKE_CXX_FLAGS_RELEASE -02)
 link_libraries(pthread ${OGRE_LIBRARIES} ${OIS_LIBRARIES} ${PTHREADS_LIBRARY} ${SOCKET_LIBRARY})
 
 add_subdirectory(src)

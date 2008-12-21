@@ -20,7 +20,7 @@ void ConnectionManager::execute(void * arg)
 	  pthis->serv->setServer(new TCPServer(5,"8080",pthis));
     pthis->serv->getServer()->startListener();
 	}
-	catch(Exception * e)
+	catch(vortex::Exception * e)
 	{
 		printf("%s\n",e->what());
 		delete e;

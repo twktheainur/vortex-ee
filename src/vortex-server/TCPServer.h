@@ -38,11 +38,11 @@ private:
 };
 
 
-class ExTCPServer : public Exception
+class ExTCPServer : public vortex::Exception
 {
     public:
     ExTCPServer(int exception,string param="")
-    :Exception(exception)
+    :vortex::Exception(exception)
     {
       switch(exception)
       {

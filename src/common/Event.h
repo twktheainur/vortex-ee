@@ -25,22 +25,37 @@ under the License.*/
 #include "Mutex.h"
 #include "Semaphore.h"
 using namespace std;
-typedef enum
+typedef struct world_event
 {
-  EV_NONE,
-  EV_UPD,
-  EV_ADD,
-  EV_DEL,
-  EV_INC_CHAT,
-  EV_OUT_CHAT,
-  EV_OTHER
-}event_type_t;
+  static const char update = 3;
+  static const char add=4;
+  static const char del=5;
+}world_event_t;
+
+typedef struct chat_event
+{
+  static const char incoming=6;
+  static const char outgoing=7;
+}chat_event_t;
+
+typedef struct connect_event
+{
+  static const char login=0;
+  static const char logout=1;
+}connect_event_t;
 
 typedef struct event
 {
-  event_type_t type;
-  string data;
+  world_event_t world;
+  chat_event_t chat;
+  connect_event_t connect;
 }event_t;
+
+typedef struct event_data
+{
+  int type;
+  string data;
+}event_data_t;
 class Event
 {
   private:
@@ -48,12 +63,13 @@ class Event
   	//Cond cond;
   	Semaphore semaphore;
   	int listeners;
-    queue<event_t> events;
+    queue<event_data_t> events;
     void wait();
   public:
     Event();
-    void sendEvent(event_type_t evt,string &data);
-    event_t getEvent();
+    void sendEvent(int evt,string &data);
+    event_data_t getEvent();
+    static event_t event;
 };
 
 #endif /* EVENT_H_ */
