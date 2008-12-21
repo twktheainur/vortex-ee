@@ -45,16 +45,20 @@ Socket::~Socket()
  {
     int gair;
     struct addrinfo hints;
-    char err[40];
+    //char err[40];
     const char * passed_host=host.data();
     memset(&hints, 0, sizeof hints);
     hints.ai_family = family;
     hints.ai_socktype = type;
+    this->service = service;
     if(host=="")
     {
+      this->host="localhost";
       hints.ai_flags=AI_PASSIVE;
       passed_host=NULL;
     }
+    else
+      this->host=host;
     if((gair = getaddrinfo(passed_host,service.data(),&hints,&info)))
     {
       printf("Socket.cpp:49 -- THROWING E_GETADDRINFO_FAIL\n");
@@ -149,7 +153,7 @@ int Socket::poll_read()
   fd_set fds;
   FD_ZERO(&fds);
   FD_SET(sockFD,&fds);
-  if(ret=(select(sockFD+1,&fds,NULL,NULL,NULL))==-1)
+  if((ret=(select(sockFD+1,&fds,NULL,NULL,NULL)))==-1)
     throw new ExSocket(E_POLL_FAIL);
   return ret;
 }
