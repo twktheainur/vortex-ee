@@ -76,6 +76,7 @@
     		                mAnimationState->setLoop(true);
     		                mAnimationState->setEnabled(true);
     	}
+      return true;
     }
     bool VortexFrameListener::mouseReleased(const OIS::MouseEvent &e, OIS::MouseButtonID id)
     {
@@ -85,6 +86,7 @@
         mDirection.y = 0;
         mAnimationState->setEnabled(false);
 			}
+      return true;
     }
 
     // KeyListener

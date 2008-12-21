@@ -15,7 +15,7 @@ EventManager::EventManager(Event * event)
 void EventManager::execute(void * arg)
 {
   EventManager * pthis = (EventManager *)arg;
-  event_t event;
+  event_data_t event;
   while(1)
   {
   	event = pthis->event->getEvent();

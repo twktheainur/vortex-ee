@@ -27,11 +27,11 @@ public:
 	~Cond();
 };
 
-class ExCond : Exception
+class ExCond : vortex::Exception
 {
 public:
   ExCond(int exception, std::string param="")
-  :Exception(exception)
+  :vortex::Exception(exception)
   {
     switch(exception)
     {

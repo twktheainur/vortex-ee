@@ -32,11 +32,11 @@ public:
 	~Mutex();
 };
 
-class ExMutex : Exception
+class ExMutex : vortex::Exception
 {
 public:
   ExMutex(int exception, std::string param="")
-  :Exception(exception)
+  :vortex::Exception(exception)
   {
     switch(exception)
     {

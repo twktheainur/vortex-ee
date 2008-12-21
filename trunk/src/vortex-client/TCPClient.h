@@ -12,6 +12,7 @@ under the License.*/
 
 #include "../common/TCPSocket.h"
 #include "../common/Exception.h"
+//#include "../common/bitBuffer.h" 
 enum TCPServerException
 {
   E_SOCKET_ERROR,
@@ -33,11 +34,11 @@ private:
   TCPSocket * socket;
 };
 
-class ExTCPClient : public Exception
+class ExTCPClient : public vortex::Exception
 {
     public:
     ExTCPClient(int exception,string param="")
-    :Exception(exception)
+    :vortex::Exception(exception)
     {
       switch(exception)
       {

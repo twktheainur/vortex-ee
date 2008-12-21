@@ -1,5 +1,5 @@
-#ifndef SERVER_H_
-#define SERVER_H_
+#ifndef CLIENT_H_
+#define CLIENT_H_
 extern "C"
 {
   #include <pthread.h>

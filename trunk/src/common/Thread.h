@@ -35,11 +35,11 @@ public:
 	int start(void * arg);
 };
 
-class ExThread : Exception
+class ExThread : vortex::Exception
 {
 public:
   ExThread(int exception, std::string param="")
-  :Exception(exception)
+  :vortex::Exception(exception)
   {
     switch(exception)
     {

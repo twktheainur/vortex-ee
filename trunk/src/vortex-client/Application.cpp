@@ -142,6 +142,7 @@
 
 
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
+      vp=NULL;
       mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
       mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
     }

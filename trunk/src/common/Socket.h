@@ -99,11 +99,11 @@ private:
   struct addrinfo * info;
 };
 
-class ExSocket : public Exception
+class ExSocket : public vortex::Exception
 {
   public:
     ExSocket(int exception,string param="")
-    :Exception(exception)
+    :vortex::Exception(exception)
     {
       switch(exception)
       {

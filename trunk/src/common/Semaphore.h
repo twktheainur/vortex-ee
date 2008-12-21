@@ -25,11 +25,11 @@ enum SemaphoreException
   E_WAIT_FAIL,
   E_DESTROY_FAIL
 };
-class ExSemaphore : Exception
+class ExSemaphore : vortex::Exception
 {
 public:
   ExSemaphore(int exception, std::string param="")
-  :Exception(exception)
+  :vortex::Exception(exception)
   {
     switch(exception)
     {

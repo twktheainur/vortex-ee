@@ -23,7 +23,7 @@ TCPServer::TCPServer(int maxClients,string service,ConnectionManager * mgr)
       int yes=1;
       socket->socket(p);
       socket->setSockOpt(SOL_SOCKET,SO_REUSEADDR,&yes,sizeof yes);
-      socket->setSockOpt(IPPROTO_TCP,TCP_NODELAY ,&yes,sizeof yes);
+      //socket->setSockOpt(IPPROTO_TCP,TCP_NODELAY ,&yes,sizeof yes);
       socket->bind(p);
       break;
     }

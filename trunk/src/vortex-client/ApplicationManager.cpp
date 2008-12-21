@@ -18,6 +18,8 @@ void ApplicationManager::execute(void * arg)
 	try{
 			  pthis->application = new Application();
 			  pthis->application->go();
+    while(1)
+      usleep(1000000);
 			}
 
 		catch(Ogre::Exception& e)

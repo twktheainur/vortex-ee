@@ -32,15 +32,15 @@ void Event::wait()
   {
      semaphore.wait();
   }
-  catch(Exception * e)
+  catch(vortex::Exception * e)
   {
     throw;
   }
 }
 
-void Event::sendEvent(event_type_t evt, string & data)
+void Event::sendEvent(int evt, string & data)
 {
-  event_t event	;
+  event_data_t event	;
   event.data=data;
   event.type=evt;
   mutex.lock();
@@ -50,9 +50,9 @@ void Event::sendEvent(event_type_t evt, string & data)
   mutex.unlock();
 }
 
-event_t Event::getEvent()
+event_data_t Event::getEvent()
 {
-  event_t event;
+  event_data_t event;
   mutex.lock();
   listeners++;
   if(events.empty())
