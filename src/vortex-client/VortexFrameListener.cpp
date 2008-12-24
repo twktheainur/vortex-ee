@@ -9,7 +9,7 @@
       mMouse = mInputManager->getMouse();
       mKeyboard = mInputManager->getKeyboard();
 
-        
+
         // Populate the camera and scene manager containers
         mCamNode = cam->getParentSceneNode();
         mPlayer = player;
@@ -26,8 +26,9 @@
         // bool�en d�finissant si on continue ou non le rendu des images
         mContinue = true;
 
-
         mDirection = Vector3::ZERO;
+
+        changement = false; // on initialise le booleen de changement
     }
 
     bool VortexFrameListener::frameStarted(const FrameEvent &evt)
@@ -35,10 +36,10 @@
         // d'abord on capture les actions effectu�es � la souris et au clavier
         mInputManager->capture();
         mAnimationState->addTime(evt.timeSinceLastFrame);
-        //mCamNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL); // on met le node � jour � partir du vecteur calcul�
+
         mPlayerNode->yaw(mAngle,Node::TS_WORLD);
 
-        //Ici on doit swapper les coordonees pour qu'elle soient les memes entre player et camera
+        //Ici on doit swapper les coordonnees pour qu'elle soient les memes entre player et camera
         int y = mDirection.y;
         int x = mDirection.x;
         mDirection.y = 0;
@@ -49,6 +50,14 @@
         mDirection.x = x;
         mDirection.z = 0;
 
+        if (changement) // si un déplacement a eu lieu pendant l'image précédente
+        {
+            // Event::event.ogre.update
+            changement = false; // on réinitialise changement
+        }
+
+
+        // ici on doit aussi vérifier si il y a des mise à jour du world
 
         return mContinue;
     }
@@ -58,12 +67,10 @@
     {
     	  if(mMouse->getMouseState().buttonDown(OIS::MB_Right))
     	  {
-           // mCamNode->yaw(Degree(-0.08*mRotate * e.state.X.rel), Node::TS_WORLD);
             mCamNode->pitch(Degree(-0.08*mRotate * e.state.Y.rel), Node::TS_LOCAL);
             mPlayerNode->yaw(Degree(-0.08*mRotate * e.state.X.rel), Node::TS_WORLD);
+            changement = true;
     	  }
-    	  //else
-          //mPlayerNode->yaw(Degree(-3*mRotate*e.state.X.rel),Node::TS_WORLD);
         return true;
     }
 
@@ -104,6 +111,7 @@
                 mAnimationState = mPlayer->getAnimationState("marcheAvant");
                 mAnimationState->setLoop(true);
                 mAnimationState->setEnabled(true);
+                changement = true;
                 break;
 
             case OIS::KC_DOWN:
@@ -113,6 +121,7 @@
                 mAnimationState = mPlayer->getAnimationState("marcheArriere");
                 mAnimationState->setLoop(true);
                 mAnimationState->setEnabled(true);
+                changement = true;
                 break;
 
             case OIS::KC_LEFT:
@@ -123,6 +132,7 @@
                 mAnimationState = mPlayer->getAnimationState("marcheGauche");
                 mAnimationState->setLoop(true);
                 mAnimationState->setEnabled(true);
+                changement = true;
                 break;
 
             case OIS::KC_RIGHT:
@@ -133,6 +143,7 @@
                 mAnimationState = mPlayer->getAnimationState("marcheDroite");
                 mAnimationState->setLoop(true);
                 mAnimationState->setEnabled(true);
+                changement = true;
                 break;
             default:
                 break;

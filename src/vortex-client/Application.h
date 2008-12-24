@@ -58,6 +58,8 @@ private:
     SceneManager *mSceneMgr;
     RenderWindow *win;
 
+    void login();
+
     void createRoot();
 
     void defineResources();

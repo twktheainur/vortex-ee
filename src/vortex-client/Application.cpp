@@ -15,6 +15,7 @@
 
     void Application::go()
     {
+        login(); // on demande à l'utilisateur de se logger
         createRoot(); // on cr�� la racine
         defineResources(); // on d�finit les ressources utilis�es par Ogre
         setupRenderSystem();
@@ -25,6 +26,12 @@
         //setupCEGUI();
         createFrameListener(); // construction du FrameListener
         startRenderLoop(); // on commence la boucle de rendu
+    }
+
+    void Application::login()
+    {
+        // on fait entrer login + mdp
+        // on envoie le login event a l'event manager
     }
 
 
