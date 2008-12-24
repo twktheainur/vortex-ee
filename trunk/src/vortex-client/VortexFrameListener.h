@@ -30,11 +30,11 @@ public:
     bool keyReleased(const OIS::KeyEvent &e);
 
 protected:
-    
+
     InputManager * mInputManager;
     OIS::Mouse*    mMouse;
     OIS::Keyboard* mKeyboard;
-    
+
     Degree mRotate;          // constante de rotation
     Real mMove;            // constante de mouvement
 
@@ -46,9 +46,11 @@ protected:
     Entity *mPlayer;
     AnimationState *mAnimationState;
 
-    bool mContinue;        // boolen dfinissant si on continue le rendu
+    bool mContinue;        // booleen definissant si on continue le rendu
     Vector3 mDirection;     // vecteur dfinissant le dplacement calcul
     Degree mAngle;  // Agle definissant la rotation calculee
+
+    bool changement;  // booleen definissant si on a eu un mouvement pendant cette image
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED
