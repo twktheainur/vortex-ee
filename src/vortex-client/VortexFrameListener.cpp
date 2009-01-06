@@ -20,7 +20,7 @@
         mAnimationState->setLoop(true);
         mAnimationState->setEnabled(false);
 
-        mRotate = 10; // valeur � changer pour la sensibilit� de la souris
+        mRotate = 0.3; // valeur � changer pour la sensibilit� de la souris
         mMove = 100; // vitesse de d�placement
 
         // bool�en d�finissant si on continue ou non le rendu des images
@@ -67,8 +67,8 @@
     {
     	  if(mMouse->getMouseState().buttonDown(OIS::MB_Right))
     	  {
-            mCamNode->pitch(Degree(-0.08*mRotate * e.state.Y.rel), Node::TS_LOCAL);
-            mPlayerNode->yaw(Degree(-0.08*mRotate * e.state.X.rel), Node::TS_WORLD);
+            mCamNode->pitch(Degree(-mRotate * e.state.Y.rel), Node::TS_LOCAL);
+            mPlayerNode->yaw(Degree(-mRotate * e.state.X.rel), Node::TS_WORLD);
             changement = true;
     	  }
         return true;
