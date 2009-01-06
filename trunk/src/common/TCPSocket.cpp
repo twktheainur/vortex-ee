@@ -43,7 +43,7 @@ int inet_pton(int af, const char *src, void *dst)
         hints.ai_family = af;
         if (getaddrinfo(src, NULL, &hints, &res) != 0)
         {
-          dolog(LOG_ERR, "Couldn't resolve host %s\n", src);
+          //dolog(LOG_ERR, "Couldn't resolve host %s\n", src);
           return -1;
         }
         ressave = res;
