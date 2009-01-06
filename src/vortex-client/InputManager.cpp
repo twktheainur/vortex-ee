@@ -51,16 +51,22 @@ void InputManager::initialise( Ogre::RenderWindow *renderWindow ) {
 
         // If possible create a buffered keyboard
         // (note: if below line doesn't compile, try:  if (mInputSystem->getNumberOfDevices(OIS::OISKeyboard) > 0) {
-        //if( mInputSystem->numKeyboards() > 0 ) {
+        #ifdef WIN32//ce code compile avec ma version de OIS sous windows, l'autre pas ~Seb
+        if( mInputSystem->numKeyBoards() > 0 ) {
+        #else
         if (mInputSystem->getNumberOfDevices(OIS::OISKeyboard) > 0) {
+        #endif
             mKeyboard = static_cast<OIS::Keyboard*>( mInputSystem->createInputObject( OIS::OISKeyboard, true ) );
             mKeyboard->setEventCallback( this );
         }
 
         // If possible create a buffered mouse
         // (note: if below line doesn't compile, try:  if (mInputSystem->getNumberOfDevices(OIS::OISMouse) > 0) {
-        //if( mInputSystem->numMice() > 0 ) {
+        #ifdef WIN32
+        if( mInputSystem->numMice() > 0 ) {
+        #else
         if (mInputSystem->getNumberOfDevices(OIS::OISMouse) > 0) {
+        #endif
             mMouse = static_cast<OIS::Mouse*>( mInputSystem->createInputObject( OIS::OISMouse, true ) );
             mMouse->setEventCallback( this );
 

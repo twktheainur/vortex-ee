@@ -11,6 +11,7 @@ under the License.*/
 #define SOCKET_H
 
 #if defined(__WIN32__) || defined(_WIN32) || defined(WIN32)
+  #define _WIN32_WINNT 0x501//pour indiquer qu'on a windows >= XP
   #include <ws2tcpip.h>
   #include <winsock2.h>
 #else

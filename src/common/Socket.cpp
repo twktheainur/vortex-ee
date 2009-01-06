@@ -70,7 +70,11 @@ Socket::~Socket()
 /*----------------------------------------------------------------------------*/
  void Socket::free()
  {
+   #ifdef WIN32
+   if(closesocket(sockFD)==-1 && errno!=EBADF)
+   #else
 	 if(close(sockFD)==-1 && errno!=EBADF)
+	 #endif
 	   {
 	     printf("Socket.cpp:70 -- THROWING E_CLOSE_FAIL\n");
 	     throw new ExSocket(E_CLOSE_FAIL);
@@ -106,7 +110,11 @@ void Socket::socket(struct addrinfo * addr)
 /*----------------------------------------------------------------------------*/
 void Socket::setSockOpt(int level, int optname, void * optval, size_t size)
 {
+  #ifdef WIN32
+  if(setsockopt(sockFD,level,optname,(const char *)optval,size)==-1)
+  #else
   if(setsockopt(sockFD,level,optname,optval,size)==-1)
+  #endif
   {
     printf("Socket.cpp:86 -- THROWING E_SETSOCKOPT_FAIL\n");
     throw new ExSocket(E_SETSOCKOPT_FAIL);
@@ -139,7 +147,11 @@ int Socket::send(const void * buffer, size_t * length, int flags)
 int Socket::recv(void * buffer, size_t length, int flags)
 {
   int recv_ret;
+  #ifdef WIN32
+  if(!(recv_ret=::recv(sockFD,(char*)buffer,length,flags)))
+  #else
   if(!(recv_ret=::recv(sockFD,buffer,length,flags)))
+  #endif
   {
     printf("Socket.cpp:26 -- THROWING E_RECV_FAIL\n");
     throw new ExSocket(E_RECV_FAIL);

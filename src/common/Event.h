@@ -56,6 +56,9 @@ typedef struct event_data
   int type;
   string data;
 }event_data_t;
+
+void usleep(time_t usec);
+
 class Event
 {
   private:

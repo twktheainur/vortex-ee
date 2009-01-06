@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="bin" />
+	<File name="..\common\Event.h" open="1" top="0" tabpos="25">
+		<Cursor position="539" topLine="0" />
+	</File>
+	<File name="..\common\Exception.h" open="1" top="0" tabpos="24">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="..\common\Socket.cpp" open="1" top="0" tabpos="22">
+		<Cursor position="5084" topLine="129" />
+	</File>
+	<File name="..\common\Socket.h" open="1" top="0" tabpos="23">
+		<Cursor position="609" topLine="0" />
+	</File>
+	<File name="..\common\TCPSocket.cpp" open="1" top="0" tabpos="26">
+		<Cursor position="1787" topLine="18" />
+	</File>
+	<File name="..\common\UDPSocket.cpp" open="1" top="0" tabpos="27">
+		<Cursor position="1351" topLine="12" />
+	</File>
+	<File name="Application.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Application.h" open="1" top="0" tabpos="4">
+		<Cursor position="63" topLine="0" />
+	</File>
+	<File name="ApplicationManager.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="413" topLine="0" />
+	</File>
+	<File name="ApplicationManager.h" open="1" top="0" tabpos="6">
+		<Cursor position="223" topLine="0" />
+	</File>
+	<File name="ChatManager.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="ChatManager.h" open="1" top="0" tabpos="15">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Client.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Client.h" open="1" top="0" tabpos="16">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="ConnectionManager.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="ConnectionManager.h" open="1" top="0" tabpos="17">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="EventManager.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="EventManager.h" open="1" top="0" tabpos="18">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="InputManager.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="1710" topLine="40" />
+	</File>
+	<File name="InputManager.h" open="1" top="0" tabpos="19">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="TCPClient.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="TCPClient.h" open="1" top="0" tabpos="20">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="VortexFrameListener.cpp" open="1" top="0" tabpos="14">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="VortexFrameListener.h" open="1" top="0" tabpos="21">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

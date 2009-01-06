@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="vortex-server" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="bin">
+				<Option output="..\..\bin\vortex-server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="..\..\obj\vortex-server" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add directory="..\pthread" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lws2_32" />
+					<Add library="..\..\lib\libpthreadGC2.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="..\common\BinBitSet.cpp" />
+		<Unit filename="..\common\BinBitSet.h" />
+		<Unit filename="..\common\Cond.cpp" />
+		<Unit filename="..\common\Cond.h" />
+		<Unit filename="..\common\Event.cpp" />
+		<Unit filename="..\common\Event.h" />
+		<Unit filename="..\common\Exception.h" />
+		<Unit filename="..\common\LoginPacket.h" />
+		<Unit filename="..\common\Mutex.cpp" />
+		<Unit filename="..\common\Mutex.h" />
+		<Unit filename="..\common\Packet.cpp" />
+		<Unit filename="..\common\Packet.h" />
+		<Unit filename="..\common\Semaphore.cpp" />
+		<Unit filename="..\common\Semaphore.h" />
+		<Unit filename="..\common\Socket.cpp" />
+		<Unit filename="..\common\Socket.h" />
+		<Unit filename="..\common\TCPSocket.cpp" />
+		<Unit filename="..\common\TCPSocket.h" />
+		<Unit filename="..\common\Thread.cpp" />
+		<Unit filename="..\common\Thread.h" />
+		<Unit filename="..\common\UDPSocket.cpp" />
+		<Unit filename="..\common\UDPSocket.h" />
+		<Unit filename="..\common\WorldManager.cpp" />
+		<Unit filename="..\common\WorldManager.h" />
+		<Unit filename="..\common\bitBuffer.h" />
+		<Unit filename="ChatManager.cpp" />
+		<Unit filename="ChatManager.h" />
+		<Unit filename="ClientManager.cpp" />
+		<Unit filename="ClientManager.h" />
+		<Unit filename="Comment.h" />
+		<Unit filename="ConnectionManager.cpp" />
+		<Unit filename="ConnectionManager.h" />
+		<Unit filename="DataBase.h" />
+		<Unit filename="Document.h" />
+		<Unit filename="EventManager.cpp" />
+		<Unit filename="EventManager.h" />
+		<Unit filename="Mark.h" />
+		<Unit filename="Server.cpp" />
+		<Unit filename="Server.h" />
+		<Unit filename="TCPServer.cpp" />
+		<Unit filename="TCPServer.h" />
+		<Unit filename="User.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

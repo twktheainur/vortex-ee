@@ -40,8 +40,13 @@ int UDPSocket::recv(void * buffer, size_t length, int flags )
   struct sockaddr_storage remote_addr;
    socklen_t sin_len = sizeof remote_addr;
 
+  #ifdef WIN32
+  if(!(recv_ret=::recvfrom(getSockFD(),(char *)buffer,length,flags,
+                           (struct sockaddr*)&remote_addr,&sin_len)))
+  #else
   if(!(recv_ret=::recvfrom(getSockFD(),(void *)buffer,length,flags,
                            (struct sockaddr*)&remote_addr,&sin_len)))
+  #endif
     throw new ExUDPSocket(E_RECVFROM_FAIL);
     setPeer((struct addrinfo *)&remote_addr);
   return recv_ret;

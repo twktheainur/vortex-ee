@@ -11,6 +11,7 @@
 #include "../common/Thread.h"
 #include "../common/Event.h"
 #include "Application.h"
+
 class ApplicationManager: public Thread
 {
 private:
