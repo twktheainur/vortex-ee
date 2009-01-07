@@ -38,7 +38,11 @@ void ConnectionManager::execute(void * arg)
     try
     {
   		socket->send(buff.set(),&size,0);
-  		usleep(5000000);
+  		#ifdef WIN32
+  		Sleep(5000);//millisecondes. Ca , n'a pas l'air de marcher
+  		#else
+  		usleep(5000000);//microsecondes
+  		#endif
   		cout << buff.length() <<endl;
     }
   	catch(Exception * e)

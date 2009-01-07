@@ -41,11 +41,12 @@ protected:
 
     SceneManager *mSceneMgr;   // le scene manager courant
     SceneNode *mCamNode;   // le node auquel notre camera est attachee
+    SceneNode *mCamRotNode; // le node autour duquel la caméra va tourner
 
     SceneNode *mPlayerNode; // le node auquel le modele est attache
     Entity *mPlayer;
     AnimationState *mAnimationState;
-
+    
     bool mContinue;        // booleen definissant si on continue le rendu
     Vector3 mDirection;     // vecteur dfinissant le dplacement calcul
     Degree mAngle;  // Agle definissant la rotation calculee
