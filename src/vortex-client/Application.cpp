@@ -107,12 +107,14 @@
       playerNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
       playerNode->attachObject(mPlayer); // on attache le modèle au noeud
 
+      SceneNode *camRotNode;
+      camRotNode=playerNode->createChildSceneNode("CamRotNode", Vector3(0,20,0)); //SceneNode autour duquel la caméra va tourner (légèrement plus haut que le playerNode)
+      //situé au même endroit que le playerNode, (la caméra tourne autour du player en apparence) mais peut subir un "pitch" (inclinaison verticale) sans modifier celle du playerNode
       SceneNode *camNode;
-      camNode = playerNode->createChildSceneNode("CamNode", Vector3(0,40,-73)); // on place la cam dans l'entree
-      camNode->pitch(Degree(200));
-      camNode->roll(Degree(180));
-      camNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
-      //mCamera->setAutoTracking(true, playerNode);
+      camNode = camRotNode->createChildSceneNode("CamNode", Vector3(0,0,-60)); // on place la camera derriere le joueur
+      camNode->setDirection(0,0,1);//pour que la camera regarde le joueur, pas la porte du fond...
+      camRotNode->pitch(Degree(20));//la caméra regarde légèrement par au-dessus
+      //camNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
 
       camNode->attachObject(mCamera); // on attache la camera au noeud
 

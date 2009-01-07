@@ -12,6 +12,7 @@
 
         // Populate the camera and scene manager containers
         mCamNode = cam->getParentSceneNode();
+        mCamRotNode = mCamNode->getParentSceneNode();
         mPlayer = player;
         mPlayerNode=player->getParentSceneNode();
         mSceneMgr = sceneMgr;
@@ -20,7 +21,7 @@
         mAnimationState->setLoop(true);
         mAnimationState->setEnabled(false);
 
-        mRotate = 0.3; // valeur � changer pour la sensibilit� de la souris
+        mRotate = 0.2; // valeur � changer pour la sensibilit� de la souris
         mMove = 100; // vitesse de d�placement
 
         // bool�en d�finissant si on continue ou non le rendu des images
@@ -67,8 +68,12 @@
     {
     	  if(mMouse->getMouseState().buttonDown(OIS::MB_Right))
     	  {
-            mCamNode->pitch(Degree(-mRotate * e.state.Y.rel), Node::TS_LOCAL);
-            mPlayerNode->yaw(Degree(-mRotate * e.state.X.rel), Node::TS_WORLD);
+    	    //on ne peut pas aller plus loin que 90 degré (camera a l'envers)
+    	    if(mCamRotNode->getOrientation().getPitch().valueDegrees() < 90 && e.state.Y.rel > 0 || mCamRotNode->getOrientation().getPitch().valueDegrees() > -90 && e.state.Y.rel<0)
+    	    {
+            mCamRotNode->pitch(Degree(mRotate * e.state.Y.rel), Node::TS_LOCAL);//on tourne le camRotNode, mais pas le joueur
+    	    }
+            mPlayerNode->yaw(Degree(-mRotate * e.state.X.rel), Node::TS_WORLD);//on tourne le joueur (et pas seulement le camRotNode)
             changement = true;
     	  }
         return true;
@@ -79,9 +84,13 @@
     	if(e.state.buttonDown(OIS::MB_Right) && e.state.buttonDown(OIS::MB_Left))
     	{
     		mDirection.y = mMove;
-    		mAnimationState = mPlayer->getAnimationState("marcheAvant");
-    		                mAnimationState->setLoop(true);
-    		                mAnimationState->setEnabled(true);
+    		if(mDirection.x==0)
+    		{
+    		  mAnimationState->setEnabled(false);
+    	  	mAnimationState = mPlayer->getAnimationState("marcheAvant");
+          mAnimationState->setLoop(true);
+    		  mAnimationState->setEnabled(true);
+    		}
     	}
       return true;
     }
@@ -91,7 +100,8 @@
       	 e.state.buttonDown(OIS::MB_Left))
 			{
         mDirection.y = 0;
-        mAnimationState->setEnabled(false);
+        if(mDirection.x==0)
+         mAnimationState->setEnabled(false);
 			}
       return true;
     }
@@ -107,27 +117,32 @@
             case OIS::KC_UP:
             case OIS::KC_W:
                 mDirection.y = mMove; // on avance
-                mAnimationState->setEnabled(false);
-                mAnimationState = mPlayer->getAnimationState("marcheAvant");
-                mAnimationState->setLoop(true);
-                mAnimationState->setEnabled(true);
+                if(mDirection.x==0)
+                {
+                  mAnimationState->setEnabled(false);
+                  mAnimationState = mPlayer->getAnimationState("marcheAvant");
+                  mAnimationState->setLoop(true);
+                  mAnimationState->setEnabled(true);
+                }
                 changement = true;
                 break;
 
             case OIS::KC_DOWN:
             case OIS::KC_S:
                 mDirection.y = -mMove/1.5; // on recule
-                mAnimationState->setEnabled(false);
-                mAnimationState = mPlayer->getAnimationState("marcheArriere");
-                mAnimationState->setLoop(true);
-                mAnimationState->setEnabled(true);
+                if(mDirection.x==0)
+                {
+                  mAnimationState->setEnabled(false);
+                  mAnimationState = mPlayer->getAnimationState("marcheArriere");
+                  mAnimationState->setLoop(true);
+                  mAnimationState->setEnabled(true);
+                }
                 changement = true;
                 break;
 
             case OIS::KC_LEFT:
             case OIS::KC_A:
                 mDirection.x = -mMove/1.5; // on va � gauche
-                // mAngle = mRotate;
                 mAnimationState->setEnabled(false);
                 mAnimationState = mPlayer->getAnimationState("marcheGauche");
                 mAnimationState->setLoop(true);
@@ -138,7 +153,6 @@
             case OIS::KC_RIGHT:
             case OIS::KC_D:
                 mDirection.x = mMove/1.5; // on va � droite
-            	// mAngle = -mRotate;
                 mAnimationState->setEnabled(false);
                 mAnimationState = mPlayer->getAnimationState("marcheDroite");
                 mAnimationState->setLoop(true);
@@ -160,20 +174,38 @@
        case OIS::KC_UP:
        case OIS::KC_W:
            mDirection.y = 0;
-           mAnimationState->setEnabled(false);
+           if(mDirection.x==0)
+           {
+             mAnimationState->setEnabled(false);
+           }
            break;
 
        case OIS::KC_DOWN:
        case OIS::KC_S:
            mDirection.y = 0;
-           mAnimationState->setEnabled(false);
+           if(mDirection.x==0)
+           {
+             mAnimationState->setEnabled(false);
+           }
            break;
 
        case OIS::KC_LEFT:
        case OIS::KC_A:
            mDirection.x = 0;
            mAngle=0;
-           mAnimationState->setEnabled(false);
+           mAnimationState->setEnabled(false);//on désactive l'anim en cours (dans tous les cas)
+           if(mDirection.y>0)
+           {
+             mAnimationState = mPlayer->getAnimationState("marcheAvant");
+             mAnimationState->setLoop(true);
+             mAnimationState->setEnabled(true);//on réactive l'anim dont on a besoin
+           }
+           else if(mDirection.y<0)
+           {
+             mAnimationState = mPlayer->getAnimationState("marcheArriere");
+             mAnimationState->setLoop(true);
+             mAnimationState->setEnabled(true);
+           }
            break;
 
        case OIS::KC_RIGHT:
@@ -181,6 +213,18 @@
            mDirection.x = 0;
            mAngle=0;
            mAnimationState->setEnabled(false);
+           if(mDirection.y>0)
+           {
+             mAnimationState = mPlayer->getAnimationState("marcheAvant");
+             mAnimationState->setLoop(true);
+             mAnimationState->setEnabled(true);//on réactive l'anim si besoin
+           }
+           else if(mDirection.y<0)
+           {
+             mAnimationState = mPlayer->getAnimationState("marcheArriere");
+             mAnimationState->setLoop(true);
+             mAnimationState->setEnabled(true);
+           }
            break;
 
        default:
