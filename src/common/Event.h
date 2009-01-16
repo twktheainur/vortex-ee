@@ -24,6 +24,7 @@ under the License.*/
 #include <unistd.h>
 #include "Mutex.h"
 #include "Semaphore.h"
+#include "bitBuffer.h"
 using namespace std;
 typedef struct world_event
 {
@@ -62,7 +63,7 @@ typedef struct event
 typedef struct event_data
 {
   int type;
-  string data;
+  bitBuffer data;
 }event_data_t;
 #if defined(WIN32)
 void usleep(time_t usec);
@@ -80,7 +81,7 @@ class Event
     void wait();
   public:
     Event();
-    void sendEvent(int evt,string &data);
+    void sendEvent(int evt,bitBuffer &data);
     event_data_t getEvent();
     static event_t event;
     static event_t net_event;

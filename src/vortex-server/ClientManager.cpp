@@ -48,7 +48,7 @@ void ClientManager::execute(void * arg)
 			cout << "Type:" << (int) buff.read<char>(true) << endl;
 			string str = buff.read<std::string > (true);
 			cout << "Str:" << str << endl;
-			eventManagerEvent.sendEvent(Event::event.connect.login, str);
+			eventManagerEvent.sendEvent(Event::event.connect.login, buff);
 
 		}
 	}

@@ -38,7 +38,7 @@ void Event::wait()
   }
 }
 
-void Event::sendEvent(int evt, string & data)
+void Event::sendEvent(int evt, bitBuffer & data)
 {
   event_data_t event	;
   event.data=data;

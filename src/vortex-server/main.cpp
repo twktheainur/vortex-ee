@@ -11,7 +11,7 @@ under the License.*/
 #include "Server.h"
 #include "../common/Event.h"
 #include "../common/Mutex.h"
-#include "../common/BinBitSet.h"
+//#include "../common/BinBitSet.h"
 #include "globals.h"
 #include <cstring>
 #include <cstdlib>
