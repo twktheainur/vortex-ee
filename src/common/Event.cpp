@@ -68,6 +68,6 @@ event_data_t Event::getEvent()
   }
   listeners--;
   mutex.unlock();
-  usleep(10);
+  usleep((time_t)10);
   return event;
 }

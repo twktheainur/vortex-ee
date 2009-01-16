@@ -9,12 +9,11 @@ License for the	 specific language governing rights and limitations
 under the License.*/
 #include "Server.h"
 #include <cstdlib>
-Server::Server(Event * event)
+Server::Server()
 {
-	eventManagerEvent = event;
   connectionManagerThread = new ConnectionManager(this);
-  eventManagerThread = new EventManager(event);
-  chatManagerThread = new ChatManager(event);
+  eventManagerThread = new EventManager();
+  chatManagerThread = new ChatManager();
 
   //struct timeval tval;
   //int i = 1;

@@ -69,7 +69,8 @@
     	  if(mMouse->getMouseState().buttonDown(OIS::MB_Right))
     	  {
     	    //on ne peut pas aller plus loin que 90 degré (camera a l'envers)
-    	    if(mCamRotNode->getOrientation().getPitch().valueDegrees() < 90 && e.state.Y.rel > 0 || mCamRotNode->getOrientation().getPitch().valueDegrees() > -90 && e.state.Y.rel<0)
+    	    if((mCamRotNode->getOrientation().getPitch().valueDegrees() < 90 && e.state.Y.rel > 0 )||
+            (mCamRotNode->getOrientation().getPitch().valueDegrees() > -90 && e.state.Y.rel<0))
     	    {
             mCamRotNode->pitch(Degree(mRotate * e.state.Y.rel), Node::TS_LOCAL);//on tourne le camRotNode, mais pas le joueur
     	    }

@@ -9,12 +9,17 @@
 #define WORLDMANAGER_H_
 
 #include "Thread.h"
+#include "Event.h"
+extern Event eventManagerEvent;
+extern Event worldManagerEvent;
 
-class WorldManager: public Thread
+class WorldManager : public Thread
 {
 public:
-	WorldManager();
-	virtual ~WorldManager();
+  WorldManager();
+  virtual ~WorldManager();
+private:
+  Event * event;
 };
 
 #endif /* WORLDMANAGER_H_ */

@@ -6,10 +6,12 @@
  */
 
 #include "WorldManager.h"
+extern Event eventManagerEvent;
+extern Event worldManagerEvent;
 
 WorldManager::WorldManager()
 {
-	// TODO Auto-generated constructor stub
+   event = &worldManagerEvent;
 
 }
 

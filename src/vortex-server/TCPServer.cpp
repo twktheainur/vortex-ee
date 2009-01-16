@@ -72,7 +72,7 @@ void TCPServer::startListener()
     }
     try
     {
-      mgr->addServerClient(new ClientManager(*new_socket,mgr->getServ()->getEventManagerEvent()));
+      mgr->addServerClient(new ClientManager(*new_socket));
       delete new_socket;
     }
     catch(exception * e)

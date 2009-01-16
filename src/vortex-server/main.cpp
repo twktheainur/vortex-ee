@@ -12,24 +12,22 @@ under the License.*/
 #include "../common/Event.h"
 #include "../common/Mutex.h"
 #include "../common/BinBitSet.h"
+#include "globals.h"
 #include <cstring>
 #include <cstdlib>
+
 extern "C"
 {
   #include <time.h>
 }
 
 //Global variables
-Event main_event;
-
+Event eventManagerEvent;
+Event chatManagerEvent;
+Event connectionManagerEvent;
+Event worldManagerEvent;
 int main(int argc, char **argv)
 {
-  Server server(&main_event);
-//	BinBitSet set;
-  //char a = 154;
-  //set.pushBits<unsigned char>(a);
-  //set.pushBitsS("100101");
-  //std::cout << "val:" << (int)set.popBits<unsigned char>() <<endl;
-
+  Server server();
   return EXIT_SUCCESS;
 }

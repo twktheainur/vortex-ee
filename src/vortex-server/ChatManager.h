@@ -15,7 +15,7 @@ class ChatManager: public Thread
 private:
  Event * main_event;
 public:
-	ChatManager(Event * event);
+	ChatManager();
 	void execute(void * arg);
 };
 

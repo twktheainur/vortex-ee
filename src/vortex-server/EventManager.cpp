@@ -6,10 +6,11 @@
  */
 
 #include "EventManager.h"
+#include "globals.h"
 
-EventManager::EventManager(Event * event)
+EventManager::EventManager()
 {
-	this->event=event;
+	this->event=&eventManagerEvent;
 	start((void *)this);
 }
 void EventManager::execute(void * arg)

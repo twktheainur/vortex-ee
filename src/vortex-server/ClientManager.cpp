@@ -10,52 +10,52 @@ under the License.*/
 
 #include "ClientManager.h"
 #include "../common/bitBuffer.h"
+#include "globals.h"
 
-ClientManager::ClientManager(TCPSocket sock,Event * event)
-             :Thread()
+ClientManager::ClientManager(TCPSocket sock)
+: Thread()
 {
-	main_event=event;
-	this->event = new Event();
+	//this->event = &clientManagerEvent;
 	socket = sock;
-  start((void*)(&sock));
+	start((void*) (&sock));
 }
 
 ClientManager::~ClientManager()
 {
-  delete event;
 }
 
-void  ClientManager::execute(void * arg)
+void ClientManager::execute(void * arg)
 {
-  TCPSocket local_socket = *((TCPSocket*)arg);
-//  BinBitSet set;
-//  string buffer;
-//  buffer.resize(150);
-//  buffer[149]='\0';
-  printf("Host:|%s| Port:|%s| Connected.\n",local_socket.getHost().data(),local_socket.getService().data());
-//  string html="<h1 style=\"color:red;\">Welcome on my TCPServer!</h1><p>Google is your friend!</p><a href='http://google.com'>Google!</a>";
-  char * buffer = new char[32];
-  size_t size =32;
-  bitBuffer buff;
+	TCPSocket local_socket = *((TCPSocket*) arg);
 
-  while(1)
-  {
-    cout << "POLL" << endl;
-    try
-    {
-      
-      local_socket.recv(buffer,size,0);
-      buff = bitBuffer(buffer,size);
-      cout <<"Type:"<<(int)buff.read<char>(true)<<endl;
-      string str=buff.read<std::string>(true);
-      cout << "Str:"<<str<<endl;
-      main_event->sendEvent(Event::event.connect.login,str);
-    }
-    catch(ExSocket * e)
-    {
-      printf("Client Thread(recv):%s\n",e->what());
-      delete e;
-    }
-  }
-  local_socket.free();
+	//  BinBitSet set;
+	//  string buffer;
+	//  buffer.resize(150);
+	//  buffer[149]='\0';
+	printf("Host:|%s| Port:|%s| Connected.\n", local_socket.getHost().data(), local_socket.getService().data());
+	//  string html="<h1 style=\"color:red;\">Welcome on my TCPServer!</h1><p>Google is your friend!</p><a href='http://google.com'>Google!</a>";
+	char * buffer = new char[32];
+	size_t size = 32;
+	bitBuffer buff;
+
+	try
+	{
+		while (1)
+		{
+			cout << "POLL" << endl;
+			local_socket.recv(buffer, size, 0);
+			buff = bitBuffer(buffer, size);
+			cout << "Type:" << (int) buff.read<char>(true) << endl;
+			string str = buff.read<std::string > (true);
+			cout << "Str:" << str << endl;
+			eventManagerEvent.sendEvent(Event::event.connect.login, str);
+
+		}
+	}
+	catch (ExSocket * e)
+	{
+		printf("Client Thread(recv):%s\n", e->what());
+		delete e;
+	}
+	local_socket.free();
 }
