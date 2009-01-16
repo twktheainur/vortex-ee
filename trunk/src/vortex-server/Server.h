@@ -32,8 +32,6 @@ private:
   WorldManager * worldManagerThread;
   ChatManager * chatManagerThread;
 	EventManager * eventManagerThread;
-	//Event interface, has to point to a global scope variable
-	Event * eventManagerEvent;
   //Clients will be registered in here by the TCPServer through the ConnectionManager
   vector<ClientManager *> clients;
   TCPServer * server;
@@ -41,9 +39,8 @@ public:
 	inline vector<ClientManager *>* getClients(){return &clients;}
 	inline void setServer(TCPServer * serv){server=serv;}
 	inline TCPServer * getServer(){return server;}
-	inline Event * getEventManagerEvent(){return eventManagerEvent;}
 	//Here event has to point to a global scope variable sharable by threads
-  Server(Event * event);
+  Server();
   ~Server();
 };
 

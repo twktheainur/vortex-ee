@@ -62,7 +62,7 @@ class bitBuffer
     //WRITE FUNCTIONS
 	template <class T> void write(T Value, bool Resize){
 		if(Resize) buffer.resize((bitIndex+(sizeof(T)*8)+7)/8);
-		for(char copyBits = 0; copyBits < sizeof(T)*8; ++copyBits){
+		for(char copyBits = 0; (unsigned)copyBits < sizeof(T)*8; ++copyBits){
 			buffer[(bitIndex+copyBits)/8] |= ((Value >> ((sizeof(T)*8-1)-copyBits)) & 0x1)<<(7-(bitIndex+copyBits)%8);
 		}
 		bitIndex += sizeof(T)*8;
@@ -82,7 +82,7 @@ class bitBuffer
 	//READ FUNCTIONS
 	template <class T> T read(bool Increment){
 		T Value = 0;
-		for(char copyBits = 0; copyBits < sizeof(T)*8; ++copyBits){
+		for(char copyBits = 0; (unsigned)copyBits < sizeof(T)*8; ++copyBits){
 			Value <<= 1;
 			Value |= (buffer[(bitIndex+copyBits)/8]>>(7-(bitIndex+copyBits)%8)) & 0x1; 
 		}

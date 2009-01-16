@@ -18,7 +18,7 @@ private:
   Event * event;
 public:
 	void execute(void * arg);
-	EventManager(Event * event);
+	EventManager();
 };
 
 #endif /* EVENTMANAGER_H_ */

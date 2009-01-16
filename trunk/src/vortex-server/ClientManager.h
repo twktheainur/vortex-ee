@@ -10,19 +10,20 @@ under the License.*/
 
 #ifndef CLIENTMANAGER_H_
 #define CLIENTMANAGER_H_
+#include "globals.h"
 #include "../common/Thread.h"
 #include "../common/Event.h"
 #include "../common/TCPSocket.h"
+
 class ClientManager : public Thread
 {
 private:
   Event * event;
-  Event * main_event;
   TCPSocket socket;
 
   void execute(void * arg);
 public:
-	ClientManager(TCPSocket sock,Event * event);
+	ClientManager(TCPSocket sock);
 	~ClientManager();
   inline Event * getEvent(){return event;}
 };
