@@ -20,7 +20,7 @@ void ChatManager::execute(void * arg)
   while(1)
   {
   	event = pthis->main_event->getEvent();
-  	if(event.data[0]=='1')
-  	  printf("Chat EVENT recv ChatManager\nTYPE:%d\nDATA:%s\n",event.type,event.data.data());
+//  	if(event.data[0]=='1')
+  	  printf("Chat EVENT recv ChatManager\nTYPE:%d\nDATA:%s\n",event.type/*,event.data.data()*/);
   }
 }

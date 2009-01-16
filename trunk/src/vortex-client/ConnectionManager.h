@@ -11,6 +11,7 @@
 #include "../common/Thread.h"
 #include "../common/Event.h"
 #include "Client.h"
+#include "globals.h"
 
 class Client;
 class ConnectionManager: public Thread
