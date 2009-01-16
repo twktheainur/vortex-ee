@@ -9,12 +9,12 @@ License for the	 specific language governing rights and limitations
 under the License.*/
 #include "Client.h"
 #include <cstdlib>
-Client::Client(Event * event)
+Client::Client()
 {
-	eventManagerEvent = event;
+	//eventManagerEvent = event;
   connectionManagerThread = new ConnectionManager(this);
-  eventManagerThread = new EventManager(event);
-  applicationManagerThread = new ApplicationManager(event);
+  eventManagerThread = new EventManager();
+  applicationManagerThread = new ApplicationManager();
   applicationManagerThread->join();
 }
 

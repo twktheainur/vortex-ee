@@ -126,7 +126,7 @@ int Socket::send(const void * buffer, size_t * length, int flags)
 {
   size_t total = 0;
   size_t bytesleft = *length;
-  int n;
+  int n=0;
   while(total<*length)
   {
      n=::send(sockFD,(char *)buffer+total,bytesleft,flags);

@@ -25,15 +25,14 @@ private:
 	EventManager * eventManagerThread;
   ApplicationManager * applicationManagerThread;
 	//Event interface, has to point to a global scope variable
-	Event * eventManagerEvent;
   //Clients will be registered in here by the TCPServer through the ConnectionManager
   TCPClient * client;
 public:
 	inline void setClient(TCPClient * cli){client=cli;}
 	inline TCPClient * getClient(){return client;}
-	inline Event * getEventManagerEvent(){return eventManagerEvent;}
+	//inline Event * getEventManagerEvent(){return eventManagerEvent;}
 	//Here event has to point to a global scope variable sharable by threads
-  Client(Event * event);
+  Client();
   ~Client();
 };
 #endif

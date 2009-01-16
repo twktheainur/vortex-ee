@@ -7,9 +7,8 @@
 
 #include "ApplicationManager.h"
 
-ApplicationManager::ApplicationManager(Event * event)
+ApplicationManager::ApplicationManager()
 {
-  main_event = event;
   start((void*)this);
 }
 void ApplicationManager::execute(void * arg)

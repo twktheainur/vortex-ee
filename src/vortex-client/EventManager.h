@@ -10,6 +10,7 @@
 
 #include "../common/Thread.h"
 #include "../common/Event.h"
+#include "globals.h"
 
 class EventManager: public Thread
 {
@@ -18,7 +19,7 @@ private:
   Event * event;
 public:
 	void execute(void * arg);
-	EventManager(Event * event);
+	EventManager();
 };
 
 #endif /* EVENTMANAGER_H_ */

@@ -7,9 +7,8 @@
 
 #include "EventManager.h"
 
-EventManager::EventManager(Event * event)
+EventManager::EventManager()
 {
-	this->event=event;
 	start((void *)this);
 }
 void EventManager::execute(void * arg)
@@ -18,8 +17,8 @@ void EventManager::execute(void * arg)
   event_data_t event;
   while(1)
   {
-  	event = pthis->event->getEvent();
-  	printf("EVENT recv EvenManager\nTYPE:%d\nDATA:%s\n",event.type,event.data.data());
+  	event = eventManagerEvent.getEvent();
+  	printf("EVENT recv EvenManager\nTYPE:%d\nDATA:%s\n",event.type/*,event.data.data()*/);
   }
 }
 

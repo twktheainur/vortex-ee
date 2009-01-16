@@ -11,14 +11,14 @@
 #include "../common/Thread.h"
 #include "../common/Event.h"
 #include "Application.h"
+#include "globals.h"
 
 class ApplicationManager: public Thread
 {
 private:
- Event * main_event;
  Application * application;
 public:
-	ApplicationManager(Event * event);
+	ApplicationManager();
 	void execute(void * arg);
 };
 
