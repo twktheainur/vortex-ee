@@ -18,8 +18,8 @@ void ChatManager::execute(void * arg)
   event_data_t event;
   while(1)
   {
-  	event = eventManagerEvent.getEvent();
-  	if(event.data[0]=='1')
-  	  printf("Chat EVENT recv ChatManager\nTYPE:%d\nDATA:%s\n",event.type,event.data.data());
+  	//event = eventManagerEvent.getEvent();
+  	//if(event.data[0]=='1')
+  	//  printf("Chat EVENT recv ChatManager\nTYPE:%d\nDATA:%s\n",event.type,event.data.data());
   }
 }

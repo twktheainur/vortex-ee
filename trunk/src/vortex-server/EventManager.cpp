@@ -20,7 +20,7 @@ void EventManager::execute(void * arg)
   while(1)
   {
   	event = pthis->event->getEvent();
-  	printf("EVENT recv EvenManager\nTYPE:%d\nDATA:%s\n",event.type,event.data.data());
+  	printf("EVENT recv EvenManager\nTYPE:%d\n",event.type/*,event.data.data()*/);
   }
 }
 

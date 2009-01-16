@@ -8,7 +8,7 @@ extern "C"
 #include "ConnectionManager.h"
 #include "ApplicationManager.h"
 #include "../common/WorldManager.h"
-#include "ChatManager.h"
+//#include "ChatManager.h"
 #include "EventManager.h"
 #include "../common/Event.h"
 #include <vector>
@@ -21,7 +21,7 @@ private:
 	//Thread Classes
   ConnectionManager * connectionManagerThread;
   WorldManager * worldManagerThread;
-  ChatManager * chatManagerThread;
+  //ChatManager * chatManagerThread;
 	EventManager * eventManagerThread;
   ApplicationManager * applicationManagerThread;
 	//Event interface, has to point to a global scope variable

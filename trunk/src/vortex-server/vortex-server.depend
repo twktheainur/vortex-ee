@@ -202,3 +202,204 @@
 1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-server\tcpserver.cpp
 	"TCPServer.h"
 
+1229063430 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\cond.cpp
+	"Cond.h"
+
+1229812564 o:\twk\doc\programming\iut2a\vortex-ee\src\common\cond.h
+	<pthread.h>
+	"Exception.h"
+	"Mutex.h"
+
+1231272506 o:\twk\doc\programming\iut2a\vortex-ee\src\pthread\pthread.h
+	<windows.h>
+	"config.h"
+	<time.h>
+	<signal.h>
+	<setjmp.h>
+	<limits.h>
+	"need_errno.h"
+	<errno.h>
+	<sched.h>
+	<sys/types.h>
+
+1231272506 o:\twk\doc\programming\iut2a\vortex-ee\src\pthread\sched.h
+	"need_errno.h"
+	<errno.h>
+	<sys/types.h>
+	<time.h>
+
+1229812499 o:\twk\doc\programming\iut2a\vortex-ee\src\common\exception.h
+	<string>
+
+1229812615 o:\twk\doc\programming\iut2a\vortex-ee\src\common\mutex.h
+	<pthread.h>
+	"Exception.h"
+
+1232132723 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.cpp
+	"Event.h"
+	<cstdlib>
+
+1232132746 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+	<winsock2.h>
+	<sys/select.h>
+	<pthread.h>
+	<string>
+	<queue>
+	<unistd.h>
+	"Mutex.h"
+	"Semaphore.h"
+	"bitBuffer.h"
+
+1231272506 o:\twk\doc\programming\iut2a\vortex-ee\src\common\semaphore.h
+	"../pthread/pthread.h"
+	"../pthread/semaphore.h"
+	<pthread.h>
+	<semaphore.h>
+	"Exception.h"
+
+1231272506 o:\twk\doc\programming\iut2a\vortex-ee\src\pthread\semaphore.h
+	"need_errno.h"
+	<errno.h>
+
+1229197813 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\mutex.cpp
+	"Mutex.h"
+	<cerrno>
+
+1229470861 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.cpp
+	"Packet.h"
+
+1232131777 o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.h
+	<cstdlib>
+	<string>
+	<vector>
+
+1228346453 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\semaphore.cpp
+	"Semaphore.h"
+
+1231272506 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
+	"Socket.h"
+
+1231272506 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
+	<ws2tcpip.h>
+	<winsock2.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netinet/tcp.h>
+	<netdb.h>
+	<arpa/inet.h>
+	<errno.h>
+	<cstring>
+	<iostream>
+	<sstream>
+	<string>
+	"Exception.h"
+
+1231272506 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\tcpsocket.cpp
+	"TCPSocket.h"
+
+1227288507 o:\twk\doc\programming\iut2a\vortex-ee\src\common\tcpsocket.h
+	"Socket.h"
+	<string>
+
+1229197552 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\thread.cpp
+	"Thread.h"
+	<iostream>
+	<pthread.h>
+
+1229812694 o:\twk\doc\programming\iut2a\vortex-ee\src\common\thread.h
+	<pthread.h>
+	<string>
+	"Exception.h"
+
+1231272506 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\udpsocket.cpp
+	"UDPSocket.h"
+
+1227137663 o:\twk\doc\programming\iut2a\vortex-ee\src\common\udpsocket.h
+	"Socket.h"
+	<string>
+
+1231632832 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
+	"WorldManager.h"
+
+1231632812 o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.h
+	"Thread.h"
+	"Event.h"
+
+1232132801 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\chatmanager.cpp
+	"ChatManager.h"
+	"globals.h"
+
+1231632987 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\chatmanager.h
+	"../common/Thread.h"
+	"../common/Event.h"
+
+1231628038 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\globals.h
+	"../common/Event.h"
+
+1232133039 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
+	"ClientManager.h"
+	"../common/bitBuffer.h"
+	"globals.h"
+
+1231632229 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.h
+	"globals.h"
+	"../common/Thread.h"
+	"../common/Event.h"
+	"../common/TCPSocket.h"
+
+1231616584 o:\twk\doc\programming\iut2a\vortex-ee\src\common\bitbuffer.h
+	<iostream>
+	<string>
+	<vector>
+	<cstring>
+
+1229822917 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\connectionmanager.cpp
+	"ConnectionManager.h"
+
+1229181707 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\connectionmanager.h
+	"../common/Thread.h"
+	"../common/Event.h"
+	"ClientManager.h"
+	"Server.h"
+
+1231632440 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\server.h
+	<pthread.h>
+	"TCPServer.h"
+	"../common/WorldManager.h"
+	"ChatManager.h"
+	"EventManager.h"
+	"../common/Event.h"
+	<vector>
+
+1229822890 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\tcpserver.h
+	"../common/Exception.h"
+	"../common/TCPSocket.h"
+	"ConnectionManager.h"
+	<winsock2.h>
+
+1231633073 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\eventmanager.h
+	"../common/Thread.h"
+	"../common/Event.h"
+
+1232133092 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\eventmanager.cpp
+	"EventManager.h"
+	"globals.h"
+
+1231632964 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\server.cpp
+	"Server.h"
+	<cstdlib>
+
+1231633148 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\tcpserver.cpp
+	"TCPServer.h"
+
+1232131803 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\main.cpp
+	"Server.h"
+	"../common/Event.h"
+	"../common/Mutex.h"
+	"globals.h"
+	<cstring>
+	<cstdlib>
+	<time.h>
+

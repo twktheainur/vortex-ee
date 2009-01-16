@@ -13,7 +13,7 @@ under the License.*/
 #include <cstdlib>
 #include <string>
 #include <vector>
-#include "BinBitSet.h"
+//#include "BinBitSet.h"
 using namespace std;
 class Packet
 {
@@ -28,7 +28,7 @@ public:
   virtual size_t getDataSize()=0;
 
 private:
-  BinBitSet container;
+//  BinBitSet container;
 };
 
 #endif /* PACKET_H_ */

@@ -14,7 +14,6 @@ Client::Client(Event * event)
 	eventManagerEvent = event;
   connectionManagerThread = new ConnectionManager(this);
   eventManagerThread = new EventManager(event);
-  chatManagerThread = new ChatManager(event);
   applicationManagerThread = new ApplicationManager(event);
   applicationManagerThread->join();
 }
@@ -23,6 +22,6 @@ Client::~Client()
 {
 	delete connectionManagerThread;
 	delete eventManagerThread;
-	delete chatManagerThread;
+//	delete chatManagerThread;
 	delete client;
 }
