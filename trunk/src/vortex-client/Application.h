@@ -48,7 +48,7 @@ public:
 
 private:
     Root *mRoot;
-    OIS::Keyboard *mKeyboard;
+    //OIS::Keyboard *mKeyboard; // ca sert a rien, on l'a déjà dans le frameListener
     OIS::InputManager *mInputManager;
     //CEGUI::OgreCEGUIRenderer *mRenderer;
     //CEGUI::System *mSystem;

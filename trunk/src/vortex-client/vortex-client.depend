@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1231354836 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
+1232212314 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1230562263 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
+1232212939 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
@@ -1240,7 +1240,7 @@
 
 1146778524 c:\users\sebastien\documents\ogresdk\include\ois\oisexception.h
 
-1231359739 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
+1232211413 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
@@ -1251,12 +1251,11 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1231348518 source:c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.cpp
+1232212687 source:c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 
-1231263206 c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.h
+1232212521 c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.h
 	"../common/Thread.h"
-	"../common/Event.h"
 	"Application.h"
 
 1230562263 c:\users\sebastien\documents\vortex\src\common\thread.h
@@ -1285,7 +1284,7 @@
 1230562263 c:\users\sebastien\documents\vortex\src\common\exception.h
 	<string>
 
-1231263197 c:\users\sebastien\documents\vortex\src\common\event.h
+1232212522 c:\users\sebastien\documents\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -1294,6 +1293,7 @@
 	<unistd.h>
 	"Mutex.h"
 	"Semaphore.h"
+	"bitBuffer.h"
 
 1230562263 c:\users\sebastien\documents\vortex\src\common\mutex.h
 	<pthread.h>
@@ -1310,26 +1310,25 @@
 	"need_errno.h"
 	<errno.h>
 
-1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\chatmanager.cpp
+1232188830 source:c:\users\sebastien\documents\vortex\src\vortex-client\chatmanager.cpp
 	"ChatManager.h"
 
 1229266972 c:\users\sebastien\documents\vortex\src\vortex-client\chatmanager.h
 	"../common/Thread.h"
 	"../common/Event.h"
 
-1229266972 source:c:\users\sebastien\documents\vortex\src\vortex-client\client.cpp
+1232188830 source:c:\users\sebastien\documents\vortex\src\vortex-client\client.cpp
 	"Client.h"
 	<cstdlib>
 
-1230562263 c:\users\sebastien\documents\vortex\src\vortex-client\client.h
+1232212521 c:\users\sebastien\documents\vortex\src\vortex-client\client.h
 	<pthread.h>
+	"globals.h"
 	"TCPClient.h"
+	"../common/WorldManager.h"
 	"ConnectionManager.h"
 	"ApplicationManager.h"
-	"../common/WorldManager.h"
-	"ChatManager.h"
 	"EventManager.h"
-	"../common/Event.h"
 	<vector>
 
 1230562263 c:\users\sebastien\documents\vortex\src\vortex-client\tcpclient.h
@@ -1357,29 +1356,30 @@
 	<string>
 	"Exception.h"
 
-1230562263 c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.h
+1232212521 c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.h
 	"../common/Thread.h"
-	"../common/Event.h"
 	"Client.h"
 
-1229266972 c:\users\sebastien\documents\vortex\src\common\worldmanager.h
+1232188830 c:\users\sebastien\documents\vortex\src\common\worldmanager.h
 	"Thread.h"
+	"Event.h"
 
-1229266972 c:\users\sebastien\documents\vortex\src\vortex-client\eventmanager.h
+1232188830 c:\users\sebastien\documents\vortex\src\vortex-client\eventmanager.h
 	"../common/Thread.h"
 	"../common/Event.h"
+	"globals.h"
 
-1231349828 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
-	"../common/bitBuffer.h"
+1232214243 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
+	"../common/custom_usleep.h"
 
-1230562263 c:\users\sebastien\documents\vortex\src\common\bitbuffer.h
+1232212522 c:\users\sebastien\documents\vortex\src\common\bitbuffer.h
 	<iostream>
 	<string>
 	<vector>
 	<cstring>
 
-1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\eventmanager.cpp
+1232188830 source:c:\users\sebastien\documents\vortex\src\vortex-client\eventmanager.cpp
 	"EventManager.h"
 
 1231263547 source:c:\users\sebastien\documents\vortex\src\vortex-client\inputmanager.cpp
@@ -1388,22 +1388,12 @@
 1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1231354666 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
+1232211404 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 
-1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
-	"../common/Event.h"
+1232212672 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
 	"Client.h"
-
-1229632678 source:c:\users\sebastien\documents\vortex\src\common\binbitset.cpp
-	"BinBitSet.h"
-	<iostream>
-
-1229632678 c:\users\sebastien\documents\vortex\src\common\binbitset.h
-	<bitset>
-	<vector>
-	<string>
-	<iostream>
+	"globals.h"
 
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\cond.cpp
 	"Cond.h"
@@ -1413,9 +1403,10 @@
 	"Exception.h"
 	"Mutex.h"
 
-1230562263 source:c:\users\sebastien\documents\vortex\src\common\event.cpp
+1232214046 source:c:\users\sebastien\documents\vortex\src\common\event.cpp
 	"Event.h"
 	<cstdlib>
+	"custom_usleep.h"
 
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\mutex.cpp
 	"Mutex.h"
@@ -1424,16 +1415,15 @@
 1229632678 source:c:\users\sebastien\documents\vortex\src\common\packet.cpp
 	"Packet.h"
 
-1229632678 c:\users\sebastien\documents\vortex\src\common\packet.h
+1232188830 c:\users\sebastien\documents\vortex\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
-	"BinBitSet.h"
 
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\semaphore.cpp
 	"Semaphore.h"
 
-1231266291 source:c:\users\sebastien\documents\vortex\src\common\socket.cpp
+1232188830 source:c:\users\sebastien\documents\vortex\src\common\socket.cpp
 	"Socket.h"
 
 1231266635 source:c:\users\sebastien\documents\vortex\src\common\tcpsocket.cpp
@@ -1451,7 +1441,7 @@
 	"Socket.h"
 	<string>
 
-1229266972 source:c:\users\sebastien\documents\vortex\src\common\worldmanager.cpp
+1232188830 source:c:\users\sebastien\documents\vortex\src\common\worldmanager.cpp
 	"WorldManager.h"
 
 1219591314 c:\users\sebastien\documents\vortex\src\ogreincludes\ogre.h
@@ -4137,4 +4127,150 @@
 
 1232133258 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\globals.h
 	"../common/Event.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrereferenceapplayer.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppWorld.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreRefAppOgreHead.h"
+	"OgreRefAppPlane.h"
+	"OgreRefAppBall.h"
+	"OgreRefAppJoint.h"
+	"OgreRefAppBox.h"
+	"OgreRefAppCollideCamera.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappprerequisites.h
+	<ode/ode.h>
+	<ode/odecpp.h>
+	<ode/odecpp_collision.h>
+	<Ogre.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\ode.h
+	<ode/config.h>
+	<ode/compatibility.h>
+	<ode/common.h>
+	<ode/contact.h>
+	<ode/error.h>
+	<ode/memory.h>
+	<ode/odemath.h>
+	<ode/matrix.h>
+	<ode/timer.h>
+	<ode/rotation.h>
+	<ode/mass.h>
+	<ode/misc.h>
+	<ode/objects.h>
+	<ode/odecpp.h>
+	<ode/collision_space.h>
+	<ode/collision.h>
+	<ode/odecpp_collision.h>
+	<ode/export-dif.h>
+
+1172579150 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\config.h
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<math.h>
+	<string.h>
+	<float.h>
+	<malloc.h>
+	<alloca.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\compatibility.h
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\common.h
+	<ode/config.h>
+	<ode/error.h>
+	<math.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\error.h
+	<ode/config.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\contact.h
+	<ode/common.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\memory.h
+	"ode/config.h"
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\odemath.h
+	<ode/common.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\matrix.h
+	<ode/common.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\timer.h
+	<ode/config.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\rotation.h
+	<ode/common.h>
+	<ode/compatibility.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\mass.h
+	<ode/common.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\misc.h
+	<ode/common.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\objects.h
+	<ode/common.h>
+	<ode/mass.h>
+	<ode/contact.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\odecpp.h
+	<ode/error.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\collision_space.h
+	<ode/common.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\collision.h
+	<ode/common.h>
+	<ode/collision_space.h>
+	<ode/contact.h>
+	"collision_trimesh.h"
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\collision_trimesh.h
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\odecpp_collision.h
+	<ode/error.h>
+
+1172577126 c:\users\sebastien\documents\vortex\src\ogreincludes\ode\export-dif.h
+	<ode/common.h>
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappworld.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppJoint.h"
+	<OgreSingleton.h>
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappjoint.h
+	"OgreRefAppPrerequisites.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappapplicationobject.h
+	"OgreRefAppPrerequisites.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappogrehead.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappplane.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappball.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappbox.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreLogManager.h"
+	"OgreStringConverter.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrerefappcollidecamera.h
+	"OgreRefAppPrerequisites.h"
+	"OgreCamera.h"
+	"OgreRefAppApplicationObject.h"
+
+1232194335 c:\users\sebastien\documents\vortex\src\vortex-client\globals.h
+	"../common/Event.h"
+
+1232214039 c:\users\sebastien\documents\vortex\src\common\custom_usleep.h
 
