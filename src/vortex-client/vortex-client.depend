@@ -1369,9 +1369,8 @@
 	"../common/Event.h"
 	"globals.h"
 
-1232214243 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
+1232218711 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
-	"../common/custom_usleep.h"
 
 1232212522 c:\users\sebastien\documents\vortex\src\common\bitbuffer.h
 	<iostream>
@@ -1403,10 +1402,9 @@
 	"Exception.h"
 	"Mutex.h"
 
-1232214046 source:c:\users\sebastien\documents\vortex\src\common\event.cpp
+1232218873 source:c:\users\sebastien\documents\vortex\src\common\event.cpp
 	"Event.h"
 	<cstdlib>
-	"custom_usleep.h"
 
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\mutex.cpp
 	"Mutex.h"
