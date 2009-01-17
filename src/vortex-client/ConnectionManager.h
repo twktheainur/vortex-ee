@@ -7,11 +7,9 @@
 
 #ifndef CONNECTIONMANAGER_H_
 #define CONNECTIONMANAGER_H_
-
 #include "../common/Thread.h"
-#include "../common/Event.h"
 #include "Client.h"
-#include "globals.h"
+
 
 class Client;
 class ConnectionManager: public Thread

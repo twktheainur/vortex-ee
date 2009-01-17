@@ -45,8 +45,8 @@ void ClientManager::execute(void * arg)
 			cout << "POLL" << endl;
 			local_socket.recv(buffer, size, 0);
 			buff = bitBuffer(buffer, size);
-			cout << "Type:" << (int) buff.read<char>(true) << endl;
-			string str = buff.read<std::string > (true);
+			cout << "Type:" << (int) buff.readChar(true) << endl;
+			string str = buff.readString(true);
 			cout << "Str:" << str << endl;
 			eventManagerEvent.sendEvent(Event::event.connect.login, buff);
 
