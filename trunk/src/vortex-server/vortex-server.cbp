@@ -67,6 +67,7 @@
 		<Unit filename="TCPServer.cpp" />
 		<Unit filename="TCPServer.h" />
 		<Unit filename="User.h" />
+		<Unit filename="globals.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
