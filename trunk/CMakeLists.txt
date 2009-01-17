@@ -46,7 +46,7 @@ set(common_source_files ${comsrc}/Cond.cpp ${comsrc}/Event.cpp ${comsrc}/Mutex.c
                         ${comsrc}/Packet.cpp ${comsrc}/Semaphore.cpp
                         ${comsrc}/Socket.cpp ${comsrc}/TCPSocket.cpp
                         ${comsrc}/Thread.cpp ${comsrc}/UDPSocket.cpp 
-                        ${comsrc}/WorldManager.cpp ${comsrc}/BinBitSet.cpp)
+                        ${comsrc}/WorldManager.cpp)
 
 if(WIN32)
   add_definitions(-DWIN32)

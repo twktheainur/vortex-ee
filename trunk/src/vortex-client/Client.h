@@ -4,13 +4,13 @@ extern "C"
 {
   #include <pthread.h>
 }
+#include "globals.h"
 #include "TCPClient.h"
+#include "../common/WorldManager.h"
 #include "ConnectionManager.h"
 #include "ApplicationManager.h"
-#include "../common/WorldManager.h"
 //#include "ChatManager.h"
 #include "EventManager.h"
-#include "../common/Event.h"
 #include <vector>
 
 class ConnectionManager;

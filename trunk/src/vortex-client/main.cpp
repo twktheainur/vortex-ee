@@ -1,4 +1,3 @@
-#include "../common/Event.h"
 #include "Client.h"
 #include "globals.h"
 //Global variables

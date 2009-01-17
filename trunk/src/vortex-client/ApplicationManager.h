@@ -9,9 +9,7 @@
 #define APPLICATIONMANAGER_H_
 
 #include "../common/Thread.h"
-#include "../common/Event.h"
 #include "Application.h"
-#include "globals.h"
 
 class ApplicationManager: public Thread
 {

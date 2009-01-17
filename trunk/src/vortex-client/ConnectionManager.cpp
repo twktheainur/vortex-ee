@@ -1,4 +1,3 @@
-#include "../common/bitBuffer.h"
 /*
  * ConnectionManager.cpp
  *
@@ -38,8 +37,8 @@ void ConnectionManager::execute(void * arg)
 	}
 
     bitBuffer buff;
-    buff.write<char>(Event::event.connect.login,true);
-    buff.write<std::string>("Hello there miserable suckers!",true);
+    buff.writeChar(Event::event.connect.login);
+    buff.writeString("Hello there miserable suckers!");
     size_t size = buff.length();
 
  while(1)
