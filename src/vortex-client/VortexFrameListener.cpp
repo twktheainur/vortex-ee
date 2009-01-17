@@ -164,7 +164,8 @@
                 break;
         }
 
-        return mContinue;
+        //return mContinue;
+        return true;
     }
 
 

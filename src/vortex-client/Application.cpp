@@ -2,12 +2,14 @@
 
     Application::~Application()
     {
-      mInputManager->destroyInputObject(mKeyboard);
+      // mInputManager->destroyInputObject(mKeyboard); //la ligne de code qui m'a fait perdre le plus de temps dans ma vie...
+      // A NE PAS DECOMMENTER (sinon, ca va planter au moment de quitter l'application...)
+      
       OIS::InputManager::destroyInputSystem(mInputManager);
 
-      /*//pour CEGUI :
-      delete mRenderer;
-      delete mSystem;*/
+      //pour CEGUI :
+      //delete mRenderer;
+      //delete mSystem;
 
       delete mListener;
       delete mRoot;
