@@ -1,6 +1,7 @@
 #include "Client.h"
 #include "globals.h"
 #include <cstdlib>
+#include <iostream>
 //Global variables
 Event eventManagerEvent;
 Event chatManagerEvent;
