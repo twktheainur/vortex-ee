@@ -1,6 +1,9 @@
 #include "Client.h"
 #include "globals.h"
+#include "ApplicationManager.h"
 #include <cstdlib>
+#include <iostream>
+#include <cstdio>
 #include <iostream>
 //Global variables
 Event eventManagerEvent;
@@ -15,6 +18,8 @@ int main(int argc, char **argv)
     app.go();
   }
   else
-    Client client();
+  { 
+    Client client;
+  }
 	return 0;
 }

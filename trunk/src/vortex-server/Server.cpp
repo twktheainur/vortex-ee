@@ -11,6 +11,7 @@ under the License.*/
 #include <cstdlib>
 Server::Server()
 {
+  cout <<"Server!";
   connectionManagerThread = new ConnectionManager(this);
   eventManagerThread = new EventManager();
   chatManagerThread = new ChatManager();

@@ -2711,7 +2711,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232132746 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1232280296 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -2748,7 +2748,7 @@
 1228346453 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\semaphore.cpp
 	"Semaphore.h"
 
-1231272506 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
+1232135361 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
 	"Socket.h"
 
 1232135304 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
@@ -2792,17 +2792,17 @@
 	"Socket.h"
 	<string>
 
-1231632832 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
+1232195929 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
 	"WorldManager.h"
 
-1231632812 o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.h
+1232196620 o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.h
 	"Thread.h"
 	"Event.h"
 
-1231362496 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
+1232282980 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
 	"Application.h"
 
-1231272506 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
+1232215862 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
@@ -4051,14 +4051,12 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1232134991 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.cpp
+1232203631 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 
-1232135082 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.h
+1232196562 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.h
 	"../common/Thread.h"
-	"../common/Event.h"
 	"Application.h"
-	"globals.h"
 
 1232134748 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\chatmanager.cpp
 	"ChatManager.h"
@@ -4071,25 +4069,23 @@
 	"Client.h"
 	<cstdlib>
 
-1232134857 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\client.h
+1232196535 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\client.h
 	<pthread.h>
+	"globals.h"
 	"TCPClient.h"
+	"../common/WorldManager.h"
 	"ConnectionManager.h"
 	"ApplicationManager.h"
-	"../common/WorldManager.h"
 	"EventManager.h"
-	"../common/Event.h"
 	<vector>
 
 1229813515 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\tcpclient.h
 	"../common/TCPSocket.h"
 	"../common/Exception.h"
 
-1232135062 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.h
+1232196501 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.h
 	"../common/Thread.h"
-	"../common/Event.h"
 	"Client.h"
-	"globals.h"
 
 1232135136 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\eventmanager.h
 	"../common/Thread.h"
@@ -4105,22 +4101,25 @@
 1229813354 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1231587128 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
+1232280296 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
+	"../common/bitBuffer.h"
 
-1232135267 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
-	"../common/Event.h"
+1232283226 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
+	"ApplicationManager.h"
+	<cstdlib>
+	<cstdio>
+	<iostream>
 
-1231616584 o:\twk\doc\programming\iut2a\vortex-ee\src\common\bitbuffer.h
+1232207307 o:\twk\doc\programming\iut2a\vortex-ee\src\common\bitbuffer.h
 	<iostream>
 	<string>
 	<vector>
 	<cstring>
 
-1232132510 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
-	"../common/bitBuffer.h"
+1232280296 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 
 1232133258 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\globals.h
