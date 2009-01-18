@@ -126,7 +126,7 @@
         light1->setPosition(Vector3(-728,-88,188));
         light1->setDiffuseColour(0.5,0.4,0.4);
         light1->setSpecularColour(0.5,0.4,0.4);
-        Entity *lampe1 = mSceneMgr->createEntity("lampe1", "lampe/lape.mesh" );
+        Entity *lampe1 = mSceneMgr->createEntity("lampe1", "lampe/lampe.mesh" );
         SceneNode *lampeNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode1", Vector3(-728,-88,188));
         lampeNode1->attachObject(lampe1);
 
