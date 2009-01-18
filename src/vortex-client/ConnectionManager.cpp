@@ -6,15 +6,7 @@
  */
 
 #include "ConnectionManager.h"
-#if defined(WIN32)
-void usleep(time_t usec)
-{
-  struct timeval timeout;
-  timeout.tv_sec = 0;
-  timeout.tv_usec = usec;
-  select(0, NULL, NULL, NULL, &timeout);
-}
-#endif
+
 
 ConnectionManager::ConnectionManager(Client * cli)
 {
@@ -50,9 +42,9 @@ void ConnectionManager::execute(void * arg)
   		#ifdef WIN32
   		//_sleep(5000); //millisecondes. Ca , n'a pas l'air de marcher
   		#else
-  		usleep(5000000);//microsecondes
+  		Event::usleep(5000000);//microsecondes
   		#endif
-  		usleep(5000000);//microsecondes
+  		Event::usleep(5000000);//microsecondes
   		cout << buff.length() <<endl;
     }
   	catch(Exception * e)

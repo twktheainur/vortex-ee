@@ -65,9 +65,6 @@ typedef struct event_data
   int type;
   bitBuffer data;
 }event_data_t;
-#if defined(WIN32)
-void usleep(time_t usec);
-#endif
 
 
 class Event
@@ -85,6 +82,17 @@ class Event
     event_data_t getEvent();
     static event_t event;
     static event_t net_event;
+
+    inline static int usleep(long usec)
+    {
+        struct timespec ts;
+        ts.tv_nsec=usec;
+        int rc = pthread_cond_timedwait(NULL, NULL, &ts);
+        if (rc == ETIMEDOUT)
+            return 0;
+        else
+            return -1;
+    }
 };
 
 #endif /* EVENT_H_ */

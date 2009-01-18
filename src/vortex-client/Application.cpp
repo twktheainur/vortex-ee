@@ -4,7 +4,7 @@
     {
       // mInputManager->destroyInputObject(mKeyboard); //la ligne de code qui m'a fait perdre le plus de temps dans ma vie...
       // A NE PAS DECOMMENTER (sinon, ca va planter au moment de quitter l'application...)
-      
+
       OIS::InputManager::destroyInputSystem(mInputManager);
 
       //pour CEGUI :
@@ -120,12 +120,15 @@
 
       camNode->attachObject(mCamera); // on attache la camera au noeud
 
-
+        //lumieres
         Light * light1 = mSceneMgr->createLight("L1");
         light1->setType(Light::LT_POINT);
         light1->setPosition(Vector3(-728,-88,188));
         light1->setDiffuseColour(0.5,0.4,0.4);
         light1->setSpecularColour(0.5,0.4,0.4);
+        Entity *lampe1 = mSceneMgr->createEntity("lampe1", "lampe/lape.mesh" );
+        SceneNode *lampeNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode1", Vector3(-728,-88,188));
+        lampeNode1->attachObject(lampe1);
 
         Light * light2 = mSceneMgr->createLight("L2");
         light2->setType(Light::LT_POINT);
@@ -150,6 +153,12 @@
         light5->setPosition(Vector3(776,-204,396));
         light5->setDiffuseColour(0.5,0.3,0.3);
         light5->setSpecularColour(0.5,0.3,0.3);
+
+        //decoration
+        Entity *tv = mSceneMgr->createEntity("TV", "tele/tele.mesh" );
+        SceneNode *TVNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("TVnode", Vector3(55,392,144));
+        TVNode->attachObject(tv);
+
 
 
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
