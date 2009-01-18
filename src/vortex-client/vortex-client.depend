@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1232212314 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
+1232290739 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1232212939 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
+1232283680 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
@@ -1251,7 +1251,7 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1232212687 source:c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.cpp
+1232295329 source:c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 
 1232212521 c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.h
@@ -1284,12 +1284,14 @@
 1230562263 c:\users\sebastien\documents\vortex\src\common\exception.h
 	<string>
 
-1232212522 c:\users\sebastien\documents\vortex\src\common\event.h
+1232297503 c:\users\sebastien\documents\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
 	<string>
 	<queue>
+	<time.h>
+	<sys/time.h>
 	<unistd.h>
 	"Mutex.h"
 	"Semaphore.h"
@@ -1369,7 +1371,7 @@
 	"../common/Event.h"
 	"globals.h"
 
-1232218711 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
+1232296949 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 
 1232212522 c:\users\sebastien\documents\vortex\src\common\bitbuffer.h
@@ -1387,12 +1389,18 @@
 1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232211404 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
+1232283753 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
+	"../common/bitBuffer.h"
 
-1232212672 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
+1232292045 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
+	"ApplicationManager.h"
+	<cstdlib>
+	<iostream>
+	<cstdio>
+	<iostream>
 
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\cond.cpp
 	"Cond.h"
@@ -1402,7 +1410,7 @@
 	"Exception.h"
 	"Mutex.h"
 
-1232218873 source:c:\users\sebastien\documents\vortex\src\common\event.cpp
+1232295329 source:c:\users\sebastien\documents\vortex\src\common\event.cpp
 	"Event.h"
 	<cstdlib>
 
