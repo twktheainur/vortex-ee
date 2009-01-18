@@ -42,9 +42,9 @@ void ConnectionManager::execute(void * arg)
   		#ifdef WIN32
   		//_sleep(5000); //millisecondes. Ca , n'a pas l'air de marcher
   		#else
-  		Event::usleep(5000000);//microsecondes
+  		//Event::usleep(5000000);//microsecondes
   		#endif
-  		Event::usleep(5000000);//microsecondes
+  		Event::usleep(50000);//microsecondes
   		cout << buff.length() <<endl;
     }
   	catch(Exception * e)

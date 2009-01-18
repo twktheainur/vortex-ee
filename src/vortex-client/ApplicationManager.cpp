@@ -17,12 +17,6 @@ void ApplicationManager::execute(void * arg)
 	try{
 			  pthis->application = new Application();
 			  pthis->application->go();
-    //while(1)
-    #ifdef WIN32
-      Sleep(1000);//milisecondes
-    #else
-//      usleep(1000000);//microsecondes
-    #endif
 			}
 
 		catch(Ogre::Exception& e)

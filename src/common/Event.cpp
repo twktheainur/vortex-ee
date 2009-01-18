@@ -12,15 +12,6 @@ under the License.*/
 //#include "Cond.h"
 #include <cstdlib>
 
-#if defined(WIN32)
-void usleep(time_t usec)
-{
-  struct timeval timeout;
-  timeout.tv_sec = 0;
-  timeout.tv_usec = usec;
-  select(0, NULL, NULL, NULL, &timeout);
-}
-#endif
 
 Event::Event()
      :semaphore(0)
@@ -68,6 +59,6 @@ event_data_t Event::getEvent()
   }
   listeners--;
   mutex.unlock();
-  usleep((time_t)10);
+  Event::usleep(10);
   return event;
 }
