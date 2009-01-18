@@ -87,6 +87,9 @@ public:
 
   inline static void usleep(long delai)
   {
+    #ifdef WIN32
+      Sleep(delai/1000);
+    #else
     printf("ST SLEEP\n");
        pthread_cond_t cw; /* condition "privée" utilisée par le thread qui veut dormir     */
      pthread_mutex_t mx; /* mutex nécessaire pour pouvoir utiliser pthread_cond_timedwait */
@@ -106,6 +109,7 @@ public:
      pthread_cond_destroy(&cw);
      pthread_mutex_destroy(&mx);
      printf("END SLEEP\n");
+    #endif
   }
 };
 
