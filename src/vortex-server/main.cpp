@@ -28,6 +28,6 @@ Event connectionManagerEvent;
 Event worldManagerEvent;
 int main(int argc, char **argv)
 {
-  Server server();
+  Server server;
   return EXIT_SUCCESS;
 }
