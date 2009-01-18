@@ -87,23 +87,25 @@ public:
 
   inline static void usleep(long delai)
   {
-    pthread_cond_t cw; /* condition "privée" utilisée par le thread qui veut dormir     */
-    pthread_mutex_t mx; /* mutex nécessaire pour pouvoir utiliser pthread_cond_timedwait */
-
-    // Ceci compile sous Linux mais pas Solaris
-    struct timeval tps_deb; /* heure de debut du blocage                                     */
-    struct timespec tps_exp; /* heure d'expiration du blocage                                 */
-
-    pthread_cond_init(&cw, NULL);
-    pthread_mutex_init(&mx, NULL);
-
-    gettimeofday(&tps_deb, 0); /* on récupère l'heure courante             */
-    tps_exp.tv_sec = tps_deb.tv_sec; /* on rajoute delai secondes                */
-    tps_exp.tv_nsec = tps_deb.tv_usec * 1000 + delai; /* on convertit les ms en ns                */
-    pthread_cond_timedwait(&cw, &mx, &tps_exp); /* et on se bloque jusqu'au temps calculé   */
-
-    pthread_cond_destroy(&cw);
-    pthread_mutex_destroy(&mx);
+    printf("ST SLEEP\n");
+       pthread_cond_t cw; /* condition "privée" utilisée par le thread qui veut dormir     */
+     pthread_mutex_t mx; /* mutex nécessaire pour pouvoir utiliser pthread_cond_timedwait */
+ 
+     // Ceci compile sous Linux mais pas Solaris
+     struct timeval tps_deb; /* heure de debut du blocage                                     */
+     struct timespec tps_exp; /* heure d'expiration du blocage                                 */
+ 
+     pthread_cond_init(&cw, NULL);
+     pthread_mutex_init(&mx, NULL);
+ 
+     gettimeofday(&tps_deb, 0); /* on récupère l'heure courante             */
+     tps_exp.tv_sec = tps_deb.tv_sec +delai/10000;
+     tps_exp.tv_nsec = (tps_deb.tv_usec+delai-(delai/10000)*10000)*1000;/*+ delai*1000;*/ /* on convertit les ms en ns                */
+     pthread_cond_timedwait(&cw, &mx, &tps_exp); /* et on se bloque jusqu'au temps calculé   */
+ 
+     pthread_cond_destroy(&cw);
+     pthread_mutex_destroy(&mx);
+     printf("END SLEEP\n");
   }
 };
 
