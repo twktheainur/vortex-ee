@@ -1,4 +1,5 @@
 #include "VortexFrameListener.h"
+#include "../common/bitBuffer.h"
 
     VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Entity * player, SceneManager *sceneMgr)
     {
@@ -53,7 +54,25 @@
 
         if (changement) // si un déplacement a eu lieu pendant l'image précédente
         {
-            // Event::event.ogre.update
+            int posX;
+            int posY;
+            int posZ;
+            int dirX = 0;
+            int dirY = 0;
+            int dirZ = 0;
+            bitBuffer buff;
+            Vector3 pos;
+            Quaternion dir; //oups comment ça marche cette merde?
+            pos = mPlayerNode->getPosition();
+            dir = mPlayerNode->getOrientation(); // renvoie un quaternion
+            posX = pos.x; posY = pos.y; posZ = pos.z;
+
+            // on ajoute l'id du client au buffer avant
+            buff.writeInt(posX); buff.writeInt(posY); buff.writeInt(posZ);
+            buff.writeInt(dirX); buff.writeInt(dirY); buff.writeInt(dirZ);
+
+            //on peut envoyer le buffer à l'event manager
+
             changement = false; // on réinitialise changement
         }
 
