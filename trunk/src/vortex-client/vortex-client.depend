@@ -2715,16 +2715,18 @@
 	<pthread.h>
 	"Exception.h"
 
-1232132723 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.cpp
+1232294127 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.cpp
 	"Event.h"
 	<cstdlib>
 
-1232280296 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1232378043 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
 	<string>
 	<queue>
+	<time.h>
+	<sys/time.h>
 	<unistd.h>
 	"Mutex.h"
 	"Semaphore.h"
@@ -2745,13 +2747,15 @@
 	"Mutex.h"
 	<cerrno>
 
-1229470861 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.cpp
+1232380089 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.cpp
 	"Packet.h"
 
-1232131777 o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.h
+1232387426 o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
+	"bitBuffer.h"
+	"Event.h"
 
 1228346453 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\semaphore.cpp
 	"Semaphore.h"
@@ -2800,14 +2804,14 @@
 	"Socket.h"
 	<string>
 
-1232195929 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
+1232294508 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
 	"WorldManager.h"
 
 1232196620 o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.h
 	"Thread.h"
 	"Event.h"
 
-1232282980 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
+1232291031 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
 	"Application.h"
 
 1232215862 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
@@ -4059,7 +4063,7 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1232203631 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.cpp
+1232294358 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 
 1232196562 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.h
@@ -4130,7 +4134,7 @@
 1232280296 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 
-1232133258 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\globals.h
+1232377906 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\globals.h
 	"../common/Event.h"
 
 1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrereferenceapplayer.h
@@ -5732,4 +5736,16 @@
 	<iostream>
 	<cstdio>
 	<iostream>
+
+1232382132 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.cpp
+	"LoginPacket.h"
+
+1232381705 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.h
+	"Packet.h"
+
+1232387184 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.cpp
+	"LoginResponsePacket.h"
+
+1232387203 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.h
+	"Packet.h"
 

@@ -242,16 +242,18 @@
 	<pthread.h>
 	"Exception.h"
 
-1232132723 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.cpp
+1232294127 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.cpp
 	"Event.h"
 	<cstdlib>
 
-1232206936 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1232387792 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
 	<string>
 	<queue>
+	<time.h>
+	<sys/time.h>
 	<unistd.h>
 	"Mutex.h"
 	"Semaphore.h"
@@ -272,18 +274,20 @@
 	"Mutex.h"
 	<cerrno>
 
-1229470861 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.cpp
+1232380089 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.cpp
 	"Packet.h"
 
-1232131777 o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.h
+1232387426 o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
+	"bitBuffer.h"
+	"Event.h"
 
 1228346453 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\semaphore.cpp
 	"Semaphore.h"
 
-1231272506 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
+1232135361 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
 	"Socket.h"
 
 1232135304 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
@@ -327,14 +331,14 @@
 	"Socket.h"
 	<string>
 
-1231632832 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
+1232294508 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
 	"WorldManager.h"
 
 1232196620 o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.h
 	"Thread.h"
 	"Event.h"
 
-1232132801 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\chatmanager.cpp
+1232294499 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\chatmanager.cpp
 	"ChatManager.h"
 	"globals.h"
 
@@ -345,7 +349,7 @@
 1231628038 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\globals.h
 	"../common/Event.h"
 
-1232133039 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
+1232207130 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
 	"ClientManager.h"
 	"../common/bitBuffer.h"
 	"globals.h"
@@ -394,14 +398,14 @@
 	"EventManager.h"
 	"globals.h"
 
-1231632964 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\server.cpp
+1232291304 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\server.cpp
 	"Server.h"
 	<cstdlib>
 
 1231633148 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\tcpserver.cpp
 	"TCPServer.h"
 
-1232131803 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\main.cpp
+1232291509 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\main.cpp
 	"Server.h"
 	"../common/Event.h"
 	"../common/Mutex.h"

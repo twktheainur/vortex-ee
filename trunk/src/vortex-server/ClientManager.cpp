@@ -27,17 +27,7 @@ ClientManager::~ClientManager()
 void ClientManager::execute(void * arg)
 {
 	TCPSocket local_socket = *((TCPSocket*) arg);
-
-	//  BinBitSet set;
-	//  string buffer;
-	//  buffer.resize(150);
-	//  buffer[149]='\0';
-	printf("Host:|%s| Port:|%s| Connected.\n", local_socket.getHost().data(), local_socket.getService().data());
-	//  string html="<h1 style=\"color:red;\">Welcome on my TCPServer!</h1><p>Google is your friend!</p><a href='http://google.com'>Google!</a>";
-	char * buffer = new char[32];
-	size_t size = 32;
-	bitBuffer buff;
-
+	/*bitBuffer buff;
 	try
 	{
 		while (1)
@@ -56,6 +46,6 @@ void ClientManager::execute(void * arg)
 	{
 		printf("Client Thread(recv):%s\n", e->what());
 		delete e;
-	}
+	}*/
 	local_socket.free();
 }

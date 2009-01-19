@@ -9,10 +9,3 @@ License for the specific language governing rights and limitations
 under the License.*/
 
 #include "Packet.h"
-
-Packet::Packet()
-{
-
-//TODO USELESS!
-}
-
