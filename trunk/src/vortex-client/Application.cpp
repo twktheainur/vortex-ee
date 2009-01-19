@@ -95,14 +95,27 @@
     void Application::setupScene()
     {
       mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
+      
+      mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
+      mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
+      
       mCamera = mSceneMgr->createCamera("Camera"); // on cree la camera
       mCamera->setNearClipDistance(5);
+      mSceneMgr->setAmbientLight(ColourValue(0,0,0));//luminosité ambiente assez faible
+      //permet de voir les ombres, et les effets des lumières des lampes, sans etre completement dans le noir
+      
+      //mSceneMgr->setShadowTechnique(SHADOWTYPE_STENCIL_MODULATIVE);
+      //a reactiver plus tard (quand on aura les collisions par exemple)
+      //La seule technique d'ombre qui ait projeté des ombres sur la map bsp est SHADOWTYPE_STENCIL_MODULATIVE
+      //par contre avec des ombres de type STENCIL, le nombre de FPS descend à 60 sur une 8800GTX OC
+      
       //mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un deplacement correct de la camera
                                   // (les axes sont inverses entre le moteur quake et ogre)
       mCamera->setFixedYawAxis(true, Vector3::UNIT_Z); // idem (suite)
       SceneNode * playerNode;
       playerNode =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode", Vector3(-680,160,127));
       mPlayer = mSceneMgr->createEntity( "Player", "man.mesh" );
+      mPlayer->setCastShadows(true);
       playerNode->pitch(Degree(90));
       playerNode->yaw(Degree(90));
       playerNode->scale(Vector3(2,2,2));
@@ -127,7 +140,8 @@
         light1->setPosition(Vector3(-745,-88,200));
         light1->setDiffuseColour(0.5,0.4,0.4);
         light1->setSpecularColour(0.5,0.4,0.4);
-        Entity *lampe1 = mSceneMgr->createEntity("lampe1", "lampe/lampe.mesh" );
+        Entity *lampe1 = mSceneMgr->createEntity("lampe1", "lampe.mesh" );
+        lampe1->setCastShadows(false);//on ne veux pas que l'objet "lampe" obscursisse la lumière de la lampe...
         SceneNode *lampeNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode1", Vector3(-765,-88,200));
         lampeNode1->attachObject(lampe1);
         lampeNode1->yaw(Degree(90));
@@ -140,7 +154,7 @@
         light2->setPosition(Vector3(-88,324,200));
         light2->setDiffuseColour(0.5,0.4,0.4);
         light2->setSpecularColour(0.5,0.4,0.4);
-        Entity *lampe2 = mSceneMgr->createEntity("lampe2", "lampe/lampe.mesh" );
+        Entity *lampe2 = mSceneMgr->createEntity("lampe2", "lampe.mesh" );
         SceneNode *lampeNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode2", Vector3(-80,324,200));
         lampeNode2->attachObject(lampe2);
         lampeNode1->yaw(Degree(180));
@@ -152,7 +166,7 @@
         light3->setPosition(Vector3(-230,-204,200));
         light3->setDiffuseColour(0.5,0.4,0.4);
         light3->setSpecularColour(0.5,0.4,0.4);
-        Entity *lampe3 = mSceneMgr->createEntity("lampe3", "lampe/lampe.mesh" );
+        Entity *lampe3 = mSceneMgr->createEntity("lampe3", "lampe.mesh" );
         SceneNode *lampeNode3 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode3", Vector3(-220,-204,200));
         lampeNode3->attachObject(lampe3);
         lampeNode3->yaw(Degree(90));
@@ -172,7 +186,7 @@
         light5->setPosition(Vector3(776,-204,396));
         light5->setDiffuseColour(0.5,0.3,0.3);
         light5->setSpecularColour(0.5,0.3,0.3);
-        Entity *lampe5 = mSceneMgr->createEntity("lampe5", "lampe/lampe.mesh" );
+        Entity *lampe5 = mSceneMgr->createEntity("lampe5", "lampe.mesh" );
         SceneNode *lampeNode5 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode5", Vector3(776,-204,396));
         lampeNode5->attachObject(lampe5);
         lampeNode5->yaw(Degree(180));
@@ -180,8 +194,9 @@
 
 
         //decoration
-        //tv
-        Entity *tv = mSceneMgr->createEntity("TV", "tele/tele.mesh" );
+        Entity *tv = mSceneMgr->createEntity("TV", "tele.mesh" );
+        tv->setCastShadows(true);
+
         SceneNode *TVNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("TVnode", Vector3(55,392,130));
         TVNode->attachObject(tv);
         TVNode->scale(Vector3(5,4.2,4));
@@ -189,7 +204,7 @@
         TVNode->yaw(Degree(75));
 
 
-        Entity *faut1 = mSceneMgr->createEntity("faut1", "fauteuil/fauteuil.mesh" );
+        Entity *faut1 = mSceneMgr->createEntity("faut1", "fauteuil.mesh" );
         SceneNode *fautNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode1", Vector3(200,392,60));
         fautNode1->attachObject(faut1);
         fautNode1->scale(Vector3(6,6,6));
@@ -197,7 +212,7 @@
         fautNode1->yaw(Degree(270));
 
 
-        Entity *faut3p1 = mSceneMgr->createEntity("faut3p1", "fauteuil3p/fauteuil3p.mesh" );
+        Entity *faut3p1 = mSceneMgr->createEntity("faut3p1", "fauteuil3p.mesh" );
         SceneNode *faut3pNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("faut3pNode1", Vector3(300,392,60));
         faut3pNode1->attachObject(faut3p1);
         faut3pNode1->scale(Vector3(6,6,6));
@@ -207,8 +222,6 @@
 
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
       vp=NULL;
-      mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
-      mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
     }
 
     void Application::setupInputSystem()
