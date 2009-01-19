@@ -7,9 +7,9 @@
 #include <iostream>
 //Global variables
 Event eventManagerEvent;
-Event chatManagerEvent;
 Event connectionManagerEvent;
 Event worldManagerEvent;
+Event OgreManagerEvent;
 int main(int argc, char **argv)
 {
   if(argc>1 && strcmp(argv[1],"offline")==0)
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     app.go();
   }
   else
-  { 
+  {
     Client client;
   }
 	return 0;

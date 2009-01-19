@@ -10,6 +10,7 @@
 extern Event eventManagerEvent;
 extern Event connectionManagerEvent;
 extern Event worldManagerEvent;
+extern Event OgreManagerEvent;
 #endif
 
 

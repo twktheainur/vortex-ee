@@ -13,22 +13,32 @@ under the License.*/
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include "bitBuffer.h"
+#include "Event.h"
 //#include "BinBitSet.h"
 using namespace std;
 class Packet
 {
 public:
-  Packet();
-
+ //Dans le premier constructeur de chaque paquet on verifiera bien que c'est le bon paquet!
+ //Voir setData() pour mettre le reste
+ //Le deuxieme constructeur prendra les champs du paquet en paramentre et construira un
+ //paquet entier
+  virtual void setData(char * buffer,size_t length)=0;//Ajoute les donnees au paquet
+  inline bitBuffer & getData(){return data;}
+  inline bitBuffer & getHeader(){return header;}
+  inline void setHeader(bitBuffer &head){header=head;}
+  inline void setDataBuffer(bitBuffer &data){this->data=data;}
   inline size_t getPacketSize()
   {
   	return getHeaderSize() + getDataSize();
   }
-  virtual size_t getHeaderSize()=0;
-  virtual size_t getDataSize()=0;
+  inline size_t getHeaderSize(){return header.length();}
+  virtual size_t getDataSize(){return data.length();}
 
 private:
-//  BinBitSet container;
+  bitBuffer data;
+  bitBuffer header;
 };
 
 #endif /* PACKET_H_ */

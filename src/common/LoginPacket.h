@@ -13,18 +13,9 @@ class LoginPacket: public Packet
 {
 public:
 	  LoginPacket(string login, string pass_hash);
-	  LoginPacket(BinBitSet set);
-
-	  inline size_t getHeaderSize(){return 3 + 8 + 8;}
-	  size_t getDataSize(){return login.size()+pass_hash.size();}
-
-
-	  inline bool isLoginPacket()
-	  {
-
-	  }
+	  LoginPacket(char * buffer,size_t length);
+	  void setData(char * buffer,size_t length);
 private:
-  int type; // For isLoginPacket
   string login;
   string pass_hash;
 };
