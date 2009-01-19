@@ -44,13 +44,14 @@
         //Ici on doit swapper les coordonnees pour qu'elle soient les memes entre player et camera
         int y = mDirection.y;
         int x = mDirection.x;
+        int z = mDirection.z;
         mDirection.y = 0;
         mDirection.x = -x;
         mDirection.z = y;
         mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
         mDirection.y = y;
         mDirection.x = x;
-        mDirection.z = 0;
+        mDirection.z = z;
 
         if (changement) // si un déplacement a eu lieu pendant l'image précédente
         {
@@ -179,6 +180,17 @@
                 mAnimationState->setEnabled(true);
                 changement = true;
                 break;
+
+            case OIS::KC_P:
+                mDirection.z = mMove/1.5; // on va en haut
+                changement = true;
+                break;
+
+            case OIS::KC_M:
+                mDirection.z = -mMove/1.5; // on va en bas
+                changement = true;
+                break;
+
             default:
                 break;
         }
@@ -246,6 +258,11 @@
              mAnimationState->setLoop(true);
              mAnimationState->setEnabled(true);
            }
+           break;
+
+        case OIS::KC_M:
+        case OIS::KC_P:
+           mDirection.z = 0;
            break;
 
        default:
