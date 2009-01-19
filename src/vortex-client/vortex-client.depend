@@ -4312,16 +4312,18 @@
 	<pthread.h>
 	"Exception.h"
 
-1232136194 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.cpp
+1232303292 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.cpp
 	"Event.h"
 	<cstdlib>
 
-1232283106 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
+1232303292 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
 	<string>
 	<queue>
+	<time.h>
+	<sys/time.h>
 	<unistd.h>
 	"Mutex.h"
 	"Semaphore.h"
@@ -4410,7 +4412,7 @@
 	"Thread.h"
 	"Event.h"
 
-1232278520 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
+1232321914 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
 1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
@@ -5662,7 +5664,7 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1232278046 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\applicationmanager.cpp
+1232303292 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 
 1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\applicationmanager.h
@@ -5706,7 +5708,7 @@
 	"../common/Event.h"
 	"globals.h"
 
-1232283208 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\connectionmanager.cpp
+1232303292 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 
 1232278046 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\eventmanager.cpp
@@ -5718,12 +5720,16 @@
 1232278046 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232278556 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.cpp
+1232321460 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1232278046 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\main.cpp
+1232303292 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
+	"ApplicationManager.h"
 	<cstdlib>
+	<iostream>
+	<cstdio>
+	<iostream>
 
