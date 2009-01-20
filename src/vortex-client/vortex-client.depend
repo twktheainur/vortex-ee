@@ -2719,7 +2719,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232378043 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1232387792 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -2811,7 +2811,7 @@
 	"Thread.h"
 	"Event.h"
 
-1232291031 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
+1232470484 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
 	"Application.h"
 
 1232215862 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
@@ -4052,10 +4052,12 @@
 
 1231362512 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ois\oisexception.h
 
-1231362496 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.h
+1232470485 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
+	"globals.h"
+	"vector.h"
 
 1229777693 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\inputmanager.h
 	<OISMouse.h>
@@ -4110,18 +4112,19 @@
 1231272506 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\inputmanager.cpp
 	"InputManager.h"
 
-1229813354 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\tcpclient.cpp
+1232294379 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232280296 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
+1232470484 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1232283226 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
+1232377949 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
 	"ApplicationManager.h"
 	<cstdlib>
+	<iostream>
 	<cstdio>
 	<iostream>
 

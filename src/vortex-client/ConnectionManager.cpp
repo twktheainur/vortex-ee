@@ -42,7 +42,7 @@ void ConnectionManager::execute(void * arg)
         socket->recv(buffer,4,0);
         try
         {
-          LoginResponsePacket lrp(buffer,4);//Classe pas encore ecrite mais ca ne saurais tarder
+          LoginResponsePacket lrp(buffer,(size_t)4);//Classe pas encore ecrite mais ca ne saurais tarder
         }
         catch(Exception * e)
         {
