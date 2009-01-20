@@ -65,7 +65,7 @@ void ConnectionManager::execute(void * arg)
       if(connectionManagerEvent.changed())
       {
         event_data_t ev_data;
-        ev_data = connectionManagerEvent.getEvent()
+        ev_data = connectionManagerEvent.getEvent();
       }
     }
   	catch(Exception * e)

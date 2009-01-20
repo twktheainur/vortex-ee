@@ -72,13 +72,32 @@
             buff.writeInt(posX); buff.writeInt(posY); buff.writeInt(posZ);
             buff.writeInt(dirX); buff.writeInt(dirY); buff.writeInt(dirZ);
 
-            //on peut envoyer le buffer à l'event manager
+            //on peut envoyer l'event
+            eventManagerEvent.sendEvent(8,buff);
 
             changement = false; // on réinitialise changement
         }
 
 
         // ici on doit aussi vérifier si il y a des mise à jour du world
+        event_data_t eventReceived;
+        while (eventManagerEvent.changed())
+        {
+            eventReceived = eventManagerEvent.getEvent();
+            //apres on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
+            switch (eventReceived.type)
+            {
+            case 3: //update
+                break;
+            case 4: //add
+                break;
+            case 5: //del
+                break;
+
+            default:
+                break;
+            }
+        }
 
         return mContinue;
     }
