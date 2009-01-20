@@ -93,7 +93,7 @@ public:
   inline static void usleep(long delai)
   {
     #ifdef WIN32
-      Sleep(delai/1000);
+      Sleep(delai/1000+1);//le +1 sert a éviter Sleep(0), qui ne garantit pas que le thread ne sera pas actif
     #else
     printf("ST SLEEP\n");
        pthread_cond_t cw; /* condition "privée" utilisée par le thread qui veut dormir     */

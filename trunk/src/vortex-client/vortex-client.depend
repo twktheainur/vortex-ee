@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1232290739 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
+1232472201 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
 1232283680 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
@@ -1240,10 +1240,12 @@
 
 1146778524 c:\users\sebastien\documents\ogresdk\include\ois\oisexception.h
 
-1232211413 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
+1232472201 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
+	"globals.h"
+	"vector.h"
 
 1231358358 c:\users\sebastien\documents\vortex\src\vortex-client\inputmanager.h
 	<OISMouse.h>
@@ -1284,7 +1286,7 @@
 1230562263 c:\users\sebastien\documents\vortex\src\common\exception.h
 	<string>
 
-1232297503 c:\users\sebastien\documents\vortex\src\common\event.h
+1232472398 c:\users\sebastien\documents\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -1371,8 +1373,10 @@
 	"../common/Event.h"
 	"globals.h"
 
-1232298288 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
+1232472201 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
+	"../common/LoginResponsePacket.h"
+	"../common/Exception.h"
 
 1232212522 c:\users\sebastien\documents\vortex\src\common\bitbuffer.h
 	<iostream>
@@ -1389,11 +1393,11 @@
 1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232283753 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
+1232472201 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1232292045 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
+1232398449 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
 	"ApplicationManager.h"
@@ -1418,13 +1422,15 @@
 	"Mutex.h"
 	<cerrno>
 
-1229632678 source:c:\users\sebastien\documents\vortex\src\common\packet.cpp
+1232398449 source:c:\users\sebastien\documents\vortex\src\common\packet.cpp
 	"Packet.h"
 
-1232188830 c:\users\sebastien\documents\vortex\src\common\packet.h
+1232398449 c:\users\sebastien\documents\vortex\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
+	"bitBuffer.h"
+	"Event.h"
 
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\semaphore.cpp
 	"Semaphore.h"
@@ -4281,7 +4287,7 @@
 	"OgreCamera.h"
 	"OgreRefAppApplicationObject.h"
 
-1232194335 c:\users\sebastien\documents\vortex\src\vortex-client\globals.h
+1232398449 c:\users\sebastien\documents\vortex\src\vortex-client\globals.h
 	"../common/Event.h"
 
 1232214039 c:\users\sebastien\documents\vortex\src\common\custom_usleep.h
@@ -5759,5 +5765,8 @@
 	"Packet.h"
 
 1232392910 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.h
+	"Packet.h"
+
+1232398449 c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.h
 	"Packet.h"
 
