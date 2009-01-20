@@ -45,7 +45,7 @@
 int y = mDirection.y;
         int x = mDirection.x;
         int z = mDirection.z;
-        mDirection.y = 0;
+        mDirection.y = z;
         mDirection.x = -x;
         mDirection.z = y;
         mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
