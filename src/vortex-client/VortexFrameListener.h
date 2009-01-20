@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <Ogre.h>
 #include "InputManager.h"
+#include "globals.h"
+#include "vector.h"
 
 
 using namespace Ogre;
@@ -46,12 +48,14 @@ protected:
     SceneNode *mPlayerNode; // le node auquel le modele est attache
     Entity *mPlayer;
     AnimationState *mAnimationState;
-    
+
     bool mContinue;        // booleen definissant si on continue le rendu
     Vector3 mDirection;     // vecteur dfinissant le dplacement calcul
     Degree mAngle;  // Agle definissant la rotation calculee
 
     bool changement;  // booleen definissant si on a eu un mouvement pendant cette image
+
+    vector<SceneNode> utilisateurs; // vecteur contenant les nodes des autres utilisateurs
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED

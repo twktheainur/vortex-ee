@@ -32,8 +32,9 @@
 
     void Application::login()
     {
-        // on fait entrer login + mdp
-        // on envoie le login event a l'event manager
+        // on fait entrer login + mdp >> Qt
+        bitBuffer buff;
+        eventManagerEvent.sendEvent(0,buff);
     }
 
 
@@ -95,20 +96,20 @@
     void Application::setupScene()
     {
       mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
-      
+
       mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
       mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
-      
+
       mCamera = mSceneMgr->createCamera("Camera"); // on cree la camera
       mCamera->setNearClipDistance(5);
       mSceneMgr->setAmbientLight(ColourValue(0,0,0));//luminosité ambiente assez faible
       //permet de voir les ombres, et les effets des lumières des lampes, sans etre completement dans le noir
-      
+
       //mSceneMgr->setShadowTechnique(SHADOWTYPE_STENCIL_MODULATIVE);
       //a reactiver plus tard (quand on aura les collisions par exemple)
       //La seule technique d'ombre qui ait projeté des ombres sur la map bsp est SHADOWTYPE_STENCIL_MODULATIVE
       //par contre avec des ombres de type STENCIL, le nombre de FPS descend à 60 sur une 8800GTX OC
-      
+
       //mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un deplacement correct de la camera
                                   // (les axes sont inverses entre le moteur quake et ogre)
       mCamera->setFixedYawAxis(true, Vector3::UNIT_Z); // idem (suite)
