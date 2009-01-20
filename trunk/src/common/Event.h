@@ -86,8 +86,10 @@ public:
   static event_t net_event;
   inline bool changed()
   {
-    usleep(10);
-    return events.empty();
+    mutex.lock();
+    bool test = (events.size()!=0);
+    mutex.unlock();
+    return test;
   }
 
   inline static void usleep(long delai)

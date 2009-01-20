@@ -18,6 +18,7 @@ ConnectionManager::ConnectionManager(Client * cli)
 void ConnectionManager::execute(void * arg)
 {
 	ConnectionManager * pthis = (ConnectionManager *)arg;
+	printf("Connection manager Init...\n");
     TCPSocket * socket;
     event_data_t event_data;
 	try
