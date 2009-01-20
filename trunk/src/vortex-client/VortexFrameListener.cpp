@@ -81,26 +81,24 @@ int y = mDirection.y;
 
         // ici on doit aussi vérifier si il y a des mise à jour du world
         event_data_t eventReceived;
-        if(worldManagerEvent.changed())
-        {
+
+          //apres on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
+          while(worldManagerEvent.changed())
+          {
             eventReceived = worldManagerEvent.getEvent();
-            //apres on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
-          //while((eventReceived = worldManagerEvent.getEvent()))
-          //{
             switch (eventReceived.type)
             {
-            case 3: //update
-                break;
-            case 4: //add
-                break;
-            case 5: //del
-                break;
+                case 3: //update
+                    break;
+                case 4: //add
+                    break;
+                case 5: //del
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
             }
-          //}
-        }
+          }
 
         return mContinue;
     }
@@ -203,12 +201,12 @@ int y = mDirection.y;
                 changement = true;
                 break;
 
-            case OIS::KC_P:
+            case OIS::KC_PGUP:
                 mDirection.z = mMove/1.5; // on va en haut
                 changement = true;
                 break;
 
-            case OIS::KC_M:
+            case OIS::KC_PGDOWN:
                 mDirection.z = -mMove/1.5; // on va en bas
                 changement = true;
                 break;
@@ -282,8 +280,8 @@ int y = mDirection.y;
            }
            break;
 
-        case OIS::KC_M:
-        case OIS::KC_P:
+        case OIS::KC_PGUP:
+        case OIS::KC_PGDOWN:
            mDirection.z = 0;
            break;
 

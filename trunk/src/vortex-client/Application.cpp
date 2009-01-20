@@ -148,9 +148,9 @@
         // droite de l'entree
         Light * light1 = mSceneMgr->createLight("L1");
         light1->setType(Light::LT_POINT);
-        light1->setPosition(Vector3(-745,-88,200));
-        light1->setDiffuseColour(0.5,0.4,0.4);
-        light1->setSpecularColour(0.5,0.4,0.4);
+        light1->setPosition(Vector3(-765,-88,200));
+        light1->setDiffuseColour(0.5,0.45,0.45);
+        light1->setSpecularColour(0.5,0.45,0.45);
         Entity *lampe1 = mSceneMgr->createEntity("lampe1", "lampe.mesh" );
         lampe1->setCastShadows(false);//on ne veux pas que l'objet "lampe" obscursisse la lumière de la lampe...
         SceneNode *lampeNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode1", Vector3(-765,-88,200));
@@ -162,9 +162,9 @@
         //derriere mur tv
         Light * light2 = mSceneMgr->createLight("L2");
         light2->setType(Light::LT_POINT);
-        light2->setPosition(Vector3(-88,324,200));
-        light2->setDiffuseColour(0.5,0.4,0.4);
-        light2->setSpecularColour(0.5,0.4,0.4);
+        light2->setPosition(Vector3(-80,324,200));
+        light2->setDiffuseColour(0.5,0.45,0.45);
+        light2->setSpecularColour(0.5,0.45,0.45);
         Entity *lampe2 = mSceneMgr->createEntity("lampe2", "lampe.mesh" );
         SceneNode *lampeNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode2", Vector3(-80,324,200));
         lampeNode2->attachObject(lampe2);
@@ -174,9 +174,9 @@
         //vers escalier
         Light * light3 = mSceneMgr->createLight("L3");
         light3->setType(Light::LT_POINT);
-        light3->setPosition(Vector3(-230,-204,200));
-        light3->setDiffuseColour(0.5,0.4,0.4);
-        light3->setSpecularColour(0.5,0.4,0.4);
+        light3->setPosition(Vector3(-220,-204,200));
+        light3->setDiffuseColour(0.5,0.45,0.45);
+        light3->setSpecularColour(0.5,0.45,0.45);
         Entity *lampe3 = mSceneMgr->createEntity("lampe3", "lampe.mesh" );
         SceneNode *lampeNode3 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode3", Vector3(-220,-204,200));
         lampeNode3->attachObject(lampe3);
@@ -188,15 +188,15 @@
         Light * light4 = mSceneMgr->createLight("L4");
         light4->setType(Light::LT_POINT);
         light4->setPosition(Vector3(768,152,108));
-        light4->setDiffuseColour(2, 1, 1);
+        light4->setDiffuseColour(1.5, 1, 1);
         light4->setSpecularColour(2, 1, 1);
 
         //etage
         Light * light5 = mSceneMgr->createLight("L5");
         light5->setType(Light::LT_POINT);
         light5->setPosition(Vector3(776,-204,396));
-        light5->setDiffuseColour(0.5,0.3,0.3);
-        light5->setSpecularColour(0.5,0.3,0.3);
+        light5->setDiffuseColour(0.5,0.4,0.4);
+        light5->setSpecularColour(0.5,0.4,0.4);
         Entity *lampe5 = mSceneMgr->createEntity("lampe5", "lampe.mesh" );
         SceneNode *lampeNode5 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode5", Vector3(776,-204,396));
         lampeNode5->attachObject(lampe5);

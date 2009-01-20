@@ -4331,7 +4331,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232392910 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
+1232479940 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -4368,7 +4368,7 @@
 1232392910 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\packet.cpp
 	"Packet.h"
 
-1232392910 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\packet.h
+1232477980 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
@@ -4429,7 +4429,7 @@
 	"Thread.h"
 	"Event.h"
 
-1232394094 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
+1232480686 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
 1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
@@ -5683,7 +5683,7 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1232303292 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\applicationmanager.cpp
+1232479938 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 
 1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\applicationmanager.h
@@ -5727,7 +5727,7 @@
 	"../common/Event.h"
 	"globals.h"
 
-1232402768 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\connectionmanager.cpp
+1232479940 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 	"../common/LoginResponsePacket.h"
 	"../common/Exception.h"
@@ -5771,4 +5771,7 @@
 
 1232398449 c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.h
 	"Packet.h"
+
+1232477980 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.cpp
+	"LoginResponsePacket.h"
 
