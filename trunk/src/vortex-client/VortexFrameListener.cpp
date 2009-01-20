@@ -73,7 +73,7 @@
             buff.writeInt(dirX); buff.writeInt(dirY); buff.writeInt(dirZ);
 
             //on peut envoyer l'event
-            eventManagerEvent.sendEvent(8,buff);
+            worldManagerEvent.sendEvent(8,buff);
 
             changement = false; // on réinitialise changement
         }
@@ -81,9 +81,9 @@
 
         // ici on doit aussi vérifier si il y a des mise à jour du world
         event_data_t eventReceived;
-        while (eventManagerEvent.changed())
+        while (worldManagerEvent.changed())
         {
-            eventReceived = eventManagerEvent.getEvent();
+            eventReceived = worldManagerEvent.getEvent();
             //apres on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
             switch (eventReceived.type)
             {

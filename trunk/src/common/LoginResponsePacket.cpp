@@ -10,8 +10,10 @@ LoginResponsePacket::LoginResponsePacket(char * buffer,size_t length)
 {
   bitBuffer tmp =bitBuffer(buffer,length);
   setHeader(tmp);
-  if(getData().readInt(true)!=Event::event.connect.login)
+  if(getData().readChar(false)!=Event::event.connect.login)
     cout;
+  setType(getData().readChar(true));
+  setDataSize(getData().readInt(true));
     //La ca par en couille il faut lancer une exception
     //C'est donc pas le bon paquet
 }
