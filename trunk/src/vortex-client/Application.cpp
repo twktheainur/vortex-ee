@@ -208,28 +208,41 @@
         Entity *tv = mSceneMgr->createEntity("TV", "tele.mesh" );
         tv->setCastShadows(true);
 
-        SceneNode *TVNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("TVnode", Vector3(55,392,130));
+        SceneNode *TVNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("TVnode", Vector3(55,392,120));
         TVNode->attachObject(tv);
         TVNode->scale(Vector3(5,4.2,4));
         TVNode->pitch(Degree(90));
         TVNode->yaw(Degree(75));
 
-
+        // devant la télé
         Entity *faut1 = mSceneMgr->createEntity("faut1", "fauteuil.mesh" );
-        SceneNode *fautNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode1", Vector3(200,392,60));
+        SceneNode *fautNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode1", Vector3(450,485,60));
         fautNode1->attachObject(faut1);
         fautNode1->scale(Vector3(6,6,6));
         fautNode1->pitch(Degree(90));
-        fautNode1->yaw(Degree(270));
+        fautNode1->yaw(Degree(290));
 
+        Entity *faut2 = mSceneMgr->createEntity("faut2", "fauteuil.mesh" );
+        SceneNode *fautNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode2", Vector3(435,170,60));
+        fautNode2->attachObject(faut2);
+        fautNode2->scale(Vector3(6,6,6));
+        fautNode2->pitch(Degree(90));
+        fautNode2->yaw(Degree(255));
 
         Entity *faut3p1 = mSceneMgr->createEntity("faut3p1", "fauteuil3p.mesh" );
-        SceneNode *faut3pNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("faut3pNode1", Vector3(300,392,60));
+        SceneNode *faut3pNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("faut3pNode1", Vector3(460,325,60));
         faut3pNode1->attachObject(faut3p1);
         faut3pNode1->scale(Vector3(6,6,6));
         faut3pNode1->pitch(Degree(90));
-        faut3pNode1->yaw(Degree(270));
+        faut3pNode1->yaw(Degree(268));
 
+        //fauteuil cheminée
+        Entity *faut3 = mSceneMgr->createEntity("faut3", "fauteuil.mesh" );
+        SceneNode *fautNode3 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode3", Vector3(600,-80,60));
+        fautNode3->attachObject(faut3);
+        fautNode3->scale(Vector3(6,6,6));
+        fautNode3->pitch(Degree(90));
+        fautNode3->yaw(Degree(55));
 
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
       vp=NULL;
