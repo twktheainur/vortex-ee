@@ -14,6 +14,7 @@ ApplicationManager::ApplicationManager()
 void ApplicationManager::execute(void * arg)
 {
 	ApplicationManager * pthis = (ApplicationManager *)arg;
+	printf("Application manager Init...\n");
 	try{
 			  pthis->application = new Application();
 			  pthis->application->go();

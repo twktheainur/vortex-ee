@@ -17,16 +17,26 @@
 
     void Application::go()
     {
+        printf("Application Init...\n");
         login(); // on demande à l'utilisateur de se logger
+        printf("1\n");
         createRoot(); // on cr�� la racine
+        printf("2\n");
         defineResources(); // on d�finit les ressources utilis�es par Ogre
+        printf("3\n");
         setupRenderSystem();
+        printf("4\n");
         createRenderWindow(); // on cr�� la fen�tre d'affichage de la sc�ne
+        printf("5\n");
         initializeResourceGroups(); // on initialise les ressources
+        printf("6\n");
         setupScene(); // on installe les �l�ments de la sc�ne
+        printf("7\n");
         setupInputSystem();
+        printf("8\n");
         //setupCEGUI();
         createFrameListener(); // construction du FrameListener
+        printf("9\n");
         startRenderLoop(); // on commence la boucle de rendu
     }
 

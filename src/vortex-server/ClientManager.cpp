@@ -28,12 +28,12 @@ ClientManager::~ClientManager()
 void ClientManager::execute(void * arg)
 {
 	TCPSocket local_socket = *((TCPSocket*) arg);
+	printf("New Client!\n");
 	bitBuffer buff;
 	char * headbuff = (char *)malloc(5);
 	char * databuff;
 	try
 	{
-
 			local_socket.recv(headbuff,5, 0);
 			LoginPacket lp = LoginPacket(headbuff,5);
             databuff = (char *)malloc(lp.getDataSize());

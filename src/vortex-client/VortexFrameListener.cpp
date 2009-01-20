@@ -42,7 +42,7 @@
         mPlayerNode->yaw(mAngle,Node::TS_WORLD);
 
         //Ici on doit swapper les coordonnees pour qu'elle soient les memes entre player et camera
-        int y = mDirection.y;
+int y = mDirection.y;
         int x = mDirection.x;
         int z = mDirection.z;
         mDirection.y = 0;
@@ -81,10 +81,12 @@
 
         // ici on doit aussi vérifier si il y a des mise à jour du world
         event_data_t eventReceived;
-        while (worldManagerEvent.changed())
+        if(worldManagerEvent.changed())
         {
             eventReceived = worldManagerEvent.getEvent();
             //apres on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
+          //while((eventReceived = worldManagerEvent.getEvent()))
+          //{
             switch (eventReceived.type)
             {
             case 3: //update
@@ -97,6 +99,7 @@
             default:
                 break;
             }
+          //}
         }
 
         return mContinue;
