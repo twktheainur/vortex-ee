@@ -11,6 +11,7 @@ under the License.*/
 #include "ClientManager.h"
 #include "../common/bitBuffer.h"
 #include "globals.h"
+#include "../common/LoginPacket.h"
 
 ClientManager::ClientManager(TCPSocket sock)
 : Thread()
@@ -27,18 +28,21 @@ ClientManager::~ClientManager()
 void ClientManager::execute(void * arg)
 {
 	TCPSocket local_socket = *((TCPSocket*) arg);
-	/*bitBuffer buff;
+	bitBuffer buff;
+	char * headbuff = (char *)malloc(5);
+	char * databuff;
 	try
 	{
+
+			local_socket.recv(headbuff,5, 0);
+			LoginPacket lp = LoginPacket(headbuff,5);
+            databuff = (char *)malloc(lp.getDataSize());
+            local_socket.recv(databuff,lp.getDataSize(),0);
+            //lp.setData(databuff,lp.getDataSize());
+			worldManagerEvent.sendEvent(Event::event.connect.login, buff);
 		while (1)
 		{
-			cout << "POLL" << endl;
-			local_socket.recv(buffer, size, 0);
-			buff = bitBuffer(buffer, size);
-			cout << "Type:" << (int) buff.readChar(true) << endl;
-			string str = buff.readString(true);
-			cout << "Str:" << str << endl;
-			eventManagerEvent.sendEvent(Event::event.connect.login, buff);
+          Sleep(100);
 
 		}
 	}
@@ -46,6 +50,6 @@ void ClientManager::execute(void * arg)
 	{
 		printf("Client Thread(recv):%s\n", e->what());
 		delete e;
-	}*/
+	}
 	local_socket.free();
 }

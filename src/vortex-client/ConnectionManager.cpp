@@ -38,8 +38,8 @@ void ConnectionManager::execute(void * arg)
         // Now on attends une reponse
         // On va d'abbord essayer de recuperer 4o (taille de l'entete global)
 
-        char * buffer = (char *)malloc(4);
-        socket->recv(buffer,4,0);
+        char * buffer = (char *)malloc(5);
+        socket->recv(buffer,5,0);
         try
         {
           LoginResponsePacket lrp(buffer,(size_t)4);//Classe pas encore ecrite mais ca ne saurais tarder

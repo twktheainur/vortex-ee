@@ -14,7 +14,7 @@ ChatManager::ChatManager()
 }
 void ChatManager::execute(void * arg)
 {
-  ChatManager * pthis = (ChatManager *)arg;
+  /*ChatManager * pthis = (ChatManager *)arg;
   event_data_t event;
   while(1)
   {
@@ -23,5 +23,5 @@ void ChatManager::execute(void * arg)
   	 //eventManagerEvent.getEvent();
   	//if(event.data[0]=='1')
   	//  printf("Chat EVENT recv ChatManager\nTYPE:%d\nDATA:%s\n",event.type,event.data.data());
-  }
+  }*/
 }

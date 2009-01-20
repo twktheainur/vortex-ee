@@ -2756,7 +2756,7 @@
 1232380089 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.cpp
 	"Packet.h"
 
-1232387426 o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.h
+1232473915 o:\twk\doc\programming\iut2a\vortex-ee\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
@@ -4121,7 +4121,7 @@
 1232294379 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232470484 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
+1232476069 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
@@ -4140,8 +4140,10 @@
 	<vector>
 	<cstring>
 
-1232280296 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
+1232474266 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
+	"../common/LoginResponsePacket.h"
+	"../common/Exception.h"
 
 1232377906 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\globals.h
 	"../common/Event.h"
@@ -5752,13 +5754,13 @@
 	<cstdio>
 	<iostream>
 
-1232382132 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.cpp
+1232474706 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.cpp
 	"LoginPacket.h"
 
-1232381705 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.h
+1232474702 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.h
 	"Packet.h"
 
-1232387184 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.cpp
+1232473903 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.cpp
 	"LoginResponsePacket.h"
 
 1232387203 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.h

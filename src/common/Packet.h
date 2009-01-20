@@ -34,11 +34,16 @@ public:
   	return getHeaderSize() + getDataSize();
   }
   inline size_t getHeaderSize(){return header.length();}
-  virtual size_t getDataSize(){return data.length();}
+  inline size_t getDataSize(){return dataSize;}
+  inline void setType(int t){type=t;}
+  inline void setDataSize(size_t s){dataSize=s;}
+
 
 private:
   bitBuffer data;
   bitBuffer header;
+  size_t dataSize;
+  int type;
 };
 
 #endif /* PACKET_H_ */
