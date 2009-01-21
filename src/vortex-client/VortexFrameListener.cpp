@@ -35,6 +35,13 @@
 
     bool VortexFrameListener::frameStarted(const FrameEvent &evt)
     {
+        // on declare les variables de position et direction qui nous servirons plusieurs fois par la suite
+        float posX;
+        float posY;
+        float posZ;
+        float dirX = 0;
+        float dirY = 0;
+
         // d'abord on capture les actions effectu�es � la souris et au clavier
         mInputManager->capture();
         mAnimationState->addTime(evt.timeSinceLastFrame);
@@ -42,37 +49,31 @@
         mPlayerNode->yaw(mAngle,Node::TS_WORLD);
 
         //Ici on doit swapper les coordonnees pour qu'elle soient les memes entre player et camera
-int y = mDirection.y;
-        int x = mDirection.x;
-        int z = mDirection.z;
-        mDirection.y = z;
-        mDirection.x = -x;
-        mDirection.z = y;
+        posY = (float)mDirection.y;
+        posX = (float)mDirection.x;
+        posZ = (float)mDirection.z;
+        mDirection.y = posZ;
+        mDirection.x = -posX;
+        mDirection.z = posY;
         mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
-        mDirection.y = y;
-        mDirection.x = x;
-        mDirection.z = z;
+        mDirection.y = posY;
+        mDirection.x = posX;
+        mDirection.z = posZ;
 
         if (changement) // si un déplacement a eu lieu pendant l'image précédente
         {
-            int posX;
-            int posY;
-            int posZ;
-            int dirX = 0;
-            int dirY = 0;
-            int dirZ = 0;
             bitBuffer buff;
             Vector3 pos;
             Quaternion dir; //oups comment ça marche cette merde?
             pos = mPlayerNode->getPosition();
             dir = mPlayerNode->getOrientation(); // renvoie un quaternion
-            posX = pos.x; posY = pos.y; posZ = pos.z;
+            posX = (float)pos.x; posY = (float)pos.y; posZ = (float)pos.z;
 
             // on ajoute l'id du client au buffer avant
-            buff.writeInt(posX); buff.writeInt(posY); buff.writeInt(posZ);
-            buff.writeInt(dirX); buff.writeInt(dirY); buff.writeInt(dirZ);
+            buff.writeFloat(posX); buff.writeFloat(posY); buff.writeFloat(posZ);
+            buff.writeFloat(dirX); buff.writeFloat(dirY);
 
-            //on peut envoyer l'event
+            //on peut envoyer l'event d'update
             worldManagerEvent.sendEvent(8,buff);
 
             changement = false; // on réinitialise changement
@@ -82,6 +83,8 @@ int y = mDirection.y;
         // ici on doit aussi vérifier si il y a des mise à jour du world
         event_data_t eventReceived;
 
+          int i = 0;
+
           //apres on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
           while(worldManagerEvent.changed())
           {
@@ -89,11 +92,33 @@ int y = mDirection.y;
             switch (eventReceived.type)
             {
                 case 3: //update
-                    break;
+                    //char* id = eventReceived.data.readChar(true);
+                    posX = eventReceived.data.readFloat(true); posY = eventReceived.data.readFloat(true); posZ = eventReceived.data.readFloat(true);
+                    dirX = eventReceived.data.readFloat(true); dirY = eventReceived.data.readFloat(true);
+                    while (i < utilisateurs.size() and utilisateurs[i].id != "plop")
+                    {
+                        i++;
+                    }
+                    if (utilisateurs[i].id == "plop") //si l'user a updater existe bien
+                    {
+                        // on calcule les coordonnees de la translation a effectuer
+                        posX -= (float)utilisateurs[i].node->getPosition().x;
+                        posY -= (float)utilisateurs[i].node->getPosition().y;
+                        posZ -= (float)utilisateurs[i].node->getPosition().z;
+                        utilisateurs[i].node->translate(posX,posY,posZ, Node::TS_LOCAL);
+                        //gerer la direction aussi :/
+                    }
+                    else
+                    {
+                        //il faut creer l'utilisateur a la position donnee
+                    }
+                break;
+
                 case 4: //add
-                    break;
+                break;
+
                 case 5: //del
-                    break;
+                break;
 
                 default:
                     break;
