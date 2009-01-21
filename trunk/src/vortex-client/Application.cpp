@@ -1,5 +1,12 @@
 #include "Application.h"
 
+    Application::Application()
+    {
+      mListener = 0;
+      mRoot = 0;
+      mWorld = 0;
+    }
+    
     Application::~Application()
     {
       // mInputManager->destroyInputObject(mKeyboard); //la ligne de code qui m'a fait perdre le plus de temps dans ma vie...
@@ -11,8 +18,18 @@
       //delete mRenderer;
       //delete mSystem;
 
-      delete mListener;
-      delete mRoot;
+      if(mListener)
+      {
+        delete mListener;
+      }
+      if(mWorld)
+      {
+        delete mWorld;
+      }
+      if(mRoot)
+      {
+        delete mRoot;
+      }
     }
 
     void Application::go()
@@ -30,13 +47,16 @@
         printf("5\n");
         initializeResourceGroups(); // on initialise les ressources
         printf("6\n");
-        setupScene(); // on installe les �l�ments de la sc�ne
+        setupScene(); // on installe les �l�ments de la sc�ne + initialisation du SceneManager
         printf("7\n");
-        setupInputSystem();
+        createWorld();//pour la gestion des collisions/gravité
+        //doit se situer APRES l'initialisation du SceneManager (methode setupScene() )
         printf("8\n");
+        setupInputSystem();
+        printf("9\n");
         //setupCEGUI();
         createFrameListener(); // construction du FrameListener
-        printf("9\n");
+        printf("10\n");
         startRenderLoop(); // on commence la boucle de rendu
     }
 
@@ -88,10 +108,20 @@
 
     void Application::setupRenderSystem()
     {
-      if (!mRoot->restoreConfig() && !mRoot->showConfigDialog())
-        throw Exception(52, "User canceled the config dialog!", "Application::setupRenderSystem()");
+      if (!mRoot->restoreConfig())
+      {
+        if(!mRoot->showConfigDialog())
+        {
+          throw Exception(52, "User canceled the config dialog!", "Application::setupRenderSystem()");
+        }
+      }
     }
 
+    void Application::createWorld(void)
+    {
+        mWorld = new World(mSceneMgr);
+    }
+    
     void Application::createRenderWindow()
     {
       mRoot->initialise(true, "Vortex");

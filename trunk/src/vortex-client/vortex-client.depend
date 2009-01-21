@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1232472201 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
+1232563114 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1232283680 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
+1232563289 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
+	"OgreReferenceAppLayer.h"
 	<CoreFoundation/CoreFoundation.h>
 
 1219591314 c:\users\sebastien\documents\ogresdk\include\ogre.h
@@ -1240,7 +1241,7 @@
 
 1146778524 c:\users\sebastien\documents\ogresdk\include\ois\oisexception.h
 
-1232472201 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
+1232561569 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
@@ -1253,7 +1254,7 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1232295329 source:c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.cpp
+1232480605 source:c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 
 1232212521 c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.h
@@ -1286,7 +1287,7 @@
 1230562263 c:\users\sebastien\documents\vortex\src\common\exception.h
 	<string>
 
-1232472398 c:\users\sebastien\documents\vortex\src\common\event.h
+1232561569 c:\users\sebastien\documents\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -1321,7 +1322,7 @@
 	"../common/Thread.h"
 	"../common/Event.h"
 
-1232188830 source:c:\users\sebastien\documents\vortex\src\vortex-client\client.cpp
+1232484180 source:c:\users\sebastien\documents\vortex\src\vortex-client\client.cpp
 	"Client.h"
 	<cstdlib>
 
@@ -1373,7 +1374,7 @@
 	"../common/Event.h"
 	"globals.h"
 
-1232472201 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
+1232480605 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 	"../common/LoginResponsePacket.h"
 	"../common/Exception.h"
@@ -1393,7 +1394,7 @@
 1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232472201 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
+1232561569 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
@@ -1425,7 +1426,7 @@
 1232398449 source:c:\users\sebastien\documents\vortex\src\common\packet.cpp
 	"Packet.h"
 
-1232398449 c:\users\sebastien\documents\vortex\src\common\packet.h
+1232478122 c:\users\sebastien\documents\vortex\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
@@ -5774,4 +5775,58 @@
 
 1232477980 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.cpp
 	"LoginResponsePacket.h"
+
+1232478122 source:c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.cpp
+	"LoginResponsePacket.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrereferenceapplayer.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppWorld.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreRefAppOgreHead.h"
+	"OgreRefAppPlane.h"
+	"OgreRefAppBall.h"
+	"OgreRefAppJoint.h"
+	"OgreRefAppBox.h"
+	"OgreRefAppCollideCamera.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappprerequisites.h
+	<ode/ode.h>
+	<ode/odecpp.h>
+	<ode/odecpp_collision.h>
+	<Ogre.h>
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappworld.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppJoint.h"
+	<OgreSingleton.h>
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappjoint.h
+	"OgreRefAppPrerequisites.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappapplicationobject.h
+	"OgreRefAppPrerequisites.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappogrehead.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappplane.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappball.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappbox.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreLogManager.h"
+	"OgreStringConverter.h"
+
+1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappcollidecamera.h
+	"OgreRefAppPrerequisites.h"
+	"OgreCamera.h"
+	"OgreRefAppApplicationObject.h"
 
