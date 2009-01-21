@@ -16,6 +16,7 @@
 					<Add directory="..\pthread" />
 					<Add directory="..\ogreIncludes" />
 					<Add directory="..\ogreIncludes\OIS" />
+					<Add directory="..\ogreIncludes\refapp" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -23,6 +24,7 @@
 					<Add library="..\..\lib\OIS.dll" />
 					<Add library="..\..\lib\OgreMain.dll" />
 					<Add library="..\..\lib\libpthreadGC2.a" />
+					<Add library="..\..\bin\ReferenceAppLayer.dll" />
 				</Linker>
 			</Target>
 		</Build>

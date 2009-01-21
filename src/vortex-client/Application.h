@@ -4,10 +4,12 @@
 #include <Ogre.h>
 #include <OIS/OIS.h>
 #include "VortexFrameListener.h"
+#include "OgreReferenceAppLayer.h"//pour la gestion des collisions/gravité
 //#include <CEGUI/CEGUI.h>
 //#include <OgreCEGUIRenderer.h>
 
 using namespace Ogre;
+using namespace OgreRefApp;
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 #include <CoreFoundation/CoreFoundation.h>
@@ -41,7 +43,7 @@ std::string macBundlePath()
 class Application
 {
 public:
-
+    Application();
     ~Application();
 
     void go();
@@ -53,6 +55,7 @@ private:
     //CEGUI::OgreCEGUIRenderer *mRenderer;
     //CEGUI::System *mSystem;
     VortexFrameListener *mListener;
+    World* mWorld;//pour la gestion des collisons/gravité
     Camera *mCamera;
     Entity * mPlayer;
     SceneManager *mSceneMgr;
@@ -65,6 +68,8 @@ private:
     void defineResources();
 
     void setupRenderSystem();
+    
+    void createWorld();//pour la gestion des collisions/gravite
 
     void createRenderWindow();
 
