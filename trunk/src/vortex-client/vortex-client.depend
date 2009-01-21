@@ -4430,13 +4430,14 @@
 	"Thread.h"
 	"Event.h"
 
-1232561172 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
+1232570592 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
+	"OgreReferenceAppLayer.h"
 	<CoreFoundation/CoreFoundation.h>
 
 1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogre.h
@@ -5742,7 +5743,7 @@
 1232278046 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232481604 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.cpp
+1232561334 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
@@ -5826,6 +5827,147 @@
 	"OgreStringConverter.h"
 
 1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrerefappcollidecamera.h
+	"OgreRefAppPrerequisites.h"
+	"OgreCamera.h"
+	"OgreRefAppApplicationObject.h"
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrereferenceapplayer.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppWorld.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreRefAppOgreHead.h"
+	"OgreRefAppPlane.h"
+	"OgreRefAppBall.h"
+	"OgreRefAppJoint.h"
+	"OgreRefAppBox.h"
+	"OgreRefAppCollideCamera.h"
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappprerequisites.h
+	<ode/ode.h>
+	<ode/odecpp.h>
+	<ode/odecpp_collision.h>
+	<Ogre.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\ode.h
+	<ode/config.h>
+	<ode/compatibility.h>
+	<ode/common.h>
+	<ode/contact.h>
+	<ode/error.h>
+	<ode/memory.h>
+	<ode/odemath.h>
+	<ode/matrix.h>
+	<ode/timer.h>
+	<ode/rotation.h>
+	<ode/mass.h>
+	<ode/misc.h>
+	<ode/objects.h>
+	<ode/odecpp.h>
+	<ode/collision_space.h>
+	<ode/collision.h>
+	<ode/odecpp_collision.h>
+	<ode/export-dif.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\config.h
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<math.h>
+	<string.h>
+	<float.h>
+	<malloc.h>
+	<alloca.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\compatibility.h
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\common.h
+	<ode/config.h>
+	<ode/error.h>
+	<math.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\error.h
+	<ode/config.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\contact.h
+	<ode/common.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\memory.h
+	"ode/config.h"
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\odemath.h
+	<ode/common.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\matrix.h
+	<ode/common.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\timer.h
+	<ode/config.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\rotation.h
+	<ode/common.h>
+	<ode/compatibility.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\mass.h
+	<ode/common.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\misc.h
+	<ode/common.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\objects.h
+	<ode/common.h>
+	<ode/mass.h>
+	<ode/contact.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\odecpp.h
+	<ode/error.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\collision_space.h
+	<ode/common.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\collision.h
+	<ode/common.h>
+	<ode/collision_space.h>
+	<ode/contact.h>
+	"collision_trimesh.h"
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\collision_trimesh.h
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\odecpp_collision.h
+	<ode/error.h>
+
+1232551148 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ode\export-dif.h
+	<ode/common.h>
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappworld.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppJoint.h"
+	<OgreSingleton.h>
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappjoint.h
+	"OgreRefAppPrerequisites.h"
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappapplicationobject.h
+	"OgreRefAppPrerequisites.h"
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappogrehead.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappplane.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappball.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappbox.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreLogManager.h"
+	"OgreStringConverter.h"
+
+1232564626 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\ogrerefappcollidecamera.h
 	"OgreRefAppPrerequisites.h"
 	"OgreCamera.h"
 	"OgreRefAppApplicationObject.h"
