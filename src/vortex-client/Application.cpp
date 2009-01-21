@@ -6,7 +6,7 @@
       mRoot = 0;
       mWorld = 0;
     }
-    
+
     Application::~Application()
     {
       // mInputManager->destroyInputObject(mKeyboard); //la ligne de code qui m'a fait perdre le plus de temps dans ma vie...
@@ -121,7 +121,7 @@
     {
         mWorld = new World(mSceneMgr);
     }
-    
+
     void Application::createRenderWindow()
     {
       mRoot->initialise(true, "Vortex");
@@ -277,25 +277,25 @@
         // table de l'autre cote du mur derriere l'escalier
 
         Entity *faut4 = mSceneMgr->createEntity("faut4", "fauteuil.mesh" );
-        SceneNode *fautNode4 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode4", Vector3(435,170,60));
+        SceneNode *fautNode4 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode4", Vector3(-290,-180,118));
         fautNode4->attachObject(faut4);
         fautNode4->scale(Vector3(6,6,6));
         fautNode4->pitch(Degree(90));
         fautNode4->yaw(Degree(255));
 
         Entity *faut5 = mSceneMgr->createEntity("faut5", "fauteuil.mesh" );
-        SceneNode *fautNode5 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode5", Vector3(450,485,60));
+        SceneNode *fautNode5 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode5", Vector3(-290,10,118));
         fautNode5->attachObject(faut5);
         fautNode5->scale(Vector3(6,6,6));
         fautNode5->pitch(Degree(90));
-        fautNode5->yaw(Degree(290));
+        fautNode5->yaw(Degree(282));
 
         Entity *faut3p2 = mSceneMgr->createEntity("faut3p2", "fauteuil3p.mesh" );
-        SceneNode *faut3pNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("faut3pNode2", Vector3(460,325,60));
+        SceneNode *faut3pNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("faut3pNode2", Vector3(-460,-50,118));
         faut3pNode2->attachObject(faut3p2);
         faut3pNode2->scale(Vector3(6,6,6));
         faut3pNode2->pitch(Degree(90));
-        faut3pNode2->yaw(Degree(85));
+        faut3pNode2->yaw(Degree(78));
 
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
       vp=NULL;
