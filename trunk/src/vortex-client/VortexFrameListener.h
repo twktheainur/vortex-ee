@@ -10,6 +10,13 @@
 
 using namespace Ogre;
 
+typedef struct structUser
+{
+  char* id;
+  SceneNode* node;
+  Entity* entite;
+} structUser_t;
+
 class VortexFrameListener : public FrameListener, public OIS::MouseListener, public OIS::KeyListener
 {
 public:
@@ -55,7 +62,7 @@ protected:
 
     bool changement;  // booleen definissant si on a eu un mouvement pendant cette image
 
-    vector<SceneNode> utilisateurs; // vecteur contenant les nodes des autres utilisateurs
+    vector<structUser_t> utilisateurs; // vecteur contenant les nodes des autres utilisateurs
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED
