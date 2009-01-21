@@ -92,29 +92,47 @@
             switch (eventReceived.type)
             {
                 case 3: //update
-                    //char* id = eventReceived.data.readChar(true);
-                    posX = eventReceived.data.readFloat(true); posY = eventReceived.data.readFloat(true); posZ = eventReceived.data.readFloat(true);
-                    dirX = eventReceived.data.readFloat(true); dirY = eventReceived.data.readFloat(true);
-                    while (i < utilisateurs.size() and utilisateurs[i].id != "plop")
-                    {
-                        i++;
-                    }
-                    if (utilisateurs[i].id == "plop") //si l'user a updater existe bien
-                    {
-                        // on calcule les coordonnees de la translation a effectuer
-                        posX -= (float)utilisateurs[i].node->getPosition().x;
-                        posY -= (float)utilisateurs[i].node->getPosition().y;
-                        posZ -= (float)utilisateurs[i].node->getPosition().z;
-                        utilisateurs[i].node->translate(posX,posY,posZ, Node::TS_LOCAL);
-                        //gerer la direction aussi :/
-                    }
-                    else
-                    {
-                        //il faut creer l'utilisateur a la position donnee
-                    }
+//                    posX = eventReceived.data.readFloat(true); posY = eventReceived.data.readFloat(true); posZ = eventReceived.data.readFloat(true);
+//                    dirX = eventReceived.data.readFloat(true); dirY = eventReceived.data.readFloat(true);
+//                    string id = eventReceived.data.readString(true);
+//                    while (i < utilisateurs.size() and utilisateurs[i].id != id)
+//                    {
+//                        i++;
+//                    }
+//                    if (utilisateurs[i].id == id) //si l'user a updater existe bien
+//                    {
+//                        // on calcule les coordonnees de la translation a effectuer
+//                        posX -= (float)utilisateurs[i].node->getPosition().x;
+//                        posY -= (float)utilisateurs[i].node->getPosition().y;
+//                        posZ -= (float)utilisateurs[i].node->getPosition().z;
+//                        utilisateurs[i].node->translate(posX,posY,posZ, Node::TS_LOCAL);
+//                        //gerer la direction aussi :/
+//                    }
+//                    else
+//                    {
+//                        //il faut creer l'utilisateur a la position donnee
+//                    }
                 break;
 
                 case 4: //add
+//                    string id2 = eventReceived.data.readString(true);
+//                    structUser_t user;
+//                    user.id = id2;
+//
+//                    SceneNode * userNode;
+//                    userNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(id2.data(), Vector3(-680,160,127));
+//                    Entity * userEntity = mSceneMgr->createEntity(id2.data(), "man.mesh" );
+//                    userEntity->setCastShadows(true);
+//                    userNode->pitch(Degree(90));
+//                    userNode->yaw(Degree(90));
+//                    userNode->scale(Vector3(2,2,2));
+//                    userNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
+//                    userNode->attachObject(userEntity); // on attache le modèle au noeud
+//
+//                    user.node = userNode;
+//                    user.entite = userEntity;
+//
+//                    utilisateurs.push_back(user);
                 break;
 
                 case 5: //del

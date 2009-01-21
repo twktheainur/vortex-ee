@@ -4331,7 +4331,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232479940 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
+1232559290 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -4429,7 +4429,7 @@
 	"Thread.h"
 	"Event.h"
 
-1232486334 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
+1232561172 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
 1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
@@ -4438,7 +4438,7 @@
 	"VortexFrameListener.h"
 	<CoreFoundation/CoreFoundation.h>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogre.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogre.h
 	"OgrePrerequisites.h"
 	"OgreAnimation.h"
 	"OgreAnimationState.h"
@@ -4536,21 +4536,21 @@
 	"OgreShadowCameraSetupPlaneOptimal.h"
 	"OgreShadowCameraSetupPSSM.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreprerequisites.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreprerequisites.h
 	"OgrePlatform.h"
 	<string>
 	"OgreStdHeaders.h"
 	"OgreMemoryAllocatorConfig.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreplatform.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreplatform.h
 	"OgreConfig.h"
 	<_mingw.h>
 	"config.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreconfig.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreconfig.h
 	"config.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestdheaders.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestdheaders.h
 	<cassert>
 	<cstdio>
 	<cstdlib>
@@ -4590,36 +4590,36 @@
 	<boost/thread/condition.hpp>
 	<boost/thread/thread.hpp>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememoryallocatorconfig.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememoryallocatorconfig.h
 	"OgrePrerequisites.h"
 	"OgreMemoryAllocatedObject.h"
 	"OgreMemorySTLAllocator.h"
 	"OgreMemoryNedAlloc.h"
 	"OgreMemoryStdAlloc.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememoryallocatedobject.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememoryallocatedobject.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememorystlallocator.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememorystlallocator.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememorynedalloc.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememorynedalloc.h
 	"OgreMemoryTracker.h"
 	<nedmalloc.h>
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememorytracker.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememorytracker.h
 	"OgrePrerequisites.h"
 	<ext/hash_map>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememorystdalloc.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrememorystdalloc.h
 	<memory>
 	<limits>
 	"OgreAlignedAllocator.h"
 	"OgreMemoryTracker.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrealignedallocator.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrealignedallocator.h
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreanimation.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreanimation.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreIteratorWrappers.h"
@@ -4627,14 +4627,14 @@
 	"OgreAnimationTrack.h"
 	"OgreAnimationState.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestring.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestring.h
 	"OgrePrerequisites.h"
 	<ext/hash_map>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreiteratorwrappers.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreiteratorwrappers.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreanimable.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreanimable.h
 	"OgrePrerequisites.h"
 	"OgreVector2.h"
 	"OgreVector3.h"
@@ -4646,50 +4646,50 @@
 	"OgreException.h"
 	"OgreAny.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevector2.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevector2.h
 	"OgrePrerequisites.h"
 	"OgreMath.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremath.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremath.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevector3.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevector3.h
 	"OgrePrerequisites.h"
 	"OgreMath.h"
 	"OgreQuaternion.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrequaternion.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrequaternion.h
 	"OgrePrerequisites.h"
 	"OgreMath.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevector4.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevector4.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecolourvalue.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecolourvalue.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresharedptr.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresharedptr.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestringvector.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestringvector.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreSharedPtr.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreexception.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreexception.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	<exception>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreany.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreany.h
 	"OgrePrerequisites.h"
 	"OgreException.h"
 	"OgreString.h"
 	<algorithm>
 	<typeinfo>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreanimationtrack.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreanimationtrack.h
 	"OgrePrerequisites.h"
 	"OgreSimpleSpline.h"
 	"OgreRotationalSpline.h"
@@ -4697,31 +4697,31 @@
 	"OgreAnimable.h"
 	"OgrePose.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresimplespline.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresimplespline.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgreMatrix4.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematrix4.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematrix4.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgreMatrix3.h"
 	"OgreVector4.h"
 	"OgrePlane.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematrix3.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematrix3.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreplane.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreplane.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerotationalspline.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerotationalspline.h
 	"OgrePrerequisites.h"
 	"OgreQuaternion.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrekeyframe.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrekeyframe.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgreQuaternion.h"
@@ -4729,33 +4729,33 @@
 	"OgreHardwareVertexBuffer.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwarevertexbuffer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwarevertexbuffer.h
 	"OgrePrerequisites.h"
 	"OgreHardwareBuffer.h"
 	"OgreSharedPtr.h"
 	"OgreColourValue.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwarebuffer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwarebuffer.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepose.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepose.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreHardwareVertexBuffer.h"
 	"OgreVector3.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreanimationstate.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreanimationstate.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreController.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecontroller.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecontroller.h
 	"OgrePrerequisites.h"
 	"OgreSharedPtr.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrearchive.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrearchive.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreDataStream.h"
@@ -4763,18 +4763,18 @@
 	"OgreStringVector.h"
 	<ctime>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogredatastream.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogredatastream.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreSharedPtr.h"
 	<istream>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrearchivemanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrearchivemanager.h
 	"OgrePrerequisites.h"
 	"OgreResourceManager.h"
 	"OgreSingleton.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreresourcemanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreresourcemanager.h
 	"OgrePrerequisites.h"
 	"OgreResource.h"
 	"OgreResourceGroupManager.h"
@@ -4784,32 +4784,32 @@
 	"OgreStringVector.h"
 	"OgreScriptLoader.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreresource.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreresource.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreSharedPtr.h"
 	"OgreStringInterface.h"
 	"OgreAtomicWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestringinterface.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestringinterface.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreCommon.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecommon.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecommon.h
 	"OgreString.h"
 	<utility>
 	<vector>
 	<map>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreatomicwrappers.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreatomicwrappers.h
 	<signal.h>
 	"OgrePrerequisites.h"
 	"OgreException.h"
 	<windows.h>
 	<intrin.h>
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreresourcegroupmanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreresourcegroupmanager.h
 	"OgrePrerequisites.h"
 	"OgreSingleton.h"
 	"OgreCommon.h"
@@ -4819,25 +4819,25 @@
 	"OgreIteratorWrappers.h"
 	<ctime>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresingleton.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresingleton.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescriptloader.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescriptloader.h
 	"OgrePrerequisites.h"
 	"OgreDataStream.h"
 	"OgreStringVector.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreaxisalignedbox.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreaxisalignedbox.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgreMatrix4.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrebillboardchain.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrebillboardchain.h
 	"OgrePrerequisites.h"
 	"OgreMovableObject.h"
 	"OgreRenderable.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremovableobject.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremovableobject.h
 	"OgrePrerequisites.h"
 	"OgreRenderQueue.h"
 	"OgreAxisAlignedBox.h"
@@ -4848,19 +4848,19 @@
 	"OgreAny.h"
 	"OgreUserDefinedObject.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderqueue.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderqueue.h
 	"OgrePrerequisites.h"
 	"OgreIteratorWrappers.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresphere.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresphere.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcaster.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcaster.h
 	"OgrePrerequisites.h"
 	"OgreRenderable.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderable.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderable.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgreRenderOperation.h"
@@ -4872,21 +4872,21 @@
 	"OgreException.h"
 	"OgreAny.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderoperation.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderoperation.h
 	"OgrePrerequisites.h"
 	"OgreVertexIndexData.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevertexindexdata.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevertexindexdata.h
 	"OgrePrerequisites.h"
 	"OgreHardwareVertexBuffer.h"
 	"OgreHardwareIndexBuffer.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwareindexbuffer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwareindexbuffer.h
 	"OgrePrerequisites.h"
 	"OgreHardwareBuffer.h"
 	"OgreSharedPtr.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematerial.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematerial.h
 	"OgrePrerequisites.h"
 	"OgreResource.h"
 	"OgreIteratorWrappers.h"
@@ -4894,11 +4894,11 @@
 	"OgreColourValue.h"
 	"OgreBlendMode.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreblendmode.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreblendmode.h
 	"OgrePrerequisites.h"
 	"OgreColourValue.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogregpuprogram.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogregpuprogram.h
 	"OgrePrerequisites.h"
 	"OgreResource.h"
 	"OgreSharedPtr.h"
@@ -4906,32 +4906,32 @@
 	"OgreSerializer.h"
 	"OgreRenderOperation.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreserializer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreserializer.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreDataStream.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrefactoryobj.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrefactoryobj.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreuserdefinedobject.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreuserdefinedobject.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrebillboardset.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrebillboardset.h
 	"OgrePrerequisites.h"
 	"OgreMovableObject.h"
 	"OgreRenderable.h"
 	"OgreRadixSort.h"
 	"OgreCommon.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreradixsort.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreradixsort.h
 	"OgrePrerequisites.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrebone.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrebone.h
 	"OgrePrerequisites.h"
 	"OgreNode.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrenode.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrenode.h
 	"OgrePrerequisites.h"
 	"OgreMatrix3.h"
 	"OgreMatrix4.h"
@@ -4940,7 +4940,7 @@
 	"OgreRenderable.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecamera.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecamera.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreMovableObject.h"
@@ -4953,7 +4953,7 @@
 	"OgreRay.h"
 	"OgrePlaneBoundedVolume.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrefrustum.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrefrustum.h
 	"OgrePrerequisites.h"
 	"OgreMovableObject.h"
 	"OgreRenderable.h"
@@ -4961,31 +4961,31 @@
 	"OgreVertexIndexData.h"
 	"OgreMovablePlane.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremovableplane.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremovableplane.h
 	"OgrePrerequisites.h"
 	"OgrePlane.h"
 	"OgreMovableObject.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreray.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreray.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgrePlaneBoundedVolume.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreplaneboundedvolume.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreplaneboundedvolume.h
 	"OgrePrerequisites.h"
 	"OgreAxisAlignedBox.h"
 	"OgreSphere.h"
 	"OgreMath.h"
 	"OgrePlane.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreconfigfile.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreconfigfile.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreStringVector.h"
 	"OgreIteratorWrappers.h"
 	"OgreDataStream.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecontrollermanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecontrollermanager.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgreSingleton.h"
@@ -4994,17 +4994,17 @@
 	"OgreTextureUnitState.h"
 	"OgreSharedPtr.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepredefinedcontrollers.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepredefinedcontrollers.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgreController.h"
 	"OgreFrameListener.h"
 	"OgreGpuProgram.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreframelistener.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreframelistener.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretextureunitstate.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretextureunitstate.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgreBlendMode.h"
@@ -5013,23 +5013,23 @@
 	"OgreString.h"
 	"OgreTexture.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretexture.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretexture.h
 	"OgrePrerequisites.h"
 	"OgreHardwareBuffer.h"
 	"OgreResource.h"
 	"OgreImage.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreimage.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreimage.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgrePixelFormat.h"
 	"OgreDataStream.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepixelformat.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepixelformat.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreentity.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreentity.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgreString.h"
@@ -5040,19 +5040,19 @@
 	"OgreMesh.h"
 	"OgreRenderable.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwarebuffermanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwarebuffermanager.h
 	"OgrePrerequisites.h"
 	"OgreSingleton.h"
 	"OgreHardwareVertexBuffer.h"
 	"OgreHardwareIndexBuffer.h"
 	"OgreRenderToVertexBuffer.h"
 
-1232494138 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendertovertexbuffer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendertovertexbuffer.h
 	"OgrePrerequisites.h"
 	"OgreMaterial.h"
 	"OgreRenderOperation.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremesh.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremesh.h
 	"OgrePrerequisites.h"
 	"OgreResource.h"
 	"OgreVertexIndexData.h"
@@ -5066,17 +5066,17 @@
 	"OgrePose.h"
 	"OgreDataStream.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevertexboneassignment.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrevertexboneassignment.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreprogressivemesh.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreprogressivemesh.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgreHardwareVertexBuffer.h"
 	"OgreHardwareIndexBuffer.h"
 	"OgreRenderOperation.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreskeleton.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreskeleton.h
 	"OgrePrerequisites.h"
 	"OgreResource.h"
 	"OgreQuaternion.h"
@@ -5084,35 +5084,35 @@
 	"OgreIteratorWrappers.h"
 	"OgreStringVector.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogregpuprogrammanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogregpuprogrammanager.h
 	"OgrePrerequisites.h"
 	"OgreResourceManager.h"
 	"OgreException.h"
 	"OgreGpuProgram.h"
 	"OgreSingleton.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwarepixelbuffer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwarepixelbuffer.h
 	"OgrePrerequisites.h"
 	"OgreHardwareBuffer.h"
 	"OgreSharedPtr.h"
 	"OgrePixelFormat.h"
 	"OgreImage.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwareocclusionquery.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehardwareocclusionquery.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehighlevelgpuprogram.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehighlevelgpuprogram.h
 	"OgrePrerequisites.h"
 	"OgreGpuProgram.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehighlevelgpuprogrammanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrehighlevelgpuprogrammanager.h
 	"OgrePrerequisites.h"
 	"OgreResourceManager.h"
 	"OgreSingleton.h"
 	"OgreException.h"
 	"OgreHighLevelGpuProgram.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrelight.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrelight.h
 	"OgrePrerequisites.h"
 	"OgreColourValue.h"
 	"OgreVector3.h"
@@ -5122,28 +5122,28 @@
 	"OgrePlaneBoundedVolume.h"
 	"OgreShadowCameraSetup.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetup.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetup.h
 	"OgrePrerequisites.h"
 	"OgreMovablePlane.h"
 	"OgreSharedPtr.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrelogmanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrelogmanager.h
 	"OgrePrerequisites.h"
 	"OgreLog.h"
 	"OgreSingleton.h"
 	"OgreString.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrelog.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrelog.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremanualobject.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremanualobject.h
 	"OgrePrerequisites.h"
 	"OgreMovableObject.h"
 	"OgreRenderable.h"
 	"OgreResourceGroupManager.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematerialmanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematerialmanager.h
 	"OgrePrerequisites.h"
 	"OgreSingleton.h"
 	"OgreResourceManager.h"
@@ -5151,7 +5151,7 @@
 	"OgreStringVector.h"
 	"OgreMaterialSerializer.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematerialserializer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrematerialserializer.h
 	"OgrePrerequisites.h"
 	"OgreMaterial.h"
 	"OgreBlendMode.h"
@@ -5159,7 +5159,7 @@
 	"OgreGpuProgram.h"
 	"OgreStringVector.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremeshmanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremeshmanager.h
 	"OgrePrerequisites.h"
 	"OgreResourceManager.h"
 	"OgreSingleton.h"
@@ -5168,24 +5168,24 @@
 	"OgreMesh.h"
 	"OgrePatchMesh.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepatchmesh.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepatchmesh.h
 	"OgrePrerequisites.h"
 	"OgreMesh.h"
 	"OgrePatchSurface.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepatchsurface.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepatchsurface.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgreString.h"
 	"OgreRenderOperation.h"
 	"OgreAxisAlignedBox.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremeshserializer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremeshserializer.h
 	"OgrePrerequisites.h"
 	"OgreMeshSerializerImpl.h"
 	"OgreSerializer.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremeshserializerimpl.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogremeshserializerimpl.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreSerializer.h"
@@ -5193,30 +5193,30 @@
 	"OgreMesh.h"
 	"OgreEdgeListBuilder.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreedgelistbuilder.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreedgelistbuilder.h
 	"OgrePrerequisites.h"
 	"OgreVector4.h"
 	"OgreHardwareVertexBuffer.h"
 	"OgreRenderOperation.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlay.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlay.h
 	"OgrePrerequisites.h"
 	"OgreSceneNode.h"
 	"OgreIteratorWrappers.h"
 	"OgreMatrix4.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescenenode.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescenenode.h
 	"OgrePrerequisites.h"
 	"OgreNode.h"
 	"OgreIteratorWrappers.h"
 	"OgreAxisAlignedBox.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlaycontainer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlaycontainer.h
 	"OgrePrerequisites.h"
 	"OgreOverlayElement.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlayelement.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlayelement.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreRenderable.h"
@@ -5226,32 +5226,32 @@
 	"OgreColourValue.h"
 	"OgreRectangle.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreutfstring.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreutfstring.h
 	"OgrePrerequisites.h"
 	<iterator>
 	<string>
 	<stdexcept>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlayelementcommands.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlayelementcommands.h
 	"OgrePrerequisites.h"
 	"OgreStringInterface.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerectangle.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerectangle.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlaymanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreoverlaymanager.h
 	"OgrePrerequisites.h"
 	"OgreSingleton.h"
 	"OgreStringVector.h"
 	"OgreOverlay.h"
 	"OgreScriptLoader.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticleaffector.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticleaffector.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreStringInterface.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticleemitter.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticleemitter.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreVector3.h"
@@ -5260,21 +5260,21 @@
 	"OgreParticleEmitterCommands.h"
 	"OgreParticle.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticleemittercommands.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticleemittercommands.h
 	"OgrePrerequisites.h"
 	"OgreStringInterface.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticle.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticle.h
 	"OgrePrerequisites.h"
 	"OgreBillboard.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrebillboard.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrebillboard.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgreColourValue.h"
 	"OgreCommon.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticlesystemmanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticlesystemmanager.h
 	"OgrePrerequisites.h"
 	"OgreParticleSystem.h"
 	"OgreFrameListener.h"
@@ -5283,7 +5283,7 @@
 	"OgreScriptLoader.h"
 	"OgreResourceGroupManager.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticlesystem.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticlesystem.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 	"OgreString.h"
@@ -5293,10 +5293,10 @@
 	"OgreRadixSort.h"
 	"OgreController.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticleiterator.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreparticleiterator.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepass.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepass.h
 	"OgrePrerequisites.h"
 	"OgreGpuProgram.h"
 	"OgreColourValue.h"
@@ -5305,18 +5305,18 @@
 	"OgreLight.h"
 	"OgreTextureUnitState.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreprofiler.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreprofiler.h
 	"OgrePrerequisites.h"
 	"OgreSingleton.h"
 	"OgreString.h"
 	"OgreOverlay.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderqueueinvocation.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderqueueinvocation.h
 	"OgrePrerequisites.h"
 	"OgreRenderQueueSortingGrouping.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderqueuesortinggrouping.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderqueuesortinggrouping.h
 	"OgrePrerequisites.h"
 	"OgreIteratorWrappers.h"
 	"OgreMaterial.h"
@@ -5324,7 +5324,7 @@
 	"OgrePass.h"
 	"OgreRadixSort.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretechnique.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretechnique.h
 	"OgrePrerequisites.h"
 	"OgreIteratorWrappers.h"
 	"OgreBlendMode.h"
@@ -5333,7 +5333,7 @@
 	"OgreIteratorWrappers.h"
 	"OgreRenderSystemCapabilities.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendersystemcapabilities.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendersystemcapabilities.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreStringConverter.h"
@@ -5341,17 +5341,17 @@
 	"OgreResource.h"
 	"OgreLogManager.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestringconverter.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestringconverter.h
 	"OgrePrerequisites.h"
 	"OgreMath.h"
 	"OgreString.h"
 	"OgreStringVector.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderqueuelistener.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderqueuelistener.h
 	"OgrePrerequisites.h"
 	"OgreRenderQueue.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendersystem.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendersystem.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreTextureUnitState.h"
@@ -5366,57 +5366,57 @@
 	"OgrePlane.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendertarget.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendertarget.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreTextureManager.h"
 	"OgreViewport.h"
 	"OgreTimer.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretexturemanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretexturemanager.h
 	"OgrePrerequisites.h"
 	"OgreResourceManager.h"
 	"OgreTexture.h"
 	"OgreSingleton.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreviewport.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreviewport.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgreColourValue.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretimer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogretimer.h
 	"OgrePrerequisites.h"
 	"OgrePlatform.h"
 	"WIN32/OgreTimerImp.h"
 	"GLX/OgreTimerImp.h"
 	"OSX/OgreTimerImp.h"
 
-1231355094 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\win32\ogretimerimp.h
+1232551136 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\win32\ogretimerimp.h
 	"windows.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendertexture.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendertexture.h
 	"OgrePrerequisites.h"
 	"OgreRenderTarget.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreconfigoptionmap.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreconfigoptionmap.h
 	"OgrePrerequisites.h"
 	"OgreStringVector.h"
 	"OgreString.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendertargetlistener.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerendertargetlistener.h
 	"OgrePrerequisites.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderwindow.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerenderwindow.h
 	"OgrePrerequisites.h"
 	"OgreRenderTarget.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreresourcebackgroundqueue.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreresourcebackgroundqueue.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgreSingleton.h"
 	"OgreResource.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreribbontrail.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreribbontrail.h
 	"OgrePrerequisites.h"
 	"OgreBillboardChain.h"
 	"OgreNode.h"
@@ -5424,7 +5424,7 @@
 	"OgreFrameListener.h"
 	"OgreControllerManager.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreroot.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreroot.h
 	"OgrePrerequisites.h"
 	"OgreSingleton.h"
 	"OgreString.h"
@@ -5432,13 +5432,13 @@
 	"OgreResourceGroupManager.h"
 	<exception>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescenemanagerenumerator.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescenemanagerenumerator.h
 	"OgrePrerequisites.h"
 	"OgreSceneManager.h"
 	"OgreSingleton.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescenemanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescenemanager.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreSceneNode.h"
@@ -5460,7 +5460,7 @@
 	"OgreCamera.h"
 	"OgreInstancedGeometry.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescenequery.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrescenequery.h
 	"OgrePrerequisites.h"
 	"OgreAxisAlignedBox.h"
 	"OgreSphere.h"
@@ -5468,7 +5468,7 @@
 	"OgreRenderOperation.h"
 	"OgrePlaneBoundedVolume.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreautoparamdatasource.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreautoparamdatasource.h
 	"OgrePrerequisites.h"
 	"OgreCommon.h"
 	"OgreMatrix4.h"
@@ -5476,25 +5476,25 @@
 	"OgreLight.h"
 	"OgreColourValue.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerectangle2d.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrerectangle2d.h
 	"OgrePrerequisites.h"
 	"OgreSimpleRenderable.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresimplerenderable.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresimplerenderable.h
 	"OgrePrerequisites.h"
 	"OgreMovableObject.h"
 	"OgreRenderable.h"
 	"OgreAxisAlignedBox.h"
 	"OgreMaterial.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowtexturemanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowtexturemanager.h
 	"OgrePrerequisites.h"
 	"OgreSingleton.h"
 	"OgrePixelFormat.h"
 	"OgreTexture.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreinstancedgeometry.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreinstancedgeometry.h
 	"OgrePrerequisites.h"
 	"OgreMovableObject.h"
 	"OgreSimpleRenderable.h"
@@ -5504,32 +5504,32 @@
 	"OgreBone.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreskeletoninstance.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreskeletoninstance.h
 	"OgrePrerequisites.h"
 	"OgreSkeleton.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreskeletonmanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreskeletonmanager.h
 	"OgrePrerequisites.h"
 	"OgreResourceManager.h"
 	"OgreSingleton.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreskeletonserializer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreskeletonserializer.h
 	"OgrePrerequisites.h"
 	"OgreSkeleton.h"
 	"OgreSerializer.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestaticgeometry.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrestaticgeometry.h
 	"OgrePrerequisites.h"
 	"OgreMovableObject.h"
 	"OgreRenderable.h"
 
-1231355110 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresubentity.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresubentity.h
 	"OgrePrerequisites.h"
 	"OgreString.h"
 	"OgreRenderable.h"
 	"OgreHardwareBufferManager.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresubmesh.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogresubmesh.h
 	"OgrePrerequisites.h"
 	"OgreVertexIndexData.h"
 	"OgreMaterial.h"
@@ -5538,12 +5538,12 @@
 	"OgreProgressiveMesh.h"
 	"OgreAnimationTrack.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositor.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositor.h
 	"OgrePrerequisites.h"
 	"OgreIteratorWrappers.h"
 	"OgreResource.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositormanager.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositormanager.h
 	"OgrePrerequisites.h"
 	"OgreResourceManager.h"
 	"OgreCompositor.h"
@@ -5551,70 +5551,70 @@
 	"OgreCompositorSerializer.h"
 	"OgreRenderSystem.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositorserializer.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositorserializer.h
 	"OgrePrerequisites.h"
 	"OgreDataStream.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositorchain.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositorchain.h
 	"OgrePrerequisites.h"
 	"OgreRenderTargetListener.h"
 	"OgreRenderQueueListener.h"
 	"OgreCompositorInstance.h"
 	"OgreCompositor.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositorinstance.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositorinstance.h
 	"OgrePrerequisites.h"
 	"OgreMaterial.h"
 	"OgreTexture.h"
 	"OgreRenderQueue.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositiontechnique.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositiontechnique.h
 	"OgrePrerequisites.h"
 	"OgrePixelFormat.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositionpass.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositionpass.h
 	"OgrePrerequisites.h"
 	"OgreMaterial.h"
 	"OgreRenderSystem.h"
 	"OgreRenderQueue.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositiontargetpass.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrecompositiontargetpass.h
 	"OgrePrerequisites.h"
 	"OgreIteratorWrappers.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrewindoweventutilities.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrewindoweventutilities.h
 	"OgrePrerequisites.h"
 	"OgrePlatform.h"
 	<windows.h>
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetupfocused.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetupfocused.h
 	"OgrePrerequisites.h"
 	"OgreShadowCameraSetup.h"
 	"OgrePolygon.h"
 	"OgreConvexBody.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepolygon.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogrepolygon.h
 	"OgrePrerequisites.h"
 	"OgreVector3.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreconvexbody.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreconvexbody.h
 	"OgrePrerequisites.h"
 	"OgrePolygon.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetuplispsm.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetuplispsm.h
 	"OgrePrerequisites.h"
 	"OgreShadowCameraSetupFocused.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetupplaneoptimal.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetupplaneoptimal.h
 	"OgrePrerequisites.h"
 	"OgreShadowCameraSetup.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetuppssm.h
+1232551154 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ogreshadowcamerasetuppssm.h
 	"OgrePrerequisites.h"
 	"OgreShadowCameraSetupLiSPSM.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\ois.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\ois.h
 	"OISPrereqs.h"
 	"OISObject.h"
 	"OISMouse.h"
@@ -5627,50 +5627,50 @@
 	"OISEvents.h"
 	"OISEffect.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisprereqs.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisprereqs.h
 	<vector>
 	<string>
 	<map>
 	"OISConfig.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisconfig.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisconfig.h
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisobject.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisobject.h
 	"OISPrereqs.h"
 	"OISInterface.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisinterface.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisinterface.h
 	"OISPrereqs.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oismouse.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oismouse.h
 	"OISObject.h"
 	"OISEvents.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisevents.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisevents.h
 	"OISPrereqs.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oiskeyboard.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oiskeyboard.h
 	"OISObject.h"
 	"OISEvents.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisjoystick.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisjoystick.h
 	"OISObject.h"
 	"OISEvents.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisinputmanager.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisinputmanager.h
 	"OISPrereqs.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisforcefeedback.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisforcefeedback.h
 	"OISPrereqs.h"
 	"OISInterface.h"
 	"OISEffect.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oiseffect.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oiseffect.h
 	"OISPrereqs.h"
 
-1231355108 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisexception.h
+1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisexception.h
 
-1232493090 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.h
+1232559612 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"

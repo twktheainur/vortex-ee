@@ -12,7 +12,7 @@ using namespace Ogre;
 
 typedef struct structUser
 {
-  char* id;
+  string id;
   SceneNode* node;
   Entity* entite;
 } structUser_t;
