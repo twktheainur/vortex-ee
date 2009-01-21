@@ -89,13 +89,14 @@ public:
     mutex.lock();
     bool test = (events.size()!=0);
     mutex.unlock();
+    usleep(10);
     return test;
   }
 
   inline static void usleep(long delai)
   {
     #ifdef WIN32
-      Sleep(delai/1000+1);//le +1 sert a éviter Sleep(0), qui ne garantit pas que le thread ne sera pas actif
+      Sleep(delai/10);//le +1 sert a éviter Sleep(0), qui ne garantit pas que le thread ne sera pas actif
     #else
     printf("ST SLEEP\n");
        pthread_cond_t cw; /* condition "privée" utilisée par le thread qui veut dormir     */
