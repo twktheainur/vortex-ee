@@ -1,7 +1,7 @@
 #include "VortexFrameListener.h"
 #include "../common/bitBuffer.h"
 
-    VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Entity * player, SceneManager *sceneMgr)
+    VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr)
     {
       mInputManager = InputManager::getSingletonPtr();
       mInputManager->initialise( win );
@@ -15,10 +15,10 @@
         mCamNode = cam->getParentSceneNode();
         mCamRotNode = mCamNode->getParentSceneNode();
         mPlayer = player;
-        mPlayerNode=player->getParentSceneNode();
+        //mPlayerNode=player->getParentSceneNode();
         mSceneMgr = sceneMgr;
 
-        mAnimationState = mPlayer->getAnimationState("marcheAvant");
+        mAnimationState = mPlayer->getEntity()->getAnimationState("marcheAvant");
         mAnimationState->setLoop(true);
         mAnimationState->setEnabled(false);
 
@@ -46,7 +46,8 @@
         mInputManager->capture();
         mAnimationState->addTime(evt.timeSinceLastFrame);
 
-        mPlayerNode->yaw(mAngle,Node::TS_WORLD);
+        //mPlayerNode->yaw(mAngle,Node::TS_WORLD);
+        mPlayer->getSceneNode()->yaw(mAngle,Node::TS_WORLD);
 
         //Ici on doit swapper les coordonnees pour qu'elle soient les memes entre player et camera
         posY = (float)mDirection.y;
@@ -55,18 +56,28 @@
         mDirection.y = posZ;
         mDirection.x = -posX;
         mDirection.z = posY;
-        mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
+        //mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
+        //mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);//n'a pas l'air de marcher avec les collision/gravité
+        
         mDirection.y = posY;
         mDirection.x = posX;
         mDirection.z = posZ;
+        
+        mPlayer->setLinearVelocity(Vector3(mDirection.y,mDirection.x,mDirection.z));//ca n'est pas les coordonnées locales...
+        mPlayer->setAngularVelocity(Vector3::ZERO);//je sais pas encore a quoi ca sert, j'ai vu ca dans l'exemple BspCollision
+
+        
+        World::getSingleton().simulationStep(evt.timeSinceLastFrame);
 
         if (changement) // si un déplacement a eu lieu pendant l'image précédente
         {
             bitBuffer buff;
             Vector3 pos;
             Quaternion dir; //oups comment ça marche cette merde?
-            pos = mPlayerNode->getPosition();
-            dir = mPlayerNode->getOrientation(); // renvoie un quaternion
+            //pos = mPlayerNode->getPosition();
+            pos=mPlayer->getSceneNode()->getPosition();
+            //dir = mPlayerNode->getOrientation(); // renvoie un quaternion
+            dir = mPlayer->getSceneNode()->getOrientation();
             posX = (float)pos.x; posY = (float)pos.y; posZ = (float)pos.z;
 
             // on ajoute l'id du client au buffer avant
@@ -157,7 +168,7 @@
     	    {
             mCamRotNode->pitch(Degree(mRotate * e.state.Y.rel), Node::TS_LOCAL);//on tourne le camRotNode, mais pas le joueur
     	    }
-            mPlayerNode->yaw(Degree(-mRotate * e.state.X.rel), Node::TS_WORLD);//on tourne le joueur (et pas seulement le camRotNode)
+            mPlayer->getSceneNode()->yaw(Degree(-mRotate * e.state.X.rel), Node::TS_WORLD);//on tourne le joueur (et pas seulement le camRotNode)
             changement = true;
     	  }
         return true;
@@ -171,7 +182,7 @@
     		if(mDirection.x==0)
     		{
     		  mAnimationState->setEnabled(false);
-    	  	mAnimationState = mPlayer->getAnimationState("marcheAvant");
+    	  	mAnimationState = mPlayer->getEntity()->getAnimationState("marcheAvant");
           mAnimationState->setLoop(true);
     		  mAnimationState->setEnabled(true);
     		}
@@ -204,7 +215,7 @@
                 if(mDirection.x==0)
                 {
                   mAnimationState->setEnabled(false);
-                  mAnimationState = mPlayer->getAnimationState("marcheAvant");
+                  mAnimationState = mPlayer->getEntity()->getAnimationState("marcheAvant");
                   mAnimationState->setLoop(true);
                   mAnimationState->setEnabled(true);
                 }
@@ -217,7 +228,7 @@
                 if(mDirection.x==0)
                 {
                   mAnimationState->setEnabled(false);
-                  mAnimationState = mPlayer->getAnimationState("marcheArriere");
+                  mAnimationState = mPlayer->getEntity()->getAnimationState("marcheArriere");
                   mAnimationState->setLoop(true);
                   mAnimationState->setEnabled(true);
                 }
@@ -228,7 +239,7 @@
             case OIS::KC_A:
                 mDirection.x = -mMove/1.5; // on va � gauche
                 mAnimationState->setEnabled(false);
-                mAnimationState = mPlayer->getAnimationState("marcheGauche");
+                mAnimationState = mPlayer->getEntity()->getAnimationState("marcheGauche");
                 mAnimationState->setLoop(true);
                 mAnimationState->setEnabled(true);
                 changement = true;
@@ -238,7 +249,7 @@
             case OIS::KC_D:
                 mDirection.x = mMove/1.5; // on va � droite
                 mAnimationState->setEnabled(false);
-                mAnimationState = mPlayer->getAnimationState("marcheDroite");
+                mAnimationState = mPlayer->getEntity()->getAnimationState("marcheDroite");
                 mAnimationState->setLoop(true);
                 mAnimationState->setEnabled(true);
                 changement = true;
@@ -292,13 +303,13 @@
            mAnimationState->setEnabled(false);//on désactive l'anim en cours (dans tous les cas)
            if(mDirection.y>0)
            {
-             mAnimationState = mPlayer->getAnimationState("marcheAvant");
+             mAnimationState = mPlayer->getEntity()->getAnimationState("marcheAvant");
              mAnimationState->setLoop(true);
              mAnimationState->setEnabled(true);//on réactive l'anim dont on a besoin
            }
            else if(mDirection.y<0)
            {
-             mAnimationState = mPlayer->getAnimationState("marcheArriere");
+             mAnimationState = mPlayer->getEntity()->getAnimationState("marcheArriere");
              mAnimationState->setLoop(true);
              mAnimationState->setEnabled(true);
            }
@@ -311,13 +322,13 @@
            mAnimationState->setEnabled(false);
            if(mDirection.y>0)
            {
-             mAnimationState = mPlayer->getAnimationState("marcheAvant");
+             mAnimationState = mPlayer->getEntity()->getAnimationState("marcheAvant");
              mAnimationState->setLoop(true);
              mAnimationState->setEnabled(true);//on réactive l'anim si besoin
            }
            else if(mDirection.y<0)
            {
-             mAnimationState = mPlayer->getAnimationState("marcheArriere");
+             mAnimationState = mPlayer->getEntity()->getAnimationState("marcheArriere");
              mAnimationState->setLoop(true);
              mAnimationState->setEnabled(true);
            }

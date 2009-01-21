@@ -47,13 +47,15 @@
         printf("5\n");
         initializeResourceGroups(); // on initialise les ressources
         printf("6\n");
-        setupScene(); // on installe les �l�ments de la sc�ne + initialisation du SceneManager
+        chooseSceneManager();
         printf("7\n");
         createWorld();//pour la gestion des collisions/gravité
-        //doit se situer APRES l'initialisation du SceneManager (methode setupScene() )
+        //doit se situer APRES l'initialisation du SceneManager (methode chooseSceneManager() )
         printf("8\n");
-        setupInputSystem();
+        setupScene(); // on installe les �l�ments de la sc�ne + initialisation du SceneManager
         printf("9\n");
+        setupInputSystem();
+        printf("10\n");
         //setupCEGUI();
         createFrameListener(); // construction du FrameListener
         printf("10\n");
@@ -117,9 +119,14 @@
       }
     }
 
+    void Application::chooseSceneManager()
+    {
+      mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
+    }
+
     void Application::createWorld(void)
     {
-        mWorld = new World(mSceneMgr);
+        mWorld = new World(mSceneMgr, World::WT_REFAPP_BSP);
     }
 
     void Application::createRenderWindow()
@@ -135,10 +142,11 @@
 
     void Application::setupScene()
     {
-      mSceneMgr = mRoot->createSceneManager(ST_INTERIOR, "BspSceneManager");
-
-      mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
+      mWorld->getSceneManager()->setWorldGeometry("maps/PT.bsp");//chargement de la map
+      //mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
       mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
+
+      mWorld->setGravity(Vector3(0, 0, -10000));
 
       mCamera = mSceneMgr->createCamera("Camera"); // on cree la camera
       mCamera->setNearClipDistance(5);
@@ -153,18 +161,29 @@
       //mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un deplacement correct de la camera
                                   // (les axes sont inverses entre le moteur quake et ogre)
       mCamera->setFixedYawAxis(true, Vector3::UNIT_Z); // idem (suite)
-      SceneNode * playerNode;
-      playerNode =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode", Vector3(-680,160,127));
-      mPlayer = mSceneMgr->createEntity( "Player", "man.mesh" );
-      mPlayer->setCastShadows(true);
-      playerNode->pitch(Degree(90));
-      playerNode->yaw(Degree(90));
-      playerNode->scale(Vector3(2,2,2));
-      playerNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
-      playerNode->attachObject(mPlayer); // on attache le modèle au noeud
+      //SceneNode * playerNode;
+      //playerNode =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode", Vector3(-680,160,127));
+      //mPlayer = mSceneMgr->createEntity( "Player", "man.mesh" );
+      mPlayer = new PersonnagePhysique("Player");
+      //mPlayer->getEntity()->setCastShadows(true);
+      
+      //le code suivant se retrouve dans PersonnagePhysique
+      //playerNode->pitch(Degree(90));
+      mPlayer->getSceneNode()->pitch(Degree(90));
+      //playerNode->yaw(Degree(90));
+      mPlayer->getSceneNode()->yaw(Degree(90));
+      //playerNode->scale(Vector3(2,2,2));
+      mPlayer->getSceneNode()->scale(Vector3(2,2,2));
+      //playerNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
+      mPlayer->getSceneNode()->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
+      //playerNode->attachObject(mPlayer); // on attache le modèle au noeud
+      
+      mPlayer->setCollisionEnabled(true);
+      mPlayer->setDynamicsEnabled(true);
 
       SceneNode *camRotNode;
-      camRotNode=playerNode->createChildSceneNode("CamRotNode", Vector3(0,20,0)); //SceneNode autour duquel la caméra va tourner (légèrement plus haut que le playerNode)
+      //camRotNode=playerNode->createChildSceneNode("CamRotNode", Vector3(0,20,0)); //SceneNode autour duquel la caméra va tourner (légèrement plus haut que le playerNode)
+      camRotNode=mPlayer->getSceneNode()->createChildSceneNode("CamRotNode", Vector3(0,20,0)); //SceneNode autour duquel la caméra va tourner (légèrement plus haut que le playerNode)
       //situé au même endroit que le playerNode, (la caméra tourne autour du player en apparence) mais peut subir un "pitch" (inclinaison verticale) sans modifier celle du playerNode
       SceneNode *camNode;
       camNode = camRotNode->createChildSceneNode("CamNode", Vector3(0,0,-60)); // on place la camera derriere le joueur

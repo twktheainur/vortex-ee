@@ -6,6 +6,7 @@
 #include "InputManager.h"
 #include "globals.h"
 #include "vector.h"
+#include "PersonnagePhysique.h"
 
 
 using namespace Ogre;
@@ -20,7 +21,7 @@ typedef struct structUser
 class VortexFrameListener : public FrameListener, public OIS::MouseListener, public OIS::KeyListener
 {
 public:
-    VortexFrameListener(RenderWindow* win, Camera* cam,Entity * player, SceneManager *sceneMgr);
+    VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr);
 
     bool frameStarted(const FrameEvent &evt);
 
@@ -52,8 +53,9 @@ protected:
     SceneNode *mCamNode;   // le node auquel notre camera est attachee
     SceneNode *mCamRotNode; // le node autour duquel la caméra va tourner
 
-    SceneNode *mPlayerNode; // le node auquel le modele est attache
-    Entity *mPlayer;
+    //SceneNode *mPlayerNode; // le node auquel le modele est attache
+    //Entity *mPlayer;
+    PersonnagePhysique* mPlayer;
     AnimationState *mAnimationState;
 
     bool mContinue;        // booleen definissant si on continue le rendu

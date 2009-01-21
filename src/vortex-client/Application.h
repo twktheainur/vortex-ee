@@ -5,6 +5,7 @@
 #include <OIS/OIS.h>
 #include "VortexFrameListener.h"
 #include "OgreReferenceAppLayer.h"//pour la gestion des collisions/gravité
+#include "PersonnagePhysique.h"//pour les collisions / la gravité
 //#include <CEGUI/CEGUI.h>
 //#include <OgreCEGUIRenderer.h>
 
@@ -57,7 +58,8 @@ private:
     VortexFrameListener *mListener;
     World* mWorld;//pour la gestion des collisons/gravité
     Camera *mCamera;
-    Entity * mPlayer;
+    //Entity* mPLayer;
+    PersonnagePhysique * mPlayer;
     SceneManager *mSceneMgr;
     RenderWindow *win;
 
@@ -68,13 +70,15 @@ private:
     void defineResources();
 
     void setupRenderSystem();
-    
-    void createWorld();//pour la gestion des collisions/gravite
 
     void createRenderWindow();
 
     void initializeResourceGroups();
 
+    void chooseSceneManager();
+
+    void createWorld();//pour la gestion des collisions/gravite
+    
     void setupScene();
 
     void setupInputSystem();
