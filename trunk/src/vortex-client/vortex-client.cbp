@@ -25,6 +25,7 @@
 					<Add library="..\..\lib\OgreMain.dll" />
 					<Add library="..\..\lib\libpthreadGC2.a" />
 					<Add library="..\..\bin\ReferenceAppLayer.dll" />
+					<Add library="..\..\bin\libode.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -69,6 +70,8 @@
 		<Unit filename="EventManager.h" />
 		<Unit filename="InputManager.cpp" />
 		<Unit filename="InputManager.h" />
+		<Unit filename="PersonnagePhysique.cpp" />
+		<Unit filename="PersonnagePhysique.h" />
 		<Unit filename="TCPClient.cpp" />
 		<Unit filename="TCPClient.h" />
 		<Unit filename="VortexFrameListener.cpp" />

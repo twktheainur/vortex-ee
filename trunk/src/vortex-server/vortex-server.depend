@@ -132,7 +132,7 @@
 	"Thread.h"
 	"Event.h"
 
-1232478122 source:c:\users\sebastien\documents\vortex\src\vortex-server\chatmanager.cpp
+1232559293 source:c:\users\sebastien\documents\vortex\src\vortex-server\chatmanager.cpp
 	"ChatManager.h"
 	"globals.h"
 
@@ -438,4 +438,10 @@
 
 1232398449 source:c:\users\sebastien\documents\vortex\src\common\loginpacket.cpp
 	"LoginPacket.h"
+
+1232478122 source:c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.cpp
+	"LoginResponsePacket.h"
+
+1232398449 c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.h
+	"Packet.h"
 
