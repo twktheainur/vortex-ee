@@ -30,9 +30,10 @@
 		<Unit filename="..\common\Event.cpp" />
 		<Unit filename="..\common\Event.h" />
 		<Unit filename="..\common\Exception.h" />
-		<Unit filename="..\common\LoginPacket.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="..\common\LoginPacket.cpp" />
+		<Unit filename="..\common\LoginPacket.h" />
+		<Unit filename="..\common\LoginResponsePacket.cpp" />
+		<Unit filename="..\common\LoginResponsePacket.h" />
 		<Unit filename="..\common\Mutex.cpp" />
 		<Unit filename="..\common\Mutex.h" />
 		<Unit filename="..\common\Packet.cpp" />
