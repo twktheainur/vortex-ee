@@ -2728,7 +2728,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232480641 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1232654590 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -2820,13 +2820,15 @@
 	"Thread.h"
 	"Event.h"
 
-1232476918 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
+1232634271 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
 	"Application.h"
 
-1232215862 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
+1232633958 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
+	"OgreReferenceAppLayer.h"
+	"PersonnagePhysique.h"
 	<CoreFoundation/CoreFoundation.h>
 
 1231362515 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ogre.h
@@ -4061,12 +4063,13 @@
 
 1231362512 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ois\oisexception.h
 
-1232470485 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.h
+1232633958 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
 	"globals.h"
 	"vector.h"
+	"PersonnagePhysique.h"
 
 1229777693 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\inputmanager.h
 	<OISMouse.h>
@@ -4124,7 +4127,7 @@
 1232294379 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232486004 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
+1232634447 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
@@ -4143,7 +4146,7 @@
 	<vector>
 	<cstring>
 
-1232476814 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
+1232556835 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 	"../common/LoginResponsePacket.h"
 	"../common/Exception.h"
@@ -5766,10 +5769,10 @@
 1232474702 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.h
 	"Packet.h"
 
-1232473903 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.cpp
+1232654471 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.cpp
 	"LoginResponsePacket.h"
 
-1232387203 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.h
+1232654928 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.h
 	"Packet.h"
 
 1232392910 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.h
@@ -5990,5 +5993,154 @@
 	"OgreRefAppWorld.h"
 
 1232610512 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.cpp
+	"PersonnagePhysique.h"
+
+1232633958 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\personnagephysique.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreRefAppWorld.h"
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappprerequisites.h
+	<ode/ode.h>
+	<ode/odecpp.h>
+	<ode/odecpp_collision.h>
+	<Ogre.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\ode.h
+	<ode/config.h>
+	<ode/compatibility.h>
+	<ode/common.h>
+	<ode/contact.h>
+	<ode/error.h>
+	<ode/memory.h>
+	<ode/odemath.h>
+	<ode/matrix.h>
+	<ode/timer.h>
+	<ode/rotation.h>
+	<ode/mass.h>
+	<ode/misc.h>
+	<ode/objects.h>
+	<ode/odecpp.h>
+	<ode/collision_space.h>
+	<ode/collision.h>
+	<ode/odecpp_collision.h>
+	<ode/export-dif.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\config.h
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<math.h>
+	<string.h>
+	<float.h>
+	<malloc.h>
+	<alloca.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\compatibility.h
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\common.h
+	<ode/config.h>
+	<ode/error.h>
+	<math.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\error.h
+	<ode/config.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\contact.h
+	<ode/common.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\memory.h
+	"ode/config.h"
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\odemath.h
+	<ode/common.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\matrix.h
+	<ode/common.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\timer.h
+	<ode/config.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\rotation.h
+	<ode/common.h>
+	<ode/compatibility.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\mass.h
+	<ode/common.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\misc.h
+	<ode/common.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\objects.h
+	<ode/common.h>
+	<ode/mass.h>
+	<ode/contact.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\odecpp.h
+	<ode/error.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\collision_space.h
+	<ode/common.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\collision.h
+	<ode/common.h>
+	<ode/collision_space.h>
+	<ode/contact.h>
+	"collision_trimesh.h"
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\collision_trimesh.h
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\odecpp_collision.h
+	<ode/error.h>
+
+1231362509 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ode\export-dif.h
+	<ode/common.h>
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappapplicationobject.h
+	"OgreRefAppPrerequisites.h"
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappworld.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppJoint.h"
+	<OgreSingleton.h>
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappjoint.h
+	"OgreRefAppPrerequisites.h"
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrereferenceapplayer.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppWorld.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreRefAppOgreHead.h"
+	"OgreRefAppPlane.h"
+	"OgreRefAppBall.h"
+	"OgreRefAppJoint.h"
+	"OgreRefAppBox.h"
+	"OgreRefAppCollideCamera.h"
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappogrehead.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappplane.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappball.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappbox.h
+	"OgreRefAppPrerequisites.h"
+	"OgreRefAppApplicationObject.h"
+	"OgreLogManager.h"
+	"OgreStringConverter.h"
+
+1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappcollidecamera.h
+	"OgreRefAppPrerequisites.h"
+	"OgreCamera.h"
+	"OgreRefAppApplicationObject.h"
+
+1232633959 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
 

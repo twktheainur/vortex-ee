@@ -31,10 +31,15 @@ void ConnectionManager::execute(void * arg)
       printf("%s\n",e->what());
 	  delete e;
 	}
-    if((event_data = connectionManagerEvent.getEvent()).type==Event::event.connect.login)
+    if((event_data = connectionManagerEvent.getEvent()).type==event_connect_login)
       {
         //On expedie le paquet
-        size_t length =event_data.data.length();
+        bitBuffer tmp;
+        size_t hlen = 5;
+        size_t length=event_data.data.length();
+        tmp.writeChar(event_connect_login);
+        tmp.writeInt(length);
+        socket->send(tmp.set(),&hlen,0);
         socket->send(event_data.data.set(),&length,0);
         // Now on attends une reponse
         // On va d'abbord essayer de recuperer 4o (taille de l'entete global)

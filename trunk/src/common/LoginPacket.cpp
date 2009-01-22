@@ -5,14 +5,14 @@ LoginPacket::LoginPacket(string login, string pass_hash)
   getData().writeString(pass_hash);
   this->login=login;
   this->pass_hash=pass_hash;
-  getHeader().writeChar(Event::event.connect.login);
+  getHeader().writeChar(event_connect_login);
   getHeader().writeInt(getData().length());
 }
 LoginPacket::LoginPacket(char * buffer,size_t length)
 {
   bitBuffer tmp =bitBuffer(buffer,length);
   setHeader(tmp);
-  if(getData().readInt(true)!=Event::event.connect.login)
+  if(getData().readInt(true)!=event_connect_login)
     cout;
     //La ca par en couille il faut lancer une exception
     //C'est donc pas le bon paquet
