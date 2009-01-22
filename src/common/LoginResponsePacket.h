@@ -5,8 +5,8 @@
  *      Author: twk
  */
 
-#ifndef LOGINPACKET_H_
-#define LOGINPACKET_H_
+#ifndef LOGINRESPONSEPACKET_H_
+#define LOGINRESPONSEPACKET_H_
 #include "Packet.h"
 
 class LoginResponsePacket: public Packet

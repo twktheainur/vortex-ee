@@ -29,49 +29,26 @@ extern "C"
 #include "bitBuffer.h"
 using namespace std;
 
-typedef struct world_event
+typedef enum event
 {
-  static const char update = 3;
-  static const char add = 4;
-  static const char del = 5;
-} world_event_t;
+  event_world_update = 3,
+  event_world_add = 4,
+  event_world_del = 5,
+  event_ogre_update = 8,
+  event_ogre_add = 9,
+  event_ogre_del = 10,
+  event_chat_incoming = 6,
+  event_chat_outgoing = 7,
+  event_connect_login = 0,
+  event_connect_logout = 1,
+  event_anim_avant = 11,
+  event_anim_arriere = 12,
+  event_anim_gauche = 13,
+  event_anim_droite = 14
+}event_t;
 
-typedef struct ogre_event
-{
-  static const char update = 8;
-  static const char add = 9;
-  static const char del = 10;
-} ogre_event_t;
 
-typedef struct chat_event
-{
-  static const char incoming = 6;
-  static const char outgoing = 7;
-} chat_event_t;
-
-typedef struct connect_event
-{
-  static const char login = 0;
-  static const char logout = 1;
-} connect_event_t;
-
-typedef struct anim_event
-{
-  static const char avant = 11;
-  static const char arriere = 12;
-  static const char gauche = 13;
-  static const char droite = 14;
-} anim_event_t;
-
-typedef struct event
-{
-  world_event_t world;
-  chat_event_t chat;
-  connect_event_t connect;
-  ogre_event_t ogre;
-} event_t;
-
-typedef struct event_data
+typedef struct event_datatype
 {
   int type;
   bitBuffer data;
@@ -90,8 +67,6 @@ public:
   Event();
   void sendEvent(int evt, bitBuffer &data);
   event_data_t getEvent();
-  static event_t event;
-  static event_t net_event;
   inline bool changed()
   {
     mutex.lock();
@@ -103,27 +78,9 @@ public:
   inline static void usleep(long delai)
   {
     #ifdef WIN32
-      Sleep(delai/1000+1);//le +1 sert a éviter Sleep(0), qui ne garantit pas que le thread ne sera pas actif
+      Sleep(delai/10);//le +1 sert a éviter Sleep(0), qui ne garantit pas que le thread ne sera pas actif
     #else
-    printf("ST SLEEP\n");
-       pthread_cond_t cw; /* condition "privée" utilisée par le thread qui veut dormir     */
-     pthread_mutex_t mx; /* mutex nécessaire pour pouvoir utiliser pthread_cond_timedwait */
-
-     // Ceci compile sous Linux mais pas Solaris
-     struct timeval tps_deb; /* heure de debut du blocage                                     */
-     struct timespec tps_exp; /* heure d'expiration du blocage                                 */
-
-     pthread_cond_init(&cw, NULL);
-     pthread_mutex_init(&mx, NULL);
-
-     gettimeofday(&tps_deb, 0); /* on récupère l'heure courante             */
-     tps_exp.tv_sec = tps_deb.tv_sec +delai/10000;
-     tps_exp.tv_nsec = (tps_deb.tv_usec+delai-(delai/10000)*10000)*1000;/*+ delai*1000;*/ /* on convertit les ms en ns                */
-     pthread_cond_timedwait(&cw, &mx, &tps_exp); /* et on se bloque jusqu'au temps calculé   */
-
-     pthread_cond_destroy(&cw);
-     pthread_mutex_destroy(&mx);
-     printf("END SLEEP\n");
+      usleep(delai);
     #endif
   }
 };

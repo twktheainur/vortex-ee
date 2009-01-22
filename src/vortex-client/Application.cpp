@@ -146,7 +146,7 @@
       //mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
       mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
 
-      mWorld->setGravity(Vector3(0, 0, -10000));
+      //mWorld->setGravity(Vector3(0, 0, -10000));
 
       mCamera = mSceneMgr->createCamera("Camera"); // on cree la camera
       mCamera->setNearClipDistance(5);

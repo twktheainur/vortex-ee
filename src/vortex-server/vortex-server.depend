@@ -249,7 +249,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232480641 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1232654590 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -352,13 +352,13 @@
 1231628038 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\globals.h
 	"../common/Event.h"
 
-1232476726 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
+1232555624 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
 	"ClientManager.h"
 	"../common/bitBuffer.h"
 	"globals.h"
 	"../common/LoginPacket.h"
 
-1231632229 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.h
+1232555815 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.h
 	"globals.h"
 	"../common/Thread.h"
 	"../common/Event.h"
@@ -424,13 +424,13 @@
 1232474702 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.h
 	"Packet.h"
 
-1232474706 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.cpp
+1232654443 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginpacket.cpp
 	"LoginPacket.h"
 
-1232473903 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.cpp
+1232654471 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.cpp
 	"LoginResponsePacket.h"
 
-1232387203 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.h
+1232654928 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.h
 	"Packet.h"
 
 1232398449 c:\users\sebastien\documents\vortex\src\common\loginpacket.h

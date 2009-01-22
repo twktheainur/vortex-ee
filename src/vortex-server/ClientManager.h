@@ -18,14 +18,14 @@ under the License.*/
 class ClientManager : public Thread
 {
 private:
-  Event * event;
+  Event event;
   TCPSocket socket;
 
   void execute(void * arg);
 public:
 	ClientManager(TCPSocket sock);
 	~ClientManager();
-  inline Event * getEvent(){return event;}
+  inline Event getEvent(){return event;}
 };
 
 #endif /* CLIENTMANAGER_H_ */

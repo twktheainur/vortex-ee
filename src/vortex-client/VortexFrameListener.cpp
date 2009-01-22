@@ -59,17 +59,17 @@
         mDirection.x = -posX;
         mDirection.z = posY;
         //mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
-        //mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);//n'a pas l'air de marcher avec les collision/gravité
+        mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);//n'a pas l'air de marcher avec les collision/gravité
 
         mDirection.y = posY;
         mDirection.x = posX;
         mDirection.z = posZ;
 
-        mPlayer->setLinearVelocity(Vector3(mDirection.y,mDirection.x,mDirection.z));//ca n'est pas les coordonnées locales...
-        mPlayer->setAngularVelocity(Vector3::ZERO);//je sais pas encore a quoi ca sert, j'ai vu ca dans l'exemple BspCollision
+        //mPlayer->setLinearVelocity(Vector3(mDirection.y,mDirection.x,mDirection.z));//ca n'est pas les coordonnées locales...
+        //mPlayer->setAngularVelocity(Vector3::ZERO);//je sais pas encore a quoi ca sert, j'ai vu ca dans l'exemple BspCollision
 
 
-        World::getSingleton().simulationStep(evt.timeSinceLastFrame);
+        //World::getSingleton().simulationStep(evt.timeSinceLastFrame);
 
         if (changement) // si un déplacement a eu lieu pendant l'image précédente
         {
