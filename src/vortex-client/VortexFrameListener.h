@@ -65,6 +65,8 @@ protected:
     bool changement;  // booleen definissant si on a eu un mouvement pendant cette image
 
     vector<structUser_t> utilisateurs; // vecteur contenant les nodes des autres utilisateurs
+
+    string idClient;
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED

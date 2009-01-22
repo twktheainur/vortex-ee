@@ -166,7 +166,7 @@
       //mPlayer = mSceneMgr->createEntity( "Player", "man.mesh" );
       mPlayer = new PersonnagePhysique("Player");
       //mPlayer->getEntity()->setCastShadows(true);
-      
+
       //le code suivant se retrouve dans PersonnagePhysique
       //playerNode->pitch(Degree(90));
       mPlayer->getSceneNode()->pitch(Degree(90));
@@ -177,7 +177,7 @@
       //playerNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
       mPlayer->getSceneNode()->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
       //playerNode->attachObject(mPlayer); // on attache le modèle au noeud
-      
+
       mPlayer->setCollisionEnabled(true);
       mPlayer->setDynamicsEnabled(true);
 
@@ -193,7 +193,7 @@
 
       camNode->attachObject(mCamera); // on attache la camera au noeud
 
-        //lumieres
+       //lumieres
         // droite de l'entree
         Light * light1 = mSceneMgr->createLight("L1");
         light1->setType(Light::LT_POINT);
@@ -204,7 +204,7 @@
         lampe1->setCastShadows(false);//on ne veux pas que l'objet "lampe" obscursisse la lumière de la lampe...
         SceneNode *lampeNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode1", Vector3(-765,-88,200));
         lampeNode1->attachObject(lampe1);
-        lampeNode1->yaw(Degree(90));
+        lampeNode1->yaw(Degree(270));
         lampeNode1->pitch(Degree(180));
         lampeNode1->scale(Vector3(12,9,9));
 
@@ -215,9 +215,9 @@
         light2->setDiffuseColour(0.5,0.45,0.45);
         light2->setSpecularColour(0.5,0.45,0.45);
         Entity *lampe2 = mSceneMgr->createEntity("lampe2", "lampe.mesh" );
-        SceneNode *lampeNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode2", Vector3(-80,324,200));
+        SceneNode *lampeNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode2", Vector3(-79,324,200));
         lampeNode2->attachObject(lampe2);
-        lampeNode1->yaw(Degree(180));
+        lampeNode2->yaw(Degree(270));
         lampeNode2->scale(Vector3(12,9,9));
 
         //vers escalier
@@ -227,9 +227,9 @@
         light3->setDiffuseColour(0.5,0.45,0.45);
         light3->setSpecularColour(0.5,0.45,0.45);
         Entity *lampe3 = mSceneMgr->createEntity("lampe3", "lampe.mesh" );
-        SceneNode *lampeNode3 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode3", Vector3(-220,-204,200));
+        SceneNode *lampeNode3 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode3", Vector3(-225,-204,200));
         lampeNode3->attachObject(lampe3);
-        lampeNode3->yaw(Degree(90));
+        lampeNode3->yaw(Degree(270));
         lampeNode3->pitch(Degree(180));
         lampeNode3->scale(Vector3(12,9,9));
 
@@ -237,29 +237,42 @@
         Light * light4 = mSceneMgr->createLight("L4");
         light4->setType(Light::LT_POINT);
         light4->setPosition(Vector3(768,152,108));
-        light4->setDiffuseColour(1.5, 1, 1);
-        light4->setSpecularColour(2, 1, 1);
+        light4->setDiffuseColour(1.5,1,1);
+        light4->setSpecularColour(1,0.5,0.5);
 
         //etage
         Light * light5 = mSceneMgr->createLight("L5");
         light5->setType(Light::LT_POINT);
-        light5->setPosition(Vector3(776,-204,396));
+        light5->setPosition(Vector3(826,-225,396));
         light5->setDiffuseColour(0.5,0.4,0.4);
         light5->setSpecularColour(0.5,0.4,0.4);
         Entity *lampe5 = mSceneMgr->createEntity("lampe5", "lampe.mesh" );
-        SceneNode *lampeNode5 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode5", Vector3(776,-204,396));
+        SceneNode *lampeNode5 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode5", Vector3(826,-225,396));
         lampeNode5->attachObject(lampe5);
-        lampeNode5->yaw(Degree(180));
+        lampeNode5->yaw(Degree(270));
         lampeNode5->scale(Vector3(12,9,9));
+
+
+        // sous l'escalier
+        Light * light6 = mSceneMgr->createLight("L6");
+        light6->setType(Light::LT_POINT);
+        light6->setPosition(Vector3(380,-253,170));
+        light6->setDiffuseColour(0.2,0.15,0.15);
+        light6->setSpecularColour(0.2,0.15,0.15);
+        Entity *lampe6 = mSceneMgr->createEntity("lampe6", "lampe.mesh" );
+        SceneNode *lampeNode6 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode6", Vector3(380,-253,170));
+        lampeNode6->attachObject(lampe6);
+        lampeNode6->yaw(Degree(270));
+        lampeNode6->pitch(Degree(270));
+        lampeNode6->scale(Vector3(12,9,9));
 
 
         //decoration
         Entity *tv = mSceneMgr->createEntity("TV", "tele.mesh" );
         tv->setCastShadows(true);
-
         SceneNode *TVNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("TVnode", Vector3(55,392,120));
         TVNode->attachObject(tv);
-        TVNode->scale(Vector3(5,4.2,4));
+        TVNode->scale(Vector3(4,3.7,3));
         TVNode->pitch(Degree(90));
         TVNode->yaw(Degree(75));
 
@@ -272,11 +285,11 @@
         fautNode1->yaw(Degree(290));
 
         Entity *faut2 = mSceneMgr->createEntity("faut2", "fauteuil.mesh" );
-        SceneNode *fautNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode2", Vector3(435,170,60));
+        SceneNode *fautNode2 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode2", Vector3(420,170,60));
         fautNode2->attachObject(faut2);
         fautNode2->scale(Vector3(6,6,6));
         fautNode2->pitch(Degree(90));
-        fautNode2->yaw(Degree(255));
+        fautNode2->yaw(Degree(250));
 
         Entity *faut3p1 = mSceneMgr->createEntity("faut3p1", "fauteuil3p.mesh" );
         SceneNode *faut3pNode1 = mSceneMgr->getRootSceneNode()->createChildSceneNode("faut3pNode1", Vector3(460,325,60));
@@ -300,7 +313,7 @@
         fautNode4->attachObject(faut4);
         fautNode4->scale(Vector3(6,6,6));
         fautNode4->pitch(Degree(90));
-        fautNode4->yaw(Degree(255));
+        fautNode4->yaw(Degree(245));
 
         Entity *faut5 = mSceneMgr->createEntity("faut5", "fauteuil.mesh" );
         SceneNode *fautNode5 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode5", Vector3(-290,10,118));

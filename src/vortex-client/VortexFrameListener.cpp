@@ -31,6 +31,8 @@
         mDirection = Vector3::ZERO;
 
         changement = false; // on initialise le booleen de changement
+
+        idClient = "Client";
     }
 
     bool VortexFrameListener::frameStarted(const FrameEvent &evt)
@@ -58,15 +60,15 @@
         mDirection.z = posY;
         //mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
         //mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);//n'a pas l'air de marcher avec les collision/gravité
-        
+
         mDirection.y = posY;
         mDirection.x = posX;
         mDirection.z = posZ;
-        
+
         mPlayer->setLinearVelocity(Vector3(mDirection.y,mDirection.x,mDirection.z));//ca n'est pas les coordonnées locales...
         mPlayer->setAngularVelocity(Vector3::ZERO);//je sais pas encore a quoi ca sert, j'ai vu ca dans l'exemple BspCollision
 
-        
+
         World::getSingleton().simulationStep(evt.timeSinceLastFrame);
 
         if (changement) // si un déplacement a eu lieu pendant l'image précédente
@@ -80,7 +82,8 @@
             dir = mPlayer->getSceneNode()->getOrientation();
             posX = (float)pos.x; posY = (float)pos.y; posZ = (float)pos.z;
 
-            // on ajoute l'id du client au buffer avant
+            //on remplit le buffer
+            buff.writeString(idClient);
             buff.writeFloat(posX); buff.writeFloat(posY); buff.writeFloat(posZ);
             buff.writeFloat(dirX); buff.writeFloat(dirY);
 
@@ -91,62 +94,98 @@
         }
 
 
-        // ici on doit aussi vérifier si il y a des mise à jour du world
-        event_data_t eventReceived;
-
+          //on verifie les mise a jour du world
+          event_data_t eventReceived;
           int i = 0;
-
-          //apres on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
+          string id;
+          structUser_t user;
           while(worldManagerEvent.changed())
           {
+            //on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
             eventReceived = worldManagerEvent.getEvent();
             switch (eventReceived.type)
             {
                 case 3: //update
-//                    posX = eventReceived.data.readFloat(true); posY = eventReceived.data.readFloat(true); posZ = eventReceived.data.readFloat(true);
-//                    dirX = eventReceived.data.readFloat(true); dirY = eventReceived.data.readFloat(true);
-//                    string id = eventReceived.data.readString(true);
-//                    while (i < utilisateurs.size() and utilisateurs[i].id != id)
-//                    {
-//                        i++;
-//                    }
-//                    if (utilisateurs[i].id == id) //si l'user a updater existe bien
-//                    {
-//                        // on calcule les coordonnees de la translation a effectuer
-//                        posX -= (float)utilisateurs[i].node->getPosition().x;
-//                        posY -= (float)utilisateurs[i].node->getPosition().y;
-//                        posZ -= (float)utilisateurs[i].node->getPosition().z;
-//                        utilisateurs[i].node->translate(posX,posY,posZ, Node::TS_LOCAL);
-//                        //gerer la direction aussi :/
-//                    }
-//                    else
-//                    {
-//                        //il faut creer l'utilisateur a la position donnee
-//                    }
+                    posX = eventReceived.data.readFloat(true); posY = eventReceived.data.readFloat(true); posZ = eventReceived.data.readFloat(true);
+                    dirX = eventReceived.data.readFloat(true); dirY = eventReceived.data.readFloat(true);
+                    id = eventReceived.data.readString(true);
+                    while (i < utilisateurs.size() and utilisateurs[i].id != id)
+                    {
+                        i++;
+                    }
+                    if (utilisateurs[i].id == id) //si l'user a updater existe bien
+                    {
+                        // on calcule les coordonnees de la translation a effectuer
+                        posX -= (float)utilisateurs[i].node->getPosition().x;
+                        posY -= (float)utilisateurs[i].node->getPosition().y;
+                        posZ -= (float)utilisateurs[i].node->getPosition().z;
+                        utilisateurs[i].node->translate(posX,posY,posZ, Node::TS_LOCAL);
+                        //gerer la direction aussi :/
+                    }
+                    else
+                    {
+                        user.id = id;
+
+                        SceneNode * userNode;
+                        userNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(id.data(), Vector3(posX,posY,posZ));
+                        Entity * userEntity = mSceneMgr->createEntity(id.data(), "man.mesh" );
+                        userEntity->setCastShadows(true);
+                        userNode->pitch(Degree(90));
+                        userNode->yaw(Degree(90));
+                        userNode->scale(Vector3(2,2,2));
+                        userNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node egalement
+                        userNode->attachObject(userEntity); // on attache le modèle au noeud
+
+                        // XXX il faudra ajouter la direction XXX
+
+                        user.node = userNode;
+                        user.entite = userEntity;
+
+                        utilisateurs.push_back(user);
+
+                        // XXX on ecrit dans le chat qu'un nouvel user est connecte XXX
+                    }
                 break;
 
                 case 4: //add
-//                    string id2 = eventReceived.data.readString(true);
-//                    structUser_t user;
-//                    user.id = id2;
-//
-//                    SceneNode * userNode;
-//                    userNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(id2.data(), Vector3(-680,160,127));
-//                    Entity * userEntity = mSceneMgr->createEntity(id2.data(), "man.mesh" );
-//                    userEntity->setCastShadows(true);
-//                    userNode->pitch(Degree(90));
-//                    userNode->yaw(Degree(90));
-//                    userNode->scale(Vector3(2,2,2));
-//                    userNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
-//                    userNode->attachObject(userEntity); // on attache le modèle au noeud
-//
-//                    user.node = userNode;
-//                    user.entite = userEntity;
-//
-//                    utilisateurs.push_back(user);
+                    id = eventReceived.data.readString(true);
+                    user.id = id;
+
+                    SceneNode * userNode;
+                    userNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(id.data(), Vector3(-680,160,127));
+                    Entity * userEntity = mSceneMgr->createEntity(id.data(), "man.mesh" );
+                    userEntity->setCastShadows(true);
+                    userNode->pitch(Degree(90));
+                    userNode->yaw(Degree(90));
+                    userNode->scale(Vector3(2,2,2));
+                    userNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node egalement
+                    userNode->attachObject(userEntity); // on attache le modèle au noeud
+
+                    user.node = userNode;
+                    user.entite = userEntity;
+
+                    utilisateurs.push_back(user);
+
+                    // XXX on ecrit dans le chat qu'un nouvel user est connecte XXX
                 break;
 
                 case 5: //del
+                    id = eventReceived.data.readString(true);
+
+                    i = 0;
+                    while (i < utilisateurs.size() and utilisateurs[i].id != id)
+                    {
+                        i++;
+                    }
+                    if (utilisateurs[i].id == id) //si l'user a updater existe bien
+                    {
+                        utilisateurs[i].entite->setVisible(false); // on rend l'entite invisible
+                        free(utilisateurs[i].entite);
+                        free(utilisateurs[i].node);
+                        //supprimer l'entree du vecteur
+                    }
+
+                    // XXX on ecrit dans le chat qu'un user est deconnecte XXX
                 break;
 
                 default:
@@ -204,10 +243,15 @@
     // KeyListener
     bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
     {
+        bitBuffer buff;
         switch (e.key)
         {
             case OIS::KC_ESCAPE: // touche �chap, on sort du programme
+                //on envoie l'event de deconnexion
+                buff.writeString(idClient);
+                worldManagerEvent.sendEvent(8,buff);
                 mContinue = false;
+                break;
                 break;
             case OIS::KC_UP:
             case OIS::KC_W:
