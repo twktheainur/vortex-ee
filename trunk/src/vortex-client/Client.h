@@ -18,13 +18,13 @@ class TCPClient;
 class Client
 {
 private:
-	//Thread Classes
+  //Thread Classes
   ConnectionManager * connectionManagerThread;
   WorldManager * worldManagerThread;
   //ChatManager * chatManagerThread;
-	EventManager * eventManagerThread;
-    ApplicationManager * applicationManagerThread;
-	//Event interface, has to point to a global scope variable
+  EventManager * eventManagerThread;
+  ApplicationManager * applicationManagerThread;
+  //Event interface, has to point to a global scope variable
   //Clients will be registered in here by the TCPServer through the ConnectionManager
   TCPClient * client;
 public:
