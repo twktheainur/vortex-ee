@@ -109,7 +109,7 @@
                     posX = eventReceived.data.readFloat(true); posY = eventReceived.data.readFloat(true); posZ = eventReceived.data.readFloat(true);
                     dirX = eventReceived.data.readFloat(true); dirY = eventReceived.data.readFloat(true);
                     id = eventReceived.data.readString(true);
-                    while (i < utilisateurs.size() and utilisateurs[i].id != id)
+                    while (i < utilisateurs.size() && utilisateurs[i].id != id)
                     {
                         i++;
                     }
@@ -122,29 +122,29 @@
                         utilisateurs[i].node->translate(posX,posY,posZ, Node::TS_LOCAL);
                         //gerer la direction aussi :/
                     }
-                    else
-                    {
-                        user.id = id;
-
-                        SceneNode * userNode;
-                        userNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(id.data(), Vector3(posX,posY,posZ));
-                        Entity * userEntity = mSceneMgr->createEntity(id.data(), "man.mesh" );
-                        userEntity->setCastShadows(true);
-                        userNode->pitch(Degree(90));
-                        userNode->yaw(Degree(90));
-                        userNode->scale(Vector3(2,2,2));
-                        userNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node egalement
-                        userNode->attachObject(userEntity); // on attache le modèle au noeud
-
-                        // XXX il faudra ajouter la direction XXX
-
-                        user.node = userNode;
-                        user.entite = userEntity;
-
-                        utilisateurs.push_back(user);
-
-                        // XXX on ecrit dans le chat qu'un nouvel user est connecte XXX
-                    }
+//                    else
+//                    {
+//                        user.id = id;
+//
+//                        SceneNode * userNode;
+//                        userNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(id.data(), Vector3(posX,posY,posZ));
+//                        Entity * userEntity = mSceneMgr->createEntity(id.data(), "man.mesh" );
+//                        userEntity->setCastShadows(true);
+//                        userNode->pitch(Degree(90));
+//                        userNode->yaw(Degree(90));
+//                        userNode->scale(Vector3(2,2,2));
+//                        userNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node egalement
+//                        userNode->attachObject(userEntity); // on attache le modèle au noeud
+//
+//                        // XXX il faudra ajouter la direction XXX
+//
+//                        user.node = userNode;
+//                        user.entite = userEntity;
+//
+//                        utilisateurs.push_back(user);
+//
+//                        // XXX on ecrit dans le chat qu'un nouvel user est connecte XXX
+//                    }
                 break;
 
                 case 4: //add
@@ -173,7 +173,7 @@
                     id = eventReceived.data.readString(true);
 
                     i = 0;
-                    while (i < utilisateurs.size() and utilisateurs[i].id != id)
+                    while (i < utilisateurs.size() && utilisateurs[i].id != id)
                     {
                         i++;
                     }
@@ -182,6 +182,7 @@
                         utilisateurs[i].entite->setVisible(false); // on rend l'entite invisible
                         free(utilisateurs[i].entite);
                         free(utilisateurs[i].node);
+                        utilisateurs.erase(utilisateurs.begin()+i);
                         //supprimer l'entree du vecteur
                     }
 

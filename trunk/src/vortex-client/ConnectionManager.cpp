@@ -66,7 +66,10 @@ void ConnectionManager::execute(void * arg)
     try
     {
       //D'abord on checks si il y a des donnees a lire avec select
+      if(socket->pollRead())
+      {
 
+      }
       //Apres on check les events:
       if(connectionManagerEvent.changed())
       {

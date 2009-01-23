@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   avatar.h
  * Author: twk
  *
@@ -13,9 +13,11 @@ class Avatar:public Object
 public:
   Avatar();
   ~Avatar(){}
+  inline setUserName();
 private:
   static const string objectId;
   string instanceId;
+  string username;
 };
 Avatar::objectId="__avatar";
 

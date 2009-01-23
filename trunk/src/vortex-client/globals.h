@@ -7,6 +7,12 @@
 #ifndef __GLOBALS_H__
 #define __GLOBALS_H__
 #include "../common/Event.h"
+#define XSTART -680
+#define YSTART  160
+#define ZSTART  127
+#define ZDIRSTART 1
+#define ZDIRSTART 0
+#define
 extern Event eventManagerEvent;
 extern Event connectionManagerEvent;
 extern Event worldManagerEvent;

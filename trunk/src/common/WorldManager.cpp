@@ -12,8 +12,23 @@ extern Event worldManagerEvent;
 WorldManager::WorldManager()
 {
    event = &worldManagerEvent;
+   start((void*)this);
+}
+
+void WorldManager::execute(void * arg)
+{
+	WorldManager * pthis = (WorldManager *)arg;
+	pthis->world = new World();
+	while(1)
+	{
+      if(ogreManagerEvent.changed())
+      {
+        event_data_t data;
+      }
+    }
 
 }
+
 
 WorldManager::~WorldManager()
 {
