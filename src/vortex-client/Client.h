@@ -6,7 +6,7 @@ extern "C"
 }
 #include "globals.h"
 #include "TCPClient.h"
-#include "../common/WorldManager.h"
+#include "WorldManager.h"
 #include "ConnectionManager.h"
 #include "ApplicationManager.h"
 //#include "ChatManager.h"
@@ -23,7 +23,7 @@ private:
   WorldManager * worldManagerThread;
   //ChatManager * chatManagerThread;
 	EventManager * eventManagerThread;
-  ApplicationManager * applicationManagerThread;
+    ApplicationManager * applicationManagerThread;
 	//Event interface, has to point to a global scope variable
   //Clients will be registered in here by the TCPServer through the ConnectionManager
   TCPClient * client;

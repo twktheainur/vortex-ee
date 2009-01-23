@@ -2823,7 +2823,7 @@
 1232634271 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
 	"Application.h"
 
-1232633958 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
+1232654200 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
@@ -4091,15 +4091,15 @@
 	"../common/Thread.h"
 	"../common/Event.h"
 
-1232135039 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\client.cpp
+1232653609 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\client.cpp
 	"Client.h"
 	<cstdlib>
 
-1232196535 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\client.h
+1232653618 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\client.h
 	<pthread.h>
 	"globals.h"
 	"TCPClient.h"
-	"../common/WorldManager.h"
+	"WorldManager.h"
 	"ConnectionManager.h"
 	"ApplicationManager.h"
 	"EventManager.h"
@@ -4131,7 +4131,7 @@
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1232377949 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
+1232653833 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
 	"ApplicationManager.h"
@@ -4151,7 +4151,7 @@
 	"../common/LoginResponsePacket.h"
 	"../common/Exception.h"
 
-1232617016 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\globals.h
+1232654019 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\globals.h
 	"../common/Event.h"
 
 1213720226 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\include\ogrereferenceapplayer.h
@@ -6143,4 +6143,20 @@
 
 1232633959 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
+
+1232654001 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\worldmanager.h
+	"../common/Thread.h"
+	"../common/Event.h"
+	"globals.h"
+	"World.h"
+
+1232619625 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\world.h
+	<vector>
+	<iostream>
+
+1232619309 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\world.cpp
+	"World.h"
+
+1232653690 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\worldmanager.cpp
+	"WorldManager.h"
 
