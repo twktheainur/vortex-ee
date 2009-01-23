@@ -56,7 +56,7 @@ private:
     //CEGUI::OgreCEGUIRenderer *mRenderer;
     //CEGUI::System *mSystem;
     VortexFrameListener *mListener;
-    World* mWorld;//pour la gestion des collisons/gravité
+    OgreRefApp::World* mWorld;//pour la gestion des collisons/gravité
     Camera *mCamera;
     //Entity* mPLayer;
     PersonnagePhysique * mPlayer;
