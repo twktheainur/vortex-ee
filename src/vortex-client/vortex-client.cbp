@@ -32,6 +32,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="..\common\Avatar.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="..\common\Avatar.h" />
 		<Unit filename="..\common\Cond.cpp" />
 		<Unit filename="..\common\Cond.h" />
 		<Unit filename="..\common\Event.cpp" />
@@ -41,6 +46,11 @@
 		<Unit filename="..\common\LoginResponsePacket.h" />
 		<Unit filename="..\common\Mutex.cpp" />
 		<Unit filename="..\common\Mutex.h" />
+		<Unit filename="..\common\Object.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="..\common\Object.h" />
 		<Unit filename="..\common\Packet.cpp" />
 		<Unit filename="..\common\Packet.h" />
 		<Unit filename="..\common\Semaphore.cpp" />
@@ -53,6 +63,8 @@
 		<Unit filename="..\common\Thread.h" />
 		<Unit filename="..\common\UDPSocket.cpp" />
 		<Unit filename="..\common\UDPSocket.h" />
+		<Unit filename="..\common\World.cpp" />
+		<Unit filename="..\common\World.h" />
 		<Unit filename="..\common\WorldManager.cpp" />
 		<Unit filename="..\common\WorldManager.h" />
 		<Unit filename="..\common\bitBuffer.h" />

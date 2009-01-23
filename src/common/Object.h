@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   object.h
  * Author: twk
  *
@@ -28,11 +28,10 @@ protected:
 private:
   static int __instances;
   int posX;
-  int posY;
-  int posZ;
-  int dirX;
-  int dirY;
-  int dirZ;
+  float posY;
+  float posZ;
+  float dirX;
+  float dirY;
 };
 int Object::__instances=0;
 

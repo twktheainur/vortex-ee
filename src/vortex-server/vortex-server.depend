@@ -290,10 +290,10 @@
 1228346453 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\semaphore.cpp
 	"Semaphore.h"
 
-1232135361 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
+1232619274 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
 	"Socket.h"
 
-1232135304 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
+1232619140 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
 	<ws2tcpip.h>
 	<winsock2.h>
 	<unistd.h>
@@ -334,10 +334,10 @@
 	"Socket.h"
 	<string>
 
-1232294508 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
+1232618424 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.cpp
 	"WorldManager.h"
 
-1232196620 o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.h
+1232618308 o:\twk\doc\programming\iut2a\vortex-ee\src\common\worldmanager.h
 	"Thread.h"
 	"Event.h"
 
@@ -352,11 +352,12 @@
 1231628038 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\globals.h
 	"../common/Event.h"
 
-1232555624 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
+1232619866 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
 	"ClientManager.h"
 	"../common/bitBuffer.h"
 	"globals.h"
 	"../common/LoginPacket.h"
+	"../common/LoginResponsePacket.h"
 
 1232555815 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.h
 	"globals.h"
@@ -370,7 +371,7 @@
 	<vector>
 	<cstring>
 
-1229822917 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\connectionmanager.cpp
+1232619714 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\connectionmanager.cpp
 	"ConnectionManager.h"
 
 1229181707 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\connectionmanager.h

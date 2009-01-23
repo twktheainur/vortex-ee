@@ -159,15 +159,19 @@ int Socket::recv(void * buffer, size_t length, int flags)
   return recv_ret;
 }
 /*----------------------------------------------------------------------------*/
-int Socket::poll_read()
+bool Socket::pollRead()
 {
-	int ret;
+  int ret;
   fd_set fds;
   FD_ZERO(&fds);
   FD_SET(sockFD,&fds);
   if((ret=(select(sockFD+1,&fds,NULL,NULL,NULL)))==-1)
     throw new ExSocket(E_POLL_FAIL);
-  return ret;
+   int result = 0;
+   if (ret > 0)
+   {
+      if (FD_ISSET(sockFD, &fds)) return true;
+   }
 }
 /*----------------------------------------------------------------------------*/
 /*---------------------------Stream Operators Definition----------------------*/
