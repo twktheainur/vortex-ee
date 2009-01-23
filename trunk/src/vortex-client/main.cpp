@@ -9,7 +9,7 @@
 Event eventManagerEvent;
 Event connectionManagerEvent;
 Event worldManagerEvent;
-Event OgreManagerEvent;
+Event ogreManagerEvent;
 int main(int argc, char **argv)
 {
   if(argc>1 && strcmp(argv[1],"offline")==0)

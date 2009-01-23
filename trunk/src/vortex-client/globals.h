@@ -12,11 +12,10 @@
 #define ZSTART  127
 #define ZDIRSTART 1
 #define ZDIRSTART 0
-#define
 extern Event eventManagerEvent;
 extern Event connectionManagerEvent;
 extern Event worldManagerEvent;
-extern Event OgreManagerEvent;
+extern Event ogreManagerEvent;
 #endif
 
 

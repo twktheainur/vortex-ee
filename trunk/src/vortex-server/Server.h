@@ -16,7 +16,7 @@ extern "C"
 }
 #include "TCPServer.h"
 //#include "ConnectionManager.h"
-#include "../common/WorldManager.h"
+#include "WorldManager.h"
 #include "ChatManager.h"
 #include "EventManager.h"
 #include "../common/Event.h"
@@ -31,7 +31,6 @@ private:
   ConnectionManager * connectionManagerThread;
   WorldManager * worldManagerThread;
   ChatManager * chatManagerThread;
-	EventManager * eventManagerThread;
   //Clients will be registered in here by the TCPServer through the ConnectionManager
   vector<ClientManager *> clients;
   TCPServer * server;

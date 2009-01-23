@@ -352,7 +352,7 @@
 1231628038 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\globals.h
 	"../common/Event.h"
 
-1232619866 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
+1232653759 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
 	"ClientManager.h"
 	"../common/bitBuffer.h"
 	"globals.h"
@@ -380,10 +380,10 @@
 	"ClientManager.h"
 	"Server.h"
 
-1231632440 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\server.h
+1232653665 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\server.h
 	<pthread.h>
 	"TCPServer.h"
-	"../common/WorldManager.h"
+	"WorldManager.h"
 	"ChatManager.h"
 	"EventManager.h"
 	"../common/Event.h"
@@ -445,4 +445,13 @@
 
 1232398449 c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.h
 	"Packet.h"
+
+1232653785 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\worldmanager.h
+	"../common/Thread.h"
+	"../common/Event.h"
+	"World.h"
+
+1232619625 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\world.h
+	<vector>
+	<iostream>
 

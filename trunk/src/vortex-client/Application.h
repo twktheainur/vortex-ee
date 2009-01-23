@@ -78,7 +78,7 @@ private:
     void chooseSceneManager();
 
     void createWorld();//pour la gestion des collisions/gravite
-    
+
     void setupScene();
 
     void setupInputSystem();

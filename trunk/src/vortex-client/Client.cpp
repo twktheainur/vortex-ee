@@ -13,7 +13,7 @@ Client::Client()
 {
 	//eventManagerEvent = event;
   connectionManagerThread = new ConnectionManager(this);
-  eventManagerThread = new EventManager();
+  worldManagerThread = new WorldManager();
   applicationManagerThread = new ApplicationManager();
   applicationManagerThread->join();
 }
@@ -21,7 +21,7 @@ Client::Client()
 Client::~Client()
 {
 	delete connectionManagerThread;
-	delete eventManagerThread;
+	delete worldManagerThread;
 //	delete chatManagerThread;
 	delete client;
 }
