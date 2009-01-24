@@ -63,6 +63,7 @@ protected:
     Degree mAngle;  // Agle definissant la rotation calculee
 
     bool changement;  // booleen definissant si on a eu un mouvement pendant cette image
+    int iteration; // variable définissant a quelle image on raffraichis la position du client
 
     vector<structUser_t> utilisateurs; // vecteur contenant les nodes des autres utilisateurs
 

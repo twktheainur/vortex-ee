@@ -40,11 +40,11 @@ namespace Ogre {
         This is especially useful together with geometry shaders, as you can
         render procedural geometry which will get saved to a vertex buffer for
         reuse later, without regenerating it again. You can also create shaders
-        that run on previous results of those shaders, creating stateful 
+        that run on previous results of those shaders, creating stateful
         shaders.
     */
     class _OgreExport RenderToVertexBuffer
-    {    
+    {
     public:
 		/** C'tor */
 		RenderToVertexBuffer();
@@ -58,12 +58,12 @@ namespace Ogre {
             buffers on its own. Only one source allowed!
         */
         VertexDeclaration* getVertexDeclaration();
-        
+
         /**
             Get the maximum number of vertices that the buffer will hold
         */
 		unsigned int getMaxVertexCount() const { return mMaxVertexCount; }
-        
+
         /**
             Set the maximum number of vertices that the buffer will hold
         */
@@ -90,7 +90,7 @@ namespace Ogre {
 		bool getResetsEveryUpdate() const { return mResetsEveryUpdate; }
 
         /**
-            Get the render operation for this buffer 
+            Get the render operation for this buffer
         */
         virtual void getRenderOperation(RenderOperation& op) = 0;
 
@@ -104,9 +104,9 @@ namespace Ogre {
             the source renderable will be used as input.
         */
 		virtual void reset() { mResetRequested = true; }
-        
+
         /**
-            Set the source renderable of this object. During the first (and 
+            Set the source renderable of this object. During the first (and
             perhaps later) update of this object, this object's data will be
             used as input)
         */

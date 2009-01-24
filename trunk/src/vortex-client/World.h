@@ -47,10 +47,10 @@ public:
     if(i<=users.size())
       users.erase(users.begin()+i);
   }
-  inline void update_user(world_user_t user,string id)
+  inline void update_user(world_user_t user)
   {
     int i=0;
-    while (i < users.size() && users[i].id != id)
+    while (i < users.size() && users[i].id != user.id)
     {
       i++;
     }
