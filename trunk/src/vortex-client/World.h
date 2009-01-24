@@ -22,10 +22,6 @@ typedef struct world_user
   float dy;
 }world_user_t;
 
-bool user_cmp(world_user_t a, world_user_t b)
-{
-  return a.id<b.id;
-}
 class World
 {
 public:
