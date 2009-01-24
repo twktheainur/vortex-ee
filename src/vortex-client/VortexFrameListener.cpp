@@ -31,6 +31,7 @@
         mDirection = Vector3::ZERO;
 
         changement = false; // on initialise le booleen de changement
+        iteration = 5;
 
         idClient = "Client";
     }
@@ -71,7 +72,7 @@
 
         //World::getSingleton().simulationStep(evt.timeSinceLastFrame);
 
-        if (changement) // si un déplacement a eu lieu pendant l'image précédente
+        if (changement and iteration == 5) // si un déplacement a eu lieu pendant l'image précédente
         {
             bitBuffer buff;
             Vector3 pos;
@@ -83,14 +84,15 @@
             posX = (float)pos.x; posY = (float)pos.y; posZ = (float)pos.z;
 
             //on remplit le buffer
-            buff.writeString(idClient);
             buff.writeFloat(posX); buff.writeFloat(posY); buff.writeFloat(posZ);
             buff.writeFloat(dirX); buff.writeFloat(dirY);
+            buff.writeString(idClient);
 
             //on peut envoyer l'event d'update
-            worldManagerEvent.sendEvent(8,buff);
+            ogreManagerEvent.sendEvent(8,buff);
 
             changement = false; // on réinitialise changement
+            iteration = 0;
         }
 
 
@@ -106,8 +108,11 @@
             switch (eventReceived.type)
             {
                 case 3: //update
-                    posX = eventReceived.data.readFloat(true); posY = eventReceived.data.readFloat(true); posZ = eventReceived.data.readFloat(true);
-                    dirX = eventReceived.data.readFloat(true); dirY = eventReceived.data.readFloat(true);
+                    posX = eventReceived.data.readFloat(true);
+                    posY = eventReceived.data.readFloat(true);
+                    posZ = eventReceived.data.readFloat(true);
+                    dirX = eventReceived.data.readFloat(true);
+                    dirY = eventReceived.data.readFloat(true);
                     id = eventReceived.data.readString(true);
                     while (i < utilisateurs.size() && utilisateurs[i].id != id)
                     {

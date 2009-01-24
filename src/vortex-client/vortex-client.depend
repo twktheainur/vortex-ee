@@ -4337,7 +4337,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232559290 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
+1232659210 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -4384,10 +4384,10 @@
 1229455242 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\semaphore.cpp
 	"Semaphore.h"
 
-1232136194 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\socket.cpp
+1232741198 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\socket.cpp
 	"Socket.h"
 
-1231355112 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\socket.h
+1232741198 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\socket.h
 	<ws2tcpip.h>
 	<winsock2.h>
 	<unistd.h>
@@ -4435,10 +4435,10 @@
 	"Thread.h"
 	"Event.h"
 
-1232611234 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
+1232727088 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1232610512 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
+1232741198 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
@@ -5678,7 +5678,7 @@
 
 1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisexception.h
 
-1232611262 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.h
+1232752822 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
@@ -5706,21 +5706,21 @@
 	"../common/Thread.h"
 	"../common/Event.h"
 
-1232278046 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\client.cpp
+1232741198 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\client.cpp
 	"Client.h"
 	<cstdlib>
 
-1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\client.h
+1232742690 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\client.h
 	<pthread.h>
 	"globals.h"
 	"TCPClient.h"
-	"../common/WorldManager.h"
+	"WorldManager.h"
 	"ConnectionManager.h"
 	"ApplicationManager.h"
 	"EventManager.h"
 	<vector>
 
-1232392908 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\globals.h
+1232755406 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\globals.h
 	"../common/Event.h"
 
 1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\tcpclient.h
@@ -5736,7 +5736,7 @@
 	"../common/Event.h"
 	"globals.h"
 
-1232479940 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\connectionmanager.cpp
+1232741198 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 	"../common/LoginResponsePacket.h"
 	"../common/Exception.h"
@@ -5750,11 +5750,11 @@
 1232278046 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232561334 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.cpp
+1232753336 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1232392908 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\main.cpp
+1232741198 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
 	"ApplicationManager.h"
@@ -5775,13 +5775,13 @@
 1232654928 o:\twk\doc\programming\iut2a\vortex-ee\src\common\loginresponsepacket.h
 	"Packet.h"
 
-1232392910 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.h
+1232659210 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.h
 	"Packet.h"
 
 1232398449 c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.h
 	"Packet.h"
 
-1232477980 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.cpp
+1232659210 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.cpp
 	"LoginResponsePacket.h"
 
 1232478122 source:c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.cpp
@@ -6158,5 +6158,21 @@
 	"World.h"
 
 1232653988 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\worldmanager.cpp
+	"WorldManager.h"
+
+1232742690 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\worldmanager.h
+	"../common/Thread.h"
+	"../common/Event.h"
+	"globals.h"
+	"World.h"
+
+1232755032 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\world.h
+	<vector>
+	<iostream>
+
+1232742690 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\world.cpp
+	"World.h"
+
+1232755268 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\worldmanager.cpp
 	"WorldManager.h"
 

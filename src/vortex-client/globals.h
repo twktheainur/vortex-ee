@@ -10,8 +10,8 @@
 #define XSTART -680
 #define YSTART  160
 #define ZSTART  127
-#define ZDIRSTART 1
-#define ZDIRSTART 0
+#define XDIRSTART 1
+#define YDIRSTART 0
 extern Event eventManagerEvent;
 extern Event connectionManagerEvent;
 extern Event worldManagerEvent;
