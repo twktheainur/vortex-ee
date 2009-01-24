@@ -329,6 +329,36 @@
         faut3pNode2->pitch(Degree(90));
         faut3pNode2->yaw(Degree(78));
 
+
+        //fauteuils table derriere mur tv
+        Entity *faut6 = mSceneMgr->createEntity("faut6", "fauteuil.mesh" );
+        SceneNode *fautNode6 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode6", Vector3(-500,430,118));
+        fautNode6->attachObject(faut6);
+        fautNode6->scale(Vector3(6,6,6));
+        fautNode6->pitch(Degree(90));
+        fautNode6->yaw(Degree(50));
+
+        Entity *faut7 = mSceneMgr->createEntity("faut7", "fauteuil.mesh" );
+        SceneNode *fautNode7 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode7", Vector3(-530,260,118));
+        fautNode7->attachObject(faut7);
+        fautNode7->scale(Vector3(6,6,6));
+        fautNode7->pitch(Degree(90));
+        fautNode7->yaw(Degree(100));
+
+        Entity *faut8 = mSceneMgr->createEntity("faut8", "fauteuil.mesh" );
+        SceneNode *fautNode8 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode8", Vector3(-230,350,118));
+        fautNode8->attachObject(faut8);
+        fautNode8->scale(Vector3(6,6,6));
+        fautNode8->pitch(Degree(90));
+        fautNode8->yaw(Degree(280));
+
+        Entity *faut9 = mSceneMgr->createEntity("faut9", "fauteuil.mesh" );
+        SceneNode *fautNode9 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode9", Vector3(-350,470,118));
+        fautNode9->attachObject(faut9);
+        fautNode9->scale(Vector3(6,6,6));
+        fautNode9->pitch(Degree(90));
+
+
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
       vp=NULL;
     }
