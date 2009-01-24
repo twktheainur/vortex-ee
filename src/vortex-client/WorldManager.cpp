@@ -20,7 +20,6 @@ void WorldManager::execute(void * arg)
 	pthis->world = new World();
 	while(1)
 	{
-
           bool update = false;
 
           event_data_t localEvent;
@@ -34,7 +33,7 @@ void WorldManager::execute(void * arg)
             switch (localEvent.type)
             {
                 case 8: //update
-                    update = right;
+                    update = true;
                     worldUser.px = localEvent.data.readFloat(true);
                     worldUser.py = localEvent.data.readFloat(true);
                     worldUser.pz = localEvent.data.readFloat(true);
@@ -104,7 +103,11 @@ void WorldManager::execute(void * arg)
             }
           }
 
-        // AJOUTER LE DELAI
+        #ifdef WIN32
+        Sleep(10);
+        #else
+        usleep(100);
+        #endif
 
     }
 }
