@@ -47,11 +47,11 @@ void WorldManager::execute(void * arg)
 
                 case 9: //add
                     pthis->world->add_user(localEvent.data.readString(true));
-                    connectionManagerEvent.sendEvent(9,localEvent.data); // si c'est une connexion on envoie directement l'event au serveur
+                    connectionManagerOutEvent.sendEvent(9,localEvent.data); // si c'est une connexion on envoie directement l'event au serveur
                 break;
 
                 case 10: //del
-                    connectionManagerEvent.sendEvent(10,localEvent.data); // si c'est une deconnexion on envoie directement l'event au serveur
+                    connectionManagerOutEvent.sendEvent(10,localEvent.data); // si c'est une deconnexion on envoie directement l'event au serveur
                     pthis->world->delete_user(localEvent.data.readString(true));
                 break;
 
@@ -61,7 +61,7 @@ void WorldManager::execute(void * arg)
           }
 
           if (update) // si on a eu un update on peut renvoyer le dernier en date au serveur
-            connectionManagerEvent.sendEvent(localEvent.type,localEvent.data);
+            connectionManagerOutEvent.sendEvent(localEvent.type,localEvent.data);
             // on note qu'ici, un event d'update peut etre envoye meme si l'user s'est deconnecte, mais le serveur l'ignorera
 
           update=false;
@@ -72,7 +72,7 @@ void WorldManager::execute(void * arg)
           while(connectionManagerEvent.changed())
           {
             //on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
-            serverEvent = connectionManagerEvent.getEvent();
+            serverEvent = connectionManagerInEvent.getEvent();
             switch (localEvent.type)
             {
                 case 3: //update

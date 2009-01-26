@@ -6,12 +6,17 @@ class Note
     public:
 		Note();
 		//Constructeur pour créer une nouvelle note
-		
-		Note(String idUser, String idDoc);
+
+		Note(String idUser, String idDoc)
+		{
+          this->idDoc=idDoc;
+          this->idUser=idUser;
+        }
 		//Constructeur pour récupérer la note de User pour Doc
-	
+
     private:
-		// completer...
+      string idDoc;
+      string idUser;
 };
 
 #endif

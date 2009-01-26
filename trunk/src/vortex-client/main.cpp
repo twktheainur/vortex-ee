@@ -6,8 +6,9 @@
 #include <cstdio>
 #include <iostream>
 //Global variables
-Event eventManagerEvent;
-Event connectionManagerEvent;
+
+Event connectionManagerInEvent;
+Event connectionManagerOutEvent;
 Event worldManagerEvent;
 Event ogreManagerEvent;
 int main(int argc, char **argv)

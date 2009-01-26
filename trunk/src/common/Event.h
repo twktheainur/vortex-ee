@@ -38,7 +38,6 @@ typedef enum event
   event_ogre_add = 9,
   event_ogre_del = 10,
   event_chat_incoming = 6,
-  event_chat_outgoing = 7,
   event_connect_login = 0,
   event_connect_logout = 1,
   event_anim_avant = 11,
