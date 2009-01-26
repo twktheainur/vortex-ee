@@ -12,8 +12,8 @@
 #define ZSTART  127
 #define XDIRSTART 1
 #define YDIRSTART 0
-extern Event eventManagerEvent;
-extern Event connectionManagerEvent;
+extern Event connectionManagerInEvent;
+extern Event connectionManagerOutEvent;
 extern Event worldManagerEvent;
 extern Event ogreManagerEvent;
 #endif
