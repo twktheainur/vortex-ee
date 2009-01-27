@@ -31,9 +31,12 @@
         delete mRoot;
       }
 
-        mGUI->shutdown();
+      if(mGUI)
+      {
+        //mGUI->shutdown();//cette ligne provoque un crash
         delete mGUI;
-        mGUI = 0;
+        //mGUI = 0;
+      }
     }
 
     void Application::go()
@@ -147,7 +150,7 @@
       //SceneNode * playerNode;
       //playerNode =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode", Vector3(-680,160,127));
       //mPlayer = mSceneMgr->createEntity( "Player", "man.mesh" );
-      mPlayer = new PersonnagePhysique("Player");
+      mPlayer = mWorld->createPersonnage("Player");
       //mPlayer->getEntity()->setCastShadows(true);
 
       //le code suivant se retrouve dans PersonnagePhysique

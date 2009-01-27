@@ -40,6 +40,7 @@ Torus Knot Software Ltd.
 #include "OgreRefAppJoint.h"
 #include "OgreRefAppBox.h"
 #include "OgreRefAppCollideCamera.h"
+#include "PersonnagePhysique.h"
 
 
 #endif

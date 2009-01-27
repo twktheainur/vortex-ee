@@ -110,7 +110,7 @@ namespace OgreRefApp {
             const Quaternion& orientation = Quaternion::IDENTITY);
             
         //création d'un personnage physique
-        PersonnagePhysique* createPersonnage(String nom, Vector3 dimensions);
+        PersonnagePhysique* createPersonnage(String nom, Vector3 dimensions = Vector3(100,200,600));
 
         /** Clears the scene. */
         void clear(void);
