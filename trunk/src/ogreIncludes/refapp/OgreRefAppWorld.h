@@ -33,6 +33,8 @@ Torus Knot Software Ltd.
 #include "OgreRefAppJoint.h"
 #include <OgreSingleton.h>
 
+#include "PersonnagePhysique.h"
+
 namespace OgreRefApp {
 
     class _OgreRefAppExport World : public Singleton<World>
@@ -106,6 +108,9 @@ namespace OgreRefApp {
         CollideCamera* createCamera(const String& name, 
             const Vector3& pos = Vector3::ZERO, 
             const Quaternion& orientation = Quaternion::IDENTITY);
+            
+        //création d'un personnage physique
+        PersonnagePhysique* createPersonnage(String nom, Vector3 dimensions);
 
         /** Clears the scene. */
         void clear(void);
