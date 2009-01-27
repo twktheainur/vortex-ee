@@ -34,41 +34,20 @@
 
     void Application::go()
     {
-        printf("Application Init...\n");
-        login(); // on demande à l'utilisateur de se logger
-        printf("1\n");
         createRoot(); // on cr�� la racine
-        printf("2\n");
         defineResources(); // on d�finit les ressources utilis�es par Ogre
-        printf("3\n");
         setupRenderSystem();
-        printf("4\n");
         createRenderWindow(); // on cr�� la fen�tre d'affichage de la sc�ne
-        printf("5\n");
         initializeResourceGroups(); // on initialise les ressources
-        printf("6\n");
         chooseSceneManager();
-        printf("7\n");
         createWorld();//pour la gestion des collisions/gravité
         //doit se situer APRES l'initialisation du SceneManager (methode chooseSceneManager() )
-        printf("8\n");
         setupScene(); // on installe les �l�ments de la sc�ne + initialisation du SceneManager
-        printf("9\n");
         setupInputSystem();
-        printf("10\n");
-        //setupCEGUI();
+        setupMyGUI();
         createFrameListener(); // construction du FrameListener
-        printf("10\n");
         startRenderLoop(); // on commence la boucle de rendu
     }
-
-    void Application::login()
-    {
-        // on fait entrer login + mdp >> Qt
-        bitBuffer buff;
-        eventManagerEvent.sendEvent(0,buff);
-    }
-
 
 
     void Application::createRoot()
@@ -376,13 +355,15 @@
       mInputManager = OIS::InputManager::createInputSystem(pl);
     }
 
-    /*void Application::setupCEGUI()
+    void Application::setupMyGUI()
     {
-    }*/
+        mGUI = new MyGUI::Gui();
+        mGUI->initialise(win);
+    }
 
     void Application::createFrameListener()
     {
-      mListener = new VortexFrameListener(win, mCamera,mPlayer, mSceneMgr);
+      mListener = new VortexFrameListener(win, mCamera,mPlayer, mSceneMgr, mGUI);
       mRoot->addFrameListener(mListener);
 
     }
