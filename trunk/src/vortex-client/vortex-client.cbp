@@ -27,9 +27,7 @@
 					<Add library="..\..\lib\libpthreadGC2.a" />
 					<Add library="..\..\bin\ReferenceAppLayer.dll" />
 					<Add library="..\..\bin\libode.a" />
-					<Add library="..\..\bin\msvcr80.dll" />
-					<Add library="..\..\bin\msvcm80.dll" />
-					<Add library="..\..\bin\msvcp80.dll" />
+					<Add library="..\..\bin\MyGUI.dll" />
 				</Linker>
 			</Target>
 		</Build>

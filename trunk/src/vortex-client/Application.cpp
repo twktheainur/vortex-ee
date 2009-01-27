@@ -30,6 +30,10 @@
       {
         delete mRoot;
       }
+
+        mGUI->shutdown();
+        delete mGUI;
+        mGUI = 0;
     }
 
     void Application::go()
@@ -216,14 +220,14 @@
         Light * light4 = mSceneMgr->createLight("L4");
         light4->setType(Light::LT_POINT);
         light4->setPosition(Vector3(768,152,108));
-        light4->setDiffuseColour(1.5,1,1);
-        light4->setSpecularColour(1,0.5,0.5);
+        light4->setDiffuseColour(1.5,1.2,1.2);
+        light4->setSpecularColour(1,0.6,0.6);
 
         //etage
         Light * light5 = mSceneMgr->createLight("L5");
         light5->setType(Light::LT_POINT);
         light5->setPosition(Vector3(826,-225,396));
-        light5->setDiffuseColour(0.5,0.4,0.4);
+        light5->setDiffuseColour(0.5,0.45,0.45);
         light5->setSpecularColour(0.5,0.4,0.4);
         Entity *lampe5 = mSceneMgr->createEntity("lampe5", "lampe.mesh" );
         SceneNode *lampeNode5 = mSceneMgr->getRootSceneNode()->createChildSceneNode("lampeNode5", Vector3(826,-225,396));
