@@ -2820,7 +2820,7 @@
 	"Thread.h"
 	"Event.h"
 
-1232634271 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
+1233048418 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
 	"Application.h"
 
 1233048418 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
@@ -4120,7 +4120,7 @@
 	"../common/Event.h"
 	"globals.h"
 
-1232135244 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\eventmanager.cpp
+1233048418 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\eventmanager.cpp
 	"EventManager.h"
 
 1231272506 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\inputmanager.cpp
@@ -4129,11 +4129,11 @@
 1232294379 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1232709712 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
+1233048418 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1232653833 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
+1232973626 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
 	"ApplicationManager.h"
@@ -4148,7 +4148,7 @@
 	<vector>
 	<cstring>
 
-1232619198 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
+1233048418 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 	"../common/LoginResponsePacket.h"
 	"../common/Exception.h"
@@ -6161,7 +6161,7 @@
 1232619309 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\world.cpp
 	"World.h"
 
-1232709712 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\worldmanager.cpp
+1233048418 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\worldmanager.cpp
 	"WorldManager.h"
 
 1232803226 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\worldmanager.h
