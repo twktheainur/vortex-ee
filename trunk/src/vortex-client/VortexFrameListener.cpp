@@ -12,11 +12,14 @@
 
       this->mGUI = mGUI;
 
+        winChat = MyGUI::LayoutManager::getInstance().load("chat.layout");
+
         winAccueil = MyGUI::LayoutManager::getInstance().load("accueil.layout");
 
         // set callback
         MyGUI::ButtonPtr buttonOK = mGUI->findWidget<MyGUI::Button>("buttonOK");
         buttonOK->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideAccueil);
+
 
         // Populate the camera and scene manager containers
         mCamNode = cam->getParentSceneNode();
