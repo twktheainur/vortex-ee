@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowC" position="448 208 256 408" align="ALIGN_HSTRETCH ALIGN_VCENTER" layer="Overlapped" name="bla">
+        <Property key="Window_AutoAlpha" value="true"/>
+        <Property key="Window_Snap" value="true"/>
+        <Property key="Widget_Enabled" value="true"/>
+    </Widget>
+</MyGUI>
