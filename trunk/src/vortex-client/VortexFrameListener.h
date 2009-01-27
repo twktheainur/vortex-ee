@@ -25,6 +25,8 @@ class VortexFrameListener : public FrameListener, public OIS::MouseListener, pub
 public:
     VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr, MyGUI::Gui * mGUI);
 
+    void hideAccueil(MyGUI::WidgetPtr _sender);
+
     bool frameStarted(const FrameEvent &evt);
 
     // MouseListener
@@ -72,6 +74,8 @@ protected:
     string idClient;
 
     MyGUI::Gui * mGUI;
+
+    MyGUI::VectorWidgetPtr winAccueil;
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED

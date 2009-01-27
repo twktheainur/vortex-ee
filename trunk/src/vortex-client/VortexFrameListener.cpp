@@ -1,11 +1,6 @@
 #include "VortexFrameListener.h"
 #include "../common/bitBuffer.h"
 
-void hideAccueil(MyGUI::VectorWidgetPtr winAccueil)
-{
-    winAccueil[0]->hide();
-}
-
     VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr, MyGUI::Gui * mGUI)
     {
       mInputManager = InputManager::getSingletonPtr();
@@ -17,12 +12,11 @@ void hideAccueil(MyGUI::VectorWidgetPtr winAccueil)
 
       this->mGUI = mGUI;
 
-        MyGUI::VectorWidgetPtr winAccueil = MyGUI::LayoutManager::getInstance().load("accueil.layout");
+        winAccueil = MyGUI::LayoutManager::getInstance().load("accueil.layout");
 
         // set callback
         MyGUI::ButtonPtr buttonOK = mGUI->findWidget<MyGUI::Button>("buttonOK");
-        // buttonOK->eventMouseButtonClick = MyGUI::newDelegate(this,hideAccueil(winAccueil));
-
+        buttonOK->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideAccueil);
 
         // Populate the camera and scene manager containers
         mCamNode = cam->getParentSceneNode();
@@ -47,6 +41,11 @@ void hideAccueil(MyGUI::VectorWidgetPtr winAccueil)
         iteration = 5;
 
         idClient = "Client";
+    }
+
+    void VortexFrameListener::hideAccueil(MyGUI::WidgetPtr _sender)
+    {
+        winAccueil[0]->hide();
     }
 
     bool VortexFrameListener::frameStarted(const FrameEvent &evt)
