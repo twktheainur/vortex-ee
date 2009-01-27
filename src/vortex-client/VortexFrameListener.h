@@ -76,6 +76,7 @@ protected:
     MyGUI::Gui * mGUI;
 
     MyGUI::VectorWidgetPtr winAccueil;
+    MyGUI::VectorWidgetPtr winChat;
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED

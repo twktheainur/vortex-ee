@@ -1,32 +1,35 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="WindowC" position_real="0.349411 0.295875 0.349411 0.466572" layer="Back" name="Vortex">
+    <Widget type="Window" skin="WindowC" position_real="0.35 0.15 0.35 0.47" layer="Back" name="Vortex">
         <Property key="Widget_Caption" value="Vortex"/>
         <Widget type="StaticImage" skin="StaticImage" position="30 8 255 90">
             <Property key="Image_Texture" value="logo.png"/>
         </Widget>
-        <Widget type="StaticText" skin="StaticText" position="70 106 184 24" align="ALIGN_CENTER">
+		
+        <Widget type="StaticText" skin="StaticText" position="70 106 184 24">
             <Property key="Widget_Caption" value="Bienvenue sur Vortex,"/>
             <Property key="Widget_FontHeight" value="21"/>
         </Widget>
-        <Widget type="StaticText" skin="StaticText" position="30 131 272 24" align="ALIGN_CENTER">
+        <Widget type="StaticText" skin="StaticText" position="30 131 272 24">
             <Property key="Widget_Caption" value="un environnement 3D multimedia"/>
             <Property key="Widget_FontHeight" value="21"/>
         </Widget>
-        <Widget type="StaticText" skin="StaticText" position="70 156 184 24" align="ALIGN_CENTER">
+        <Widget type="StaticText" skin="StaticText" position="70 156 184 24">
             <Property key="Widget_Caption" value="et multi utilisateurs..."/>
             <Property key="Widget_FontHeight" value="21"/>
         </Widget>
+		
         <Widget type="Widget" skin="Separator1" position="0 188 320 8"/>
-        <Widget type="StaticText" skin="StaticText" position="12 204 307 24" align="ALIGN_CENTER">
+		
+        <Widget type="StaticText" skin="StaticText" position="12 204 307 24">
             <Property key="Widget_Caption" value="conseil: approchez vous des objets de"/>
             <Property key="Widget_FontHeight" value="20"/>
         </Widget>
-        <Widget type="StaticText" skin="StaticText" position="28 229 267 24" align="ALIGN_CENTER">
+        <Widget type="StaticText" skin="StaticText" position="28 229 267 24">
             <Property key="Widget_Caption" value="la piece pour interagir avec eux..."/>
             <Property key="Widget_FontHeight" value="20"/>
         </Widget>
-        <Widget type="Button" skin="ButtonSmall" position="103 260 104 24" align="ALIGN_CENTER" name="buttonOK">
+        <Widget type="Button" skin="ButtonSmall" position="103 260 104 24" name="buttonOK">
             <Property key="Widget_Caption" value="OK"/>
         </Widget>
     </Widget>
