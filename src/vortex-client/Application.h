@@ -5,7 +5,7 @@
 #include <OIS/OIS.h>
 #include "VortexFrameListener.h"
 #include "OgreReferenceAppLayer.h"//pour la gestion des collisions/gravité
-#include "PersonnagePhysique.h"//pour les collisions / la gravité
+//#include "PersonnagePhysique.h"//pour les collisions / la gravité
 //#include <CEGUI/CEGUI.h>
 //#include <OgreCEGUIRenderer.h>
 #include <MyGUI.h>
