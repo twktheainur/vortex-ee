@@ -249,7 +249,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232654590 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1232909253 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -352,10 +352,11 @@
 1231628038 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\globals.h
 	"../common/Event.h"
 
-1232653759 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
+1233068097 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanager.cpp
 	"ClientManager.h"
 	"../common/bitBuffer.h"
 	"globals.h"
+	"../common/Exception.h"
 	"../common/LoginPacket.h"
 	"../common/LoginResponsePacket.h"
 
@@ -446,12 +447,20 @@
 1232398449 c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.h
 	"Packet.h"
 
-1232653785 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\worldmanager.h
+1233068457 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\worldmanager.h
 	"../common/Thread.h"
 	"../common/Event.h"
 	"World.h"
+	"globals.h"
 
-1232619625 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\world.h
+1233068480 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\world.h
 	<vector>
 	<iostream>
+
+1232619309 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\world.cpp
+	"World.h"
+
+1232653906 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\worldmanager.cpp
+	"WorldManager.h"
+	"World.h"
 

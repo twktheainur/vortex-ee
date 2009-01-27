@@ -1,0 +1,2462 @@
+# depslib dependency file v1.0
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_actioncontroller.cpp
+	"MyGUI_ActionController.h"
+	"MyGUI_Widget.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_actioncontroller.h
+	"MyGUI_Prerequest.h"
+
+1233051139 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_prerequest.h
+	"MyGUI_Platform.h"
+	<string>
+	<list>
+	<set>
+	<map>
+	<vector>
+	<deque>
+	"MyGUI_Utility.h"
+	"MyGUI_Delegate.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_platform.h
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_utility.h
+	"MyGUI_Prerequest.h"
+	<sstream>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_delegate.h
+	"MyGUI_DelegateImplement.h"
+	"MyGUI_DelegateImplement.h"
+	"MyGUI_DelegateImplement.h"
+	"MyGUI_DelegateImplement.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_delegateimplement.h
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widget.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_CroppedRectangleInterface.h"
+	"MyGUI_LayerItem.h"
+	"MyGUI_WidgetUserData.h"
+	"MyGUI_WidgetEvent.h"
+	"MyGUI_WidgetCreator.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_croppedrectangleinterface.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_common.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Macros.h"
+	"MyGUI_LogManager.h"
+	"MyGUI_Instance.h"
+	"MyGUI_Types.h"
+	"MyGUI_RenderOut.h"
+	"MyGUI_AlignInfo.h"
+	"MyGUI_ResourcePath.h"
+	<OgreException.h>
+	"MyGUI_Utility.h"
+	"MyGUI_InputDefine.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_macros.h
+	<OgrePlatform.h>
+
+1221598458 c:\ogresdk\include\ogreplatform.h
+	"OgreConfig.h"
+	<_mingw.h>
+	"config.h"
+
+1220480474 c:\ogresdk\include\ogreconfig.h
+	"config.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_logmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_LogStream.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_logstream.h
+	"MyGUI_Prerequest.h"
+	<fstream>
+	<iostream>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_instance.h
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_types.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Utility.h"
+	<Ogre.h>
+	"TPoint.h"
+	"TSize.h"
+	"TRect.h"
+	"TCoord.h"
+
+1220480474 c:\ogresdk\include\ogre.h
+	"OgrePrerequisites.h"
+	"OgreAnimation.h"
+	"OgreAnimationState.h"
+	"OgreAnimationTrack.h"
+	"OgreAny.h"
+	"OgreArchive.h"
+	"OgreArchiveManager.h"
+	"OgreAxisAlignedBox.h"
+	"OgreBillboardChain.h"
+	"OgreBillboardSet.h"
+	"OgreBone.h"
+	"OgreCamera.h"
+	"OgreConfigFile.h"
+	"OgreControllerManager.h"
+	"OgreDataStream.h"
+	"OgreEntity.h"
+	"OgreException.h"
+	"OgreFrustum.h"
+	"OgreGpuProgram.h"
+	"OgreGpuProgramManager.h"
+	"OgreHardwareBufferManager.h"
+	"OgreHardwareIndexBuffer.h"
+	"OgreHardwarePixelBuffer.h"
+	"OgreHardwareOcclusionQuery.h"
+	"OgreHardwareVertexBuffer.h"
+	"OgreHardwarePixelBuffer.h"
+	"OgreHighLevelGpuProgram.h"
+	"OgreHighLevelGpuProgramManager.h"
+	"OgreKeyFrame.h"
+	"OgreLight.h"
+	"OgreLogManager.h"
+	"OgreManualObject.h"
+	"OgreMaterial.h"
+	"OgreMaterialManager.h"
+	"OgreMaterialSerializer.h"
+	"OgreMath.h"
+	"OgreMatrix3.h"
+	"OgreMatrix4.h"
+	"OgreMesh.h"
+	"OgreMeshManager.h"
+	"OgreMeshSerializer.h"
+	"OgreOverlay.h"
+	"OgreOverlayContainer.h"
+	"OgreOverlayElement.h"
+	"OgreOverlayManager.h"
+	"OgreParticleAffector.h"
+	"OgreParticleEmitter.h"
+	"OgreParticleSystemManager.h"
+	"OgrePass.h"
+	"OgrePatchMesh.h"
+	"OgrePatchSurface.h"
+	"OgreProfiler.h"
+	"OgreRadixSort.h"
+	"OgreRenderQueueInvocation.h"
+	"OgreRenderQueueListener.h"
+	"OgreRenderSystem.h"
+	"OgreRenderTargetListener.h"
+	"OgreRenderTexture.h"
+	"OgreRenderWindow.h"
+	"OgreResourceBackgroundQueue.h"
+	"OgreResourceGroupManager.h"
+	"OgreRibbonTrail.h"
+	"OgreRoot.h"
+	"OgreSceneManager.h"
+	"OgreSceneManagerEnumerator.h"
+	"OgreSceneNode.h"
+	"OgreSimpleRenderable.h"
+	"OgreSkeleton.h"
+	"OgreSkeletonInstance.h"
+	"OgreSkeletonManager.h"
+	"OgreSkeletonSerializer.h"
+	"OgreStaticGeometry.h"
+	"OgreString.h"
+	"OgreStringConverter.h"
+	"OgreStringVector.h"
+	"OgreSubEntity.h"
+	"OgreSubMesh.h"
+	"OgreTechnique.h"
+	"OgreTextureManager.h"
+	"OgreTextureUnitState.h"
+	"OgreUserDefinedObject.h"
+	"OgreVector2.h"
+	"OgreViewport.h"
+	"OgreCompositor.h"
+	"OgreCompositorManager.h"
+	"OgreCompositorChain.h"
+	"OgreCompositorInstance.h"
+	"OgreCompositionTechnique.h"
+	"OgreCompositionPass.h"
+	"OgreCompositionTargetPass.h"
+	"OgreWindowEventUtilities.h"
+	"OgreShadowCameraSetup.h"
+	"OgreShadowCameraSetupFocused.h"
+	"OgreShadowCameraSetupLiSPSM.h"
+	"OgreShadowCameraSetupPlaneOptimal.h"
+	"OgreShadowCameraSetupPSSM.h"
+
+1224109874 c:\ogresdk\include\ogreprerequisites.h
+	"OgrePlatform.h"
+	<string>
+	"OgreStdHeaders.h"
+	"OgreMemoryAllocatorConfig.h"
+
+1222451694 c:\ogresdk\include\ogrestdheaders.h
+	<cassert>
+	<cstdio>
+	<cstdlib>
+	<ctime>
+	<cstring>
+	<cstdarg>
+	<cmath>
+	<vector>
+	<map>
+	<string>
+	<set>
+	<list>
+	<deque>
+	<queue>
+	<bitset>
+	<tr1/unordered_map>
+	<tr1/unordered_set>
+	<ext/hash_map>
+	<ext/hash_set>
+	<hash_set>
+	<hash_map>
+	<algorithm>
+	<functional>
+	<limits>
+	<fstream>
+	<iostream>
+	<iomanip>
+	<sstream>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<unistd.h>
+	<dlfcn.h>
+	<unistd.h>
+	<sys/param.h>
+	<CoreFoundation/CoreFoundation.h>
+	<boost/thread/tss.hpp>
+	<boost/thread/recursive_mutex.hpp>
+	<boost/thread/condition.hpp>
+	<boost/thread/thread.hpp>
+
+1225477750 c:\ogresdk\include\ogrememoryallocatorconfig.h
+	"OgrePrerequisites.h"
+	"OgreMemoryAllocatedObject.h"
+	"OgreMemorySTLAllocator.h"
+	"OgreMemoryNedAlloc.h"
+	"OgreMemoryStdAlloc.h"
+
+1220480474 c:\ogresdk\include\ogrememoryallocatedobject.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrememorystlallocator.h
+	"OgrePrerequisites.h"
+
+1225477750 c:\ogresdk\include\ogrememorynedalloc.h
+
+1225477750 c:\ogresdk\include\ogrememorystdalloc.h
+	<memory>
+	<limits>
+	"OgreAlignedAllocator.h"
+	"OgreMemoryTracker.h"
+
+1220480474 c:\ogresdk\include\ogrealignedallocator.h
+
+1221849010 c:\ogresdk\include\ogrememorytracker.h
+	"OgrePrerequisites.h"
+	<backward/hash_map>
+	<ext/hash_map>
+
+1222451694 c:\ogresdk\include\ogreanimation.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreIteratorWrappers.h"
+	"OgreAnimable.h"
+	"OgreAnimationTrack.h"
+	"OgreAnimationState.h"
+
+1222451694 c:\ogresdk\include\ogrestring.h
+	"OgrePrerequisites.h"
+	<tr1/unordered_map>
+	<ext/hash_map>
+
+1220480474 c:\ogresdk\include\ogreiteratorwrappers.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogreanimable.h
+	"OgrePrerequisites.h"
+	"OgreVector2.h"
+	"OgreVector3.h"
+	"OgreVector4.h"
+	"OgreQuaternion.h"
+	"OgreColourValue.h"
+	"OgreSharedPtr.h"
+	"OgreStringVector.h"
+	"OgreException.h"
+	"OgreAny.h"
+
+1220480474 c:\ogresdk\include\ogrevector2.h
+	"OgrePrerequisites.h"
+	"OgreMath.h"
+
+1220480474 c:\ogresdk\include\ogremath.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrevector3.h
+	"OgrePrerequisites.h"
+	"OgreMath.h"
+	"OgreQuaternion.h"
+
+1220480474 c:\ogresdk\include\ogrequaternion.h
+	"OgrePrerequisites.h"
+	"OgreMath.h"
+
+1220480474 c:\ogresdk\include\ogrevector4.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+
+1222894232 c:\ogresdk\include\ogrecolourvalue.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogresharedptr.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrestringvector.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreSharedPtr.h"
+
+1220480474 c:\ogresdk\include\ogreexception.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	<exception>
+
+1220480474 c:\ogresdk\include\ogreany.h
+	"OgrePrerequisites.h"
+	"OgreException.h"
+	"OgreString.h"
+	<algorithm>
+	<typeinfo>
+
+1223329052 c:\ogresdk\include\ogreanimationtrack.h
+	"OgrePrerequisites.h"
+	"OgreSimpleSpline.h"
+	"OgreRotationalSpline.h"
+	"OgreKeyFrame.h"
+	"OgreAnimable.h"
+	"OgrePose.h"
+
+1220480474 c:\ogresdk\include\ogresimplespline.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgreMatrix4.h"
+
+1220480474 c:\ogresdk\include\ogrematrix4.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgreMatrix3.h"
+	"OgreVector4.h"
+	"OgrePlane.h"
+
+1220480474 c:\ogresdk\include\ogrematrix3.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+
+1220480474 c:\ogresdk\include\ogreplane.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+
+1220480474 c:\ogresdk\include\ogrerotationalspline.h
+	"OgrePrerequisites.h"
+	"OgreQuaternion.h"
+
+1220480474 c:\ogresdk\include\ogrekeyframe.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgreQuaternion.h"
+	"OgreAny.h"
+	"OgreHardwareVertexBuffer.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogrehardwarevertexbuffer.h
+	"OgrePrerequisites.h"
+	"OgreHardwareBuffer.h"
+	"OgreSharedPtr.h"
+	"OgreColourValue.h"
+
+1220480474 c:\ogresdk\include\ogrehardwarebuffer.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrepose.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreHardwareVertexBuffer.h"
+	"OgreVector3.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogreanimationstate.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreController.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogrecontroller.h
+	"OgrePrerequisites.h"
+	"OgreSharedPtr.h"
+
+1220480474 c:\ogresdk\include\ogrearchive.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreDataStream.h"
+	"OgreSharedPtr.h"
+	"OgreStringVector.h"
+	<ctime>
+
+1220480474 c:\ogresdk\include\ogredatastream.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreSharedPtr.h"
+	<istream>
+
+1220480474 c:\ogresdk\include\ogrearchivemanager.h
+	"OgrePrerequisites.h"
+	"OgreResourceManager.h"
+	"OgreSingleton.h"
+
+1220480474 c:\ogresdk\include\ogreresourcemanager.h
+	"OgrePrerequisites.h"
+	"OgreResource.h"
+	"OgreResourceGroupManager.h"
+	"OgreIteratorWrappers.h"
+	"OgreCommon.h"
+	"OgreDataStream.h"
+	"OgreStringVector.h"
+	"OgreScriptLoader.h"
+
+1220480474 c:\ogresdk\include\ogreresource.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreSharedPtr.h"
+	"OgreStringInterface.h"
+	"OgreAtomicWrappers.h"
+
+1220480474 c:\ogresdk\include\ogrestringinterface.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreCommon.h"
+
+1220480474 c:\ogresdk\include\ogrecommon.h
+	"OgreString.h"
+	<utility>
+	<vector>
+	<map>
+
+1220480474 c:\ogresdk\include\ogreatomicwrappers.h
+	<signal.h>
+	"OgrePrerequisites.h"
+	"OgreException.h"
+	<windows.h>
+	<intrin.h>
+
+1223329052 c:\ogresdk\include\ogreresourcegroupmanager.h
+	"OgrePrerequisites.h"
+	"OgreSingleton.h"
+	"OgreCommon.h"
+	"OgreDataStream.h"
+	"OgreResource.h"
+	"OgreArchive.h"
+	"OgreIteratorWrappers.h"
+	<ctime>
+
+1220480474 c:\ogresdk\include\ogresingleton.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrescriptloader.h
+	"OgrePrerequisites.h"
+	"OgreDataStream.h"
+	"OgreStringVector.h"
+
+1220480474 c:\ogresdk\include\ogreaxisalignedbox.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgreMatrix4.h"
+
+1220480474 c:\ogresdk\include\ogrebillboardchain.h
+	"OgrePrerequisites.h"
+	"OgreMovableObject.h"
+	"OgreRenderable.h"
+
+1220480474 c:\ogresdk\include\ogremovableobject.h
+	"OgrePrerequisites.h"
+	"OgreRenderQueue.h"
+	"OgreAxisAlignedBox.h"
+	"OgreSphere.h"
+	"OgreShadowCaster.h"
+	"OgreFactoryObj.h"
+	"OgreAnimable.h"
+	"OgreAny.h"
+	"OgreUserDefinedObject.h"
+
+1220480474 c:\ogresdk\include\ogrerenderqueue.h
+	"OgrePrerequisites.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogresphere.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+
+1220480474 c:\ogresdk\include\ogreshadowcaster.h
+	"OgrePrerequisites.h"
+	"OgreRenderable.h"
+
+1220480474 c:\ogresdk\include\ogrerenderable.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgreRenderOperation.h"
+	"OgreMatrix4.h"
+	"OgreMaterial.h"
+	"OgrePlane.h"
+	"OgreGpuProgram.h"
+	"OgreVector4.h"
+	"OgreException.h"
+	"OgreAny.h"
+
+1220480474 c:\ogresdk\include\ogrerenderoperation.h
+	"OgrePrerequisites.h"
+	"OgreVertexIndexData.h"
+
+1220480474 c:\ogresdk\include\ogrevertexindexdata.h
+	"OgrePrerequisites.h"
+	"OgreHardwareVertexBuffer.h"
+	"OgreHardwareIndexBuffer.h"
+
+1220480474 c:\ogresdk\include\ogrehardwareindexbuffer.h
+	"OgrePrerequisites.h"
+	"OgreHardwareBuffer.h"
+	"OgreSharedPtr.h"
+
+1220480474 c:\ogresdk\include\ogrematerial.h
+	"OgrePrerequisites.h"
+	"OgreResource.h"
+	"OgreIteratorWrappers.h"
+	"OgreCommon.h"
+	"OgreColourValue.h"
+	"OgreBlendMode.h"
+
+1220480474 c:\ogresdk\include\ogreblendmode.h
+	"OgrePrerequisites.h"
+	"OgreColourValue.h"
+
+1223329052 c:\ogresdk\include\ogregpuprogram.h
+	"OgrePrerequisites.h"
+	"OgreResource.h"
+	"OgreSharedPtr.h"
+	"OgreIteratorWrappers.h"
+	"OgreSerializer.h"
+	"OgreRenderOperation.h"
+
+1220480474 c:\ogresdk\include\ogreserializer.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreDataStream.h"
+
+1220480474 c:\ogresdk\include\ogrefactoryobj.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogreuserdefinedobject.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrebillboardset.h
+	"OgrePrerequisites.h"
+	"OgreMovableObject.h"
+	"OgreRenderable.h"
+	"OgreRadixSort.h"
+	"OgreCommon.h"
+
+1220480474 c:\ogresdk\include\ogreradixsort.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrebone.h
+	"OgrePrerequisites.h"
+	"OgreNode.h"
+
+1220480474 c:\ogresdk\include\ogrenode.h
+	"OgrePrerequisites.h"
+	"OgreMatrix3.h"
+	"OgreMatrix4.h"
+	"OgreQuaternion.h"
+	"OgreString.h"
+	"OgreRenderable.h"
+	"OgreIteratorWrappers.h"
+
+1224109874 c:\ogresdk\include\ogrecamera.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreMovableObject.h"
+	"OgreMatrix4.h"
+	"OgreVector3.h"
+	"OgrePlane.h"
+	"OgreQuaternion.h"
+	"OgreCommon.h"
+	"OgreFrustum.h"
+	"OgreRay.h"
+	"OgrePlaneBoundedVolume.h"
+
+1220480474 c:\ogresdk\include\ogrefrustum.h
+	"OgrePrerequisites.h"
+	"OgreMovableObject.h"
+	"OgreRenderable.h"
+	"OgreAxisAlignedBox.h"
+	"OgreVertexIndexData.h"
+	"OgreMovablePlane.h"
+
+1220480474 c:\ogresdk\include\ogremovableplane.h
+	"OgrePrerequisites.h"
+	"OgrePlane.h"
+	"OgreMovableObject.h"
+
+1220480474 c:\ogresdk\include\ogreray.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgrePlaneBoundedVolume.h"
+
+1220480474 c:\ogresdk\include\ogreplaneboundedvolume.h
+	"OgrePrerequisites.h"
+	"OgreAxisAlignedBox.h"
+	"OgreSphere.h"
+	"OgreMath.h"
+	"OgrePlane.h"
+
+1220480474 c:\ogresdk\include\ogreconfigfile.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreStringVector.h"
+	"OgreIteratorWrappers.h"
+	"OgreDataStream.h"
+
+1220480474 c:\ogresdk\include\ogrecontrollermanager.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgreSingleton.h"
+	"OgreController.h"
+	"OgrePredefinedControllers.h"
+	"OgreTextureUnitState.h"
+	"OgreSharedPtr.h"
+
+1220480474 c:\ogresdk\include\ogrepredefinedcontrollers.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgreController.h"
+	"OgreFrameListener.h"
+	"OgreGpuProgram.h"
+
+1220480474 c:\ogresdk\include\ogreframelistener.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogretextureunitstate.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgreBlendMode.h"
+	"OgreMatrix4.h"
+	"OgreIteratorWrappers.h"
+	"OgreString.h"
+	"OgreTexture.h"
+
+1220480474 c:\ogresdk\include\ogretexture.h
+	"OgrePrerequisites.h"
+	"OgreHardwareBuffer.h"
+	"OgreResource.h"
+	"OgreImage.h"
+
+1220480474 c:\ogresdk\include\ogreimage.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgrePixelFormat.h"
+	"OgreDataStream.h"
+
+1220480474 c:\ogresdk\include\ogrepixelformat.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+
+1220480474 c:\ogresdk\include\ogreentity.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgreString.h"
+	"OgreMovableObject.h"
+	"OgreQuaternion.h"
+	"OgreVector3.h"
+	"OgreHardwareBufferManager.h"
+	"OgreMesh.h"
+	"OgreRenderable.h"
+
+1220480474 c:\ogresdk\include\ogrehardwarebuffermanager.h
+	"OgrePrerequisites.h"
+	"OgreSingleton.h"
+	"OgreHardwareVertexBuffer.h"
+	"OgreHardwareIndexBuffer.h"
+	"OgreRenderToVertexBuffer.h"
+
+1220480474 c:\ogresdk\include\ogrerendertovertexbuffer.h
+	"OgrePrerequisites.h"
+	"OgreMaterial.h"
+	"OgreRenderOperation.h"
+
+1220480474 c:\ogresdk\include\ogremesh.h
+	"OgrePrerequisites.h"
+	"OgreResource.h"
+	"OgreVertexIndexData.h"
+	"OgreAxisAlignedBox.h"
+	"OgreVertexBoneAssignment.h"
+	"OgreIteratorWrappers.h"
+	"OgreProgressiveMesh.h"
+	"OgreHardwareVertexBuffer.h"
+	"OgreSkeleton.h"
+	"OgreAnimationTrack.h"
+	"OgrePose.h"
+	"OgreDataStream.h"
+
+1220480474 c:\ogresdk\include\ogrevertexboneassignment.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogreprogressivemesh.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgreHardwareVertexBuffer.h"
+	"OgreHardwareIndexBuffer.h"
+	"OgreRenderOperation.h"
+
+1220480474 c:\ogresdk\include\ogreskeleton.h
+	"OgrePrerequisites.h"
+	"OgreResource.h"
+	"OgreQuaternion.h"
+	"OgreVector3.h"
+	"OgreIteratorWrappers.h"
+	"OgreStringVector.h"
+
+1220480474 c:\ogresdk\include\ogregpuprogrammanager.h
+	"OgrePrerequisites.h"
+	"OgreResourceManager.h"
+	"OgreException.h"
+	"OgreGpuProgram.h"
+	"OgreSingleton.h"
+
+1220480474 c:\ogresdk\include\ogrehardwarepixelbuffer.h
+	"OgrePrerequisites.h"
+	"OgreHardwareBuffer.h"
+	"OgreSharedPtr.h"
+	"OgrePixelFormat.h"
+	"OgreImage.h"
+
+1220480474 c:\ogresdk\include\ogrehardwareocclusionquery.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrehighlevelgpuprogram.h
+	"OgrePrerequisites.h"
+	"OgreGpuProgram.h"
+
+1220480474 c:\ogresdk\include\ogrehighlevelgpuprogrammanager.h
+	"OgrePrerequisites.h"
+	"OgreResourceManager.h"
+	"OgreSingleton.h"
+	"OgreException.h"
+	"OgreHighLevelGpuProgram.h"
+
+1220480474 c:\ogresdk\include\ogrelight.h
+	"OgrePrerequisites.h"
+	"OgreColourValue.h"
+	"OgreVector3.h"
+	"OgreVector4.h"
+	"OgreString.h"
+	"OgreMovableObject.h"
+	"OgrePlaneBoundedVolume.h"
+	"OgreShadowCameraSetup.h"
+
+1220480474 c:\ogresdk\include\ogreshadowcamerasetup.h
+	"OgrePrerequisites.h"
+	"OgreMovablePlane.h"
+	"OgreSharedPtr.h"
+
+1220480474 c:\ogresdk\include\ogrelogmanager.h
+	"OgrePrerequisites.h"
+	"OgreLog.h"
+	"OgreSingleton.h"
+	"OgreString.h"
+
+1220480474 c:\ogresdk\include\ogrelog.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+
+1220480474 c:\ogresdk\include\ogremanualobject.h
+	"OgrePrerequisites.h"
+	"OgreMovableObject.h"
+	"OgreRenderable.h"
+	"OgreResourceGroupManager.h"
+
+1220480474 c:\ogresdk\include\ogrematerialmanager.h
+	"OgrePrerequisites.h"
+	"OgreSingleton.h"
+	"OgreResourceManager.h"
+	"OgreMaterial.h"
+	"OgreStringVector.h"
+	"OgreMaterialSerializer.h"
+
+1220480474 c:\ogresdk\include\ogrematerialserializer.h
+	"OgrePrerequisites.h"
+	"OgreMaterial.h"
+	"OgreBlendMode.h"
+	"OgreTextureUnitState.h"
+	"OgreGpuProgram.h"
+	"OgreStringVector.h"
+
+1220480474 c:\ogresdk\include\ogremeshmanager.h
+	"OgrePrerequisites.h"
+	"OgreResourceManager.h"
+	"OgreSingleton.h"
+	"OgreVector3.h"
+	"OgreHardwareBuffer.h"
+	"OgreMesh.h"
+	"OgrePatchMesh.h"
+
+1220480474 c:\ogresdk\include\ogrepatchmesh.h
+	"OgrePrerequisites.h"
+	"OgreMesh.h"
+	"OgrePatchSurface.h"
+
+1220480474 c:\ogresdk\include\ogrepatchsurface.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgreString.h"
+	"OgreRenderOperation.h"
+	"OgreAxisAlignedBox.h"
+
+1223329052 c:\ogresdk\include\ogremeshserializer.h
+	"OgrePrerequisites.h"
+	"OgreMeshSerializerImpl.h"
+	"OgreSerializer.h"
+
+1220480474 c:\ogresdk\include\ogremeshserializerimpl.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreSerializer.h"
+	"OgreMaterial.h"
+	"OgreMesh.h"
+	"OgreEdgeListBuilder.h"
+
+1220480474 c:\ogresdk\include\ogreedgelistbuilder.h
+	"OgrePrerequisites.h"
+	"OgreVector4.h"
+	"OgreHardwareVertexBuffer.h"
+	"OgreRenderOperation.h"
+
+1220480474 c:\ogresdk\include\ogreoverlay.h
+	"OgrePrerequisites.h"
+	"OgreSceneNode.h"
+	"OgreIteratorWrappers.h"
+	"OgreMatrix4.h"
+
+1220480474 c:\ogresdk\include\ogrescenenode.h
+	"OgrePrerequisites.h"
+	"OgreNode.h"
+	"OgreIteratorWrappers.h"
+	"OgreAxisAlignedBox.h"
+
+1220480474 c:\ogresdk\include\ogreoverlaycontainer.h
+	"OgrePrerequisites.h"
+	"OgreOverlayElement.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogreoverlayelement.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreRenderable.h"
+	"OgreUTFString.h"
+	"OgreStringInterface.h"
+	"OgreOverlayElementCommands.h"
+	"OgreColourValue.h"
+	"OgreRectangle.h"
+
+1220480474 c:\ogresdk\include\ogreutfstring.h
+	"OgrePrerequisites.h"
+	<iterator>
+	<string>
+	<stdexcept>
+
+1220480474 c:\ogresdk\include\ogreoverlayelementcommands.h
+	"OgrePrerequisites.h"
+	"OgreStringInterface.h"
+
+1220480474 c:\ogresdk\include\ogrerectangle.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogreoverlaymanager.h
+	"OgrePrerequisites.h"
+	"OgreSingleton.h"
+	"OgreStringVector.h"
+	"OgreOverlay.h"
+	"OgreScriptLoader.h"
+
+1225477750 c:\ogresdk\include\ogreparticleaffector.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreStringInterface.h"
+
+1220480474 c:\ogresdk\include\ogreparticleemitter.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreVector3.h"
+	"OgreColourValue.h"
+	"OgreStringInterface.h"
+	"OgreParticleEmitterCommands.h"
+	"OgreParticle.h"
+
+1220480474 c:\ogresdk\include\ogreparticleemittercommands.h
+	"OgrePrerequisites.h"
+	"OgreStringInterface.h"
+
+1220480474 c:\ogresdk\include\ogreparticle.h
+	"OgrePrerequisites.h"
+	"OgreBillboard.h"
+
+1220480474 c:\ogresdk\include\ogrebillboard.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgreColourValue.h"
+	"OgreCommon.h"
+
+1220480474 c:\ogresdk\include\ogreparticlesystemmanager.h
+	"OgrePrerequisites.h"
+	"OgreParticleSystem.h"
+	"OgreFrameListener.h"
+	"OgreSingleton.h"
+	"OgreIteratorWrappers.h"
+	"OgreScriptLoader.h"
+	"OgreResourceGroupManager.h"
+
+1220480474 c:\ogresdk\include\ogreparticlesystem.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+	"OgreString.h"
+	"OgreParticleIterator.h"
+	"OgreStringInterface.h"
+	"OgreMovableObject.h"
+	"OgreRadixSort.h"
+	"OgreController.h"
+
+1220480474 c:\ogresdk\include\ogreparticleiterator.h
+	"OgrePrerequisites.h"
+
+1224109874 c:\ogresdk\include\ogrepass.h
+	"OgrePrerequisites.h"
+	"OgreGpuProgram.h"
+	"OgreColourValue.h"
+	"OgreBlendMode.h"
+	"OgreCommon.h"
+	"OgreLight.h"
+	"OgreTextureUnitState.h"
+
+1220480474 c:\ogresdk\include\ogreprofiler.h
+	"OgrePrerequisites.h"
+	"OgreSingleton.h"
+	"OgreString.h"
+	"OgreOverlay.h"
+
+1220480474 c:\ogresdk\include\ogrerenderqueueinvocation.h
+	"OgrePrerequisites.h"
+	"OgreRenderQueueSortingGrouping.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogrerenderqueuesortinggrouping.h
+	"OgrePrerequisites.h"
+	"OgreIteratorWrappers.h"
+	"OgreMaterial.h"
+	"OgreTechnique.h"
+	"OgrePass.h"
+	"OgreRadixSort.h"
+
+1220480474 c:\ogresdk\include\ogretechnique.h
+	"OgrePrerequisites.h"
+	"OgreIteratorWrappers.h"
+	"OgreBlendMode.h"
+	"OgreCommon.h"
+	"OgrePass.h"
+	"OgreIteratorWrappers.h"
+	"OgreRenderSystemCapabilities.h"
+
+1220480474 c:\ogresdk\include\ogrerendersystemcapabilities.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreStringConverter.h"
+	"OgreStringVector.h"
+	"OgreResource.h"
+	"OgreLogManager.h"
+
+1220480474 c:\ogresdk\include\ogrestringconverter.h
+	"OgrePrerequisites.h"
+	"OgreMath.h"
+	"OgreString.h"
+	"OgreStringVector.h"
+
+1220480474 c:\ogresdk\include\ogrerenderqueuelistener.h
+	"OgrePrerequisites.h"
+	"OgreRenderQueue.h"
+
+1220480474 c:\ogresdk\include\ogrerendersystem.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreTextureUnitState.h"
+	"OgreCommon.h"
+	"OgreRenderOperation.h"
+	"OgreRenderSystemCapabilities.h"
+	"OgreRenderTarget.h"
+	"OgreRenderTexture.h"
+	"OgreFrameListener.h"
+	"OgreConfigOptionMap.h"
+	"OgreGpuProgram.h"
+	"OgrePlane.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogrerendertarget.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreTextureManager.h"
+	"OgreViewport.h"
+	"OgreTimer.h"
+
+1220480474 c:\ogresdk\include\ogretexturemanager.h
+	"OgrePrerequisites.h"
+	"OgreResourceManager.h"
+	"OgreTexture.h"
+	"OgreSingleton.h"
+
+1220480474 c:\ogresdk\include\ogreviewport.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgreColourValue.h"
+
+1220480474 c:\ogresdk\include\ogretimer.h
+	"OgrePrerequisites.h"
+	"OgrePlatform.h"
+	"WIN32/OgreTimerImp.h"
+	"GLX/OgreTimerImp.h"
+	"OSX/OgreTimerImp.h"
+
+1220480406 c:\ogresdk\include\win32\ogretimerimp.h
+	"windows.h"
+
+1220480474 c:\ogresdk\include\ogrerendertexture.h
+	"OgrePrerequisites.h"
+	"OgreRenderTarget.h"
+
+1220480474 c:\ogresdk\include\ogreconfigoptionmap.h
+	"OgrePrerequisites.h"
+	"OgreStringVector.h"
+	"OgreString.h"
+
+1220480474 c:\ogresdk\include\ogrerendertargetlistener.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrerenderwindow.h
+	"OgrePrerequisites.h"
+	"OgreRenderTarget.h"
+
+1220480474 c:\ogresdk\include\ogreresourcebackgroundqueue.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgreSingleton.h"
+	"OgreResource.h"
+
+1220480474 c:\ogresdk\include\ogreribbontrail.h
+	"OgrePrerequisites.h"
+	"OgreBillboardChain.h"
+	"OgreNode.h"
+	"OgreIteratorWrappers.h"
+	"OgreFrameListener.h"
+	"OgreControllerManager.h"
+
+1220480474 c:\ogresdk\include\ogreroot.h
+	"OgrePrerequisites.h"
+	"OgreSingleton.h"
+	"OgreString.h"
+	"OgreSceneManagerEnumerator.h"
+	"OgreResourceGroupManager.h"
+	<exception>
+
+1220480474 c:\ogresdk\include\ogrescenemanagerenumerator.h
+	"OgrePrerequisites.h"
+	"OgreSceneManager.h"
+	"OgreSingleton.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogrescenemanager.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreSceneNode.h"
+	"OgrePlane.h"
+	"OgreQuaternion.h"
+	"OgreColourValue.h"
+	"OgreCommon.h"
+	"OgreSceneQuery.h"
+	"OgreAutoParamDataSource.h"
+	"OgreAnimationState.h"
+	"OgreRenderQueue.h"
+	"OgreRenderQueueSortingGrouping.h"
+	"OgreRectangle2D.h"
+	"OgrePixelFormat.h"
+	"OgreResourceGroupManager.h"
+	"OgreTexture.h"
+	"OgreShadowCameraSetup.h"
+	"OgreShadowTextureManager.h"
+	"OgreCamera.h"
+	"OgreInstancedGeometry.h"
+
+1220480474 c:\ogresdk\include\ogrescenequery.h
+	"OgrePrerequisites.h"
+	"OgreAxisAlignedBox.h"
+	"OgreSphere.h"
+	"OgreRay.h"
+	"OgreRenderOperation.h"
+	"OgrePlaneBoundedVolume.h"
+
+1220480474 c:\ogresdk\include\ogreautoparamdatasource.h
+	"OgrePrerequisites.h"
+	"OgreCommon.h"
+	"OgreMatrix4.h"
+	"OgreVector4.h"
+	"OgreLight.h"
+	"OgreColourValue.h"
+
+1220480474 c:\ogresdk\include\ogrerectangle2d.h
+	"OgrePrerequisites.h"
+	"OgreSimpleRenderable.h"
+
+1220480474 c:\ogresdk\include\ogresimplerenderable.h
+	"OgrePrerequisites.h"
+	"OgreMovableObject.h"
+	"OgreRenderable.h"
+	"OgreAxisAlignedBox.h"
+	"OgreMaterial.h"
+
+1220480474 c:\ogresdk\include\ogreshadowtexturemanager.h
+	"OgrePrerequisites.h"
+	"OgreSingleton.h"
+	"OgrePixelFormat.h"
+	"OgreTexture.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogreinstancedgeometry.h
+	"OgrePrerequisites.h"
+	"OgreMovableObject.h"
+	"OgreSimpleRenderable.h"
+	"OgreSkeleton.h"
+	"OgreSkeletonInstance.h"
+	"OgreAnimationTrack.h"
+	"OgreBone.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogreskeletoninstance.h
+	"OgrePrerequisites.h"
+	"OgreSkeleton.h"
+
+1220480474 c:\ogresdk\include\ogreskeletonmanager.h
+	"OgrePrerequisites.h"
+	"OgreResourceManager.h"
+	"OgreSingleton.h"
+
+1220480474 c:\ogresdk\include\ogreskeletonserializer.h
+	"OgrePrerequisites.h"
+	"OgreSkeleton.h"
+	"OgreSerializer.h"
+
+1220480474 c:\ogresdk\include\ogrestaticgeometry.h
+	"OgrePrerequisites.h"
+	"OgreMovableObject.h"
+	"OgreRenderable.h"
+
+1220480474 c:\ogresdk\include\ogresubentity.h
+	"OgrePrerequisites.h"
+	"OgreString.h"
+	"OgreRenderable.h"
+	"OgreHardwareBufferManager.h"
+
+1220480474 c:\ogresdk\include\ogresubmesh.h
+	"OgrePrerequisites.h"
+	"OgreVertexIndexData.h"
+	"OgreMaterial.h"
+	"OgreRenderOperation.h"
+	"OgreVertexBoneAssignment.h"
+	"OgreProgressiveMesh.h"
+	"OgreAnimationTrack.h"
+
+1220480474 c:\ogresdk\include\ogrecompositor.h
+	"OgrePrerequisites.h"
+	"OgreIteratorWrappers.h"
+	"OgreResource.h"
+
+1220480474 c:\ogresdk\include\ogrecompositormanager.h
+	"OgrePrerequisites.h"
+	"OgreResourceManager.h"
+	"OgreCompositor.h"
+	"OgreRectangle2D.h"
+	"OgreCompositorSerializer.h"
+	"OgreRenderSystem.h"
+
+1220480474 c:\ogresdk\include\ogrecompositorserializer.h
+	"OgrePrerequisites.h"
+	"OgreDataStream.h"
+
+1220480474 c:\ogresdk\include\ogrecompositorchain.h
+	"OgrePrerequisites.h"
+	"OgreRenderTargetListener.h"
+	"OgreRenderQueueListener.h"
+	"OgreCompositorInstance.h"
+	"OgreCompositor.h"
+
+1220480474 c:\ogresdk\include\ogrecompositorinstance.h
+	"OgrePrerequisites.h"
+	"OgreMaterial.h"
+	"OgreTexture.h"
+	"OgreRenderQueue.h"
+
+1220480474 c:\ogresdk\include\ogrecompositiontechnique.h
+	"OgrePrerequisites.h"
+	"OgrePixelFormat.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogrecompositionpass.h
+	"OgrePrerequisites.h"
+	"OgreMaterial.h"
+	"OgreRenderSystem.h"
+	"OgreRenderQueue.h"
+
+1220480474 c:\ogresdk\include\ogrecompositiontargetpass.h
+	"OgrePrerequisites.h"
+	"OgreIteratorWrappers.h"
+
+1220480474 c:\ogresdk\include\ogrewindoweventutilities.h
+	"OgrePrerequisites.h"
+	"OgrePlatform.h"
+	<windows.h>
+
+1220480474 c:\ogresdk\include\ogreshadowcamerasetupfocused.h
+	"OgrePrerequisites.h"
+	"OgreShadowCameraSetup.h"
+	"OgrePolygon.h"
+	"OgreConvexBody.h"
+
+1223329052 c:\ogresdk\include\ogrepolygon.h
+	"OgrePrerequisites.h"
+	"OgreVector3.h"
+
+1220480474 c:\ogresdk\include\ogreconvexbody.h
+	"OgrePrerequisites.h"
+	"OgrePolygon.h"
+
+1225825134 c:\ogresdk\include\ogreshadowcamerasetuplispsm.h
+	"OgrePrerequisites.h"
+	"OgreShadowCameraSetupFocused.h"
+
+1220480474 c:\ogresdk\include\ogreshadowcamerasetupplaneoptimal.h
+	"OgrePrerequisites.h"
+	"OgreShadowCameraSetup.h"
+
+1220480474 c:\ogresdk\include\ogreshadowcamerasetuppssm.h
+	"OgrePrerequisites.h"
+	"OgreShadowCameraSetupLiSPSM.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\tpoint.h
+	<string>
+	<sstream>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\tsize.h
+	<string>
+	<sstream>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\trect.h
+	<string>
+	<sstream>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\tcoord.h
+	"TPoint.h"
+	"TSize.h"
+	<string>
+	<sstream>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_renderout.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Utility.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_aligninfo.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Macros.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_resourcepath.h
+	"MyGUI_Prerequest.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_inputdefine.h
+	"MyGUI_Prerequest.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetdefines.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+	"MyGUI_AlignInfo.h"
+	<OgreColourValue.h>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_layeritem.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Macros.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetuserdata.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetevent.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Macros.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetcreator.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_WidgetCreator.h"
+	"MyGUI_UnlinkWidget.h"
+	"MyGUI_CastWidget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_unlinkwidget.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_castwidget.h
+	"MyGUI_Widget.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_button.cpp
+	"MyGUI_Button.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_StaticImage.h"
+	"MyGUI_CastWidget.h"
+	"MyGUI_InputManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_button.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetskininfo.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_SubWidgetBinding.h"
+	"MyGUI_ChildSkinInfo.h"
+	"MyGUI_MaskPeekInfo.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_subwidgetbinding.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_childskininfo.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_maskpeekinfo.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	<OgreCodec.h>
+	<OgreImageCodec.h>
+
+1220480474 c:\ogresdk\include\ogrecodec.h
+	"OgrePrerequisites.h"
+	"OgreSharedPtr.h"
+	"OgreDataStream.h"
+	"OgreIteratorWrappers.h"
+	"OgreStringVector.h"
+
+1220480474 c:\ogresdk\include\ogreimagecodec.h
+	"OgreCodec.h"
+	"OgrePixelFormat.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_staticimage.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_inputmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Macros.h"
+	"MyGUI_Instance.h"
+	"MyGUI_WidgetDefines.h"
+	"MyGUI_FrameListener.h"
+	"MyGUI_UnlinkWidget.h"
+	"MyGUI_WidgetDefines.h"
+	"MyGUI_XmlDocument.h"
+	"MyGUI_InputDefine.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_framelistener.h
+	"MyGUI_Prerequest.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_xmldocument.h
+	"MyGUI_Prerequest.h"
+	<vector>
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<assert.h>
+	<OgreDataStream.h>
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_buttonfactory.cpp
+	"MyGUI_ButtonFactory.h"
+	"MyGUI_Button.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_buttonfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetfactoryinterface.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_skinmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_WidgetDefines.h"
+	"MyGUI_XmlDocument.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_clipboardmanager.cpp
+	"MyGUI_ClipboardManager.h"
+	"MyGUI_Gui.h"
+	"MyGUI_TextIterator.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_clipboardmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_Common.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_gui.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_Common.h"
+	"MyGUI_CastWidget.h"
+	"MyGUI_FrameListener.h"
+	"MyGUI_XmlDocument.h"
+	"MyGUI_WidgetCreator.h"
+	"MyGUI_WidgetOIS.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetois.h
+	<OIS/OIS.h>
+
+1143392582 c:\ogresdk\include\ois\ois.h
+	"OISPrereqs.h"
+	"OISObject.h"
+	"OISMouse.h"
+	"OISKeyboard.h"
+	"OISJoyStick.h"
+	"OISInterface.h"
+	"OISInputManager.h"
+	"OISForceFeedback.h"
+	"OISException.h"
+	"OISEvents.h"
+	"OISEffect.h"
+
+1161677826 c:\ogresdk\include\ois\oisprereqs.h
+	<vector>
+	<string>
+	<map>
+	"OISConfig.h"
+
+1155370840 c:\ogresdk\include\ois\oisconfig.h
+
+1155364960 c:\ogresdk\include\ois\oisobject.h
+	"OISPrereqs.h"
+	"OISInterface.h"
+
+1142351258 c:\ogresdk\include\ois\oisinterface.h
+	"OISPrereqs.h"
+
+1156949758 c:\ogresdk\include\ois\oismouse.h
+	"OISObject.h"
+	"OISEvents.h"
+
+1155364960 c:\ogresdk\include\ois\oisevents.h
+	"OISPrereqs.h"
+
+1155364960 c:\ogresdk\include\ois\oiskeyboard.h
+	"OISObject.h"
+	"OISEvents.h"
+
+1156949758 c:\ogresdk\include\ois\oisjoystick.h
+	"OISObject.h"
+	"OISEvents.h"
+
+1155364960 c:\ogresdk\include\ois\oisinputmanager.h
+	"OISPrereqs.h"
+
+1142351258 c:\ogresdk\include\ois\oisforcefeedback.h
+	"OISPrereqs.h"
+	"OISInterface.h"
+	"OISEffect.h"
+
+1147638404 c:\ogresdk\include\ois\oiseffect.h
+	"OISPrereqs.h"
+
+1146782124 c:\ogresdk\include\ois\oisexception.h
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_textiterator.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_TextChangeHistory.h"
+	"MyGUI_Font.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_textchangehistory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	<Ogre.h>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_font.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	<Ogre.h>
+	<OgreResource.h>
+	<OgreTexture.h>
+	<OgreMaterial.h>
+	<OgreCommon.h>
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_colourrect.cpp
+	"MyGUI_ColourRect.h"
+	"MyGUI_RenderItem.h"
+	"MyGUI_LayerManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_colourrect.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+	"MyGUI_CroppedRectangleInterface.h"
+	"MyGUI_DrawItem.h"
+	"MyGUI_SubSkin.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_drawitem.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_subskin.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+	"MyGUI_CroppedRectangleInterface.h"
+	"MyGUI_DrawItem.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_renderitem.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	<OgreHardwareBufferManager.h>
+	<OgreHardwareVertexBuffer.h>
+	<OgrePrerequisites.h>
+	<OgreRenderOperation.h>
+	<OgreRenderSystem.h>
+	<OgreTextureManager.h>
+	<OgreTextureUnitState.h>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_layermanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_XmlDocument.h"
+	"MyGUI_UnlinkWidget.h"
+	<Ogre.h>
+	<OgrePrerequisites.h>
+	<OgreRenderQueueListener.h>
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_combobox.cpp
+	"MyGUI_ComboBox.h"
+	"MyGUI_ControllerManager.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_Gui.h"
+	"MyGUI_ControllerFadeAlpha.h"
+	"MyGUI_List.h"
+	"MyGUI_Button.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_LayerManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_combobox.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Edit.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_edit.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+	"MyGUI_TextChangeHistory.h"
+	"MyGUI_TextIterator.h"
+	"MyGUI_FrameListener.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_controllermanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_FrameListener.h"
+	"MyGUI_ControllerItem.h"
+	"MyGUI_UnlinkWidget.h"
+	"MyGUI_WidgetDefines.h"
+	"MyGUI_ActionController.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_controlleritem.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_controllerfadealpha.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetDefines.h"
+	"MyGUI_ControllerItem.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_list.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_comboboxfactory.cpp
+	"MyGUI_ComboBoxFactory.h"
+	"MyGUI_ComboBox.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_comboboxfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_controlleredgehide.cpp
+	"MyGUI_Prerequest.h"
+	"MyGUI_ControllerEdgeHide.h"
+	"MyGUI_Gui.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_Widget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_controlleredgehide.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetDefines.h"
+	"MyGUI_ControllerItem.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_controllerfadealpha.cpp
+	"MyGUI_Prerequest.h"
+	"MyGUI_ControllerFadeAlpha.h"
+	"MyGUI_Gui.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_Widget.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_controllermanager.cpp
+	"MyGUI_Gui.h"
+	"MyGUI_ControllerManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_Common.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_controllerposition.cpp
+	"MyGUI_Prerequest.h"
+	"MyGUI_ControllerPosition.h"
+	"MyGUI_Gui.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_Widget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_controllerposition.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetDefines.h"
+	"MyGUI_ControllerItem.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_dynlib.cpp
+	"MyGUI_DynLib.h"
+	"MyGUI_Common.h"
+	<Windows.h>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_dynlib.h
+	"MyGUI_Prerequest.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_dynlibmanager.cpp
+	"MyGUI_DynLibManager.h"
+	"MyGUI_Common.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_dynlibmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_DynLib.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_edit.cpp
+	"MyGUI_Gui.h"
+	"MyGUI_Edit.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_ClipboardManager.h"
+	"MyGUI_PointerManager.h"
+	"MyGUI_SubWidgetTextInterface.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_pointermanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_PointerInfo.h"
+	"MyGUI_WidgetDefines.h"
+	"MyGUI_UnlinkWidget.h"
+	"MyGUI_WidgetCreator.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_pointerinfo.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_subwidgettextinterface.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_CroppedRectangleInterface.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_editfactory.cpp
+	"MyGUI_EditFactory.h"
+	"MyGUI_Edit.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_editfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_edittext.cpp
+	"MyGUI_EditText.h"
+	"MyGUI_RenderItem.h"
+	"MyGUI_LayerItemKeeper.h"
+	"MyGUI_FontManager.h"
+	"MyGUI_LayerManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_edittext.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+	"MyGUI_SubWidgetTextInterface.h"
+	"MyGUI_DrawItem.h"
+	"MyGUI_Font.h"
+	"MyGUI_EnumCharInfo.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_enumcharinfo.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Font.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_layeritemkeeper.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_fontmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	<OgrePrerequisites.h>
+	<OgreSingleton.h>
+	<OgreResourceManager.h>
+	"MyGUI_Font.h"
+	"MyGUI_Instance.h"
+	"MyGUI_XmlDocument.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_font.cpp
+	<OgreStableHeaders.h>
+	"MyGUI_Font.h"
+	"MyGUI_Common.h"
+	<OgreMaterialManager.h>
+	<OgreTextureManager.h>
+	<OgreTexture.h>
+	<OgreResourceGroupManager.h>
+	<OgreStringConverter.h>
+	<OgreRenderWindow.h>
+	<OgreException.h>
+	<OgreBlendMode.h>
+	<OgreTextureUnitState.h>
+	<OgreTechnique.h>
+	<OgrePass.h>
+	<OgreMaterial.h>
+	<OgreBitwise.h>
+	<ft2build.h>
+
+1220480474 c:\ogresdk\include\ogrestableheaders.h
+	"OgrePlatform.h"
+	"OgreArchive.h"
+	"OgreAxisAlignedBox.h"
+	"OgreBitwise.h"
+	"OgreCamera.h"
+	"OgreColourValue.h"
+	"OgreCommon.h"
+	"OgreDataStream.h"
+	"OgreException.h"
+	"OgreFileSystem.h"
+	"OgreLog.h"
+	"OgreMath.h"
+	"OgreMatrix3.h"
+	"OgreMatrix4.h"
+	"OgreMovableObject.h"
+	"OgreNode.h"
+	"OgrePlane.h"
+	"OgrePrerequisites.h"
+	"OgreQuaternion.h"
+	"OgreResource.h"
+	"OgreSerializer.h"
+	"OgreSharedPtr.h"
+	"OgreSimpleRenderable.h"
+	"OgreSimpleSpline.h"
+	"OgreSingleton.h"
+	"OgreSphere.h"
+	"OgreStdHeaders.h"
+	"OgreString.h"
+	"OgreStringConverter.h"
+	"OgreStringInterface.h"
+	"OgreStringVector.h"
+	"OgreUserDefinedObject.h"
+	"OgreVector2.h"
+	"OgreVector3.h"
+	"OgreVector4.h"
+	"OgreWireBoundingBox.h"
+	"OgreZip.h"
+
+1220480474 c:\ogresdk\include\ogrebitwise.h
+	"OgrePrerequisites.h"
+
+1220480474 c:\ogresdk\include\ogrefilesystem.h
+	"OgrePrerequisites.h"
+	"OgreArchive.h"
+	"OgreArchiveFactory.h"
+
+1220480474 c:\ogresdk\include\ogrearchivefactory.h
+	"OgrePrerequisites.h"
+	"OgreFactoryObj.h"
+
+1220480474 c:\ogresdk\include\ogrewireboundingbox.h
+	"OgrePrerequisites.h"
+	"OgreSimpleRenderable.h"
+
+1220480474 c:\ogresdk\include\ogrezip.h
+	"OgrePrerequisites.h"
+	"OgreArchive.h"
+	"OgreArchiveFactory.h"
+
+1143199508 c:\ft2\include\freetype2\ft2build.h
+	<freetype/config/ftheader.h>
+
+1168334456 c:\ft2\include\freetype2\freetype\config\ftheader.h
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_fontmanager.cpp
+	"MyGUI_Font.h"
+	"MyGUI_Gui.h"
+	"MyGUI_FontManager.h"
+	"MyGUI_Common.h"
+	"MyGUI_XmlDocument.h"
+	<OgreImageCodec.h>
+	<OgreFont.h>
+
+1220480474 c:\ogresdk\include\ogrefont.h
+	"OgrePrerequisites.h"
+	"OgreResource.h"
+	"OgreTexture.h"
+	"OgreMaterial.h"
+	"OgreCommon.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_foobar.cpp
+	"MyGUI_FooBar.h"
+	"MyGUI_Macros.h"
+	"MyGUI_Gui.h"
+	"MyGUI_StaticImage.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_ControllerManager.h"
+	"MyGUI_ControllerFadeAlpha.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_foobar.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+	"MyGUI_FrameListener.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_foobarfactory.cpp
+	"MyGUI_FooBarFactory.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_FooBar.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_foobarfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_gui.cpp
+	"MyGUI_Gui.h"
+	"MyGUI_Widget.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_SubWidgetManager.h"
+	"MyGUI_LogManager.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_LayerManager.h"
+	"MyGUI_FontManager.h"
+	"MyGUI_ControllerManager.h"
+	"MyGUI_PointerManager.h"
+	"MyGUI_ClipboardManager.h"
+	"MyGUI_LayoutManager.h"
+	"MyGUI_PluginManager.h"
+	"MyGUI_DynLibManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_subwidgetmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_CroppedRectangleInterface.h"
+	"MyGUI_SubWidgetFactoryInterface.h"
+	"MyGUI_SubSkin.h"
+	"MyGUI_MainSkin.h"
+	"MyGUI_SimpleText.h"
+	"MyGUI_EditText.h"
+	"MyGUI_ColourRect.h"
+	"MyGUI_TileRect.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_subwidgetfactoryinterface.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_CroppedRectangleInterface.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_mainskin.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+	"MyGUI_CroppedRectangleInterface.h"
+	"MyGUI_DrawItem.h"
+	"MyGUI_SubSkin.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_simpletext.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+	"MyGUI_SubWidgetTextInterface.h"
+	"MyGUI_DrawItem.h"
+	"MyGUI_Font.h"
+	"MyGUI_EnumCharInfo.h"
+	"MyGUI_EditText.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_tilerect.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+	"MyGUI_CroppedRectangleInterface.h"
+	"MyGUI_DrawItem.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_layoutmanager.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Instance.h"
+	"MyGUI_XmlDocument.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_pluginmanager.h
+	"MyGUI_Prerequest.h"
+	<Ogre.h>
+	"MyGUI_Instance.h"
+	"MyGUI_Plugin.h"
+	"MyGUI_XmlDocument.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_plugin.h
+	"MyGUI_Prerequest.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_hscroll.cpp
+	"MyGUI_HScroll.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_Button.h"
+	"MyGUI_WidgetSkinInfo.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_hscroll.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_VScroll.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_vscroll.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_hscrollfactory.cpp
+	"MyGUI_HScrollFactory.h"
+	"MyGUI_HScroll.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_hscrollfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_inputmanager.cpp
+	"MyGUI_XmlDocument.h"
+	"MyGUI_Common.h"
+	"MyGUI_Gui.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_LayerManager.h"
+	"MyGUI_Widget.h"
+	"MyGUI_RenderOut.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_PointerManager.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_itembox.cpp
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	"MyGUI_CastWidget.h"
+	"MyGUI_ItemBox.h"
+	"MyGUI_Button.h"
+	"MyGUI_VScroll.h"
+	"MyGUI_HScroll.h"
+	"MyGUI_WidgetOIS.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_Gui.h"
+	"MyGUI_WidgetTranslate.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_itembox.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgettranslate.h
+	"MyGUI_Prerequest.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_itemboxfactory.cpp
+	"MyGUI_ItemBoxFactory.h"
+	"MyGUI_ItemBox.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_itemboxfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_layeriteminfo.cpp
+	"MyGUI_LayerItemInfo.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_layeriteminfo.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_LayerItemKeeper.h"
+	<Ogre.h>
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_layeritemkeeper.cpp
+	"MyGUI_LayerItemKeeper.h"
+	"MyGUI_RenderItem.h"
+	"MyGUI_LayerItem.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_layerkeeper.cpp
+	"MyGUI_Common.h"
+	"MyGUI_LayerItem.h"
+	"MyGUI_LayerKeeper.h"
+	"MyGUI_LayerItemKeeper.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_layerkeeper.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Types.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_layermanager.cpp
+	"MyGUI_Common.h"
+	"MyGUI_LayerManager.h"
+	"MyGUI_LayerKeeper.h"
+	"MyGUI_LayerItem.h"
+	"MyGUI_LayerItemKeeper.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_Widget.h"
+	"MyGUI_Gui.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_layoutmanager.cpp
+	"MyGUI_Common.h"
+	"MyGUI_Gui.h"
+	"MyGUI_LayoutManager.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_Widget.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_list.cpp
+	"MyGUI_Prerequest.h"
+	"MyGUI_Common.h"
+	"MyGUI_CastWidget.h"
+	"MyGUI_List.h"
+	"MyGUI_Button.h"
+	"MyGUI_VScroll.h"
+	"MyGUI_WidgetOIS.h"
+	"MyGUI_WidgetSkinInfo.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_listfactory.cpp
+	"MyGUI_ListFactory.h"
+	"MyGUI_List.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_listfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_logmanager.cpp
+	"MyGUI_LogManager.h"
+	<sstream>
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_logstream.cpp
+	"MyGUI_LogStream.h"
+	"MyGUI_LogManager.h"
+	<iomanip>
+	<time.h>
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_mainskin.cpp
+	"MyGUI_MainSkin.h"
+	"MyGUI_RenderItem.h"
+	"MyGUI_LayerManager.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_message.cpp
+	"MyGUI_Message.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_LayerManager.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_WidgetOIS.h"
+	"MyGUI_MessageFactory.h"
+	"MyGUI_Gui.h"
+	"MyGUI_ControllerManager.h"
+	"MyGUI_ControllerFadeAlpha.h"
+	"MyGUI_StaticImage.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_message.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Window.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_window.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_messagefactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_messagefactory.cpp
+	"MyGUI_MessageFactory.h"
+	"MyGUI_Message.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_InputManager.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_multilist.cpp
+	"MyGUI_MultiList.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_Button.h"
+	"MyGUI_List.h"
+	"MyGUI_Gui.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_multilist.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+	"MyGUI_FrameListener.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_multilistfactory.cpp
+	"MyGUI_MultiListFactory.h"
+	"MyGUI_MultiList.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_multilistfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_pluginmanager.cpp
+	"MyGUI_PluginManager.h"
+	"MyGUI_Gui.h"
+	"MyGUI_DynLibManager.h"
+	"MyGUI_Common.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_pointermanager.cpp
+	"MyGUI_Gui.h"
+	"MyGUI_LayerManager.h"
+	"MyGUI_PointerManager.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_XmlDocument.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_popupmenu.cpp
+	"MyGUI_PopupMenu.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_Button.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_ControllerManager.h"
+	"MyGUI_ControllerFadeAlpha.h"
+	"MyGUI_InputManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_popupmenu.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_popupmenufactory.cpp
+	"MyGUI_PopupMenuFactory.h"
+	"MyGUI_PopupMenu.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_popupmenufactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_progress.cpp
+	"MyGUI_Progress.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_Widget.h"
+	"MyGUI_Gui.h"
+	"MyGUI_SkinManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_progress.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+	"MyGUI_FrameListener.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_progressfactory.cpp
+	"MyGUI_ProgressFactory.h"
+	"MyGUI_Progress.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_progressfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_renderbox.cpp
+	"MyGUI_Gui.h"
+	"MyGUI_RenderBox.h"
+	"MyGUI_InputManager.h"
+	<OgreTextureManager.h>
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_renderbox.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+	"MyGUI_FrameListener.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_renderboxfactory.cpp
+	"MyGUI_RenderBoxFactory.h"
+	"MyGUI_RenderBox.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_renderboxfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1233050649 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_renderitem.cpp
+	"MyGUI_RenderItem.h"
+	"MyGUI_LayerItemKeeper.h"
+	"MyGUI_DrawItem.h"
+	"MyGUI_LayerManager.h"
+	"MyGUI_Gui.h"
+	<OgreRoot.h>
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_renderout.cpp
+	"MyGUI_RenderOut.h"
+	"MyGUI_Utility.h"
+	<OgreFontManager.h>
+	<OgreOverlayManager.h>
+	<OgreRoot.h>
+	<OgreOverlayContainer.h>
+	<OgreRenderWindow.h>
+
+1220480474 c:\ogresdk\include\ogrefontmanager.h
+	"OgrePrerequisites.h"
+	"OgreSingleton.h"
+	"OgreResourceManager.h"
+	"OgreFont.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_sheet.cpp
+	"MyGUI_Sheet.h"
+	"MyGUI_Tab.h"
+	"MyGUI_CastWidget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_sheet.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_tab.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_sheetfactory.cpp
+	"MyGUI_SheetFactory.h"
+	"MyGUI_Sheet.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_sheetfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_simpletext.cpp
+	"MyGUI_SimpleText.h"
+	"MyGUI_RenderItem.h"
+	"MyGUI_LayerItemKeeper.h"
+	"MyGUI_FontManager.h"
+	"MyGUI_LayerManager.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_skinmanager.cpp
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_Gui.h"
+	"MyGUI_XmlDocument.h"
+	<OgreMaterialManager.h>
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_staticimage.cpp
+	"MyGUI_StaticImage.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetSkinInfo.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_staticimagefactory.cpp
+	"MyGUI_StaticImageFactory.h"
+	"MyGUI_StaticImage.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_staticimagefactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_statictext.cpp
+	"MyGUI_StaticText.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_statictext.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_Widget.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_statictextfactory.cpp
+	"MyGUI_StaticTextFactory.h"
+	"MyGUI_StaticText.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_statictextfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_subskin.cpp
+	"MyGUI_SubSkin.h"
+	"MyGUI_RenderItem.h"
+	"MyGUI_LayerManager.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_subwidgetmanager.cpp
+	"MyGUI_SubWidgetManager.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_tab.cpp
+	"MyGUI_Tab.h"
+	"MyGUI_CastWidget.h"
+	"MyGUI_ControllerManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_ControllerFadeAlpha.h"
+	"MyGUI_Button.h"
+	"MyGUI_Sheet.h"
+	"MyGUI_WidgetSkinInfo.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_tabfactory.cpp
+	"MyGUI_TabFactory.h"
+	"MyGUI_Tab.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_tabfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_textiterator.cpp
+	"MyGUI_TextIterator.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_tilerect.cpp
+	"MyGUI_TileRect.h"
+	"MyGUI_RenderItem.h"
+	"MyGUI_LayerManager.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_vscroll.cpp
+	"MyGUI_VScroll.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_CastWidget.h"
+	"MyGUI_Button.h"
+	"MyGUI_WidgetSkinInfo.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_vscrollfactory.cpp
+	"MyGUI_VScrollFactory.h"
+	"MyGUI_VScroll.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_vscrollfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_widget.cpp
+	"MyGUI_Gui.h"
+	"MyGUI_Widget.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_SubWidgetManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_WidgetSkinInfo.h"
+	"MyGUI_LayerKeeper.h"
+	"MyGUI_LayerItemKeeper.h"
+	"MyGUI_LayerItem.h"
+	"MyGUI_LayerManager.h"
+	"MyGUI_RenderItem.h"
+	"MyGUI_SubWidgetTextInterface.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_widgetcreator.cpp
+	"MyGUI_WidgetCreator.h"
+	"MyGUI_Widget.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_widgetfactory.cpp
+	"MyGUI_WidgetFactory.h"
+	"MyGUI_Widget.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_widgetfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_widgetmanager.cpp
+	"MyGUI_Gui.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_LayerManager.h"
+	"MyGUI_Widget.h"
+	"MyGUI_WidgetCreator.h"
+	"MyGUI_WidgetFactory.h"
+	"MyGUI_ButtonFactory.h"
+	"MyGUI_WindowFactory.h"
+	"MyGUI_ListFactory.h"
+	"MyGUI_VScrollFactory.h"
+	"MyGUI_HScrollFactory.h"
+	"MyGUI_EditFactory.h"
+	"MyGUI_ComboBoxFactory.h"
+	"MyGUI_StaticTextFactory.h"
+	"MyGUI_SheetFactory.h"
+	"MyGUI_TabFactory.h"
+	"MyGUI_ProgressFactory.h"
+	"MyGUI_ItemBoxFactory.h"
+	"MyGUI_MultiListFactory.h"
+	"MyGUI_StaticImageFactory.h"
+	"MyGUI_MessageFactory.h"
+	"MyGUI_RenderBoxFactory.h"
+	"MyGUI_FooBarFactory.h"
+	"MyGUI_PopupMenuFactory.h"
+	"MyGUI_MenuBarFactory.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_windowfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062966 o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\include\mygui_menubarfactory.h
+	"MyGUI_Prerequest.h"
+	"MyGUI_WidgetFactoryInterface.h"
+	"MyGUI_WidgetDefines.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_window.cpp
+	"MyGUI_Window.h"
+	"MyGUI_Macros.h"
+	"MyGUI_Gui.h"
+	"MyGUI_ControllerManager.h"
+	"MyGUI_InputManager.h"
+	"MyGUI_WidgetManager.h"
+	"MyGUI_ControllerFadeAlpha.h"
+	"MyGUI_WidgetSkinInfo.h"
+
+1213062970 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_windowfactory.cpp
+	"MyGUI_WindowFactory.h"
+	"MyGUI_Window.h"
+	"MyGUI_SkinManager.h"
+	"MyGUI_WidgetManager.h"
+
+1213062972 source:o:\twk\doc\programming\iut2a\vortex-ee\src\myguiengine\src\mygui_xmldocument.cpp
+	"MyGUI_XmlDocument.h"
+
