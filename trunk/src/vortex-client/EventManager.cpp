@@ -17,7 +17,7 @@ void EventManager::execute(void * arg)
   event_data_t event;
   while(1)
   {
-  	event = eventManagerEvent.getEvent();
+  	event = worldManagerEvent.getEvent();
   	printf("EVENT recv EvenManager\nTYPE:%d\nDATA:%s\n",event.type/*,event.data.data()*/);
   }
 }

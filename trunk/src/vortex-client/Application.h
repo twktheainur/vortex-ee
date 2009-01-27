@@ -8,6 +8,7 @@
 #include "PersonnagePhysique.h"//pour les collisions / la gravité
 //#include <CEGUI/CEGUI.h>
 //#include <OgreCEGUIRenderer.h>
+#include <MyGUI.h>
 
 using namespace Ogre;
 using namespace OgreRefApp;
@@ -63,6 +64,8 @@ private:
     SceneManager *mSceneMgr;
     RenderWindow *win;
 
+    MyGUI::Gui * mGUI;
+
     void login();
 
     void createRoot();
@@ -83,7 +86,7 @@ private:
 
     void setupInputSystem();
 
-    // void setupCEGUI();
+    void setupMyGUI();
 
     void createFrameListener();
 

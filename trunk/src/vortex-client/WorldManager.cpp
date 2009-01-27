@@ -69,7 +69,7 @@ void WorldManager::execute(void * arg)
 
           event_data_t serverEvent;
           // puis on gere les mise a jour recues du serveur
-          while(connectionManagerEvent.changed())
+          while(connectionManagerInEvent.changed())
           {
             //on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
             serverEvent = connectionManagerInEvent.getEvent();

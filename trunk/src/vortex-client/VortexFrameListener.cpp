@@ -1,7 +1,7 @@
 #include "VortexFrameListener.h"
 #include "../common/bitBuffer.h"
 
-    VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr)
+    VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr, MyGUI::Gui * mGUI)
     {
       mInputManager = InputManager::getSingletonPtr();
       mInputManager->initialise( win );
@@ -10,6 +10,9 @@
       mMouse = mInputManager->getMouse();
       mKeyboard = mInputManager->getKeyboard();
 
+      this->mGUI = mGUI;
+
+        MyGUI::LayoutManager::getInstance().load("sample.layout");
 
         // Populate the camera and scene manager containers
         mCamNode = cam->getParentSceneNode();
@@ -38,6 +41,8 @@
 
     bool VortexFrameListener::frameStarted(const FrameEvent &evt)
     {
+        mGUI->injectFrameEntered(evt.timeSinceLastFrame);
+
         // on declare les variables de position et direction qui nous servirons plusieurs fois par la suite
         float posX;
         float posY;
@@ -205,6 +210,8 @@
     // MouseListener
     bool VortexFrameListener::mouseMoved(const OIS::MouseEvent &e)
     {
+        mGUI->injectMouseMove(e);
+
     	  if(mMouse->getMouseState().buttonDown(OIS::MB_Right))
     	  {
     	    //on ne peut pas aller plus loin que 90 degré (camera a l'envers)
@@ -221,6 +228,8 @@
 
     bool VortexFrameListener::mousePressed(const OIS::MouseEvent &e, OIS::MouseButtonID id)
     {
+        mGUI->injectMousePress(e, id);
+
     	if(e.state.buttonDown(OIS::MB_Right) && e.state.buttonDown(OIS::MB_Left))
     	{
     		mDirection.y = mMove;
@@ -236,19 +245,23 @@
     }
     bool VortexFrameListener::mouseReleased(const OIS::MouseEvent &e, OIS::MouseButtonID id)
     {
-      if(e.state.buttonDown(OIS::MB_Right) ||
-      	 e.state.buttonDown(OIS::MB_Left))
-			{
-        mDirection.y = 0;
-        if(mDirection.x==0)
-         mAnimationState->setEnabled(false);
-			}
-      return true;
+        mGUI->injectMouseRelease(e, id);
+
+        if(e.state.buttonDown(OIS::MB_Right) ||
+            e.state.buttonDown(OIS::MB_Left))
+        {
+            mDirection.y = 0;
+            if(mDirection.x==0)
+                mAnimationState->setEnabled(false);
+        }
+        return true;
     }
 
     // KeyListener
     bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
     {
+        mGUI->injectKeyPress(e);
+
         bitBuffer buff;
         switch (e.key)
         {
@@ -257,7 +270,6 @@
                 buff.writeString(idClient);
                 worldManagerEvent.sendEvent(8,buff);
                 mContinue = false;
-                break;
                 break;
             case OIS::KC_UP:
             case OIS::KC_W:
@@ -326,6 +338,8 @@
 
     bool VortexFrameListener::keyReleased(const OIS::KeyEvent &e)
     {
+        mGUI->injectKeyRelease(e);
+
         switch (e.key) // ici on arr�te le mouvement lorsque la touche est relach�e
        {
        case OIS::KC_UP:

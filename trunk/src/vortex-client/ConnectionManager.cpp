@@ -31,7 +31,7 @@ void ConnectionManager::execute(void * arg)
       printf("%s\n",e->what());
 	  delete e;
 	}
-    if((event_data = connectionManagerEvent.getEvent()).type==event_connect_login)
+    if((event_data = connectionManagerOutEvent.getEvent()).type==event_connect_login)
       {
         //On expedie le paquet
         bitBuffer tmp;
@@ -71,10 +71,10 @@ void ConnectionManager::execute(void * arg)
 
       }
       //Apres on check les events:
-      if(connectionManagerEvent.changed())
+      if(connectionManagerOutEvent.changed())
       {
         event_data_t ev_data;
-        ev_data = connectionManagerEvent.getEvent();
+        ev_data = connectionManagerOutEvent.getEvent();
       }
     }
   	catch(Exception * e)

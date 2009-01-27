@@ -7,6 +7,7 @@
 #include "globals.h"
 #include "vector.h"
 #include "PersonnagePhysique.h"
+#include "MyGUI.h"
 
 
 using namespace Ogre;
@@ -21,7 +22,7 @@ typedef struct structUser
 class VortexFrameListener : public FrameListener, public OIS::MouseListener, public OIS::KeyListener
 {
 public:
-    VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr);
+    VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr, MyGUI::Gui * mGUI);
 
     bool frameStarted(const FrameEvent &evt);
 
@@ -68,6 +69,8 @@ protected:
     vector<structUser_t> utilisateurs; // vecteur contenant les nodes des autres utilisateurs
 
     string idClient;
+
+    MyGUI::Gui * mGUI;
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED
