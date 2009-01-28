@@ -15,13 +15,16 @@
         winChat = MyGUI::LayoutManager::getInstance().load("chat.layout");
 
         winAccueil = MyGUI::LayoutManager::getInstance().load("accueil.layout");
+        // set callback
+        MyGUI::ButtonPtr buttonAccueilOK = mGUI->findWidget<MyGUI::Button>("buttonOK");
+        buttonAccueilOK->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideAccueil);
 
         winLaunchInter = MyGUI::LayoutManager::getInstance().load("launchInterface.layout");
         showWindow(1,false);
 
-        // set callback
-        MyGUI::ButtonPtr buttonOK = mGUI->findWidget<MyGUI::Button>("buttonOK");
-        buttonOK->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideAccueil);
+        winImage = MyGUI::LayoutManager::getInstance().load("winImage.layout");
+        winVideo = MyGUI::LayoutManager::getInstance().load("winVideo.layout");
+        winAudio = MyGUI::LayoutManager::getInstance().load("winAudio.layout");
 
 
         // Populate the camera and scene manager containers
@@ -63,6 +66,21 @@
             case 1: //winLaunchInter
                 if (show) winLaunchInter[0]->show();
                 else winLaunchInter[0]->hide();
+            break;
+
+            case 2: //winVideo
+                if (show) winVideo[0]->show();
+                else winVideo[0]->hide();
+            break;
+
+            case 3: //winImage
+                if (show) winImage[0]->show();
+                else winImage[0]->hide();
+            break;
+
+            case 4: //winAudio
+                if (show) winAudio[0]->show();
+                else winAudio[0]->hide();
             break;
 
             default:
@@ -141,13 +159,20 @@
             posX = (float)pos.x; posY = (float)pos.y; posZ = (float)pos.z;
 
             //on verifie si on est proche d'un objet
-            if (distance(55.0,392.0,120.0,posX,posY,posZ,50.0,50.0,50.0) && !lauchIntShow)
+            if ((distance(55.0,392.0,120.0,posX,posY,posZ,80.0,80.0,80.0) || distance(144.0,384.0,72.0,posX,posY,posZ,80.0,80.0,80.0) ||
+                 distance(-627.0,560.0,168.0,posX,posY,posZ,80.0,80.0,80.0) || distance(-752.0,472.0,168.0,posX,posY,posZ,80.0,80.0,80.0) ||
+                 distance(736.0,-240.0,96.0,posX,posY,posZ,80.0,80.0,80.0) || distance(816.0,-160.0,96.0,posX,posY,posZ,80.0,80.0,80.0) ||
+                 distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0)) && !lauchIntShow)
+            // TV(2), bib1(2), bib2(2), audio(1)
             // si la distance avec le point donne est assez petite et que la fenetre d'info n'est pas encore affichee, on l'affiche
             {
                 lauchIntShow = true;
                 showWindow(1,true);
             }
-            else if (!distance(55.0,392.0,120.0,posX,posY,posZ,50.0,50.0,50.0) && lauchIntShow)
+            else if ((!distance(55.0,392.0,120.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(144.0,384.0,72.0,posX,posY,posZ,80.0,80.0,80.0) &&
+                 !distance(-627.0,560.0,168.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(-752.0,472.0,168.0,posX,posY,posZ,80.0,80.0,80.0) &&
+                 !distance(736.0,-240.0,96.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(816.0,-160.0,96.0,posX,posY,posZ,80.0,80.0,80.0) &&
+                 !distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0)) && lauchIntShow)
             // si winLaunchInter est montree et qu'on s'eloigne trop, on la cache
             {
                 lauchIntShow = false;
@@ -317,6 +342,9 @@
     {
         mGUI->injectKeyPress(e);
 
+        Vector3 pos;
+        float posX, posY, posZ;
+
         bitBuffer buff;
         switch (e.key)
         {
@@ -381,6 +409,32 @@
                 mDirection.z = -mMove/1.5; // on va en bas
                 changement = true;
                 break;
+
+            case OIS::KC_SPACE:
+                if (lauchIntShow)
+                {
+                    pos=mPlayer->getSceneNode()->getPosition();
+                    posX = (float)pos.x; posY = (float)pos.y; posZ = (float)pos.z;
+                    if (distance(55.0,392.0,120.0,posX,posY,posZ,80.0,80.0,80.0) || distance(144.0,384.0,72.0,posX,posY,posZ,80.0,80.0,80.0))
+                    // television
+                    {
+                        showWindow(2,true);
+                    }
+
+                    else if (distance(-627.0,560.0,168.0,posX,posY,posZ,80.0,80.0,80.0) || distance(-752.0,472.0,168.0,posX,posY,posZ,80.0,80.0,80.0) ||
+                             distance(736.0,-240.0,96.0,posX,posY,posZ,80.0,80.0,80.0) || distance(816.0,-160.0,96.0,posX,posY,posZ,80.0,80.0,80.0))
+                    //bibliotheque
+                    {
+                        showWindow(3,true);
+                    }
+
+                    else if (distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0))
+                    //lecteur audio
+                    {
+                        showWindow(4,true);
+                    }
+                }
+            break;
 
             default:
                 break;
