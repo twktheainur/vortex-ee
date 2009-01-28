@@ -154,7 +154,7 @@
       //mPlayer = mSceneMgr->createEntity( "Player", "man.mesh" );
       mPlayer = mWorld->createPersonnage("Player", Vector3(10,10,10), Vector3(-680,160,127));//nom, dimensions (x,y,z), position (x,y,z)
       // les 2 derniers paramètres sont facultatifs
-      
+
       //mPlayer->getEntity()->setCastShadows(true);
 
       //le code suivant se retrouve dans PersonnagePhysique
@@ -260,6 +260,7 @@
 
 
         //decoration
+        //television
         Entity *tv = mSceneMgr->createEntity("TV", "tele.mesh" );
         tv->setCastShadows(true);
         SceneNode *TVNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("TVnode", Vector3(55,392,120));
@@ -299,7 +300,6 @@
         fautNode3->yaw(Degree(55));
 
         // table de l'autre cote du mur derriere l'escalier
-
         Entity *faut4 = mSceneMgr->createEntity("faut4", "fauteuil.mesh" );
         SceneNode *fautNode4 = mSceneMgr->getRootSceneNode()->createChildSceneNode("fautNode4", Vector3(-290,-180,118));
         fautNode4->attachObject(faut4);

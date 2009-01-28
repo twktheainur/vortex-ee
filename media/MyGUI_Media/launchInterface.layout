@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position_real="0.01 0.01 0.291533 0.112376" layer="Back">
+        <Property key="Widget_Alpha" value="80"/>
+        <Widget type="StaticImage" skin="StaticImage" position="8 8 64 64">
+            <Property key="Image_Texture" value="info.png"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="88 16 184 16">
+            <Property key="Widget_Caption" value="Appuyez sur entree pour "/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="104 32 152 16">
+            <Property key="Widget_Caption" value="ouvrir l'interface de "/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="120 48 120 24">
+            <Property key="Widget_Caption" value="l'objet proche..."/>
+        </Widget>
+    </Widget>
+</MyGUI>

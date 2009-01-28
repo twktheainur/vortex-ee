@@ -16,6 +16,9 @@
 
         winAccueil = MyGUI::LayoutManager::getInstance().load("accueil.layout");
 
+        winLaunchInter = MyGUI::LayoutManager::getInstance().load("launchInterface.layout");
+        showWindow(1,false);
+
         // set callback
         MyGUI::ButtonPtr buttonOK = mGUI->findWidget<MyGUI::Button>("buttonOK");
         buttonOK->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideAccueil);
@@ -44,6 +47,8 @@
         iteration = 5;
 
         idClient = "Client";
+
+        lauchIntShow = false;
     }
 
     void VortexFrameListener::hideAccueil(MyGUI::WidgetPtr _sender)
@@ -51,11 +56,26 @@
         winAccueil[0]->hide();
     }
 
+    void VortexFrameListener::showWindow(int window, bool show)
+    {
+        switch (window)
+        {
+            case 1: //winLaunchInter
+                if (show) winLaunchInter[0]->show();
+                else winLaunchInter[0]->hide();
+            break;
+
+            default:
+            break;
+        }
+    }
+
     bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     {
         mGUI->injectFrameEntered(evt.timeSinceLastFrame);
 
         // on declare les variables de position et direction qui nous servirons plusieurs fois par la suite
+        Vector3 pos;
         float posX;
         float posY;
         float posZ;
@@ -67,6 +87,7 @@
         mAnimationState->addTime(evt.timeSinceLastFrame);
 
         //mPlayerNode->yaw(mAngle,Node::TS_WORLD);
+        //mPlayer->getSceneNode()->yaw(mAngle,Node::TS_WORLD);
 
         //Ici on doit swapper les coordonnees pour qu'elle soient les memes entre player et camera
         posY = (float)mDirection.y;
@@ -77,15 +98,15 @@
         mDirection.z = posY;
         //mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
         //mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);//n'a pas l'air de marcher avec les collision/gravité
-        
-        
+
+
         #ifdef COLLISIONS_GRAVITE_ACTIVEES
           mPlayer->setLinearVelocity(posX, posY, posZ);
           World::getSingleton().simulationStep(evt.timeSinceLastFrame);
         #else
           mPlayer->translate(mDirection * evt.timeSinceLastFrame);
         #endif
-        
+
         //on remet les éléments de mDirection à leur place :
         mDirection.y = posY;
         mDirection.x = posX;
@@ -111,9 +132,27 @@
             ogreManagerEvent.sendEvent(8,buff);
 
             changement = false; // on réinitialise changement
+
             iteration = 0;
         }
 
+
+            pos=mPlayer->getSceneNode()->getPosition();
+            posX = (float)pos.x; posY = (float)pos.y; posZ = (float)pos.z;
+
+            //on verifie si on est proche d'un objet
+            if (distance(55.0,392.0,120.0,posX,posY,posZ,50.0,50.0,50.0) && !lauchIntShow)
+            // si la distance avec le point donne est assez petite et que la fenetre d'info n'est pas encore affichee, on l'affiche
+            {
+                lauchIntShow = true;
+                showWindow(1,true);
+            }
+            else if (!distance(55.0,392.0,120.0,posX,posY,posZ,50.0,50.0,50.0) && lauchIntShow)
+            // si winLaunchInter est montree et qu'on s'eloigne trop, on la cache
+            {
+                lauchIntShow = false;
+                showWindow(1,false);
+            }
 
           //on verifie les mise a jour du world
           event_data_t eventReceived;
@@ -217,6 +256,8 @@
                     break;
             }
           }
+
+        iteration++;
 
         return mContinue;
     }
