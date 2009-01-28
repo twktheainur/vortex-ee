@@ -29,7 +29,7 @@
             <Property key="Widget_Caption" value="la piece pour interagir avec eux..."/>
             <Property key="Widget_FontHeight" value="20"/>
         </Widget>
-        <Widget type="Button" skin="ButtonSmall" position="103 260 104 24" name="buttonOK">
+        <Widget type="Button" skin="ButtonSmall" position="103 260 104 24" name="buttonAccueilOK">
             <Property key="Widget_Caption" value="OK"/>
         </Widget>
     </Widget>
