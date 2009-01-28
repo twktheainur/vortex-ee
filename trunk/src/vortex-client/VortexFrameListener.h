@@ -26,7 +26,17 @@ class VortexFrameListener : public FrameListener, public OIS::MouseListener, pub
 public:
     VortexFrameListener(RenderWindow* win, Camera* cam,PersonnagePhysique * player, SceneManager *sceneMgr, MyGUI::Gui * mGUI);
 
-    void hideAccueil(MyGUI::WidgetPtr _sender);
+    inline void hideAccueil(MyGUI::WidgetPtr _sender) { showWindow(0,false); }
+
+    inline void hideWindowImage(MyGUI::WidgetPtr _sender) { showWindow(3,false); }
+
+    inline void hideWindowVideo(MyGUI::WidgetPtr _sender) { showWindow(2,false); }
+
+    inline void hideWindowAudio(MyGUI::WidgetPtr _sender) { showWindow(4,false); }
+
+	void notifyComboChatAccept(MyGUI::Widget * _sender);
+
+    void addToChat(const Ogre::UTFString & _line);
 
     void showWindow(int window, bool show);
     // window est le numero de la fenetre qu'on montre ou cache suivant la valeur de show
@@ -91,11 +101,18 @@ protected:
 
     string idClient;
 
+    Ogre::UTFString mStringUnknown;
+
     MyGUI::Gui * mGUI;
 
     MyGUI::VectorWidgetPtr winAccueil;
+
     MyGUI::VectorWidgetPtr winChat;
+    MyGUI::ListPtr mChatHistorique;
+    MyGUI::ComboBoxPtr mComboChat;
+
     MyGUI::VectorWidgetPtr winLaunchInter;
+
     MyGUI::VectorWidgetPtr winImage;
     MyGUI::VectorWidgetPtr winVideo;
     MyGUI::VectorWidgetPtr winAudio;

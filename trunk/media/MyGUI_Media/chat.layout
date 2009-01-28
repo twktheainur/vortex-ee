@@ -1,14 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="Window" position_real="0 0.671408 0.599143 0.33" layer="Overlapped" name="WindowChat">
+    <Widget type="Window" skin="Window" position_real="0 0.669986 0.599143 0.328592" layer="Overlapped" name="WindowChat">
         <Property key="Widget_Caption" value="Chat"/>
         <Property key="Window_MinMax" value="200 100 2000 2000"/>
         <Property key="Widget_Alpha" value="70"/>
         <Property key="Window_AutoAlpha" value="true"/>
-        <Widget type="List" skin="List" position_real="0 -0.0309278 1.00364 0.865979" name="list_History"/>
-        <Widget type="ComboBox" skin="ComboBox" position="5 165 443 26" name="combo_Command"/>
-        <Widget type="Button" skin="Button" position="453 165 91 26" name="button_Submit">
-            <Property key="Widget_Caption" value="Envoyer"/>
-        </Widget>
+        <Widget type="List" skin="List" position_real="0 0.0102564 0.998182 0.815385" name="chatHistorique"/>
+        <Widget type="ComboBox" skin="ComboBox" position="5 165 536 26" name="comboChat"/>
     </Widget>
 </MyGUI>
