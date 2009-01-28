@@ -6,7 +6,7 @@
             <Property key="Image_Texture" value="info.png"/>
         </Widget>
         <Widget type="StaticText" skin="StaticText" position="88 16 184 16">
-            <Property key="Widget_Caption" value="Appuyez sur entree pour "/>
+            <Property key="Widget_Caption" value="Appuyez sur espace pour "/>
         </Widget>
         <Widget type="StaticText" skin="StaticText" position="104 32 152 16">
             <Property key="Widget_Caption" value="ouvrir l'interface de "/>

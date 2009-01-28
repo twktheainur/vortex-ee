@@ -96,6 +96,9 @@ protected:
     MyGUI::VectorWidgetPtr winAccueil;
     MyGUI::VectorWidgetPtr winChat;
     MyGUI::VectorWidgetPtr winLaunchInter;
+    MyGUI::VectorWidgetPtr winImage;
+    MyGUI::VectorWidgetPtr winVideo;
+    MyGUI::VectorWidgetPtr winAudio;
 
     bool lauchIntShow;
 };
