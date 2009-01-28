@@ -28,6 +28,9 @@ public:
 
     void hideAccueil(MyGUI::WidgetPtr _sender);
 
+    void showWindow(int window, bool show);
+    // window est le numero de la fenetre qu'on montre ou cache suivant la valeur de show
+
     bool frameEnded(const FrameEvent &evt);
 
     // MouseListener
@@ -37,12 +40,26 @@ public:
 
     bool mouseReleased(const OIS::MouseEvent &e, OIS::MouseButtonID id);
 
-
     // KeyListener
     bool keyPressed(const OIS::KeyEvent &e);
 
-
     bool keyReleased(const OIS::KeyEvent &e);
+
+    inline bool distance(float x1, float y1, float z1, float x2, float y2, float z2, float distx, float disty, float distz)
+    {
+        float x, y, z;
+
+        if (x1>x2) x = x1-x2;
+        else x = x2-x1;
+
+        if (y1>y2) y = y1-y2;
+        else y = y2-y1;
+
+        if (z1>z2) z = z1-z2;
+        else z = z2-z1;
+
+        return (x<distx && y<disty && z<distz);
+    }
 
 protected:
 
@@ -78,6 +95,9 @@ protected:
 
     MyGUI::VectorWidgetPtr winAccueil;
     MyGUI::VectorWidgetPtr winChat;
+    MyGUI::VectorWidgetPtr winLaunchInter;
+
+    bool lauchIntShow;
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED
