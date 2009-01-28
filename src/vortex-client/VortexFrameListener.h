@@ -9,6 +9,7 @@
 #include "OgreReferenceAppLayer.h"//pour la gestion des collisions/gravité
 #include "MyGUI.h"
 
+//#define COLLISIONS_GRAVITE_ACTIVEES
 
 using namespace Ogre;
 using namespace OgreRefApp;
@@ -27,7 +28,7 @@ public:
 
     void hideAccueil(MyGUI::WidgetPtr _sender);
 
-    bool frameStarted(const FrameEvent &evt);
+    bool frameEnded(const FrameEvent &evt);
 
     // MouseListener
     bool mouseMoved(const OIS::MouseEvent &e);

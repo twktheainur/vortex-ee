@@ -51,7 +51,7 @@
         winAccueil[0]->hide();
     }
 
-    bool VortexFrameListener::frameStarted(const FrameEvent &evt)
+    bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     {
         mGUI->injectFrameEntered(evt.timeSinceLastFrame);
 
@@ -67,7 +67,6 @@
         mAnimationState->addTime(evt.timeSinceLastFrame);
 
         //mPlayerNode->yaw(mAngle,Node::TS_WORLD);
-        mPlayer->getSceneNode()->yaw(mAngle,Node::TS_WORLD);
 
         //Ici on doit swapper les coordonnees pour qu'elle soient les memes entre player et camera
         posY = (float)mDirection.y;
@@ -77,17 +76,20 @@
         mDirection.x = -posX;
         mDirection.z = posY;
         //mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
-        mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);//n'a pas l'air de marcher avec les collision/gravité
-
+        //mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);//n'a pas l'air de marcher avec les collision/gravité
+        
+        
+        #ifdef COLLISIONS_GRAVITE_ACTIVEES
+          mPlayer->setLinearVelocity(posX, posY, posZ);
+          World::getSingleton().simulationStep(evt.timeSinceLastFrame);
+        #else
+          mPlayer->translate(mDirection * evt.timeSinceLastFrame);
+        #endif
+        
+        //on remet les éléments de mDirection à leur place :
         mDirection.y = posY;
         mDirection.x = posX;
         mDirection.z = posZ;
-
-        //mPlayer->setLinearVelocity(Vector3(mDirection.y,mDirection.x,mDirection.z));//ca n'est pas les coordonnées locales...
-        //mPlayer->setAngularVelocity(Vector3::ZERO);//je sais pas encore a quoi ca sert, j'ai vu ca dans l'exemple BspCollision
-
-
-        //World::getSingleton().simulationStep(evt.timeSinceLastFrame);
 
         if (changement and iteration == 5) // si un déplacement a eu lieu pendant l'image précédente
         {
@@ -232,7 +234,7 @@
     	    {
             mCamRotNode->pitch(Degree(mRotate * e.state.Y.rel), Node::TS_LOCAL);//on tourne le camRotNode, mais pas le joueur
     	    }
-            mPlayer->getSceneNode()->yaw(Degree(-mRotate * e.state.X.rel), Node::TS_WORLD);//on tourne le joueur (et pas seulement le camRotNode)
+            mPlayer->yaw(Degree(-mRotate * e.state.X.rel));//on tourne le joueur (et pas seulement le camRotNode)
             changement = true;
     	  }
         return true;

@@ -132,7 +132,9 @@
       //mSceneMgr->setWorldGeometry("maps/PT.bsp"); // chargement de la map
       mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
 
-      //mWorld->setGravity(Vector3(0, 0, -10000));
+      #ifdef COLLISIONS_GRAVITE_ACTIVEES//défini dans VortexFrameListener.h
+        //mWorld->setGravity(Vector3(0, 0, -100));
+      #endif
 
       mCamera = mSceneMgr->createCamera("Camera"); // on cree la camera
       mCamera->setNearClipDistance(5);
@@ -150,7 +152,9 @@
       //SceneNode * playerNode;
       //playerNode =mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode", Vector3(-680,160,127));
       //mPlayer = mSceneMgr->createEntity( "Player", "man.mesh" );
-      mPlayer = mWorld->createPersonnage("Player");
+      mPlayer = mWorld->createPersonnage("Player", Vector3(10,10,10), Vector3(-680,160,127));//nom, dimensions (x,y,z), position (x,y,z)
+      // les 2 derniers paramètres sont facultatifs
+      
       //mPlayer->getEntity()->setCastShadows(true);
 
       //le code suivant se retrouve dans PersonnagePhysique
@@ -164,8 +168,10 @@
       mPlayer->getSceneNode()->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node �galement
       //playerNode->attachObject(mPlayer); // on attache le modèle au noeud
 
-      mPlayer->setCollisionEnabled(true);
-      mPlayer->setDynamicsEnabled(true);
+      #ifdef COLLISIONS_GRAVITE_ACTIVEES
+        mPlayer->setCollisionEnabled(true);
+        mPlayer->setDynamicsEnabled(true);
+      #endif
 
       SceneNode *camRotNode;
       //camRotNode=playerNode->createChildSceneNode("CamRotNode", Vector3(0,20,0)); //SceneNode autour duquel la caméra va tourner (légèrement plus haut que le playerNode)
