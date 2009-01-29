@@ -33,17 +33,35 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
     winImage = MyGUI::LayoutManager::getInstance().load("winImage.layout");
     // set callback
     MyGUI::ButtonPtr buttonImageFermer = mGUI->findWidget<MyGUI::Button>("buttonImageFermer");
-    buttonImageFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowImage);
+    buttonImageFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::closeWindowImage);
+    // set callback2
+    MyGUI::ButtonPtr buttonImageCacher = mGUI->findWidget<MyGUI::Button>("buttonImageCacher");
+    buttonImageCacher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowImage);
 
     winVideo = MyGUI::LayoutManager::getInstance().load("winVideo.layout");
     // set callback
     MyGUI::ButtonPtr buttonVideoFermer = mGUI->findWidget<MyGUI::Button>("buttonVideoFermer");
-    buttonVideoFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowVideo);
+    buttonVideoFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::closeWindowVideo);
+    // set callback2
+    MyGUI::ButtonPtr buttonVideoCacher = mGUI->findWidget<MyGUI::Button>("buttonVideoCacher");
+    buttonVideoCacher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowVideo);
 
     winAudio = MyGUI::LayoutManager::getInstance().load("winAudio.layout");
     // set callback
     MyGUI::ButtonPtr buttonAudioFermer = mGUI->findWidget<MyGUI::Button>("buttonAudioFermer");
-    buttonAudioFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowAudio);
+    buttonAudioFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::closeWindowAudio);
+    // set callback2
+    MyGUI::ButtonPtr buttonAudioCacher = mGUI->findWidget<MyGUI::Button>("buttonAudioCacher");
+    buttonAudioCacher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowAudio);
+
+    //boutons d'affichage des interfaces
+    buttonsAfficher = MyGUI::LayoutManager::getInstance().load("boutonAfficher.layout");
+    buttonImageAfficher = mGUI->findWidget<MyGUI::Button>("buttonImageAfficher");
+    buttonImageAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowImage);
+    buttonAudioAfficher = mGUI->findWidget<MyGUI::Button>("buttonAudioAfficher");
+    buttonAudioAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowAudio);
+    buttonVideoAfficher = mGUI->findWidget<MyGUI::Button>("buttonVideoAfficher");
+    buttonVideoAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowVideo);
 
 
     // Populate the camera and scene manager containers
@@ -105,17 +123,17 @@ void VortexFrameListener::showWindow(int window, bool show)
         break;
 
     case 2: //winVideo
-        if (show) winVideo[0]->show();
+        if (show) { winVideo[0]->show(); buttonVideoAfficher->hide(); }
         else winVideo[0]->hide();
         break;
 
     case 3: //winImage
-        if (show) winImage[0]->show();
+        if (show) { winImage[0]->show(); buttonImageAfficher->hide(); }
         else winImage[0]->hide();
         break;
 
     case 4: //winAudio
-        if (show) winAudio[0]->show();
+        if (show) { winAudio[0]->show(); buttonAudioAfficher->hide(); }
         else winAudio[0]->hide();
         break;
 
@@ -332,6 +350,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
                 utilisateurs[i].entite->setVisible(false); // on rend l'entite invisible
                 free(utilisateurs[i].entite);
                 free(utilisateurs[i].node);
+                free(utilisateurs[i].anim);
                 utilisateurs.erase(utilisateurs.begin()+i);
                 //supprimer l'entree du vecteur
             }

@@ -3,8 +3,11 @@
     <Widget type="Window" skin="WindowC" position="424 48 432 456" layer="Overlapped" name="winAudio">
         <Property key="Widget_Caption" value="Gerer et consulter votre musique"/>
 		<Property key="Widget_Show" value="false"/>
-        <Widget type="Button" skin="ButtonSmall" position="157 394 96 24" name="buttonAudioFermer">
+        <Widget type="Button" skin="ButtonSmall" position="213 394 96 24" name="buttonAudioFermer">
             <Property key="Widget_Caption" value="Fermer"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="117 394 90 24" name="buttonAudioCacher">
+            <Property key="Widget_Caption" value="Cacher"/>
         </Widget>
     </Widget>
 </MyGUI>

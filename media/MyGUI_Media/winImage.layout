@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="WindowC" position="424 48 432 456" layer="Overlapped" name="winImage">
+    <Widget type="Window" skin="WindowC" position="424 48 432 456" layer="Back" name="winImage">
         <Property key="Widget_Caption" value="Gerer et consulter vos photos"/>
 		<Property key="Widget_Show" value="false"/>
-        <Widget type="Button" skin="ButtonSmall" position="157 394 96 24" name="buttonImageFermer">
+        <Widget type="Button" skin="ButtonSmall" position="213 394 96 24" name="buttonImageFermer">
             <Property key="Widget_Caption" value="Fermer"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="117 394 90 24" name="buttonImageCacher">
+            <Property key="Widget_Caption" value="Cacher"/>
         </Widget>
     </Widget>
 </MyGUI>
