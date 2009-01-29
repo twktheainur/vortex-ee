@@ -82,15 +82,9 @@
             connectionManagerOutEvent.sendEvent(event_connect_login,buff);
 
             //if (connectionManagerOutEvent.changed()) event_data_t eventReceived = connectionManagerOutEvent.getEvent()
-            if (login != "sauss" && pass != "war")
-            {
-                erreur->show();
-            }
-            else
-            {
+
                 idClientGlobal = login;
                 winLogin[0]->hide();
-            }
         }
     }
 
