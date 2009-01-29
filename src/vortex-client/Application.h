@@ -61,8 +61,10 @@ private:
     MyGUI::VectorWidgetPtr winLogin;
     MyGUI::EditPtr mEditLogin;
     MyGUI::EditPtr mEditPass;
+    MyGUI::ButtonPtr buttonLogConnec;
+    MyGUI::StaticTextPtr erreur;
 
-    bool login();
+    void login();
 
     inline void quitter(MyGUI::WidgetPtr _sender) { continuer = false; }
 
