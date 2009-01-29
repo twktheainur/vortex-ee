@@ -158,7 +158,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     // d'abord on capture les actions effectu�es � la souris et au clavier
     mInputManager->capture();
     mAnimationState->addTime(evt.timeSinceLastFrame);
-
+    
     //mPlayerNode->yaw(mAngle,Node::TS_WORLD);
     //mPlayer->getSceneNode()->yaw(mAngle,Node::TS_WORLD);
 
@@ -171,7 +171,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     mDirection.z = posY;
     //mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
     //mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
-    mPlayer->deplacement(mDirection * evt.timeSinceLastFrame);
+    mPlayer->deplacement(mDirection, evt.timeSinceLastFrame);
 
     //on remet les éléments de mDirection à leur place :
     mDirection.y = posY;

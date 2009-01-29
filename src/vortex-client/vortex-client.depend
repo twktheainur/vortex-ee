@@ -1242,7 +1242,7 @@
 
 1146778524 c:\users\sebastien\documents\ogresdk\include\ois\oisexception.h
 
-1233224191 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
+1233228276 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
@@ -1257,14 +1257,19 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1232480605 source:c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.cpp
+1233229436 source:c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
+	"../common/md5wrapper.h"
+	"../common/bitBuffer.h"
+	"globals.h"
+	"Client.h"
+	"ConnectionManager.h"
 
-1232212521 c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.h
+1233229436 c:\users\sebastien\documents\vortex\src\vortex-client\applicationmanager.h
 	"../common/Thread.h"
 	"Application.h"
 
-1230562263 c:\users\sebastien\documents\vortex\src\common\thread.h
+1233229438 c:\users\sebastien\documents\vortex\src\common\thread.h
 	<pthread.h>
 	<string>
 	"Exception.h"
@@ -1290,7 +1295,7 @@
 1230562263 c:\users\sebastien\documents\vortex\src\common\exception.h
 	<string>
 
-1233064833 c:\users\sebastien\documents\vortex\src\common\event.h
+1233229438 c:\users\sebastien\documents\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -1325,17 +1330,17 @@
 	"../common/Thread.h"
 	"../common/Event.h"
 
-1232798078 source:c:\users\sebastien\documents\vortex\src\vortex-client\client.cpp
+1233229436 source:c:\users\sebastien\documents\vortex\src\vortex-client\client.cpp
 	"Client.h"
 	<cstdlib>
-
-1232798078 c:\users\sebastien\documents\vortex\src\vortex-client\client.h
-	<pthread.h>
-	"globals.h"
-	"TCPClient.h"
 	"WorldManager.h"
 	"ConnectionManager.h"
 	"ApplicationManager.h"
+
+1233229436 c:\users\sebastien\documents\vortex\src\vortex-client\client.h
+	<pthread.h>
+	"globals.h"
+	"TCPClient.h"
 	"EventManager.h"
 	<vector>
 
@@ -1347,7 +1352,7 @@
 	"Socket.h"
 	<string>
 
-1232798078 c:\users\sebastien\documents\vortex\src\common\socket.h
+1233229438 c:\users\sebastien\documents\vortex\src\common\socket.h
 	<ws2tcpip.h>
 	<winsock2.h>
 	<unistd.h>
@@ -1377,10 +1382,11 @@
 	"../common/Event.h"
 	"globals.h"
 
-1233064833 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
+1233229436 source:c:\users\sebastien\documents\vortex\src\vortex-client\connectionmanager.cpp
 	"ConnectionManager.h"
 	"../common/LoginResponsePacket.h"
 	"../common/Exception.h"
+	"../common/UpdatePacket.h"
 
 1232212522 c:\users\sebastien\documents\vortex\src\common\bitbuffer.h
 	<iostream>
@@ -1394,14 +1400,15 @@
 1231263547 source:c:\users\sebastien\documents\vortex\src\vortex-client\inputmanager.cpp
 	"InputManager.h"
 
-1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\tcpclient.cpp
+1233229436 source:c:\users\sebastien\documents\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
+	"globals.h"
 
-1233225777 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
+1233231198 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1233064833 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
+1233229436 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
 	"ApplicationManager.h"
@@ -1409,6 +1416,7 @@
 	<iostream>
 	<cstdio>
 	<iostream>
+	<fstream>
 
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\cond.cpp
 	"Cond.h"
@@ -1429,7 +1437,7 @@
 1232398449 source:c:\users\sebastien\documents\vortex\src\common\packet.cpp
 	"Packet.h"
 
-1232478122 c:\users\sebastien\documents\vortex\src\common\packet.h
+1233229438 c:\users\sebastien\documents\vortex\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
@@ -1439,10 +1447,10 @@
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\semaphore.cpp
 	"Semaphore.h"
 
-1232798078 source:c:\users\sebastien\documents\vortex\src\common\socket.cpp
+1233229438 source:c:\users\sebastien\documents\vortex\src\common\socket.cpp
 	"Socket.h"
 
-1231266635 source:c:\users\sebastien\documents\vortex\src\common\tcpsocket.cpp
+1233229438 source:c:\users\sebastien\documents\vortex\src\common\tcpsocket.cpp
 	"TCPSocket.h"
 
 1229266972 source:c:\users\sebastien\documents\vortex\src\common\thread.cpp
@@ -1450,7 +1458,7 @@
 	<iostream>
 	<pthread.h>
 
-1231266764 source:c:\users\sebastien\documents\vortex\src\common\udpsocket.cpp
+1233229438 source:c:\users\sebastien\documents\vortex\src\common\udpsocket.cpp
 	"UDPSocket.h"
 
 1229266972 c:\users\sebastien\documents\vortex\src\common\udpsocket.h
@@ -4306,8 +4314,9 @@
 	"OgreCamera.h"
 	"OgreRefAppApplicationObject.h"
 
-1233064833 c:\users\sebastien\documents\vortex\src\vortex-client\globals.h
+1233229436 c:\users\sebastien\documents\vortex\src\vortex-client\globals.h
 	"../common/Event.h"
+	<fstream>
 
 1232214039 c:\users\sebastien\documents\vortex\src\common\custom_usleep.h
 
@@ -5790,13 +5799,13 @@
 1232659210 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.h
 	"Packet.h"
 
-1232659202 c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.h
+1233229438 c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.h
 	"Packet.h"
 
 1232659210 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\loginresponsepacket.cpp
 	"LoginResponsePacket.h"
 
-1232659202 source:c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.cpp
+1233229438 source:c:\users\sebastien\documents\vortex\src\common\loginresponsepacket.cpp
 	"LoginResponsePacket.h"
 
 1233081579 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\ogrereferenceapplayer.h
@@ -5995,10 +6004,10 @@
 	"OgreCamera.h"
 	"OgreRefAppApplicationObject.h"
 
-1232580071 source:c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.cpp
+1233230974 source:c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
 
-1233226007 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
+1233230992 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
 	"Ogre.h"
 
 1233227174 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.h
@@ -7884,11 +7893,10 @@
 	"MyGUI_WidgetDefines.h"
 	"MyGUI_ControllerItem.h"
 
-1232798078 c:\users\sebastien\documents\vortex\src\vortex-client\worldmanager.h
+1233229436 c:\users\sebastien\documents\vortex\src\vortex-client\worldmanager.h
 	"../common/Thread.h"
 	"../common/Event.h"
 	"globals.h"
-	"World.h"
 
 1232960666 c:\users\sebastien\documents\vortex\src\vortex-client\world.h
 	<vector>
@@ -7897,8 +7905,9 @@
 1232798078 source:c:\users\sebastien\documents\vortex\src\vortex-client\world.cpp
 	"World.h"
 
-1233064833 source:c:\users\sebastien\documents\vortex\src\vortex-client\worldmanager.cpp
+1233229436 source:c:\users\sebastien\documents\vortex\src\vortex-client\worldmanager.cpp
 	"WorldManager.h"
+	"World.h"
 
 1233082624 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\refapp\personnagephysique.h
 	"OgreRefAppPrerequisites.h"
@@ -7929,4 +7938,32 @@
 
 1233152180 o:\twk\doc\programming\iut2a\vortex-ee\src\common\updatepacket.h
 	"Packet.h"
+
+1233229438 source:c:\users\sebastien\documents\vortex\src\common\loginpacket.cpp
+	"LoginPacket.h"
+
+1233229438 c:\users\sebastien\documents\vortex\src\common\loginpacket.h
+	"Packet.h"
+
+1233229438 source:c:\users\sebastien\documents\vortex\src\common\updatepacket.cpp
+	"UpdatePacket.h"
+	"bitBuffer.h"
+
+1233229438 c:\users\sebastien\documents\vortex\src\common\updatepacket.h
+	"Packet.h"
+
+1233229438 source:c:\users\sebastien\documents\vortex\src\common\md5.cpp
+	"md5.h"
+
+1233229438 c:\users\sebastien\documents\vortex\src\common\md5.h
+	<string>
+
+1233229438 source:c:\users\sebastien\documents\vortex\src\common\md5wrapper.cpp
+	<fstream>
+	<iostream>
+	"md5wrapper.h"
+	"md5.h"
+
+1233229438 c:\users\sebastien\documents\vortex\src\common\md5wrapper.h
+	<string>
 
