@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Widget" skin="Panel" position_real="0.01 0.01 0.291533 0.112376" layer="Back">
+    <Widget type="Widget" skin="Panel" position="10 10 272 79" layer="Back">
         <Property key="Widget_Alpha" value="80"/>
         <Widget type="StaticImage" skin="StaticImage" position="8 8 64 64">
             <Property key="Image_Texture" value="info.png"/>

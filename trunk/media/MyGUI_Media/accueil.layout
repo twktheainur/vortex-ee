@@ -1,35 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="WindowC" position_real="0.35 0.25 0.35 0.47" layer="Main" name="Vortex">
+    <Widget type="Window" skin="WindowC" position="312 192 296 280" layer="Main" name="Vortex">
         <Property key="Widget_Caption" value="Vortex"/>
-        <Widget type="StaticImage" skin="StaticImage" position="30 8 255 90">
+        <Widget type="StaticImage" skin="StaticImage" position="21 10 240 72">
             <Property key="Image_Texture" value="logo.png"/>
         </Widget>
-		
-        <Widget type="StaticText" skin="StaticText" position="70 106 184 24">
+        <Widget type="StaticText" skin="StaticText" position="62 82 184 24">
             <Property key="Widget_Caption" value="Bienvenue sur Vortex,"/>
-            <Property key="Widget_FontHeight" value="21"/>
+            <Property key="Widget_FontHeight" value="20"/>
         </Widget>
-        <Widget type="StaticText" skin="StaticText" position="30 131 272 24">
+        <Widget type="StaticText" skin="StaticText" position="14 106 272 25">
             <Property key="Widget_Caption" value="un environnement 3D multimedia"/>
-            <Property key="Widget_FontHeight" value="21"/>
+            <Property key="Widget_FontHeight" value="20"/>
         </Widget>
-        <Widget type="StaticText" skin="StaticText" position="70 156 184 24">
+        <Widget type="StaticText" skin="StaticText" position="62 132 184 24">
             <Property key="Widget_Caption" value="et multi utilisateurs..."/>
-            <Property key="Widget_FontHeight" value="21"/>
-        </Widget>
-		
-        <Widget type="Widget" skin="Separator1" position="0 188 320 8"/>
-		
-        <Widget type="StaticText" skin="StaticText" position="12 204 307 24">
-            <Property key="Widget_Caption" value="conseil: approchez vous des objets de"/>
             <Property key="Widget_FontHeight" value="20"/>
         </Widget>
-        <Widget type="StaticText" skin="StaticText" position="28 229 267 24">
-            <Property key="Widget_Caption" value="la piece pour interagir avec eux..."/>
-            <Property key="Widget_FontHeight" value="20"/>
+        <Widget type="Widget" skin="Separator1" position="0 156 320 6"/>
+        <Widget type="StaticText" skin="StaticText" position="20 172 257 24">
+            <Property key="Widget_Caption" value="conseil: approchez vous des objets"/>
+            <Property key="Widget_FontHeight" value="18"/>
         </Widget>
-        <Widget type="Button" skin="ButtonSmall" position="103 260 104 24" name="buttonAccueilOK">
+        <Widget type="StaticText" skin="StaticText" position="12 189 265 24">
+            <Property key="Widget_Caption" value="de la piece pour interagir avec eux..."/>
+            <Property key="Widget_FontHeight" value="18"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="95 212 104 22" name="buttonAccueilOK">
             <Property key="Widget_Caption" value="OK"/>
         </Widget>
     </Widget>
