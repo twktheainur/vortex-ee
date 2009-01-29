@@ -19,6 +19,7 @@ typedef struct structUser
   string id;
   SceneNode* node;
   Entity* entite;
+  AnimationState* anim;
 } structUser_t;
 
 class VortexFrameListener : public FrameListener, public OIS::MouseListener, public OIS::KeyListener
@@ -117,7 +118,7 @@ protected:
     MyGUI::VectorWidgetPtr winVideo;
     MyGUI::VectorWidgetPtr winAudio;
 
-    bool lauchIntShow;
+    bool launchIntShow;
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED

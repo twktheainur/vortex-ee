@@ -36,7 +36,6 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
     buttonImageFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowImage);
 
     winVideo = MyGUI::LayoutManager::getInstance().load("winVideo.layout");
-    showWindow(3,true);
     // set callback
     MyGUI::ButtonPtr buttonVideoFermer = mGUI->findWidget<MyGUI::Button>("buttonVideoFermer");
     buttonVideoFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowVideo);
@@ -71,7 +70,9 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
 
     idClient = "Client";
 
-    lauchIntShow = false;
+    launchIntShow = false;
+
+    addToChat("#000088Bienvenue sur Vortex #00003B" + idClient + "#000088 !");
 }
 
 void VortexFrameListener::notifyComboChatAccept(MyGUI::Widget * _sender)
@@ -79,7 +80,7 @@ void VortexFrameListener::notifyComboChatAccept(MyGUI::Widget * _sender)
     const Ogre::UTFString & message = _sender->getCaption();
     if (message == "") return;
 
-    addToChat(idClient + ": " + message);
+    addToChat( "#00003B" + idClient + ": #006B85" + message);
     _sender->setCaption("");
 }
 
@@ -132,8 +133,9 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     float posX;
     float posY;
     float posZ;
-    float dirX = 0;
-    float dirY = 0;
+    float dirX = 0.0;
+    float dirY = 0.0;
+    int anim;
 
     // d'abord on capture les actions effectu�es � la souris et au clavier
     mInputManager->capture();
@@ -165,7 +167,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     mDirection.x = posX;
     mDirection.z = posZ;
 
-    if (changement and iteration == 5) // si un déplacement a eu lieu pendant l'image précédente
+    if (iteration >= 5) // si un déplacement a eu lieu pendant l'image précédente
     {
         bitBuffer buff;
         Vector3 pos;
@@ -178,6 +180,12 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
         posY = (float)pos.y;
         posZ = (float)pos.z;
 
+        if (mAnimationState->getAnimationName() == "MarcheAvant") anim = 1;
+        else if (mAnimationState->getAnimationName() == "MarcheArriere") anim = 2;
+        else if (mAnimationState->getAnimationName() == "MarcheGauche") anim = 3;
+        else if (mAnimationState->getAnimationName() == "MarcheDroite") anim = 4;
+        else anim = 0;
+
         //on remplit le buffer
         buff.writeFloat(posX);
         buff.writeFloat(posY);
@@ -185,6 +193,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
         buff.writeFloat(dirX);
         buff.writeFloat(dirY);
         buff.writeString(idClient);
+        buff.writeInt(anim);
 
         //on peut envoyer l'event d'update
         ogreManagerEvent.sendEvent(8,buff);
@@ -204,20 +213,20 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     if ((distance(55.0,392.0,120.0,posX,posY,posZ,80.0,80.0,80.0) || distance(144.0,384.0,72.0,posX,posY,posZ,80.0,80.0,80.0) ||
             distance(-627.0,560.0,168.0,posX,posY,posZ,80.0,80.0,80.0) || distance(-752.0,472.0,168.0,posX,posY,posZ,80.0,80.0,80.0) ||
             distance(736.0,-240.0,96.0,posX,posY,posZ,80.0,80.0,80.0) || distance(816.0,-160.0,96.0,posX,posY,posZ,80.0,80.0,80.0) ||
-            distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0)) && !lauchIntShow)
+            distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0)) && !launchIntShow)
         // TV(2), bib1(2), bib2(2), audio(1)
         // si la distance avec le point donne est assez petite et que la fenetre d'info n'est pas encore affichee, on l'affiche
     {
-        lauchIntShow = true;
+        launchIntShow = true;
         showWindow(1,true);
     }
     else if ((!distance(55.0,392.0,120.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(144.0,384.0,72.0,posX,posY,posZ,80.0,80.0,80.0) &&
               !distance(-627.0,560.0,168.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(-752.0,472.0,168.0,posX,posY,posZ,80.0,80.0,80.0) &&
               !distance(736.0,-240.0,96.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(816.0,-160.0,96.0,posX,posY,posZ,80.0,80.0,80.0) &&
-              !distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0)) && lauchIntShow)
+              !distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0)) && launchIntShow)
         // si winLaunchInter est montree et qu'on s'eloigne trop, on la cache
     {
-        lauchIntShow = false;
+        launchIntShow = false;
         showWindow(1,false);
     }
 
@@ -239,6 +248,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
             dirX = eventReceived.data.readFloat(true);
             dirY = eventReceived.data.readFloat(true);
             id = eventReceived.data.readString(true);
+            anim = eventReceived.data.readInt(true);
             while (i < utilisateurs.size() && utilisateurs[i].id != id)
             {
                 i++;
@@ -252,38 +262,50 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
                 utilisateurs[i].node->translate(posX,posY,posZ, Node::TS_LOCAL);
                 //gerer la direction aussi :/
             }
-//                    else
-//                    {
-//                        user.id = id;
-//
-//                        SceneNode * userNode;
-//                        userNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(id.data(), Vector3(posX,posY,posZ));
-//                        Entity * userEntity = mSceneMgr->createEntity(id.data(), "man.mesh" );
-//                        userEntity->setCastShadows(true);
-//                        userNode->pitch(Degree(90));
-//                        userNode->yaw(Degree(90));
-//                        userNode->scale(Vector3(2,2,2));
-//                        userNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node egalement
-//                        userNode->attachObject(userEntity); // on attache le modèle au noeud
-//
-//                        // XXX il faudra ajouter la direction XXX
-//
-//                        user.node = userNode;
-//                        user.entite = userEntity;
-//
-//                        utilisateurs.push_back(user);
-//
-//                        // XXX on ecrit dans le chat qu'un nouvel user est connecte XXX
-//                    }
-            break;
+
+            //on gere l'animation
+            if (anim == 0)
+                utilisateurs[i].anim->setEnabled(false);
+            else if (anim == 1)
+            {
+                utilisateurs[i].anim->setEnabled(false);
+                utilisateurs[i].anim = utilisateurs[i].entite->getAnimationState("marcheAvant");
+                utilisateurs[i].anim->setLoop(true);
+                utilisateurs[i].anim->setEnabled(true);
+            }
+            else if (anim == 2)
+            {
+                utilisateurs[i].anim->setEnabled(false);
+                utilisateurs[i].anim = utilisateurs[i].entite->getAnimationState("marcheArriere");
+                utilisateurs[i].anim->setLoop(true);
+                utilisateurs[i].anim->setEnabled(true);
+            }
+            else if (anim == 3)
+            {
+                utilisateurs[i].anim->setEnabled(false);
+                utilisateurs[i].anim = utilisateurs[i].entite->getAnimationState("marcheGauche");
+                utilisateurs[i].anim->setLoop(true);
+                utilisateurs[i].anim->setEnabled(true);
+            }
+            else if (anim == 4)
+            {
+                utilisateurs[i].anim->setEnabled(false);
+                utilisateurs[i].anim = utilisateurs[i].entite->getAnimationState("marcheDroite");
+                utilisateurs[i].anim->setLoop(true);
+                utilisateurs[i].anim->setEnabled(true);
+            }
+
+        break;
 
         case 4: //add
             id = eventReceived.data.readString(true);
             user.id = id;
 
             SceneNode * userNode;
+            AnimationState * anim;
+            Entity * userEntity;
             userNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(id.data(), Vector3(-680,160,127));
-            Entity * userEntity = mSceneMgr->createEntity(id.data(), "man.mesh" );
+            userEntity = mSceneMgr->createEntity(id.data(), "man.mesh" );
             userEntity->setCastShadows(true);
             userNode->pitch(Degree(90));
             userNode->yaw(Degree(90));
@@ -291,13 +313,18 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
             userNode->setFixedYawAxis(true, Vector3::UNIT_Z); // on redresse l'axe de la node egalement
             userNode->attachObject(userEntity); // on attache le modèle au noeud
 
+            anim = userEntity->getAnimationState("marcheAvant");
+            anim->setLoop(true);
+            anim->setEnabled(false);
+
             user.node = userNode;
             user.entite = userEntity;
+            user.anim = anim;
 
             utilisateurs.push_back(user);
 
-            // XXX on ecrit dans le chat qu'un nouvel user est connecte XXX
-            break;
+            addToChat("#FF8000" + id + "vient de se connecter.");
+        break;
 
         case 5: //del
             id = eventReceived.data.readString(true);
@@ -316,8 +343,8 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
                 //supprimer l'entree du vecteur
             }
 
-            // XXX on ecrit dans le chat qu'un user est deconnecte XXX
-            break;
+            addToChat("#FF8000" + id + "vient de se deconnecter.");
+        break;
 
         default:
             break;
@@ -336,6 +363,7 @@ bool VortexFrameListener::mouseMoved(const OIS::MouseEvent &e)
 
     if (mMouse->getMouseState().buttonDown(OIS::MB_Right))
     {
+        changement = true;
         //on ne peut pas aller plus loin que 90 degré (camera a l'envers)
         if ((mCamRotNode->getOrientation().getPitch().valueDegrees() < 90 && e.state.Y.rel > 0 )||
                 (mCamRotNode->getOrientation().getPitch().valueDegrees() > -90 && e.state.Y.rel<0))
@@ -343,7 +371,6 @@ bool VortexFrameListener::mouseMoved(const OIS::MouseEvent &e)
             mCamRotNode->pitch(Degree(mRotate * e.state.Y.rel), Node::TS_LOCAL);//on tourne le camRotNode, mais pas le joueur
         }
         mPlayer->yaw(Degree(-mRotate * e.state.X.rel));//on tourne le joueur (et pas seulement le camRotNode)
-        changement = true;
     }
     return true;
 }
@@ -357,9 +384,9 @@ bool VortexFrameListener::mousePressed(const OIS::MouseEvent &e, OIS::MouseButto
         mDirection.y = mMove;
         if (mDirection.x==0)
         {
+            changement = true;
             mAnimationState->setEnabled(false);
             mAnimationState = mPlayer->getEntity()->getAnimationState("marcheAvant");
-            mAnimationState->setLoop(true);
             mAnimationState->setEnabled(true);
         }
     }
@@ -390,7 +417,7 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
     bitBuffer buff;
     switch (e.key)
     {
-    case OIS::KC_ESCAPE: // touche �chap, on sort du programme
+    case OIS::KC_ESCAPE: // touche echap, on sort du programme
         //on envoie l'event de deconnexion
         buff.writeString(idClient);
         worldManagerEvent.sendEvent(8,buff);
@@ -424,7 +451,7 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
 
     case OIS::KC_LEFT:
     case OIS::KC_A:
-        mDirection.x = -mMove/1.5; // on va � gauche
+        mDirection.x = -mMove/1.5; // on va a gauche
         mAnimationState->setEnabled(false);
         mAnimationState = mPlayer->getEntity()->getAnimationState("marcheGauche");
         mAnimationState->setLoop(true);
@@ -434,7 +461,7 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
 
     case OIS::KC_RIGHT:
     case OIS::KC_D:
-        mDirection.x = mMove/1.5; // on va � droite
+        mDirection.x = mMove/1.5; // on va a droite
         mAnimationState->setEnabled(false);
         mAnimationState = mPlayer->getEntity()->getAnimationState("marcheDroite");
         mAnimationState->setLoop(true);
@@ -453,7 +480,7 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
         break;
 
     case OIS::KC_SPACE:
-        if (lauchIntShow)
+        if (launchIntShow)
         {
             pos=mPlayer->getSceneNode()->getPosition();
             posX = (float)pos.x;
@@ -469,8 +496,7 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
                      distance(736.0,-240.0,96.0,posX,posY,posZ,80.0,80.0,80.0) || distance(816.0,-160.0,96.0,posX,posY,posZ,80.0,80.0,80.0))
                 //bibliotheque
             {
-                //showWindow(3,true);
-                cout;
+                showWindow(3,true);
             }
 
             else if (distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0))
@@ -492,9 +518,10 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
 
 bool VortexFrameListener::keyReleased(const OIS::KeyEvent &e)
 {
+
     mGUI->injectKeyRelease(e);
 
-    switch (e.key) // ici on arr�te le mouvement lorsque la touche est relach�e
+    switch (e.key) // ici on arrete le mouvement lorsque la touche est relachee
     {
     case OIS::KC_UP:
     case OIS::KC_W:
@@ -503,7 +530,7 @@ bool VortexFrameListener::keyReleased(const OIS::KeyEvent &e)
         {
             mAnimationState->setEnabled(false);
         }
-        break;
+    break;
 
     case OIS::KC_DOWN:
     case OIS::KC_S:
@@ -512,7 +539,7 @@ bool VortexFrameListener::keyReleased(const OIS::KeyEvent &e)
         {
             mAnimationState->setEnabled(false);
         }
-        break;
+    break;
 
     case OIS::KC_LEFT:
     case OIS::KC_A:
@@ -531,7 +558,7 @@ bool VortexFrameListener::keyReleased(const OIS::KeyEvent &e)
             mAnimationState->setLoop(true);
             mAnimationState->setEnabled(true);
         }
-        break;
+    break;
 
     case OIS::KC_RIGHT:
     case OIS::KC_D:
@@ -550,15 +577,44 @@ bool VortexFrameListener::keyReleased(const OIS::KeyEvent &e)
             mAnimationState->setLoop(true);
             mAnimationState->setEnabled(true);
         }
-        break;
+    break;
 
     case OIS::KC_PGUP:
     case OIS::KC_PGDOWN:
         mDirection.z = 0;
-        break;
+    break;
 
     default:
-        break;
+    break;
     } // switch
+
+    bitBuffer buff;
+    Vector3 pos;
+    Quaternion dir;
+    float posX;
+    float posY;
+    float posZ;
+    float dirX = 0.0;
+    float dirY = 0.0;
+    int anim;
+    pos=mPlayer->getSceneNode()->getPosition();
+    dir = mPlayer->getSceneNode()->getOrientation();
+    posX = (float)pos.x;
+    posY = (float)pos.y;
+    posZ = (float)pos.z;
+
+    buff.writeFloat(posX); buff.writeFloat(posY); buff.writeFloat(posZ);
+    buff.writeFloat(dirX); buff.writeFloat(dirY);
+    buff.writeString(idClient);
+
+    if (mAnimationState->getAnimationName() == "MarcheAvant") anim = 1;
+    else if (mAnimationState->getAnimationName() == "MarcheArriere") anim = 2;
+    else if (mAnimationState->getAnimationName() == "MarcheGauche") anim = 3;
+    else if (mAnimationState->getAnimationName() == "MarcheDroite") anim = 4;
+    else anim = 0;
+
+    buff.writeInt(anim);
+    ogreManagerEvent.sendEvent(8,buff);
+
     return true;
 }
