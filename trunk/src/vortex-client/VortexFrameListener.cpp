@@ -53,15 +53,15 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
     // set callback2
     MyGUI::ButtonPtr buttonAudioCacher = mGUI->findWidget<MyGUI::Button>("buttonAudioCacher");
     buttonAudioCacher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowAudio);
-//
-//    //boutons d'affichage des interfaces
-//    buttonsAfficher = MyGUI::LayoutManager::getInstance().load("boutonAfficher.layout");
-//    buttonImageAfficher = mGUI->findWidget<MyGUI::Button>("buttonImageAfficher");
-//    buttonImageAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowImage);
-//    buttonAudioAfficher = mGUI->findWidget<MyGUI::Button>("buttonAudioAfficher");
-//    buttonAudioAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowAudio);
-//    buttonVideoAfficher = mGUI->findWidget<MyGUI::Button>("buttonVideoAfficher");
-//    buttonVideoAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowVideo);
+
+    //boutons d'affichage des interfaces
+    buttonsAfficher = MyGUI::LayoutManager::getInstance().load("boutonAfficher.layout");
+    buttonImageAfficher = mGUI->findWidget<MyGUI::Button>("buttonImageAfficher");
+    buttonImageAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowImage);
+    buttonAudioAfficher = mGUI->findWidget<MyGUI::Button>("buttonAudioAfficher");
+    buttonAudioAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowAudio);
+    buttonVideoAfficher = mGUI->findWidget<MyGUI::Button>("buttonVideoAfficher");
+    buttonVideoAfficher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::showWindowVideo);
 
 
     // Populate the camera and scene manager containers
@@ -123,17 +123,17 @@ void VortexFrameListener::showWindow(int window, bool show)
         break;
 
     case 2: //winVideo
-        if (show) { winVideo[0]->show(); /*buttonVideoAfficher->hide(); */}
+        if (show) { winVideo[0]->show(); buttonVideoAfficher->hide(); }
         else winVideo[0]->hide();
         break;
 
     case 3: //winImage
-        if (show) { winImage[0]->show(); /*buttonImageAfficher->hide();*/ }
+        if (show) { winImage[0]->show(); buttonImageAfficher->hide(); }
         else winImage[0]->hide();
         break;
 
     case 4: //winAudio
-        if (show) { winAudio[0]->show(); /*buttonAudioAfficher->hide();*/ }
+        if (show) { winAudio[0]->show(); buttonAudioAfficher->hide(); }
         else winAudio[0]->hide();
         break;
 
