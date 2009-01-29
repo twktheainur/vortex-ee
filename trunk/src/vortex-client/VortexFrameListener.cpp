@@ -19,12 +19,6 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
 
     mComboChat->eventComboAccept = MyGUI::newDelegate(this, &VortexFrameListener::notifyComboChatAccept);
 
-    //fenetre d'accueil
-    winAccueil = MyGUI::LayoutManager::getInstance().load("accueil.layout");
-    // set callback
-    MyGUI::ButtonPtr buttonAccueilOK = mGUI->findWidget<MyGUI::Button>("buttonAccueilOK");
-    buttonAccueilOK->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideAccueil);
-
     //fenetre qui apparait lorsqu'on est proche d'un objet interactif
     winLaunchInter = MyGUI::LayoutManager::getInstance().load("launchInterface.layout");
     showWindow(1,false);
@@ -86,11 +80,11 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
     changement = false; // on initialise le booleen de changement
     iteration = 5;
 
-    idClient = "Client";
+    idClient = "";
 
     launchIntShow = false;
 
-    addToChat("#000088Bienvenue sur Vortex #00003B" + idClient + "#000088 !");
+    messageBienvenue = false;
 }
 
 void VortexFrameListener::notifyComboChatAccept(MyGUI::Widget * _sender)
@@ -144,6 +138,21 @@ void VortexFrameListener::showWindow(int window, bool show)
 
 bool VortexFrameListener::frameEnded(const FrameEvent &evt)
 {
+    if (idClient == "")
+        idClient = idClientGlobal;
+    else if (idClient != "" && !messageBienvenue)
+    {
+        addToChat("#000088Bienvenue sur Vortex #00003B" + idClient + "#000088 !");
+
+        //fenetre d'accueil
+        winAccueil = MyGUI::LayoutManager::getInstance().load("accueil.layout");
+        // set callback
+        MyGUI::ButtonPtr buttonAccueilOK = mGUI->findWidget<MyGUI::Button>("buttonAccueilOK");
+        buttonAccueilOK->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideAccueil);
+
+        messageBienvenue = true;
+    }
+
     mGUI->injectFrameEntered(evt.timeSinceLastFrame);
 
     // on declare les variables de position et direction qui nous servirons plusieurs fois par la suite
@@ -365,6 +374,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
 
     iteration++;
 
+    if (mContinue) mContinue = continuer;
     return mContinue;
 }
 
@@ -373,6 +383,7 @@ bool VortexFrameListener::mouseMoved(const OIS::MouseEvent &e)
 {
     mGUI->injectMouseMove(e);
 
+    if (idClient != "") {
     if (mMouse->getMouseState().buttonDown(OIS::MB_Right))
     {
         changement = true;
@@ -384,6 +395,7 @@ bool VortexFrameListener::mouseMoved(const OIS::MouseEvent &e)
         }
         mPlayer->getSceneNode()->yaw(Degree(-mRotate * e.state.X.rel));//on tourne le joueur (et pas seulement le camRotNode)
     }
+    }
     return true;
 }
 
@@ -391,6 +403,7 @@ bool VortexFrameListener::mousePressed(const OIS::MouseEvent &e, OIS::MouseButto
 {
     mGUI->injectMousePress(e, id);
 
+    if (idClient != "") {
     if (e.state.buttonDown(OIS::MB_Right) && e.state.buttonDown(OIS::MB_Left))
     {
         mDirection.y = mMove;
@@ -402,18 +415,21 @@ bool VortexFrameListener::mousePressed(const OIS::MouseEvent &e, OIS::MouseButto
             mAnimationState->setEnabled(true);
         }
     }
+    }
     return true;
 }
 bool VortexFrameListener::mouseReleased(const OIS::MouseEvent &e, OIS::MouseButtonID id)
 {
     mGUI->injectMouseRelease(e, id);
 
+    if (idClient != "") {
     if (e.state.buttonDown(OIS::MB_Right) ||
             e.state.buttonDown(OIS::MB_Left))
     {
         mDirection.y = 0;
         if (mDirection.x==0)
             mAnimationState->setEnabled(false);
+    }
     }
     return true;
 }
@@ -437,6 +453,7 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
         break;
     case OIS::KC_UP:
     case OIS::KC_W:
+    if (idClient != "") {
         mDirection.y = mMove; // on avance
         if (mDirection.x==0)
         {
@@ -446,10 +463,12 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
             mAnimationState->setEnabled(true);
         }
         changement = true;
-        break;
+    }
+    break;
 
     case OIS::KC_DOWN:
     case OIS::KC_S:
+    if (idClient != "") {
         mDirection.y = -mMove/1.5; // on recule
         if (mDirection.x==0)
         {
@@ -459,37 +478,46 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
             mAnimationState->setEnabled(true);
         }
         changement = true;
-        break;
+    }
+    break;
 
     case OIS::KC_LEFT:
     case OIS::KC_A:
+    if (idClient != "") {
         mDirection.x = -mMove/1.5; // on va a gauche
         mAnimationState->setEnabled(false);
         mAnimationState = mPlayer->getEntity()->getAnimationState("marcheGauche");
         mAnimationState->setLoop(true);
         mAnimationState->setEnabled(true);
         changement = true;
-        break;
+    }
+    break;
 
     case OIS::KC_RIGHT:
     case OIS::KC_D:
+    if (idClient != "") {
         mDirection.x = mMove/1.5; // on va a droite
         mAnimationState->setEnabled(false);
         mAnimationState = mPlayer->getEntity()->getAnimationState("marcheDroite");
         mAnimationState->setLoop(true);
         mAnimationState->setEnabled(true);
         changement = true;
-        break;
+    }
+    break;
 
     case OIS::KC_PGUP:
+    if (idClient != "") {
         mDirection.z = mMove/1.5; // on va en haut
         changement = true;
-        break;
+    }
+    break;
 
     case OIS::KC_PGDOWN:
+    if (idClient != "") {
         mDirection.z = -mMove/1.5; // on va en bas
         changement = true;
-        break;
+    }
+    break;
 
     case OIS::KC_SPACE:
         if (launchIntShow)
@@ -517,7 +545,7 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
                 showWindow(4,true);
             }
         }
-        break;
+    break;
 
     default:
         break;
@@ -530,9 +558,9 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
 
 bool VortexFrameListener::keyReleased(const OIS::KeyEvent &e)
 {
-
     mGUI->injectKeyRelease(e);
 
+    if (idClient != "") {
     switch (e.key) // ici on arrete le mouvement lorsque la touche est relachee
     {
     case OIS::KC_UP:
@@ -627,6 +655,7 @@ bool VortexFrameListener::keyReleased(const OIS::KeyEvent &e)
 
     buff.writeInt(anim);
     ogreManagerEvent.sendEvent(8,buff);
+    }
 
     return true;
 }

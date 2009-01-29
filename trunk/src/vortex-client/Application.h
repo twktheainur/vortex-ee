@@ -6,6 +6,7 @@
 #include "VortexFrameListener.h"
 #include "PersonnagePhysique.h"
 #include <MyGUI.h>
+#include "../common/md5wrapper.h"
 
 using namespace Ogre;
 
@@ -57,7 +58,15 @@ private:
 
     MyGUI::Gui * mGUI;
 
-    void login();
+    MyGUI::VectorWidgetPtr winLogin;
+    MyGUI::EditPtr mEditLogin;
+    MyGUI::EditPtr mEditPass;
+
+    bool login();
+
+    inline void quitter(MyGUI::WidgetPtr _sender) { continuer = false; }
+
+    void buttonConnexionClick(MyGUI::WidgetPtr _widget);
 
     void createRoot();
 
