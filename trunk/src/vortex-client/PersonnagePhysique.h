@@ -5,20 +5,13 @@
 
 using namespace Ogre;
 
-//cette classe ressemble désormais plus a une structure qu'a une classe
-//mais elle va nous permettre de ne pas changer toute l'implémentation de Application et VortexFrameListener
-
 class PersonnagePhysique
 {
 public:
-  PersonnagePhysique(SceneNode * mSceneNode, Entity * mEntity)
-  {
-    this->mSceneNode=mSceneNode;
-    this->mEntity=mEntity;
-    this->mSceneNode->attachObject(mEntity);
-  }
-  inline SceneNode * getSceneNode(){return mSceneNode;}
-  inline Entity * getEntity(){return mEntity;}
+  PersonnagePhysique(SceneNode * mSceneNode, Entity * mEntity);//constructeur
+  inline SceneNode * getSceneNode() const {return mSceneNode;}//getter
+  inline Entity * getEntity() const {return mEntity;}//getter
+  void deplacement(Vector3 direction);//déplace le personnage dans la direction indiquée, si c'est possible
 private:
   SceneNode * mSceneNode;
   Entity * mEntity;

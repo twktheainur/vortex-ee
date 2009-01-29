@@ -152,7 +152,8 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     mDirection.x = -posX;
     mDirection.z = posY;
     //mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
-    mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
+    //mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
+    mPlayer->deplacement(mDirection * evt.timeSinceLastFrame);
 
     //on remet les éléments de mDirection à leur place :
     mDirection.y = posY;

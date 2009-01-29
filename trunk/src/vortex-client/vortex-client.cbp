@@ -77,6 +77,7 @@
 		<Unit filename="EventManager.h" />
 		<Unit filename="InputManager.cpp" />
 		<Unit filename="InputManager.h" />
+		<Unit filename="PersonnagePhysique.cpp" />
 		<Unit filename="PersonnagePhysique.h" />
 		<Unit filename="TCPClient.cpp" />
 		<Unit filename="TCPClient.h" />
