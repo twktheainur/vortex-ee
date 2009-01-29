@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Button" skin="ButtonSmall" position_real="0.616292 0.933144 0.0996785 0.0540541" layer="Main" name="buttonImageAfficher">
+    <Widget type="Button" skin="ButtonSmall" position="575 656 93 38" layer="Main" name="buttonImageAfficher">
         <Property key="Widget_Caption" value="Photo"/>
         <Property key="Widget_Alpha" value="95"/>
 		<Property key="Widget_Show" value="false"/>
     </Widget>
-    <Widget type="Button" skin="ButtonSmall" position_real="0.745981 0.933144 0.0996785 0.0540541" layer="Main" name="buttonAudioAfficher">
+    <Widget type="Button" skin="ButtonSmall" position="696 656 93 38" layer="Main" name="buttonAudioAfficher">
         <Property key="Widget_Caption" value="Musique"/>
         <Property key="Widget_Alpha" value="95"/>
 		<Property key="Widget_Show" value="false"/>
     </Widget>
-    <Widget type="Button" skin="ButtonSmall" position_real="0.881029 0.933144 0.0996785 0.0540541" layer="Main" name="buttonVideoAfficher">
+    <Widget type="Button" skin="ButtonSmall" position="822 656 93 38" layer="Main" name="buttonVideoAfficher">
         <Property key="Widget_Caption" value="Film"/>
         <Property key="Widget_Alpha" value="95"/>
 		<Property key="Widget_Show" value="false"/>
