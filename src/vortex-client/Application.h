@@ -4,14 +4,10 @@
 #include <Ogre.h>
 #include <OIS/OIS.h>
 #include "VortexFrameListener.h"
-#include "OgreReferenceAppLayer.h"//pour la gestion des collisions/gravité
-//#include "PersonnagePhysique.h"//pour les collisions / la gravité
-//#include <CEGUI/CEGUI.h>
-//#include <OgreCEGUIRenderer.h>
+#include "PersonnagePhysique.h"
 #include <MyGUI.h>
 
 using namespace Ogre;
-using namespace OgreRefApp;
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 #include <CoreFoundation/CoreFoundation.h>
@@ -52,14 +48,9 @@ public:
 
 private:
     Root *mRoot;
-    //OIS::Keyboard *mKeyboard; // ca sert a rien, on l'a déjà dans le frameListener
     OIS::InputManager *mInputManager;
-    //CEGUI::OgreCEGUIRenderer *mRenderer;
-    //CEGUI::System *mSystem;
     VortexFrameListener *mListener;
-    OgreRefApp::World* mWorld;//pour la gestion des collisons/gravité
     Camera *mCamera;
-    //Entity* mPLayer;
     PersonnagePhysique * mPlayer;
     SceneManager *mSceneMgr;
     RenderWindow *win;
@@ -79,8 +70,6 @@ private:
     void initializeResourceGroups();
 
     void chooseSceneManager();
-
-    void createWorld();//pour la gestion des collisions/gravite
 
     void setupScene();
 

@@ -16,7 +16,6 @@
 					<Add directory="..\pthread" />
 					<Add directory="..\ogreIncludes" />
 					<Add directory="..\ogreIncludes\OIS" />
-					<Add directory="..\ogreIncludes\refapp" />
 					<Add directory="..\MyGUIEngine\include" />
 				</Compiler>
 				<Linker>
@@ -25,8 +24,6 @@
 					<Add library="..\..\lib\OIS.dll" />
 					<Add library="..\..\lib\OgreMain.dll" />
 					<Add library="..\..\lib\libpthreadGC2.a" />
-					<Add library="..\..\bin\ReferenceAppLayer.dll" />
-					<Add library="..\..\bin\libode.a" />
 					<Add library="..\..\bin\MyGUI.dll" />
 				</Linker>
 			</Target>
@@ -80,7 +77,6 @@
 		<Unit filename="EventManager.h" />
 		<Unit filename="InputManager.cpp" />
 		<Unit filename="InputManager.h" />
-		<Unit filename="PersonnagePhysique.cpp" />
 		<Unit filename="PersonnagePhysique.h" />
 		<Unit filename="TCPClient.cpp" />
 		<Unit filename="TCPClient.h" />

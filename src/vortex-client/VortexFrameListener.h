@@ -6,13 +6,10 @@
 #include "InputManager.h"
 #include "globals.h"
 #include "vector.h"
-#include "OgreReferenceAppLayer.h"//pour la gestion des collisions/gravité
+#include "PersonnagePhysique.h"
 #include "MyGUI.h"
 
-//#define COLLISIONS_GRAVITE_ACTIVEES
-
 using namespace Ogre;
-using namespace OgreRefApp;
 
 typedef struct structUser
 {
