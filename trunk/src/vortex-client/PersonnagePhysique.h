@@ -15,7 +15,9 @@ public:
 private:
   SceneNode * mSceneNode;
   Entity * mEntity;
-  bool _endroitInterdit(Vector3 coord);
+  bool _endroitInterdit(Vector3 coordPrecedentes, Vector3 coord);//retourne vrai si on n'a pas le droit de se trouver à cet endroit
+  //on utilise les "coordonnées précedentes", car pour certains endroits, on a pas le droit de s'y trouver si on vient d'un endroit précis
+  //par ex : si on est en bas, devant la TV, on ne peut pas se retrouver au niveau de la TV (plus haut) comme par magie (il y un truc qui s'appelle la gravité qui empêche ca :o) )
 };
 
 
