@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1233137857 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
+1233224834 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1233098667 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
+1233223899 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
-	"OgreReferenceAppLayer.h"
+	"PersonnagePhysique.h"
 	<MyGUI.h>
 	<CoreFoundation/CoreFoundation.h>
 
@@ -1242,13 +1242,13 @@
 
 1146778524 c:\users\sebastien\documents\ogresdk\include\ois\oisexception.h
 
-1233137935 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
+1233224191 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
 	"globals.h"
 	"vector.h"
-	"OgreReferenceAppLayer.h"
+	"PersonnagePhysique.h"
 	"MyGUI.h"
 
 1231358358 c:\users\sebastien\documents\vortex\src\vortex-client\inputmanager.h
@@ -1397,7 +1397,7 @@
 1230562263 source:c:\users\sebastien\documents\vortex\src\vortex-client\tcpclient.cpp
 	"TCPClient.h"
 
-1233137894 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
+1233224321 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
@@ -5990,10 +5990,8 @@
 1232580071 source:c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
 
-1233069746 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
-	"OgreRefAppPrerequisites.h"
-	"OgreRefAppApplicationObject.h"
-	"OgreRefAppWorld.h"
+1233224780 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
+	"Ogre.h"
 
 1232610512 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.h
 	"OgreRefAppPrerequisites.h"
@@ -7382,9 +7380,11 @@
 	"MyGUI_DrawItem.h"
 	"MyGUI_SubSkin.h"
 
-1233098668 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\personnagephysique.h
+1233159908 c:\users\sebastien\documents\vortex\src\ogreincludes\refapp\personnagephysique.h
 	"OgreRefAppPrerequisites.h"
 	"OgreRefAppApplicationObject.h"
+	"OgreLogManager.h"
+	"OgreStringConverter.h"
 
 1233079577 c:\users\sebastien\documents\vortex\src\myguiengine\include\mygui.h
 	"MyGUI_Gui.h"

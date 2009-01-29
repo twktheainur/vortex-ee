@@ -152,15 +152,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     mDirection.x = -posX;
     mDirection.z = posY;
     //mPlayerNode->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
-    //mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);//n'a pas l'air de marcher avec les collision/gravité
-
-
-#ifdef COLLISIONS_GRAVITE_ACTIVEES
-    mPlayer->setLinearVelocity(posX, posY, posZ);
-    World::getSingleton().simulationStep(evt.timeSinceLastFrame);
-#else
-    mPlayer->translate(mDirection * evt.timeSinceLastFrame);
-#endif
+    mPlayer->getSceneNode()->translate(mDirection * evt.timeSinceLastFrame, Node::TS_LOCAL);
 
     //on remet les éléments de mDirection à leur place :
     mDirection.y = posY;
@@ -370,7 +362,7 @@ bool VortexFrameListener::mouseMoved(const OIS::MouseEvent &e)
         {
             mCamRotNode->pitch(Degree(mRotate * e.state.Y.rel), Node::TS_LOCAL);//on tourne le camRotNode, mais pas le joueur
         }
-        mPlayer->yaw(Degree(-mRotate * e.state.X.rel));//on tourne le joueur (et pas seulement le camRotNode)
+        mPlayer->getSceneNode()->yaw(Degree(-mRotate * e.state.X.rel));//on tourne le joueur (et pas seulement le camRotNode)
     }
     return true;
 }
