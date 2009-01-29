@@ -4357,7 +4357,7 @@
 	"Event.h"
 	<cstdlib>
 
-1232988770 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
+1233242836 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -4394,7 +4394,7 @@
 1232392910 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\common\packet.cpp
 	"Packet.h"
 
-1232477980 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\packet.h
+1233242836 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\packet.h
 	<cstdlib>
 	<string>
 	<vector>
@@ -4436,7 +4436,7 @@
 	<iostream>
 	<pthread.h>
 
-1229864408 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\thread.h
+1233242836 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\thread.h
 	<pthread.h>
 	<string>
 	"Exception.h"
@@ -5698,7 +5698,7 @@
 
 1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisexception.h
 
-1233227532 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.h
+1233242976 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
@@ -5741,8 +5741,9 @@
 	"EventManager.h"
 	<vector>
 
-1232988770 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\globals.h
+1233242834 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\globals.h
 	"../common/Event.h"
+	<fstream>
 
 1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\tcpclient.h
 	"../common/TCPSocket.h"
@@ -6010,7 +6011,7 @@
 1233230992 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
 	"Ogre.h"
 
-1233227174 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.h
+1233242834 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.h
 	"Ogre.h"
 
 1233227174 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.cpp
