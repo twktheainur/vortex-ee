@@ -4438,14 +4438,14 @@
 	"Thread.h"
 	"Event.h"
 
-1233138420 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
+1233225184 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1233082624 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
+1233225184 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
-	"OgreReferenceAppLayer.h"
+	"PersonnagePhysique.h"
 	<MyGUI.h>
 	<CoreFoundation/CoreFoundation.h>
 
@@ -5681,13 +5681,13 @@
 
 1232551152 e:\documents and settings\saussagewarrior\bureau\vortex\src\ogreincludes\ois\oisexception.h
 
-1233182118 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.h
+1233227532 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
 	"globals.h"
 	"vector.h"
-	"OgreReferenceAppLayer.h"
+	"PersonnagePhysique.h"
 	"MyGUI.h"
 
 1232278046 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\inputmanager.h
@@ -5993,12 +5993,10 @@
 1233226007 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
 	"Ogre.h"
 
-1232610512 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.h
-	"OgreRefAppPrerequisites.h"
-	"OgreRefAppApplicationObject.h"
-	"OgreRefAppWorld.h"
+1233227174 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.h
+	"Ogre.h"
 
-1232610512 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.cpp
+1233227174 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
 
 1232633958 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\personnagephysique.h
