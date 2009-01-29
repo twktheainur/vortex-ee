@@ -24,6 +24,7 @@ public:
  //Voir setData() pour mettre le reste
  //Le deuxieme constructeur prendra les champs du paquet en paramentre et construira un
  //paquet entier
+  virtual ~Packet(){}
   virtual void setData(char * buffer,size_t length)=0;//Ajoute les donnees au paquet
   inline bitBuffer & getData(){return data;}
   inline bitBuffer & getHeader(){return header;}

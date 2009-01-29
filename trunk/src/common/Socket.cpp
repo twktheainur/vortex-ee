@@ -70,13 +70,14 @@ Socket::~Socket()
 /*----------------------------------------------------------------------------*/
  void Socket::free()
  {
+   cout << "Freedom is mine!\n";
    #ifdef WIN32
-   if(closesocket(sockFD)==-1 && errno!=EBADF)
+   if(closesocket(sockFD)==SOCK_ERR && errno!=EBADF)
    #else
-	 if(close(sockFD)==-1 && errno!=EBADF)
+	 if(close(sockFD)==SOCK_ERR && errno!=EBADF)
 	 #endif
 	   {
-	     printf("Socket.cpp:70 -- THROWING E_CLOSE_FAIL\n");
+	     //printf("Socket.cpp:70 -- THROWING E_CLOSE_FAIL\n");
 	     throw new ExSocket(E_CLOSE_FAIL);
 	   }
 	   freeaddrinfo(info);
@@ -88,9 +89,9 @@ int Socket::bind(struct addrinfo * addr)
   int bind_ret;
   char port[6];
   sprintf(port,"%d",get_in_port((struct sockaddr *)addr));
-  if((bind_ret = ::bind(sockFD,addr->ai_addr,addr->ai_addrlen)))
+  if((bind_ret = ::bind(sockFD,addr->ai_addr,addr->ai_addrlen))==SOCK_ERR)
   {
-    printf("Socket.cpp:64 -- THROWING E_BIND_FAIL\n");
+    //printf("Socket.cpp:64 -- THROWING E_BIND_FAIL\n");
     throw new ExSocket(E_BIND_FAIL,port);
   }
   return bind_ret;
@@ -100,9 +101,9 @@ int Socket::bind(struct addrinfo * addr)
 /*-----------------------Open the socket--------------------------------------*/
 void Socket::socket(struct addrinfo * addr)
 {
-    if((sockFD = ::socket(addr->ai_family,addr->ai_socktype,addr->ai_protocol))==-1)
+    if((sockFD = ::socket(addr->ai_family,addr->ai_socktype,addr->ai_protocol))==SOCK_ERR)
     {
-      printf("Socket.cpp:76 -- THROWING E_SOCKET_FAIL\n");
+      //printf("Socket.cpp:76 -- THROWING E_SOCKET_FAIL\n");
       throw new ExSocket(E_SOCKET_FAIL);
     }
 }
@@ -111,12 +112,12 @@ void Socket::socket(struct addrinfo * addr)
 void Socket::setSockOpt(int level, int optname, void * optval, size_t size)
 {
   #ifdef WIN32
-  if(setsockopt(sockFD,level,optname,(const char *)optval,size)==-1)
+  if(setsockopt(sockFD,level,optname,(const char *)optval,size)==SOCK_ERR)
   #else
-  if(setsockopt(sockFD,level,optname,optval,size)==-1)
+  if(setsockopt(sockFD,level,optname,optval,size)==SOCK_ERR)
   #endif
   {
-    printf("Socket.cpp:86 -- THROWING E_SETSOCKOPT_FAIL\n");
+    //printf("Socket.cpp:86 -- THROWING E_SETSOCKOPT_FAIL\n");
     throw new ExSocket(E_SETSOCKOPT_FAIL);
   }
 }
@@ -130,14 +131,14 @@ int Socket::send(const void * buffer, size_t * length, int flags)
   while(total<*length)
   {
      n=::send(sockFD,(char *)buffer+total,bytesleft,flags);
-     if(n==-1){break;}
+     if(n==SOCK_ERR){break;}
      total +=n;
      bytesleft-=n;
   }
   *length = total;
   if(n==-1)
   {
-    printf("Socket.cpp:125 -- THROWING E_SEND_FAIL\n");
+    //printf("Socket.cpp:125 -- THROWING E_SEND_FAIL\n");
     throw new ExSocket(E_SEND_FAIL,strerror(errno));
   }
   return total;
@@ -148,12 +149,12 @@ int Socket::recv(void * buffer, size_t length, int flags)
 {
   int recv_ret;
   #ifdef WIN32
-  if(!(recv_ret=::recv(sockFD,(char*)buffer,length,flags)))
+  if((recv_ret=::recv(sockFD,(char*)buffer,length,flags))==SOCK_ERR)
   #else
-  if(!(recv_ret=::recv(sockFD,buffer,length,flags)))
+  if((recv_ret=::recv(sockFD,buffer,length,flags))==SOCK_ERR)
   #endif
   {
-    printf("Socket.cpp:26 -- THROWING E_RECV_FAIL\n");
+   // printf("Socket.cpp:26 -- THROWING E_RECV_FAIL\n");
     throw new ExSocket(E_RECV_FAIL);
   }
   return recv_ret;
@@ -165,13 +166,16 @@ bool Socket::pollRead()
   fd_set fds;
   FD_ZERO(&fds);
   FD_SET(sockFD,&fds);
-  if((ret=(select(sockFD+1,&fds,NULL,NULL,NULL)))==-1)
+  cout << "Preif"<<endl;
+  if((ret=(select(sockFD+1,&fds,NULL,NULL,NULL)))==SOCK_ERR)
     throw new ExSocket(E_POLL_FAIL);
-   int result = 0;
+    cout << "post select"<<endl;
    if (ret > 0)
    {
       if (FD_ISSET(sockFD, &fds)) return true;
    }
+   cout << "end pollREad"<<endl;
+   return false;
 }
 /*----------------------------------------------------------------------------*/
 /*---------------------------Stream Operators Definition----------------------*/
@@ -202,7 +206,7 @@ Socket& operator>>(Socket& sock,std::basic_string<char, std::char_traits<char>, 
   return sock;
 }
 /*------------------------SockFD getter---------------------------------------*/
-int Socket::getSockFD()
+sock_t Socket::getSockFD()
   {
     return sockFD;
   }

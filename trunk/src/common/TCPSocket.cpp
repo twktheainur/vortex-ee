@@ -12,7 +12,6 @@ under the License.*/
   //#include <ws2tcpip.h>
 #endif
 /******************************************************************************/
-#ifdef _WIN32
 const char *inet_ntop(int af, const void *src, char *dst, socklen_t cnt)
 {
         if (af == AF_INET)
@@ -55,7 +54,6 @@ int inet_pton(int af, const char *src, void *dst)
         freeaddrinfo(ressave);
         return 0;
 }
-#endif
 /***************************Constructor/Destructor*****************************/
 TCPSocket::TCPSocket(string host, string service,int family,int backlog)
           :Socket(host,service,family,TCP_SOCK)
@@ -68,7 +66,7 @@ TCPSocket::TCPSocket(string host, string service,int family,int backlog)
 
  void TCPSocket::connect(struct addrinfo * addr)
  {
-     if(::connect(getSockFD(),addr->ai_addr,addr->ai_addrlen)==-1)
+     if(::connect(getSockFD(),addr->ai_addr,addr->ai_addrlen)==SOCK_ERR)
      {
         printf("TCPSocket.cpp:15 -- THROWING E_CONNECT_FAIL\n");
         throw new ExTCPSocket(E_CONNECT_FAIL);
@@ -78,7 +76,7 @@ TCPSocket::TCPSocket(string host, string service,int family,int backlog)
 /*----------------------------------------------------------------------------*/
  void TCPSocket::listen()
  {
-     if(::listen(getSockFD(),backlog)==-1)
+     if(::listen(getSockFD(),backlog)==SOCK_ERR)
      {
        printf("TCPSocket.cpp:22 -- THROWING E_LISTEN_FAIL\n");
        throw new ExTCPSocket(E_LISTEN_FAIL);
@@ -99,9 +97,9 @@ TCPSocket::TCPSocket(string host, string service,int family,int backlog)
    new_fd = ::accept(getSockFD(),
                      (struct sockaddr *)&remote_addr,
                      (socklen_t *)&sin_len);
-     if(new_fd==-1)
+     if(new_fd==SOCK_ERR)
      {
-       printf("TCPSocket.cpp:37 -- THROWING E_ACCEPT_FAIL\n");
+       // printf("TCPSocket.cpp:37 -- THROWING E_ACCEPT_FAIL\n");
        throw new ExTCPSocket(E_ACCEPT_FAIL);
      }
    host.resize(INET6_ADDRSTRLEN);

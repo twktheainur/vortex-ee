@@ -35,7 +35,7 @@ public:
   }
   inline void delete_user(string id)
   {
-    int i=0;
+    unsigned int i=0;
     while (i < users.size() && users[i].id != id)
     {
       i++;
@@ -45,7 +45,7 @@ public:
   }
   inline void update_user(world_user_t user,string id)
   {
-    int i=0;
+    unsigned int i=0;
     while (i < users.size() && users[i].id != id)
     {
       i++;

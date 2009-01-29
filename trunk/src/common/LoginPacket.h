@@ -12,9 +12,12 @@
 class LoginPacket: public Packet
 {
 public:
+      ~LoginPacket(){}
 	  LoginPacket(string login, string pass_hash);
 	  LoginPacket(char * buffer,size_t length);
 	  void setData(char * buffer,size_t length);
+	  inline string getLogin(){return login;}
+	  inline string getPassHash(){return pass_hash;}
 private:
   string login;
   string pass_hash;

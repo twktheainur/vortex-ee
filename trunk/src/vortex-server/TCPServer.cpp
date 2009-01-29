@@ -15,7 +15,8 @@ TCPServer::TCPServer(int maxClients,string service,ConnectionManager * mgr)
   nClients=0;
   this->maxClients = maxClients;
   socket = new TCPSocket("",service,ANY_F,maxClients);
-  struct addrinfo * p=socket->getInfo();
+  struct addrinfo * p=NULL;
+  p = socket->getInfo();
   for(;p!=NULL;p=p->ai_next)
   {
     try
@@ -23,7 +24,8 @@ TCPServer::TCPServer(int maxClients,string service,ConnectionManager * mgr)
       int yes=1;
       socket->socket(p);
       socket->setSockOpt(SOL_SOCKET,SO_REUSEADDR,&yes,sizeof yes);
-      //socket->setSockOpt(IPPROTO_TCP,TCP_NODELAY ,&yes,sizeof yes);
+      socket->setSockOpt(IPPROTO_TCP,TCP_NODELAY ,&yes,sizeof yes);
+      socket->setNblock();
       socket->bind(p);
       break;
     }
@@ -63,21 +65,21 @@ void TCPServer::startListener()
     try
     {
       new_socket = socket->accept();
+      try
+      {
+        mgr->addServerClient(new ClientManager(*new_socket));
+        delete new_socket;
+      }
+      catch(vortex::Exception * e)
+      {
+        printf("TCPServer::startListener()(incoming_handler):%s\n",e->what());
+        delete e;
+      }
     }
-    catch (exception * e)
+    catch (vortex::Exception * e)
     {
-      printf("TCPServer::startListener()(accept):%s\n",e->what());
-      throw new ExTCPServer(E_ACCEPT_ERROR);
-      delete e;
-    }
-    try
-    {
-      mgr->addServerClient(new ClientManager(*new_socket));
-      delete new_socket;
-    }
-    catch(exception * e)
-    {
-      printf("TCPServer::startListener()(incoming_handler):%s\n",e->what());
+        printf("Polling: No new clients:%s\n",e->what());
+        Event::usleep(10000);
       delete e;
     }
   }

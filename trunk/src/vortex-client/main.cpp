@@ -5,14 +5,17 @@
 #include <iostream>
 #include <cstdio>
 #include <iostream>
+#include <fstream>
 //Global variables
 
 Event connectionManagerInEvent;
 Event connectionManagerOutEvent;
 Event worldManagerEvent;
 Event ogreManagerEvent;
+std::ofstream flog;
 int main(int argc, char **argv)
 {
+  flog.open("Cli.log");
   if(argc>1 && strcmp(argv[1],"offline")==0)
   {
     Application app;
@@ -20,7 +23,14 @@ int main(int argc, char **argv)
   }
   else
   {
-    Client client;
+    try
+    {
+      Client client;
+    }
+    catch(vortex::Exception  * e)
+    {
+      flog <<e->what() << endl;
+    }
   }
 	return 0;
 }

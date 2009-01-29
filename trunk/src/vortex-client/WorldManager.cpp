@@ -6,7 +6,7 @@
  */
 
 #include "WorldManager.h"
-
+#include "World.h"
 
 WorldManager::WorldManager()
 {

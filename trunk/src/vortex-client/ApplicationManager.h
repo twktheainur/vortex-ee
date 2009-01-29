@@ -11,12 +11,14 @@
 #include "../common/Thread.h"
 #include "Application.h"
 
+class Client;
 class ApplicationManager: public Thread
 {
 private:
  Application * application;
+ Client * cli;
 public:
-	ApplicationManager();
+	ApplicationManager(Client * cli);
 	void execute(void * arg);
 };
 
