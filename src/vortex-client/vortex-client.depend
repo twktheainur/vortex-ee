@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1233224930 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
+1233261418 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1233253166 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
+1233259879 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
@@ -1405,11 +1405,11 @@
 	"TCPClient.h"
 	"globals.h"
 
-1233235696 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
+1233253166 source:c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1233229436 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
+1233253166 source:c:\users\sebastien\documents\vortex\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
 	"ApplicationManager.h"
@@ -6017,10 +6017,10 @@
 	"OgreCamera.h"
 	"OgreRefAppApplicationObject.h"
 
-1233235887 source:c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.cpp
+1233260624 source:c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
 
-1233230992 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
+1233256595 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
 	"Ogre.h"
 
 1233242834 e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.h
