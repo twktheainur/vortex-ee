@@ -12,11 +12,10 @@
             <Widget type="Edit" skin="Edit" position="189 42 168 32" name="logPseudo"/>
             <Widget type="StaticText" skin="StaticText" position="29 90 136 24">
                 <Property key="Widget_Caption" value="Mot de passe :"/>
-
             </Widget>
             <Widget type="Edit" skin="Edit" position="189 82 168 32" name="logPass"/>
             <Widget type="StaticText" skin="StaticText" position="20 122 384 24" name="logError">
-                <Property key="Widget_Caption" value="#620000Les informations que vous avez remplies sont incorrectes!"/>
+                <Property key="Widget_Caption" value="#600000Les informations que vous avez remplies sont incorrectes!"/>
                 <Property key="Widget_FontHeight" value="16"/>
                 <Property key="Widget_Show" value="false"/>
             </Widget>

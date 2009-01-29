@@ -45,7 +45,6 @@ typedef enum event
   event_anim_gauche = 13,
   event_anim_droite = 14,
   event_anim_aucune=15,
-  event_quit=16
 }event_t;
 
 

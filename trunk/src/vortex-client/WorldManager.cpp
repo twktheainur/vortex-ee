@@ -32,6 +32,9 @@ void WorldManager::execute(void * arg)
             localEvent = ogreManagerEvent.getEvent();
             switch (localEvent.type)
             {
+                case 6: //chat
+                    connectionManagerOutEvent.sendEvent(6,localEvent.data);
+                break;
                 case 8: //update
                     update = true;
                     worldUser.px = localEvent.data.readFloat(true);
@@ -96,6 +99,10 @@ void WorldManager::execute(void * arg)
                 case 5: //del
                     pthis->world->delete_user(serverEvent.data.readString(true));
                     worldManagerEvent.sendEvent(5,serverEvent.data);
+                break;
+
+                case 6:
+                    worldManagerEvent.sendEvent(6,localEvent.data);
                 break;
 
                 default:

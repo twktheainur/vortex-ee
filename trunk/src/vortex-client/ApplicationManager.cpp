@@ -36,7 +36,7 @@ void ApplicationManager::execute(void * arg)
       pthis->application = new Application();
 	    pthis->application->go();
 	    bitBuffer buff2;
-	    connectionManagerOutEvent.sendEvent(event_quit,buff2);
+	    //connectionManagerOutEvent.sendEvent(event_quit,buff2);
     }
 
 		catch(Ogre::Exception& e)
