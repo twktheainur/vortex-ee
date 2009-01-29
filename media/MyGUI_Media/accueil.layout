@@ -5,8 +5,8 @@
         <Widget type="StaticImage" skin="StaticImage" position="21 10 240 72">
             <Property key="Image_Texture" value="logo.png"/>
         </Widget>
-        <Widget type="StaticText" skin="StaticText" position="62 82 184 24">
-            <Property key="Widget_Caption" value="Bienvenue sur Vortex,"/>
+        <Widget type="StaticText" skin="StaticText" position="61 82 184 24">
+            <Property key="Widget_Caption" value="Bienvenue dans Vortex,"/>
             <Property key="Widget_FontHeight" value="20"/>
         </Widget>
         <Widget type="StaticText" skin="StaticText" position="14 106 272 25">

@@ -93,6 +93,15 @@ void VortexFrameListener::notifyComboChatAccept(MyGUI::Widget * _sender)
     if (message == "") return;
 
     addToChat( "#00003B" + idClient + ": #006B85" + message);
+
+        bitBuffer buff;
+        buff.writeString(idClient);
+        buff.writeString("all");
+        buff.writeString(message);
+
+        //on peut envoyer l'event d'update
+        ogreManagerEvent.sendEvent(6,buff);
+
     _sender->setCaption("");
 }
 
@@ -142,7 +151,7 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
         idClient = idClientGlobal;
     else if (idClient != "" && !messageBienvenue)
     {
-        addToChat("#000088Bienvenue sur Vortex #00003B" + idClient + "#000088 !");
+        addToChat("#000088Bienvenue dans Vortex #00003B" + idClient + "#000088 !");
 
         //fenetre d'accueil
         winAccueil = MyGUI::LayoutManager::getInstance().load("accueil.layout");
@@ -255,6 +264,11 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     int i = 0;
     string id;
     structUser_t user;
+
+    string envoyeur;
+    string receveur;
+    string message;
+
     while (worldManagerEvent.changed())
     {
         //on check eventReceived.type et suivant le cas, on insere une nouvelle node au vecteur ou on en met une a jour
@@ -365,6 +379,14 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
             }
 
             addToChat("#FF8000" + id + "vient de se deconnecter.");
+        break;
+
+        case 6: // message de chat
+            envoyeur = eventReceived.data.readString(true);
+            receveur = eventReceived.data.readString(true);
+            message = eventReceived.data.readString(true);
+
+            addToChat("#351E3C" + envoyeur + ": #6C4F9D" + message);
         break;
 
         default:

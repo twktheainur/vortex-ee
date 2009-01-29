@@ -4359,7 +4359,7 @@
 	"Event.h"
 	<cstdlib>
 
-1233242836 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
+1233261174 e:\documents and settings\saussagewarrior\bureau\vortex\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -5716,7 +5716,7 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1233242834 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\applicationmanager.cpp
+1233262360 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 	"../common/md5wrapper.h"
 	"../common/bitBuffer.h"
@@ -5783,7 +5783,7 @@
 	"TCPClient.h"
 	"globals.h"
 
-1233250172 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.cpp
+1233263528 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
@@ -6208,7 +6208,7 @@
 1232742690 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\world.cpp
 	"World.h"
 
-1233242834 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\worldmanager.cpp
+1233263354 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\worldmanager.cpp
 	"WorldManager.h"
 	"World.h"
 
