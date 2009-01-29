@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowC" position="312 304 296 128" layer="Popup" name="winConfirm">
+        <Property key="Widget_Caption" value="Confirmation"/>
+        <Property key="Widget_Show" value="false"/>
+        <Widget type="StaticImage" skin="StaticImage" position="13 18 48 48">
+            <Property key="Image_Texture" value="Warn.png"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="117 10 128 24">
+            <Property key="Widget_Caption" value="Etes vous sur de"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="125 26 120 24">
+            <Property key="Widget_Caption" value="vouloir quitter?"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="85 50 80 32" name="buttonConfOui">
+            <Property key="Widget_Caption" value="Oui"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="189 50 80 32" name="buttonConfNon">
+            <Property key="Widget_Caption" value="Non"/>
+        </Widget>
+    </Widget>
+</MyGUI>

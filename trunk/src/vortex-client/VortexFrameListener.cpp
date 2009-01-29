@@ -23,6 +23,17 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
     winLaunchInter = MyGUI::LayoutManager::getInstance().load("launchInterface.layout");
     showWindow(1,false);
 
+
+    //fenetre de confirmation
+    winConfirm = MyGUI::LayoutManager::getInstance().load("confirm.layout");
+    // set callback
+    MyGUI::ButtonPtr buttonConfOui = mGUI->findWidget<MyGUI::Button>("buttonConfOui");
+    buttonConfOui->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::quitter);
+    // set callback2
+    MyGUI::ButtonPtr buttonConfNon = mGUI->findWidget<MyGUI::Button>("buttonConfNon");
+    buttonConfNon->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::closeWindowConfirm);
+
+
     //interface documents
     winImage = MyGUI::LayoutManager::getInstance().load("winImage.layout");
     // set callback
@@ -118,27 +129,32 @@ void VortexFrameListener::showWindow(int window, bool show)
     case 0: //winAccueil
         if (show) winAccueil[0]->show();
         else winAccueil[0]->hide();
-        break;
+    break;
 
     case 1: //winLaunchInter
         if (show) winLaunchInter[0]->show();
         else winLaunchInter[0]->hide();
-        break;
+    break;
 
     case 2: //winVideo
         if (show) { winVideo[0]->show(); buttonVideoAfficher->hide(); }
         else winVideo[0]->hide();
-        break;
+    break;
 
     case 3: //winImage
         if (show) { winImage[0]->show(); buttonImageAfficher->hide(); }
         else winImage[0]->hide();
-        break;
+    break;
 
     case 4: //winAudio
         if (show) { winAudio[0]->show(); buttonAudioAfficher->hide(); }
         else winAudio[0]->hide();
-        break;
+    break;
+
+    case 5: //winConfirm
+        if (show) { winConfirm[0]->show(); }
+        else winConfirm[0]->hide();
+    break;
 
     default:
         break;
@@ -464,14 +480,10 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
     Vector3 pos;
     float posX, posY, posZ;
 
-    bitBuffer buff;
     switch (e.key)
     {
     case OIS::KC_ESCAPE: // touche echap, on sort du programme
-        //on envoie l'event de deconnexion
-        buff.writeString(idClient);
-        worldManagerEvent.sendEvent(8,buff);
-        mContinue = false;
+        winConfirm[0]->show();
         break;
     case OIS::KC_UP:
     case OIS::KC_W:

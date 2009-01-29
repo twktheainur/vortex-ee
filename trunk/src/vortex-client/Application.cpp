@@ -81,10 +81,16 @@
             buff.writeString(pass);
             connectionManagerOutEvent.sendEvent(event_connect_login,buff);
 
-            //if (connectionManagerOutEvent.changed()) event_data_t eventReceived = connectionManagerOutEvent.getEvent()
-
+//          event_data_t eventReceived = connectionManagerOutEvent.getEvent();
+//          if (eventReceived.data().length() == 0)
+//          {
+//              erreur->show();
+//          }
+//          else
+//          {
                 idClientGlobal = login;
                 winLogin[0]->hide();
+//          }
         }
     }
 
