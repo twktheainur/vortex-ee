@@ -32,6 +32,8 @@ public:
 
     inline void closeWindowAudio(MyGUI::WidgetPtr _sender) { showWindow(4,false); }
 
+    inline void closeWindowConfirm(MyGUI::WidgetPtr _sender) { showWindow(5,false); }
+
     inline void hideWindowImage(MyGUI::WidgetPtr _sender) { showWindow(3,false); buttonImageAfficher->show(); }
 
     inline void hideWindowVideo(MyGUI::WidgetPtr _sender) { showWindow(2,false); buttonVideoAfficher->show(); }
@@ -43,6 +45,15 @@ public:
     inline void showWindowVideo(MyGUI::WidgetPtr _sender) { showWindow(2,true); buttonVideoAfficher->hide(); }
 
     inline void showWindowAudio(MyGUI::WidgetPtr _sender) { showWindow(4,true); buttonAudioAfficher->hide(); }
+
+    inline void quitter(MyGUI::WidgetPtr _sender)
+    {
+        //on envoie l'event de deconnexion
+        bitBuffer buff;
+        buff.writeString(idClient);
+        worldManagerEvent.sendEvent(8,buff);
+        mContinue = false;
+    }
 
 	void notifyComboChatAccept(MyGUI::Widget * _sender);
 
@@ -122,6 +133,8 @@ protected:
     MyGUI::ComboBoxPtr mComboChat;
 
     MyGUI::VectorWidgetPtr winLaunchInter;
+
+    MyGUI::VectorWidgetPtr winConfirm;
 
     MyGUI::VectorWidgetPtr winImage;
     MyGUI::VectorWidgetPtr winVideo;
