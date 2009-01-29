@@ -32,17 +32,17 @@ public:
 
     inline void closeWindowAudio(MyGUI::WidgetPtr _sender) { showWindow(4,false); }
 
-    inline void hideWindowImage(MyGUI::WidgetPtr _sender) { showWindow(3,false); buttonImageAfficher->show(); }
+    inline void hideWindowImage(MyGUI::WidgetPtr _sender) { showWindow(3,false); /*buttonImageAfficher->show();*/ }
 
-    inline void hideWindowVideo(MyGUI::WidgetPtr _sender) { showWindow(2,false); buttonVideoAfficher->show(); }
+    inline void hideWindowVideo(MyGUI::WidgetPtr _sender) { showWindow(2,false); /*buttonVideoAfficher->show();*/ }
 
-    inline void hideWindowAudio(MyGUI::WidgetPtr _sender) { showWindow(4,false); buttonAudioAfficher->show(); }
+    inline void hideWindowAudio(MyGUI::WidgetPtr _sender) { showWindow(4,false); /*buttonAudioAfficher->show(); */}
 
-    inline void showWindowImage(MyGUI::WidgetPtr _sender) { showWindow(3,true); buttonImageAfficher->hide(); }
+    inline void showWindowImage(MyGUI::WidgetPtr _sender) { showWindow(3,true); /*buttonImageAfficher->hide();*/ }
 
-    inline void showWindowVideo(MyGUI::WidgetPtr _sender) { showWindow(2,true); buttonVideoAfficher->hide(); }
+    inline void showWindowVideo(MyGUI::WidgetPtr _sender) { showWindow(2,true); /*buttonVideoAfficher->hide(); */}
 
-    inline void showWindowAudio(MyGUI::WidgetPtr _sender) { showWindow(4,true); buttonAudioAfficher->hide(); }
+    inline void showWindowAudio(MyGUI::WidgetPtr _sender) { showWindow(4,true); /*buttonAudioAfficher->hide(); */}
 
 	void notifyComboChatAccept(MyGUI::Widget * _sender);
 
