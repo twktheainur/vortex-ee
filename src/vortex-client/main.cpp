@@ -13,6 +13,10 @@ Event connectionManagerOutEvent;
 Event worldManagerEvent;
 Event ogreManagerEvent;
 std::ofstream flog;
+
+string idClientGlobal = "";
+bool continuer = true;
+
 int main(int argc, char **argv)
 {
   flog.open("Cli.log");

@@ -134,6 +134,8 @@ protected:
     MyGUI::ButtonPtr buttonVideoAfficher;
 
     bool launchIntShow;
+
+    bool messageBienvenue; //définit si le message de bienvenue a deja ete affiche ou pas
 };
 
 #endif // VORTEXFRAMELISTENER_H_INCLUDED

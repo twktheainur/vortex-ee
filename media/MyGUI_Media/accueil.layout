@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="WindowC" position="312 192 296 280" layer="Main" name="Vortex">
+    <Widget type="Window" skin="WindowC" position="312 192 296 280" layer="Overlapped" name="Vortex">
         <Property key="Widget_Caption" value="Vortex"/>
         <Widget type="StaticImage" skin="StaticImage" position="21 10 240 72">
             <Property key="Image_Texture" value="logo.png"/>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="BackRectangle" position_real="0 0 1 1" layer="Main">
+        <Widget type="ItemBox" skin="ItemBox" position="264 256 392 192">
+            <Widget type="StaticText" skin="StaticText" position="13 10 360 24">
+                <Property key="Widget_Caption" value="Veuillez entrer vos informations personnelles svp..."/>
+            </Widget>
+            <Widget type="StaticText" skin="StaticText" position="29 50 112 24">
+                <Property key="Widget_Caption" value="Pseudonyme :"/>
+                <Property key="Widget_FontHeight" value="18"/>
+            </Widget>
+            <Widget type="Edit" skin="Edit" position="189 42 168 32" name="logPseudo"/>
+            <Widget type="StaticText" skin="StaticText" position="29 90 136 24">
+                <Property key="Widget_Caption" value="Mot de passe :"/>
+            </Widget>
+            <Widget type="Edit" skin="Edit" position="189 82 168 32" name="logPass"/>
+            <Widget type="StaticText" skin="StaticText" position="5 122 384 24" name="logError">
+                <Property key="Widget_Caption" value="#ff0000Les informations que vous avez remplies sont incorrectes!"/>
+                <Property key="Widget_FontHeight" value="16"/>
+                <Property key="Widget_Show" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonSmall" position="77 146 112 32" name="buttonLogConnec">
+                <Property key="Widget_Caption" value="Connexion"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonSmall" position="197 146 112 32" name="buttonLogQuit">
+                <Property key="Widget_Caption" value="Quitter"/>
+            </Widget>
+        </Widget>
+    </Widget>
+</MyGUI>

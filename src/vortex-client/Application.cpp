@@ -36,19 +36,47 @@
 
     void Application::go()
     {
-        createRoot(); // on cr�� la racine
-        defineResources(); // on d�finit les ressources utilis�es par Ogre
+        createRoot(); // on cree la racine
+        defineResources(); // on definit les ressources utilisees par Ogre
         setupRenderSystem();
-        createRenderWindow(); // on cr�� la fen�tre d'affichage de la sc�ne
+        createRenderWindow(); // on cree la fenetre d'affichage de la scene
         initializeResourceGroups(); // on initialise les ressources
         chooseSceneManager();
-        setupScene(); // on installe les �l�ments de la sc�ne + initialisation du SceneManager
+        setupScene(); // on installe les elements de la scene + initialisation du SceneManager
         setupInputSystem();
         setupMyGUI();
+        login(); // affichage de la fenetre de login
         createFrameListener(); // construction du FrameListener
         startRenderLoop(); // on commence la boucle de rendu
     }
 
+    bool Application::login()
+    {
+        winLogin = MyGUI::LayoutManager::getInstance().load("login.layout");
+        mEditLogin = mGUI->findWidget<MyGUI::Edit>("logPseudo");
+        mEditPass = mGUI->findWidget<MyGUI::Edit>("logPass");
+        MyGUI::ButtonPtr buttonLogConnec = mGUI->findWidget<MyGUI::Button>("buttonLogConnec");
+        buttonLogConnec->eventMouseButtonClick = MyGUI::newDelegate(this, &Application::buttonConnexionClick);
+        MyGUI::ButtonPtr buttonLogQuit = mGUI->findWidget<MyGUI::Button>("buttonLogQuit");
+        buttonLogQuit->eventMouseButtonClick = MyGUI::newDelegate(this, &Application::quitter);
+        return true;
+    }
+
+
+    void Application::buttonConnexionClick(MyGUI::WidgetPtr _widget)
+    {
+        md5wrapper md5;
+        string login = mEditLogin->getCaption();
+        string pass = mEditPass->getCaption();
+        pass = md5.getHashFromString(pass);
+        bitBuffer buff;
+        buff.writeString(login);
+        buff.writeString(pass);
+        connectionManagerOutEvent.sendEvent(event_connect_login,buff);
+
+        idClientGlobal = login;
+        winLogin[0]->hide();
+    }
 
     void Application::createRoot()
     {
@@ -132,7 +160,7 @@
       //mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un deplacement correct de la camera
                                   // (les axes sont inverses entre le moteur quake et ogre)
       mCamera->setFixedYawAxis(true, Vector3::UNIT_Z); // idem (suite)
-      
+
       SceneNode * playerNode;
       playerNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode", Vector3(-680,160,127));
       Entity * playerEntity;
