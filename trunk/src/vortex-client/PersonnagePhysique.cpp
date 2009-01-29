@@ -21,7 +21,11 @@ void PersonnagePhysique::deplacement(Vector3 direction, Real timeSinceLastFrame)
 
 bool PersonnagePhysique::_endroitInterdit(Vector3 coord)
 {
-  if(coord.x < -880 || coord.x > 800 || coord.y < -230 || coord.y > 545 )
+  if(coord.x < -880 || coord.x > 800 || coord.y < -230 || coord.y > 545 //limites de la map
+  || (coord.x < -704 && (coord.y < 90 || coord.y > 224 ) ) //bibliotheques a droite et a gauche de la porte du fond
+  || (coord.x > -370 && coord.x < -234 && coord.y > 70 && coord.y < 106 ) || (coord.x > -250 && coord.x < -214 && coord.y < 106 ) //cloison (a droite quand on arrive)
+  || (coord.x > -138 && coord.x < -54 && coord.y > 214 && coord.y < 250 ) || (coord.x > -90 && coord.x < -54 && coord.y > 214 ) //cloison (a gauche quand on arrive)
+   )
   {
     return true;
   }
