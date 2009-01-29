@@ -50,16 +50,16 @@
         startRenderLoop(); // on commence la boucle de rendu
     }
 
-    bool Application::login()
+    void Application::login()
     {
         winLogin = MyGUI::LayoutManager::getInstance().load("login.layout");
         mEditLogin = mGUI->findWidget<MyGUI::Edit>("logPseudo");
+        buttonLogConnec = mGUI->findWidget<MyGUI::Button>("buttonLogConnec");
         mEditPass = mGUI->findWidget<MyGUI::Edit>("logPass");
-        MyGUI::ButtonPtr buttonLogConnec = mGUI->findWidget<MyGUI::Button>("buttonLogConnec");
         buttonLogConnec->eventMouseButtonClick = MyGUI::newDelegate(this, &Application::buttonConnexionClick);
         MyGUI::ButtonPtr buttonLogQuit = mGUI->findWidget<MyGUI::Button>("buttonLogQuit");
         buttonLogQuit->eventMouseButtonClick = MyGUI::newDelegate(this, &Application::quitter);
-        return true;
+        erreur = mGUI->findWidget<MyGUI::StaticText>("logError");
     }
 
 
@@ -68,14 +68,30 @@
         md5wrapper md5;
         string login = mEditLogin->getCaption();
         string pass = mEditPass->getCaption();
-        pass = md5.getHashFromString(pass);
-        bitBuffer buff;
-        buff.writeString(login);
-        buff.writeString(pass);
-        connectionManagerOutEvent.sendEvent(event_connect_login,buff);
 
-        idClientGlobal = login;
-        winLogin[0]->hide();
+        if (login == "" || pass == "")
+        {
+            erreur->show();
+        }
+        else
+        {
+            pass = md5.getHashFromString(pass);
+            bitBuffer buff;
+            buff.writeString(login);
+            buff.writeString(pass);
+            connectionManagerOutEvent.sendEvent(event_connect_login,buff);
+
+            //if (connectionManagerOutEvent.changed()) event_data_t eventReceived = connectionManagerOutEvent.getEvent()
+            if (login != "sauss" && pass != "war")
+            {
+                erreur->show();
+            }
+            else
+            {
+                idClientGlobal = login;
+                winLogin[0]->hide();
+            }
+        }
     }
 
     void Application::createRoot()
@@ -274,6 +290,16 @@
         TVNode->scale(Vector3(4,3.7,3));
         TVNode->pitch(Degree(90));
         TVNode->yaw(Degree(75));
+
+        //chaine hifi
+        Entity *hifi = mSceneMgr->createEntity("hifi", "chaineHiFi.mesh");
+        tv->setCastShadows(true);
+        SceneNode *hifiNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("HiFinode", Vector3(240,-235,93));
+        hifiNode->attachObject(hifi);
+        hifiNode->scale(Vector3(9,9,9));
+        hifiNode->pitch(Degree(90));
+        hifiNode->yaw(Degree(180));
+
 
         // devant la télé
         Entity *faut1 = mSceneMgr->createEntity("faut1", "fauteuil.mesh" );
