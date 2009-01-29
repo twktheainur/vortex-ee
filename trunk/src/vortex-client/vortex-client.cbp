@@ -16,7 +16,6 @@
 					<Add directory="..\pthread" />
 					<Add directory="..\ogreIncludes" />
 					<Add directory="..\ogreIncludes\OIS" />
-					<Add directory="..\ogreIncludes\refapp" />
 					<Add directory="..\MyGUIEngine\include" />
 				</Compiler>
 				<Linker>

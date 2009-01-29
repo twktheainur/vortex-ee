@@ -2,12 +2,13 @@
 1233224930 source:c:\users\sebastien\documents\vortex\src\vortex-client\application.cpp
 	"Application.h"
 
-1233223899 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
+1233253166 c:\users\sebastien\documents\vortex\src\vortex-client\application.h
 	<Ogre.h>
 	<OIS/OIS.h>
 	"VortexFrameListener.h"
 	"PersonnagePhysique.h"
 	<MyGUI.h>
+	"../common/md5wrapper.h"
 	<CoreFoundation/CoreFoundation.h>
 
 1219591314 c:\users\sebastien\documents\ogresdk\include\ogre.h
@@ -1242,7 +1243,7 @@
 
 1146778524 c:\users\sebastien\documents\ogresdk\include\ois\oisexception.h
 
-1233235717 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
+1233253166 c:\users\sebastien\documents\vortex\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
@@ -4314,9 +4315,10 @@
 	"OgreCamera.h"
 	"OgreRefAppApplicationObject.h"
 
-1233229436 c:\users\sebastien\documents\vortex\src\vortex-client\globals.h
+1233253166 c:\users\sebastien\documents\vortex\src\vortex-client\globals.h
 	"../common/Event.h"
 	<fstream>
+	<unistd.h>
 
 1232214039 c:\users\sebastien\documents\vortex\src\common\custom_usleep.h
 
@@ -6015,7 +6017,7 @@
 	"OgreCamera.h"
 	"OgreRefAppApplicationObject.h"
 
-1233234398 source:c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.cpp
+1233235887 source:c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
 
 1233230992 c:\users\sebastien\documents\vortex\src\vortex-client\personnagephysique.h
