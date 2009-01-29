@@ -16,6 +16,7 @@
 					<Add directory="..\pthread" />
 					<Add directory="..\ogreIncludes" />
 					<Add directory="..\ogreIncludes\OIS" />
+					<Add directory="..\ogreIncludes\refapp" />
 					<Add directory="..\MyGUIEngine\include" />
 				</Compiler>
 				<Linker>
@@ -24,6 +25,8 @@
 					<Add library="..\..\lib\OIS.dll" />
 					<Add library="..\..\lib\OgreMain.dll" />
 					<Add library="..\..\lib\libpthreadGC2.a" />
+					<Add library="..\..\bin\ReferenceAppLayer.dll" />
+					<Add library="..\..\bin\libode.a" />
 					<Add library="..\..\bin\MyGUI.dll" />
 				</Linker>
 			</Target>
@@ -41,6 +44,7 @@
 		<Unit filename="..\common\Event.cpp" />
 		<Unit filename="..\common\Event.h" />
 		<Unit filename="..\common\Exception.h" />
+		<Unit filename="..\common\LoginPacket.cpp" />
 		<Unit filename="..\common\LoginResponsePacket.cpp" />
 		<Unit filename="..\common\LoginResponsePacket.h" />
 		<Unit filename="..\common\Mutex.cpp" />
@@ -62,7 +66,12 @@
 		<Unit filename="..\common\Thread.h" />
 		<Unit filename="..\common\UDPSocket.cpp" />
 		<Unit filename="..\common\UDPSocket.h" />
+		<Unit filename="..\common\UpdatePacket.cpp" />
 		<Unit filename="..\common\bitBuffer.h" />
+		<Unit filename="..\common\md5.cpp" />
+		<Unit filename="..\common\md5.h" />
+		<Unit filename="..\common\md5wrapper.cpp" />
+		<Unit filename="..\common\md5wrapper.h" />
 		<Unit filename="Application.cpp" />
 		<Unit filename="Application.h" />
 		<Unit filename="ApplicationManager.cpp" />

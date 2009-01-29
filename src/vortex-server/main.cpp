@@ -22,8 +22,7 @@ extern "C"
 }
 
 //Global variables
-Event eventManagerEvent;
-Event chatManagerEvent;
+Event clientManagerEvent;
 Event connectionManagerEvent;
 Event worldManagerEvent;
 int main(int argc, char **argv)

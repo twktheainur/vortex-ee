@@ -12,6 +12,7 @@
 class LoginResponsePacket: public Packet
 {
 public:
+      ~LoginResponsePacket(){}
 	  LoginResponsePacket(string sessid);
 	  LoginResponsePacket(char * buffer,size_t length);
 	  void setData(char * buffer,size_t length);

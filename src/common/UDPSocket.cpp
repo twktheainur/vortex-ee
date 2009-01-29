@@ -21,11 +21,11 @@ int UDPSocket::send(const void * buffer, size_t * length, int flags )
 {
   size_t total = 0;
   size_t bytesleft = *length;
-  int n;
+  int n=0;
   while(total<*length)
   {
      if((n=::sendto(getSockFD(),(char *)buffer+total,bytesleft,flags,
-                    getInfo()->ai_addr,getInfo()->ai_addrlen))==-1){break;}
+                    getInfo()->ai_addr,getInfo()->ai_addrlen))==SOCK_ERR){break;}
      total +=n;
      bytesleft-=n;
   }
@@ -41,7 +41,7 @@ int UDPSocket::recv(void * buffer, size_t length, int flags )
    socklen_t sin_len = sizeof remote_addr;
 
   #ifdef WIN32
-  if(!(recv_ret=::recvfrom(getSockFD(),(char *)buffer,length,flags,
+  if(SOCK_ERR==(recv_ret=::recvfrom(getSockFD(),(char *)buffer,length,flags,
                            (struct sockaddr*)&remote_addr,&sin_len)))
   #else
   if(!(recv_ret=::recvfrom(getSockFD(),(void *)buffer,length,flags,

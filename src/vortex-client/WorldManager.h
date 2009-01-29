@@ -11,10 +11,9 @@
 #include "../common/Thread.h"
 #include "../common/Event.h"
 #include "globals.h"
-#include "World.h"
 extern Event eventManagerEvent;
 extern Event worldManagerEvent;
-
+class World;
 class WorldManager : public Thread
 {
 public:

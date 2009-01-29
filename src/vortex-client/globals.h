@@ -7,6 +7,7 @@
 #ifndef __GLOBALS_H__
 #define __GLOBALS_H__
 #include "../common/Event.h"
+#include <fstream>
 #define XSTART -680
 #define YSTART  160
 #define ZSTART  127
@@ -16,6 +17,7 @@ extern Event connectionManagerInEvent;
 extern Event connectionManagerOutEvent;
 extern Event worldManagerEvent;
 extern Event ogreManagerEvent;
+extern std::ofstream flog;
 #endif
 
 

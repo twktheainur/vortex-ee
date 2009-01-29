@@ -31,7 +31,7 @@ public:
 	Thread();
 	void cancel();
 	void join();
-	~Thread();
+	virtual ~Thread();
 	int start(void * arg);
 };
 

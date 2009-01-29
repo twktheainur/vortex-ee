@@ -9,19 +9,29 @@ License for the	 specific language governing rights and limitations
 under the License.*/
 #include "Client.h"
 #include <cstdlib>
+#include "WorldManager.h"
+#include "ConnectionManager.h"
+#include "ApplicationManager.h"
 Client::Client()
 {
 	//eventManagerEvent = event;
+	flog << "App start" << endl;
+	  applicationManagerThread = new ApplicationManager(this);
+
+  flog << "The club has been disbanded" << endl;
   connectionManagerThread = new ConnectionManager(this);
   worldManagerThread = new WorldManager();
-  applicationManagerThread = new ApplicationManager();
+    flog << "before join  " << endl;
   applicationManagerThread->join();
+
+
+
 }
 
 Client::~Client()
 {
-	delete connectionManagerThread;
-	delete worldManagerThread;
+	//delete connectionManagerThread;
+	//delete worldManagerThread;
 //	delete chatManagerThread;
-	delete client;
+	//delete client;
 }

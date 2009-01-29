@@ -8,6 +8,7 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 #include "TCPClient.h"
+#include "globals.h"
 
 TCPClient::TCPClient(string host,string service)
 {
@@ -19,12 +20,14 @@ TCPClient::TCPClient(string host,string service)
     {
       socket->socket(p);
       socket->connect(p);
+      socket->setNblock();
       break;
     }
     catch(ExTCPSocket * e)
     {
       printf("TCPClient:%s\n",e->what());
-      puts("Une erreur a été rencontrée. Un serveur est-il actif ?");
+      flog <<"TCPClient:" <<e->what()<<endl;
+      flog<<"Une erreur a été rencontrée. Un serveur est-il actif ?"<<endl;
       throw new ExTCPClient(E_CONNECT_ERROR,e->what());
       delete e;
     }
@@ -77,5 +80,5 @@ void TCPClient::send(string & data)
 
 void TCPClient::protocolLoop()
 {
-  
+
 }

@@ -15,14 +15,14 @@ ConnectionManager::ConnectionManager(Server * serv)
 void ConnectionManager::execute(void * arg)
 {
 	ConnectionManager * pthis = (ConnectionManager *)arg;
+	pthis->serv->setServer(new TCPServer(5,"8080",pthis));
 	try
 	{
-	  pthis->serv->setServer(new TCPServer(5,"8080",pthis));
       pthis->serv->getServer()->startListener();
 	}
 	catch(vortex::Exception * e)
 	{
-		printf("%s\n",e->what());
+		printf("A client failed to connect:%s\n",e->what());
 		delete e;
 	}
 }

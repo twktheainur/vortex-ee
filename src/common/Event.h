@@ -43,7 +43,9 @@ typedef enum event
   event_anim_avant = 11,
   event_anim_arriere = 12,
   event_anim_gauche = 13,
-  event_anim_droite = 14
+  event_anim_droite = 14,
+  event_anim_aucune=15,
+  event_quit=16
 }event_t;
 
 
@@ -77,7 +79,7 @@ public:
   inline static void usleep(long delai)
   {
     #ifdef WIN32
-      Sleep(delai/10);//le +1 sert a Ã©viter Sleep(0), qui ne garantit pas que le thread ne sera pas actif
+      Sleep(delai/10);//le +1 sert a éviter Sleep(0), qui ne garantit pas que le thread ne sera pas actif
     #else
       usleep(delai);
     #endif
