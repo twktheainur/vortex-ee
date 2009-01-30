@@ -2738,7 +2738,7 @@
 	"Event.h"
 	<cstdlib>
 
-1233154629 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1233274139 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -2782,7 +2782,7 @@
 1233240454 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
 	"Socket.h"
 
-1233240086 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
+1233279585 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
 	<ws2tcpip.h>
 	<winsock2.h>
 	<unistd.h>
@@ -2830,7 +2830,7 @@
 	"Thread.h"
 	"Event.h"
 
-1233269783 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
+1233302196 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.cpp
 	"Application.h"
 
 1233259435 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\application.h
@@ -4074,12 +4074,12 @@
 
 1231362512 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\ois\oisexception.h
 
-1233269337 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.h
+1233302196 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.h
 	<unistd.h>
 	<Ogre.h>
 	"InputManager.h"
 	"globals.h"
-	"vector.h"
+	<vector>
 	"PersonnagePhysique.h"
 	"MyGUI.h"
 
@@ -4089,14 +4089,12 @@
 	<OISInputManager.h>
 	<OgreRenderWindow.h>
 
-1233268396 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.cpp
+1233314493 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.cpp
 	"ApplicationManager.h"
 	"../common/md5wrapper.h"
 	"../common/bitBuffer.h"
 	"globals.h"
 	"Client.h"
-	"ConnectionManagerIn.h"
-	"ConnectionManagerOut.h"
 
 1233251272 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\applicationmanager.h
 	"../common/Thread.h"
@@ -4147,11 +4145,11 @@
 	"TCPClient.h"
 	"globals.h"
 
-1233269346 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
+1233302196 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\vortexframelistener.cpp
 	"VortexFrameListener.h"
 	"../common/bitBuffer.h"
 
-1233253287 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
+1233270549 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\main.cpp
 	"Client.h"
 	"globals.h"
 	"ApplicationManager.h"
@@ -6033,7 +6031,7 @@
 1233280210 source:e:\documents and settings\saussagewarrior\bureau\vortex\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
 
-1233251272 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\personnagephysique.h
+1233274139 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\personnagephysique.h
 	"Ogre.h"
 
 1232564689 o:\twk\doc\programming\iut2a\vortex-ee\src\ogreincludes\refapp\ogrerefappprerequisites.h
@@ -6179,7 +6177,7 @@
 	"OgreCamera.h"
 	"OgreRefAppApplicationObject.h"
 
-1233251272 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\personnagephysique.cpp
+1233302196 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\personnagephysique.cpp
 	"PersonnagePhysique.h"
 
 1233251272 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\worldmanager.h
@@ -6194,7 +6192,7 @@
 1233251272 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\world.cpp
 	"World.h"
 
-1233251272 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\worldmanager.cpp
+1233274139 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-client\worldmanager.cpp
 	"WorldManager.h"
 	"World.h"
 

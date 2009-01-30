@@ -10,7 +10,6 @@
 #include "../common/bitBuffer.h"
 #include "globals.h"
 #include "Client.h"
-#include "ConnectionManager.h"
 
 ApplicationManager::ApplicationManager(Client * cli)
 {
