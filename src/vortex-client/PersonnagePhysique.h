@@ -15,9 +15,12 @@ public:
 private:
   SceneNode * mSceneNode;
   Entity * mEntity;
-  bool _endroitInterdit(Vector3 coordPrecedentes, Vector3 coord);//retourne vrai si on n'a pas le droit de se trouver à cet endroit
+  bool endroitInterdit(Vector3 coordPrecedentes, Vector3 coord);//retourne vrai si on n'a pas le droit de se trouver à cet endroit
   //on utilise les "coordonnées précedentes", car pour certains endroits, on a pas le droit de s'y trouver si on vient d'un endroit précis
   //par ex : si on est en bas, devant la TV, on ne peut pas se retrouver au niveau de la TV (plus haut) comme par magie (il y un truc qui s'appelle la gravité qui empêche ca :o) )
+  void ajusterAltitude(Vector3 & coord, Real timeSinceLastFrame);//permet d'ajuster l'altitude (z) en fonction des autres coordonnées (x et y)
+  //coord est passée par référence : c'est une variable donnée résultat
+  //timeSinceLastFrame est utilisée en cas de "chute"
 };
 
 
