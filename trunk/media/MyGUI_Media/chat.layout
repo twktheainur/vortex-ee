@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="Window" position="0 475 559 231" layer="Overlapped" name="WindowChat">
+    <Widget type="Window" skin="Window" position="0 539 500 231" layer="Overlapped" name="WindowChat">
         <Property key="Widget_Caption" value="Chat"/>
         <Property key="Window_MinMax" value="200 100 2000 2000"/>
         <Property key="Widget_Alpha" value="70"/>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
     <Widget type="Widget" skin="BackRectangle" position_real="0 0 1 1" layer="Main">
-        <Widget type="ItemBox" skin="ItemBox" position="264 256 392 192">
+        <Widget type="ItemBox" skin="ItemBox" position="320 296 392 192">
             <Widget type="StaticText" skin="StaticText" position="13 10 360 24">
                 <Property key="Widget_Caption" value="Veuillez entrer vos informations personnelles svp..."/>
             </Widget>

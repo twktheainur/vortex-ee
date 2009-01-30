@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Window" skin="WindowC" position="312 304 296 128" layer="Popup" name="winConfirm">
+    <Widget type="Window" skin="WindowC" position="360 336 296 128" layer="Popup" name="winConfirm">
         <Property key="Widget_Caption" value="Confirmation"/>
         <Property key="Widget_Show" value="false"/>
         <Widget type="StaticImage" skin="StaticImage" position="13 18 48 48">
