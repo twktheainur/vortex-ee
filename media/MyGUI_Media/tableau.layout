@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowC" position="136 96 664 336" layer="Overlapped" name="winTableau">
+        <Property key="Widget_Show" value="false"/>
+        <Property key="Widget_Caption" value="Ecrire au tableau"/>
+        <Widget type="StaticText" skin="StaticText" position="109 2 440 24">
+            <Property key="Widget_Caption" value="Vous pouvez laisser un message a vos amis sur ce tableau..."/>
+            <Property key="Widget_Colour" value="#002000"/>
+        </Widget>
+        <Widget type="ItemBox" skin="ItemBox" position="0 26 656 248"/>
+        <Widget type="Button" skin="ButtonSmall" position="229 275 104 24" name="buttonTabValider">
+            <Property key="Widget_Caption" value="Valider"/>
+        </Widget>
+        <Widget type="Edit" skin="EditStretch" position="13 34 632 232">
+            <Property key="Edit_MultiLine" value="true"/>
+            <Property key="Edit_OverflowToTheLeft" value="true"/>
+            <Property key="Widget_AlignText" value="ALIGN_LEFT ALIGN_TOP"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="349 275 104 24" name="buttonTabFermer">
+            <Property key="Widget_Caption" value="Fermer"/>
+        </Widget>
+    </Widget>
+</MyGUI>

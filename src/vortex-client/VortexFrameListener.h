@@ -34,6 +34,8 @@ public:
 
     inline void closeWindowConfirm(MyGUI::WidgetPtr _sender) { showWindow(5,false); }
 
+    inline void closeWindowTableau(MyGUI::WidgetPtr _sender) { showWindow(6,false); }
+
     inline void hideWindowImage(MyGUI::WidgetPtr _sender) { showWindow(3,false); buttonImageAfficher->show(); }
 
     inline void hideWindowVideo(MyGUI::WidgetPtr _sender) { showWindow(2,false); buttonVideoAfficher->show(); }
@@ -133,6 +135,8 @@ protected:
     MyGUI::ComboBoxPtr mComboChat;
 
     MyGUI::VectorWidgetPtr winLaunchInter;
+
+    MyGUI::VectorWidgetPtr winTableau;
 
     MyGUI::VectorWidgetPtr winConfirm;
 
