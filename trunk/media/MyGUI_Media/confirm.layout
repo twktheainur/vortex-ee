@@ -4,7 +4,7 @@
         <Property key="Widget_Caption" value="Confirmation"/>
         <Property key="Widget_Show" value="false"/>
         <Widget type="StaticImage" skin="StaticImage" position="13 18 48 48">
-            <Property key="Image_Texture" value="Warn.png"/>
+            <Property key="Image_Texture" value="warn.png"/>
         </Widget>
         <Widget type="StaticText" skin="StaticText" position="117 10 128 24">
             <Property key="Widget_Caption" value="Etes vous sur de"/>

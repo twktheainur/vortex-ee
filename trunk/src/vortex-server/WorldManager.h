@@ -10,9 +10,10 @@
 
 #include "../common/Thread.h"
 #include "../common/Event.h"
-#include "World.h"
 #include "globals.h"
-
+extern Event eventManagerEvent;
+extern Event worldManagerEvent;
+class World;
 class WorldManager : public Thread
 {
 public:

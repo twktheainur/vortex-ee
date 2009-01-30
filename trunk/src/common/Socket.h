@@ -27,9 +27,10 @@ extern "C"
 
 #include <netdb.h>
 #include <arpa/inet.h>
-    typedef sock_t int;
-#define SOCK_ERR -1
+
 }
+  typedef int sock_t;
+#define SOCK_ERR -1
 #endif
 extern "C"
 {
@@ -89,7 +90,7 @@ public:
         unsigned long enable = 1;
         ioctlsocket (sockFD,FIONBIO,&enable);
 #else
-        ::fcntl(sockFD, F_SETFL, O_NONBLOCK);
+        //::fcntl(sockFD, F_SETFL, O_NONBLOCK);
 #endif
     }
 
@@ -146,7 +147,7 @@ public:
             setError("An error occured while data was being sent:"+param);
             break;
         case E_RECV_FAIL:
-            setError("An error occured while data was being recieved");
+            setError("An error occured while data was being received:"+param);
             break;
         }
     }

@@ -1,18 +1,18 @@
 /*
- * ConnectionManager.h
+ * ConnectionManagerIn.h
  *
  *  Created on: Nov 22, 2008
  *      Author: twk
  */
 
-#ifndef CONNECTIONMANAGER_H_
-#define CONNECTIONMANAGER_H_
+#ifndef ConnectionManagerIn_H_
+#define ConnectionManagerIn_H_
 #include "../common/Thread.h"
 #include "Client.h"
 
 
 class Client;
-class ConnectionManager: public Thread
+class ConnectionManagerIn: public Thread
 {
 private:
   Client * cli;
@@ -21,8 +21,8 @@ public:
   inline Client * getCli(){return cli;}
   inline void setCli(Client * cli){this->cli=cli;}
 	void  execute(void * arg);
-	ConnectionManager(Client * cli);
-	~ConnectionManager();
+	ConnectionManagerIn(Client * cli);
+	~ConnectionManagerIn();
 };
 
-#endif /* CONNECTIONMANAGER_H_ */
+#endif /* ConnectionManagerIn_H_ */

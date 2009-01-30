@@ -20,7 +20,7 @@ TCPClient::TCPClient(string host,string service)
     {
       socket->socket(p);
       socket->connect(p);
-      socket->setNblock();
+      //socket->setNblock();
       break;
     }
     catch(ExTCPSocket * e)

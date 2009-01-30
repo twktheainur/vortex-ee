@@ -6,6 +6,8 @@
  */
 
 #include "ConnectionManager.h"
+#include "globals.h"
+#include "Server.h"
 
 ConnectionManager::ConnectionManager(Server * serv)
 {
@@ -26,9 +28,9 @@ void ConnectionManager::execute(void * arg)
 		delete e;
 	}
 }
-void ConnectionManager::addServerClient(ClientManager * mgr)
+void ConnectionManager::addServerClient(cthreads_t th)
 {
-	serv->getClients()->push_back(mgr);
+	serv->getClients()->push_back(th);
 }
 
 ConnectionManager::~ConnectionManager()

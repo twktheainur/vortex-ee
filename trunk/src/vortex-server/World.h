@@ -28,14 +28,16 @@ public:
   World();
   World(const World& orig);
   virtual ~World();
+
   inline void add_user(string id)
   {
     world_user_t user={id,-680,160,127,1,0};
     users.push_back(user);
   }
+
   inline void delete_user(string id)
   {
-    unsigned int i=0;
+    int i=0;
     while (i < users.size() && users[i].id != id)
     {
       i++;
@@ -43,14 +45,15 @@ public:
     if(i<=users.size())
       users.erase(users.begin()+i);
   }
-  inline void update_user(world_user_t user,string id)
+
+  inline void update_user(world_user_t user)
   {
-    unsigned int i=0;
-    while (i < users.size() && users[i].id != id)
+    int i=0;
+    while (i < users.size() && users[i].id != user.id)
     {
       i++;
     }
-    if(i<=users.size())
+    if(i<users.size())
       users[i]=user;
     else
      cout;

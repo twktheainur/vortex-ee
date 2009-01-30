@@ -2,8 +2,16 @@
 
     Application::Application()
     {
-      mListener = 0;
-      mRoot = 0;
+      try
+      {
+        mListener = 0;
+        mRoot = 0;
+      }
+      catch (vortex::Exception  * e)
+        {
+            flog << "AppCatchConstr!"<<e->what() << endl;
+        }
+
     }
 
     Application::~Application()
@@ -41,13 +49,24 @@
         setupRenderSystem();
         createRenderWindow(); // on cree la fenetre d'affichage de la scene
         initializeResourceGroups(); // on initialise les ressources
-        chooseSceneManager();
-        setupScene(); // on installe les elements de la scene + initialisation du SceneManager
+  initializeResourceGroups(); // on initialise les ressources
+                 chooseSceneManager();
+
+        try{
+
+              setupScene(); // on installe les elements de la scene + initialisation du SceneManager
+             }
+        catch (vortex::Exception  * e)
+        {
+            flog << "SetupSceneMErdeAMORT!AppCatchGo!"<<e->what() << endl;
+        }
+
         setupInputSystem();
         setupMyGUI();
         login(); // affichage de la fenetre de login
         createFrameListener(); // construction du FrameListener
         startRenderLoop(); // on commence la boucle de rendu
+
     }
 
     void Application::login()
@@ -160,8 +179,8 @@
 
     void Application::setupScene()
     {
-      mSceneMgr->setWorldGeometry("maps/PT.bsp");//chargement de la map
-      mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
+   mSceneMgr->setSkyBox(true, "coucher_soleil"); //chargement de la skybox
+   mSceneMgr->setWorldGeometry("maps/PT.bsp");//chargement de la map
 
       mCamera = mSceneMgr->createCamera("Camera"); // on cree la camera
       mCamera->setNearClipDistance(5);
@@ -176,6 +195,7 @@
       //mCamera->pitch(Degree(90)); // On redresse les axes de l'espace pour avoir un deplacement correct de la camera
                                   // (les axes sont inverses entre le moteur quake et ogre)
       mCamera->setFixedYawAxis(true, Vector3::UNIT_Z); // idem (suite)
+
 
       SceneNode * playerNode;
       playerNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("PlayerNode", Vector3(-680,160,127));
@@ -394,6 +414,7 @@
 
       Viewport *vp = mRoot->getAutoCreatedWindow()->addViewport(mCamera);
       vp=NULL;
+
     }
 
     void Application::setupInputSystem()

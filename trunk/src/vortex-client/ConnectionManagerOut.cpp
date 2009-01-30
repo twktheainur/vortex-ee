@@ -1,30 +1,30 @@
 /*
- * ConnectionManager.cpp
+ * ConnectionManagerOut.cpp
  *
  *  Created on: Nov 22, 2008
  *      Author: twk
  */
 
-#include "ConnectionManager.h"
+#include "ConnectionManagerOut.h"
 #include "../common/LoginResponsePacket.h"
 #include "../common/Exception.h"
 #include "../common/UpdatePacket.h"
+#include "globals.h"
 
 
-ConnectionManager::ConnectionManager(Client * cli)
+ConnectionManagerOut::ConnectionManagerOut(Client * cli)
 {
     this->cli=cli;
     start((void *)this);
 }
-void ConnectionManager::execute(void * arg)
+void ConnectionManagerOut::execute(void * arg)
 {
-    ConnectionManager * pthis = (ConnectionManager *)arg;
-    flog<<"Connection manager Init...\n";
+    ConnectionManagerOut * pthis = (ConnectionManagerOut *)arg;
+    flog<<"Connection manager Out Init...\n";
     TCPSocket * socket;
     event_data_t event_data;
     try
     {
-        pthis->cli->setClient(new TCPClient("localhost","8080"));
         socket = pthis->cli->getClient()->getSocket();
     }
     catch (vortex::Exception * e)
@@ -46,26 +46,6 @@ void ConnectionManager::execute(void * arg)
         socket->send(event_data.data.set(),&length,0);
         // Now on attends une reponse
         // On va d'abbord essayer de recuperer 5o (taille de l'entete global)
-
-        char * buffer = (char *)malloc(5);
-        try
-        {
-        if (socket->pollRead())
-            socket->recv(buffer,5,0);
-            LoginResponsePacket lrp(buffer,(size_t)5);
-            if (lrp.getHeader().length()>0)
-                flog << "Yay got a positive response!\n";
-            else
-                flog << "login failed!\n";
-        }
-        catch (vortex::Exception * e)
-        {
-
-            flog << "what 1"<<e->what()<<endl;
-            //Soit Mauvais paquet
-            //Soit timeout du socket
-        }
-        free(buffer);
     }
 
     //LOGIN OK!
@@ -73,45 +53,6 @@ void ConnectionManager::execute(void * arg)
     while (1)
     {
         flog << "Main LOOP!\n";
-        try
-        {
-            //D'abord on checks si il y a des donnees a lire avec select
-            flog << "POLL successful!\n";
-            char * buffer = (char *)malloc(5);
-            socket->recv(buffer,5,0);
-            bitBuffer header(buffer,5);
-            flog << "Type:" <<header.readChar(false)<<endl;
-
-            switch (header.readChar(false))
-            {
-
-            case event_connect_login:
-                flog << "login" << endl;
-                break;
-            case event_connect_logout:
-                flog << "logout" << endl;
-                break;
-            case event_world_add:
-                flog << "add" << endl;
-                break;
-            case event_world_update:
-                flog << "update" << endl;
-                break;
-            case event_world_del:
-                flog << "del" << endl;
-                break;
-            case event_chat_incoming:
-                flog << "chat" << endl;
-                break;
-
-            }
-            free(buffer);
-        }
-        catch (vortex::Exception * e)
-        {
-            flog << "what2"<<e->what()<<endl;
-            delete e;
-        }
         //Apres on check les events:
         if (connectionManagerOutEvent.changed())
         {
@@ -167,7 +108,7 @@ void ConnectionManager::execute(void * arg)
     }
     flog << "main loop end\n";
 }
-ConnectionManager::~ConnectionManager()
+ConnectionManagerOut::~ConnectionManagerOut()
 {
 
 }

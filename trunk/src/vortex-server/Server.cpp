@@ -14,7 +14,6 @@ Server::Server()
   cout <<"Server!";
   connectionManagerThread = new ConnectionManager(this);
   worldManagerThread = new WorldManager();
-  chatManagerThread = new ChatManager();
 
   //struct timeval tval;
   //int i = 1;
@@ -31,9 +30,8 @@ Server::Server()
 Server::~Server()
 {
 	delete connectionManagerThread;
-	delete chatManagerThread;
 	delete server;
-	std::vector<ClientManager*>::iterator it;
-	for(it=clients.begin();it!=clients.end();it++)
-		delete *it;
+	//std::vector<cthreads_t *>::iterator it;
+	//for(it=clients.begin();it!=clients.end();it++)
+		//delete *it;
 }

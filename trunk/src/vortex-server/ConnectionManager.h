@@ -7,11 +7,12 @@
 
 #ifndef CONNECTIONMANAGER_H_
 #define CONNECTIONMANAGER_H_
-
+//#include "Server.h"
 #include "../common/Thread.h"
 #include "../common/Event.h"
-#include "ClientManager.h"
-#include "Server.h"
+#include "ClientManagerIn.h"
+#include "ClientManagerOut.h"
+
 class Server;
 class ConnectionManager: public Thread
 {
@@ -22,7 +23,7 @@ public:
 	//Registers a new client in the Server class
   inline Server * getServ(){return serv;}
 	void  execute(void * arg);
-	void addServerClient(ClientManager * mgr);
+	void addServerClient(struct cthreads ct);
 	ConnectionManager(Server * serv);
 	~ConnectionManager();
 };

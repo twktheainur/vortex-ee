@@ -10,6 +10,15 @@ under the License.*/
 #include "TCPSocket.h"
 #if defined(__WIN32__) || defined(_WIN32)
   //#include <ws2tcpip.h>
+#else
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <arpa/inet.h>
 #endif
 /******************************************************************************/
 const char *inet_ntop(int af, const void *src, char *dst, socklen_t cnt)
@@ -28,7 +37,7 @@ const char *inet_ntop(int af, const void *src, char *dst, socklen_t cnt)
                 struct sockaddr_in6 in;
                 memset(&in, 0, sizeof(in));
                 in.sin6_family = AF_INET6;
-                memcpy(&in.sin6_addr, src, sizeof(struct in_addr6));
+                memcpy(&in.sin6_addr, src,8);
                 getnameinfo((struct sockaddr *)&in, sizeof(struct
 sockaddr_in6), dst, cnt, NULL, 0, NI_NUMERICHOST);
                 return dst;
