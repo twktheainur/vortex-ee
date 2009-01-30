@@ -15,27 +15,32 @@ extern "C"
   #include <pthread.h>
 }
 #include "TCPServer.h"
-//#include "ConnectionManager.h"
 #include "WorldManager.h"
-#include "ChatManager.h"
-#include "EventManager.h"
 #include "../common/Event.h"
+#include "ClientManagerIn.h"
+#include "ClientManagerOut.h"
 #include <vector>
 
 class ConnectionManager;
 class TCPServer;
+
+typedef struct cthreads
+{
+  ClientManagerIn * in;
+  ClientManagerOut * out;
+}cthreads_t;
+
 class Server
 {
 private:
 	//Thread Classes
   ConnectionManager * connectionManagerThread;
   WorldManager * worldManagerThread;
-  ChatManager * chatManagerThread;
   //Clients will be registered in here by the TCPServer through the ConnectionManager
-  vector<ClientManager *> clients;
+  vector<cthreads_t> clients;
   TCPServer * server;
 public:
-	inline vector<ClientManager *>* getClients(){return &clients;}
+	inline vector<cthreads_t>* getClients(){return &clients;}
 	inline void setServer(TCPServer * serv){server=serv;}
 	inline TCPServer * getServer(){return server;}
 	//Here event has to point to a global scope variable sharable by threads

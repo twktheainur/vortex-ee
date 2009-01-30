@@ -5,7 +5,7 @@
 #include <Ogre.h>
 #include "InputManager.h"
 #include "globals.h"
-#include "vector.h"
+#include <vector>
 #include "PersonnagePhysique.h"
 #include "MyGUI.h"
 

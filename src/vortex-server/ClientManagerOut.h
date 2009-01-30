@@ -8,14 +8,14 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 
-#ifndef CLIENTMANAGER_H_
-#define CLIENTMANAGER_H_
+#ifndef CLIENTMANAGEROUT_H_
+#define CLIENTMANAGEROUT_H_
 #include "globals.h"
 #include "../common/Thread.h"
 #include "../common/Event.h"
 #include "../common/TCPSocket.h"
 
-class ClientManager : public Thread
+class ClientManagerOut : public Thread
 {
 private:
   Event event;
@@ -23,8 +23,8 @@ private:
 
   void execute(void * arg);
 public:
-	ClientManager(TCPSocket sock);
-	~ClientManager();
+	ClientManagerOut(TCPSocket sock);
+	~ClientManagerOut();
   inline Event getEvent(){return event;}
 };
 

@@ -8,7 +8,8 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 
-#include "ClientManager.h"
+#include "ClientManagerOut.h"
+#include "ClientManagerIn.h"
 #include "../common/bitBuffer.h"
 #include "globals.h"
 #include "../common/Exception.h"
@@ -16,18 +17,19 @@ under the License.*/
 #include "../common/LoginResponsePacket.h"
 #include "../common/UpdatePacket.h"
 
-ClientManager::ClientManager(TCPSocket sock)
+ClientManagerIn::ClientManagerIn(TCPSocket sock,ClientManagerOut * cmo)
         : Thread()
 {
     socket = sock;
+    this->cmo=cmo;
     start((void*) (&sock));
 }
 
-ClientManager::~ClientManager()
+ClientManagerIn::~ClientManagerIn()
 {
 }
 
-void ClientManager::execute(void * arg)
+void ClientManagerIn::execute(void * arg)
 {
     TCPSocket local_socket = *((TCPSocket*) arg);
     printf("New Client!\n");
@@ -39,37 +41,36 @@ void ClientManager::execute(void * arg)
     int iter=0;
     try
     {
-        cout << "Damn it!" << endl;
-        if(local_socket.pollRead())
-          local_socket.recv(headbuff,5, 0);
-        cout << "Damn it! more!" << endl;
+        local_socket.recv(headbuff,5, 0);
         LoginPacket lp = LoginPacket(headbuff,5);
-        cout << "Size" <<lp.getDataSize() << endl;
         databuff = (char *)malloc(lp.getDataSize());
-        if(local_socket.pollRead())
-          local_socket.recv(databuff,lp.getDataSize(),0);
-        printf("Pre ERROR\n");
+        local_socket.recv(databuff,lp.getDataSize(),0);
         lp.setData(databuff,lp.getDataSize());
-        printf("POST ERROR!\n");
         //Verif dans la base de donnees si le login est accepte
         if (lp.getLogin()=="twk")
         {
             cout << lp.getLogin()<<endl;
             cout << lp.getPassHash()<<endl;
+            cout << "Building Response\n";
             LoginResponsePacket lpr(lp.getLogin());
             size_t hlen = lpr.getHeaderSize();
             size_t dlen = lpr.getDataSize();
-            cout << "send 1" <<endl;
             local_socket.send(lpr.getHeader().set(),&hlen,0);
-            cout << "send 2::" << hlen << "--" << dlen<<endl;
             local_socket.send(lpr.getData().set(),&dlen,0);
-            cout << "Data successfully sent! TADA!" <<endl;
+            cout << "Stuff Sent!\n";
+            cmo->getEvent().sendEvent(event_connect_login,lp.getData());
+        }
+        else
+        {
+          cout << "wrong pass biatch!\n";
+          cmo->cancel();
+          this->cancel();
         }
         ok = true;
         while (ok)
         {
             //Polling to check whether there is data to read...
-            cout << "Server ClientManager Main Protocol Loop!"<<endl;
+            cout << "Server ClientManagerIn Main Protocol Loop!"<<endl;
                 headbuff = (char *)malloc(5);
                 try
                 {

@@ -14,7 +14,7 @@ endif(WIN32)
 set(CMAKE_CXX_FLAGS "-Wall  -fmessage-length=0 -Wno-deprecated ")
 set(CMAKE_CXX_FLAGS_DEBUG -O0 -g3 -c)
 set(CMAKE_CXX_FLAGS_RELEASE -O0 -g3 -c)
-link_libraries(pthread ${OGRE_LIBRARIES} ${OIS_LIBRARIES} ${PTHREADS_LIBRARY} ${SOCKET_LIBRARY})
+link_libraries(pthread ${OGRE_LIBRARIES} ${OIS_LIBRARIES} ${PTHREADS_LIBRARY} ${SOCKET_LIBRARY} mygui)
 
 add_subdirectory(src)
 
@@ -25,28 +25,34 @@ set(bin_dir bin)
 
 
 include_directories(src/common)
-include_directories(${OGRE_INCLUDE_DIR} ${OIS_INCLUDE_DIR} ${PTHREADS_INCLUDE_DIR} ${SOCKET_INCLUDE})
-link_directories($(OGRE_LIB_DIR) ${OIS_LIB_DIR})
+include_directories(${OGRE_INCLUDE_DIR} ${OIS_INCLUDE_DIR} ${PTHREADS_INCLUDE_DIR} ${SOCKET_INCLUDE} src/MyGUIEngine/include)
+link_directories($(OGRE_LIB_DIR) ${OIS_LIB_DIR} /usr/local/lib)
 
 
 
-set(server_source_files ${srvsrc}/ChatManager.cpp  ${srvsrc}/ClientManager.cpp
-                        ${srvsrc}/ConnectionManager.cpp  ${srvsrc}/EventManager.cpp
+set(server_source_files ${srvsrc}/ClientManagerIn.cpp
+			${srvsrc}/ClientManagerOut.cpp
+                        ${srvsrc}/ConnectionManager.cpp  
                         ${srvsrc}/main.cpp  ${srvsrc}/Server.cpp 
-                        ${srvsrc}/TCPServer.cpp)
+                        ${srvsrc}/TCPServer.cpp ${srvsrc}/WorldManager.cpp
+                        ${srvsrc}/World.cpp)
 
 set(client_source_files ${clisrc}/main.cpp ${clisrc}/TCPClient.cpp
 			${clisrc}/Application.cpp ${clisrc}/VortexFrameListener.cpp
 			${clisrc}/InputManager.cpp
-			${clisrc}/ChatManager.cpp  ${clisrc}/ConnectionManager.cpp  
-			${clisrc}/EventManager.cpp ${clisrc}/ApplicationManager.cpp
-                        ${clisrc}/Client.cpp)
+			${clisrc}/ConnectionManagerIn.cpp
+			${clisrc}/ConnectionManagerOut.cpp  
+			${clisrc}/ApplicationManager.cpp
+                        ${clisrc}/Client.cpp ${clisrc}/World.cpp
+			${clisrc}/WorldManager.cpp ${clisrc}/PersonnagePhysique.cpp)
 
 set(common_source_files ${comsrc}/Cond.cpp ${comsrc}/Event.cpp ${comsrc}/Mutex.cpp 
                         ${comsrc}/Packet.cpp ${comsrc}/Semaphore.cpp
                         ${comsrc}/Socket.cpp ${comsrc}/TCPSocket.cpp
-                        ${comsrc}/Thread.cpp ${comsrc}/UDPSocket.cpp 
-                        ${comsrc}/WorldManager.cpp)
+                        ${comsrc}/Thread.cpp ${comsrc}/UDPSocket.cpp
+                        ${comsrc}/md5wrapper.cpp ${comsrc}/md5.cpp
+                        ${comsrc}/LoginResponsePacket.cpp ${comsrc}/LoginPacket.cpp
+			${comsrc}/UpdatePacket.cpp)
 
 if(WIN32)
   add_definitions(-DWIN32)

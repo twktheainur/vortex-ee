@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     }
     catch(vortex::Exception  * e)
     {
-      flog <<e->what() << endl;
+      flog << "Main catcher!" <<e->what() << endl;
     }
   }
 	return 0;

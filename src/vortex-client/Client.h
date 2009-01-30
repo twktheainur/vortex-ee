@@ -10,7 +10,8 @@ extern "C"
 #include "EventManager.h"
 #include <vector>
 
-class ConnectionManager;
+class ConnectionManagerIn;
+class ConnectionManagerOut;
 class TCPClient;
 class ApplicationManager;
 class WorldManager;
@@ -18,7 +19,8 @@ class Client
 {
 private:
   //Thread Classes
-  ConnectionManager * connectionManagerThread;
+  ConnectionManagerIn * connectionManagerInThread;
+  ConnectionManagerOut * connectionManagerOutThread;
   WorldManager * worldManagerThread;
   //ChatManager * chatManagerThread;
   ApplicationManager * applicationManagerThread;
@@ -28,9 +30,13 @@ private:
 public:
 	inline void setClient(TCPClient * cli){client=cli;}
 	inline TCPClient * getClient(){return client;}
-	inline ConnectionManager * getConnectionManagerThread()
+	inline ConnectionManagerIn * getConnectionManagerInThread()
 	{
-	  return connectionManagerThread;
+	  return connectionManagerInThread;
+  }
+  inline ConnectionManagerOut * getConnectionManagerOutThread()
+	{
+	  return connectionManagerOutThread;
   }
 	//inline Event * getEventManagerEvent(){return eventManagerEvent;}
 	//Here event has to point to a global scope variable sharable by threads

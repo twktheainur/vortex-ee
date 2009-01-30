@@ -8,6 +8,8 @@ basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
 License for the specific language governing rights and limitations
 under the License.*/
 #include "TCPServer.h"
+#include "ClientManagerOut.h"
+#include "Server.h"
 
 TCPServer::TCPServer(int maxClients,string service,ConnectionManager * mgr)
 {
@@ -25,7 +27,7 @@ TCPServer::TCPServer(int maxClients,string service,ConnectionManager * mgr)
       socket->socket(p);
       socket->setSockOpt(SOL_SOCKET,SO_REUSEADDR,&yes,sizeof yes);
       socket->setSockOpt(IPPROTO_TCP,TCP_NODELAY ,&yes,sizeof yes);
-      socket->setNblock();
+      //socket->setNblock();
       socket->bind(p);
       break;
     }
@@ -67,12 +69,14 @@ void TCPServer::startListener()
       new_socket = socket->accept();
       try
       {
-        mgr->addServerClient(new ClientManager(*new_socket));
+        ClientManagerOut * cmo = new ClientManagerOut(*new_socket);
+        struct cthreads ct = {new ClientManagerIn(*new_socket,cmo),cmo};
+        mgr->addServerClient(ct);
         delete new_socket;
       }
       catch(vortex::Exception * e)
       {
-        printf("TCPServer::startListener()(incoming_handler):%s\n",e->what());
+        cout << "TCPServer::startListener()(incoming_handler):%s\n" << e->what() << endl;
         delete e;
       }
     }
