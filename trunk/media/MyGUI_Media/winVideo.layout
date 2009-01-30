@@ -1,13 +1,103 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
     <Widget type="Window" skin="WindowC" position="424 48 432 456" layer="Overlapped" name="winVideo">
+		<Property key="Widget_Show" value="false"/>
         <Property key="Widget_Caption" value="Gerer et consulter vos films"/>
-        <Property key="Widget_Show" value="false"/>
         <Widget type="Button" skin="ButtonSmall" position="213 394 96 24" name="buttonVideoFermer">
             <Property key="Widget_Caption" value="Fermer"/>
         </Widget>
 		<Widget type="Button" skin="ButtonSmall" position="117 394 90 24" name="buttonVideoCacher">
             <Property key="Widget_Caption" value="Cacher"/>
+        </Widget>
+        <Widget type="Tab" skin="Tab" position="-3 2 428 390">
+            <Widget type="Sheet" skin="Default" position="8 29 412 354" name="VideoTabCons">
+                <Property key="Widget_Caption" value="Videotheque"/>
+                <Property key="Sheet_Select" value="true"/>
+                <Widget type="StaticText" skin="StaticText" position="8 3 392 16">
+                    <Property key="Widget_Caption" value="Ici vous pouvez consulter votre videotheque et la partager..."/>
+                    <Property key="Widget_FontHeight" value="16"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="8 27 264 24" name="comboVideoParcour">
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+                <Widget type="Button" skin="Button" position="288 27 112 24" name="buttonVideoParc">
+                    <Property key="Widget_Caption" value="Partager"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="24 83 64 16">
+                    <Property key="Widget_Caption" value="Auteur:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="80 83 184 16" name="labelVideoAuteur">
+                    <Property key="Widget_Caption" value=" "/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="24 107 112 16">
+                    <Property key="Widget_Caption" value="Note moyenne:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="136 107 32 16" name="labelVideoNote">
+                    <Property key="Widget_Caption" value=" "/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="64 331 120 16">
+                    <Property key="Widget_Caption" value="Donner une note:"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="200 327 56 24" name="comboVideoNote">
+					<Property key="Widget_Caption" value="0"/>
+                    <Property key="ComboBox_AddItem" value="0"/>
+                    <Property key="ComboBox_AddItem" value="1"/>
+                    <Property key="ComboBox_AddItem" value="2"/>
+                    <Property key="ComboBox_AddItem" value="3"/>
+                    <Property key="ComboBox_AddItem" value="4"/>
+                    <Property key="ComboBox_AddItem" value="5"/>
+                </Widget>
+                <Widget type="Button" skin="Button" position="288 326 80 24" name="buttonVideoNoter">
+                    <Property key="Widget_Caption" value="Noter"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="24 131 56 16">
+                    <Property key="Widget_Caption" value="Duree:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="80 131 80 16" name="labelVideoDuree"/>
+                <Widget type="Button" skin="Button" position="96 179 224 24">
+                    <Property key="Widget_Caption" value="Jouer pour moi"/>
+                </Widget>
+                <Widget type="Button" skin="Button" position="96 227 224 24">
+                    <Property key="Widget_Caption" value="Jouer pour tout le monde"/>
+                </Widget>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 412 354" name="VideoTabAutre">
+                <Property key="Widget_Caption" value="Et les autres?"/>
+                <Widget type="StaticText" skin="StaticText" position="8 3 392 16">
+                    <Property key="Widget_Caption" value="Ici vous avez acces aux films des autres utilisateurs..."/>
+                    <Property key="Widget_FontHeight" value="16"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="8 27 264 24"/>
+                <Widget type="Button" skin="Button" position="288 27 112 24" name="buttonVideoDl">
+                    <Property key="Widget_Caption" value="Telecharger"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="12 59 384 16">
+                    <Property key="Widget_FontHeight" value="15"/>
+                    <Property key="Widget_Caption" value="#005000Vous pouvez telecharger un film pour l'ajouter a votre"/>
+                </Widget>
+				<Widget type="StaticText" skin="StaticText" position="16 75 88 16">
+                    <Property key="Widget_Caption" value="#005000videotheque..."/>
+                    <Property key="Widget_FontHeight" value="15"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 107 56 16">
+                    <Property key="Widget_Caption" value="Auteur:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="56 139 88 16" name="labelVideoAuteur2">
+                    <Property key="Widget_Caption" value=""/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 155 56 16">
+                    <Property key="Widget_Caption" value="Taille:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="112 115 56 16" name="labelVideoTaille">
+                    <Property key="Widget_Caption" value=""/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 131 104 16">
+                    <Property key="Widget_Caption" value="Note moyenne:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="64 91 176 16" name="labelVideoNote2">
+                    <Property key="Widget_Caption" value=""/>
+                </Widget>
+            </Widget>
         </Widget>
     </Widget>
 </MyGUI>

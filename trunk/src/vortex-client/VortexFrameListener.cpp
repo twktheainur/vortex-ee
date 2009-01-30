@@ -21,8 +21,15 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
 
     //fenetre qui apparait lorsqu'on est proche d'un objet interactif
     winLaunchInter = MyGUI::LayoutManager::getInstance().load("launchInterface.layout");
-    showWindow(1,false);
 
+    //tableau noir
+    winTableau = MyGUI::LayoutManager::getInstance().load("tableau.layout");
+    // set callback
+    MyGUI::ButtonPtr buttonTabValider = mGUI->findWidget<MyGUI::Button>("buttonTabValider");
+    buttonTabValider->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::closeWindowTableau);
+    // set callback2
+    MyGUI::ButtonPtr buttonTabFermer = mGUI->findWidget<MyGUI::Button>("buttonTabFermer");
+    buttonTabFermer->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::closeWindowTableau);
 
     //fenetre de confirmation
     winConfirm = MyGUI::LayoutManager::getInstance().load("confirm.layout");
@@ -43,6 +50,7 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
     MyGUI::ButtonPtr buttonImageCacher = mGUI->findWidget<MyGUI::Button>("buttonImageCacher");
     buttonImageCacher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowImage);
 
+
     winVideo = MyGUI::LayoutManager::getInstance().load("winVideo.layout");
     // set callback
     MyGUI::ButtonPtr buttonVideoFermer = mGUI->findWidget<MyGUI::Button>("buttonVideoFermer");
@@ -50,6 +58,7 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
     // set callback2
     MyGUI::ButtonPtr buttonVideoCacher = mGUI->findWidget<MyGUI::Button>("buttonVideoCacher");
     buttonVideoCacher->eventMouseButtonClick = MyGUI::newDelegate(this, &VortexFrameListener::hideWindowVideo);
+
 
     winAudio = MyGUI::LayoutManager::getInstance().load("winAudio.layout");
     // set callback
@@ -98,12 +107,46 @@ VortexFrameListener::VortexFrameListener(RenderWindow* win, Camera* cam,Personna
     messageBienvenue = false;
 }
 
+
 void VortexFrameListener::notifyComboChatAccept(MyGUI::Widget * _sender)
 {
     const Ogre::UTFString & message = _sender->getCaption();
     if (message == "") return;
 
-    addToChat( "#00003B" + idClient + ": #006B85" + message);
+    string mess = message;
+    string::iterator it;
+    it=mess.begin();
+    if (*it == '/')
+    {
+        if (mess == "/superman") {
+            addToChat( "#175016*" + idClient + " veut devenir un super hero*");
+            mMove = 2000;
+        }
+        else if (mess == "/supertoupieman") {
+            addToChat( "#175016*" + idClient + " veut devenir super ridicule*");
+            mRotate = 20;
+        }
+        else if (mess == "/supernormal") {
+            addToChat( "#175016*" + idClient + " prefere garder les pieds sur terre*");
+            mRotate = 0.2;
+            mMove = 100;
+        }
+        else if (mess == "/supercanard") {
+            addToChat( "#175016*" + idClient + " COLLECTIOOOONNE DES CANARDS HOHOOO*");
+            addToChat( "#175016*" + idClient + " COLLECTIOOOONNE DES CANARDS PAR MILLIEEER*");
+            addToChat( "#175016*" + idClient + " COLLECTIOOOONNE DES CANARDS HOHOOO*");
+            addToChat( "#175016*" + idClient + " COLLECTIOOOONNE DES CANAAARDS VIVANTS!*");
+        }
+        else if (mess == "/ilovethedarkness") {
+            addToChat( "#175016*" + idClient + " n'a pas eu sa dose de solitude aujourd'hui, il ira au coin*");
+            mPlayer->getSceneNode()->setPosition(-24,528,200);
+        }
+        else
+            addToChat( "#175016*" + idClient + " raconte vraiment n'importe quoi, il a besoin de repos, appellez une ambulance*");
+    }
+    else
+    {
+        addToChat( "#00003B" + idClient + ": #006B85" + message);
 
         bitBuffer buff;
         buff.writeString(idClient);
@@ -112,6 +155,7 @@ void VortexFrameListener::notifyComboChatAccept(MyGUI::Widget * _sender)
 
         //on peut envoyer l'event d'update
         ogreManagerEvent.sendEvent(6,buff);
+    }
 
     _sender->setCaption("");
 }
@@ -154,6 +198,11 @@ void VortexFrameListener::showWindow(int window, bool show)
     case 5: //winConfirm
         if (show) { winConfirm[0]->show(); }
         else winConfirm[0]->hide();
+    break;
+
+    case 6: //winTableau
+        if (show) { winTableau[0]->show(); }
+        else winTableau[0]->hide();
     break;
 
     default:
@@ -258,8 +307,9 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     if ((distance(55.0,392.0,120.0,posX,posY,posZ,80.0,80.0,80.0) || distance(144.0,384.0,72.0,posX,posY,posZ,80.0,80.0,80.0) ||
             distance(-627.0,560.0,168.0,posX,posY,posZ,80.0,80.0,80.0) || distance(-752.0,472.0,168.0,posX,posY,posZ,80.0,80.0,80.0) ||
             distance(736.0,-240.0,96.0,posX,posY,posZ,80.0,80.0,80.0) || distance(816.0,-160.0,96.0,posX,posY,posZ,80.0,80.0,80.0) ||
-            distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0)) && !launchIntShow)
-        // TV(2), bib1(2), bib2(2), audio(1)
+            distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0) || distance(-904.0,160.0,150.0,posX,posY,posZ,50.0,50.0,50.0) ||
+            distance(-96.0,512.0,150.0,posX,posY,posZ,70.0,70.0,70.0)) && !launchIntShow)
+        // TV(2), bib1(2), bib2(2), audio(1), porte(1), tableau(1)
         // si la distance avec le point donne est assez petite et que la fenetre d'info n'est pas encore affichee, on l'affiche
     {
         launchIntShow = true;
@@ -268,7 +318,8 @@ bool VortexFrameListener::frameEnded(const FrameEvent &evt)
     else if ((!distance(55.0,392.0,120.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(144.0,384.0,72.0,posX,posY,posZ,80.0,80.0,80.0) &&
               !distance(-627.0,560.0,168.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(-752.0,472.0,168.0,posX,posY,posZ,80.0,80.0,80.0) &&
               !distance(736.0,-240.0,96.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(816.0,-160.0,96.0,posX,posY,posZ,80.0,80.0,80.0) &&
-              !distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0)) && launchIntShow)
+              !distance(224.0,-232.0,104.0,posX,posY,posZ,80.0,80.0,80.0) && !distance(-904.0,160.0,150.0,posX,posY,posZ,50.0,50.0,50.0) &&
+              !distance(-96.0,512.0,150.0,posX,posY,posZ,70.0,70.0,70.0)) && launchIntShow)
         // si winLaunchInter est montree et qu'on s'eloigne trop, on la cache
     {
         launchIntShow = false;
@@ -577,6 +628,16 @@ bool VortexFrameListener::keyPressed(const OIS::KeyEvent &e)
                 //lecteur audio
             {
                 showWindow(4,true);
+            }
+            else if (distance(-904.0,160.0,150.0,posX,posY,posZ,50.0,50.0,50.0))
+                //porte
+            {
+                showWindow(5,true);
+            }
+            else if (distance(-96.0,512.0,150.0,posX,posY,posZ,70.0,70.0,70.0))
+                //tableau
+            {
+                showWindow(6,true);
             }
         }
     break;

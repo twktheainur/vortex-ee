@@ -2,6 +2,7 @@
 <MyGUI type="Layout">
     <Widget type="Widget" skin="Panel" position="10 10 272 79" layer="Back">
         <Property key="Widget_Alpha" value="80"/>
+		<Property key="Widget_Show" value="false"/>
         <Widget type="StaticImage" skin="StaticImage" position="8 8 64 64">
             <Property key="Image_Texture" value="info.png"/>
         </Widget>
