@@ -293,12 +293,21 @@
 
         //chaine hifi
         Entity *hifi = mSceneMgr->createEntity("hifi", "chaineHiFi.mesh");
-        tv->setCastShadows(true);
+        hifi->setCastShadows(true);
         SceneNode *hifiNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("HiFinode", Vector3(240,-235,93));
         hifiNode->attachObject(hifi);
         hifiNode->scale(Vector3(9,9,9));
         hifiNode->pitch(Degree(90));
         hifiNode->yaw(Degree(180));
+        
+        //lecteur de DVD
+        Entity *lectDVD = mSceneMgr->createEntity("lectDVD","lecteurDVD.mesh");
+        lectDVD->setCastShadows(true);
+        SceneNode *lectDVDNode = mSceneMgr->getRootSceneNode()->createChildSceneNode("DVDNode", Vector3(136,388,84));
+        lectDVDNode->attachObject(lectDVD);
+        lectDVDNode->scale(Vector3(15,15,15));
+        lectDVDNode->pitch(Degree(90));
+        lectDVDNode->yaw(Degree(90));
 
 
         // devant la télé
