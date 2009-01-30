@@ -249,7 +249,7 @@
 	"Event.h"
 	<cstdlib>
 
-1233154629 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
+1233274139 o:\twk\doc\programming\iut2a\vortex-ee\src\common\event.h
 	<winsock2.h>
 	<sys/select.h>
 	<pthread.h>
@@ -293,7 +293,7 @@
 1233240454 source:o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.cpp
 	"Socket.h"
 
-1233240086 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
+1233279585 o:\twk\doc\programming\iut2a\vortex-ee\src\common\socket.h
 	<ws2tcpip.h>
 	<winsock2.h>
 	<unistd.h>
@@ -407,7 +407,7 @@
 	"EventManager.h"
 	"globals.h"
 
-1233268013 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\server.cpp
+1233279626 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\server.cpp
 	"Server.h"
 	<cstdlib>
 
@@ -502,7 +502,7 @@
 	"../common/Event.h"
 	"../common/TCPSocket.h"
 
-1233266368 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanagerout.cpp
+1233268826 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanagerout.cpp
 	"ClientManagerOut.h"
 	"../common/bitBuffer.h"
 	"globals.h"
@@ -511,7 +511,7 @@
 	"../common/LoginResponsePacket.h"
 	"../common/UpdatePacket.h"
 
-1233268415 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanagerin.cpp
+1233270414 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\clientmanagerin.cpp
 	"ClientManagerOut.h"
 	"ClientManagerIn.h"
 	"../common/bitBuffer.h"
@@ -520,4 +520,270 @@
 	"../common/LoginPacket.h"
 	"../common/LoginResponsePacket.h"
 	"../common/UpdatePacket.h"
+
+1233138815 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\base.cc
+	"Base.h"
+	<mysql++.h>
+
+1233138815 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\base.h
+	<string>
+	<mysql++.h>
+	<stdio.h>
+	"Document.h"
+	"Commentaire.h"
+	"Utilisateur.h"
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\mysql++.h
+	"connection.h"
+	"cpool.h"
+	"query.h"
+	"sql_types.h"
+	"transaction.h"
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\connection.h
+	"common.h"
+	"noexceptions.h"
+	"options.h"
+	<string>
+	"tcp_connection.h"
+	"uds_connection.h"
+	"wnp_connection.h"
+
+1233229197 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\common.h
+	<winsock.h>
+	"config.h"
+	<mysql/mysql_version.h>
+	<mysql_version.h>
+	<mysql/mysql.h>
+	<mysql.h>
+
+1233229199 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlserver\mysql_version.h
+	<custom_conf.h>
+
+1233229199 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlserver\mysql.h
+	<standards.h>
+	<sys/types.h>
+	<winsock.h>
+	"mysql_version.h"
+	"mysql_com.h"
+	"mysql_time.h"
+	"typelib.h"
+	"my_list.h"
+	"my_alloc.h"
+
+1233229199 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlserver\mysql_com.h
+
+1233229199 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlserver\mysql_time.h
+
+1233229199 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlserver\typelib.h
+	"my_alloc.h"
+
+1233229199 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlserver\my_alloc.h
+
+1233229199 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlserver\my_list.h
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\noexceptions.h
+	"common.h"
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\options.h
+	"common.h"
+	<deque>
+	<string>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\tcp_connection.h
+	"connection.h"
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\uds_connection.h
+	"connection.h"
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\wnp_connection.h
+	"connection.h"
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\cpool.h
+	"beemutex.h"
+	<list>
+	<assert.h>
+	<time.h>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\beemutex.h
+	"exceptions.h"
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\exceptions.h
+	"options.h"
+	<exception>
+	<string>
+	<sstream>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\query.h
+	"common.h"
+	"noexceptions.h"
+	"qparms.h"
+	"querydef.h"
+	"result.h"
+	"row.h"
+	"stadapter.h"
+	<deque>
+	<iomanip>
+	<list>
+	<map>
+	<set>
+	<vector>
+	<ext/slist>
+	<slist>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\qparms.h
+	"stadapter.h"
+	<vector>
+
+1233229197 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\stadapter.h
+	"common.h"
+	"datetime.h"
+	"null.h"
+	"sql_buffer.h"
+	"sql_types.h"
+	<stdexcept>
+	<string>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\datetime.h
+	"common.h"
+	"comparable.h"
+	<string>
+	<iostream>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\comparable.h
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\null.h
+	"exceptions.h"
+	<iostream>
+	<string>
+
+1233229197 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\sql_buffer.h
+	"refcounted.h"
+	"type_info.h"
+	<string>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\refcounted.h
+	<memory>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\type_info.h
+	"common.h"
+	"exceptions.h"
+	<map>
+	<sstream>
+	<typeinfo>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\sql_types.h
+	"common.h"
+	"tiny_int.h"
+	<string>
+	<stdint.h>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\tiny_int.h
+	"common.h"
+	<ostream>
+
+1233229197 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\querydef.h
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\result.h
+	"common.h"
+	"exceptions.h"
+	"field.h"
+	"field_names.h"
+	"field_types.h"
+	"noexceptions.h"
+	"refcounted.h"
+	"row.h"
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\field.h
+	"common.h"
+	"type_info.h"
+	<vector>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\field_names.h
+	<string>
+	<vector>
+	<ctype.h>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\field_types.h
+	"type_info.h"
+	<vector>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\row.h
+	"common.h"
+	"mystring.h"
+	"noexceptions.h"
+	"refcounted.h"
+	"vallist.h"
+	<vector>
+	<string>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\mystring.h
+	"common.h"
+	"datetime.h"
+	"exceptions.h"
+	"null.h"
+	"sql_buffer.h"
+	<string>
+	<sstream>
+	<limits>
+	<stdlib.h>
+	<string.h>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\vallist.h
+	"manip.h"
+	<string>
+	<vector>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\manip.h
+	"common.h"
+	"myset.h"
+	"stadapter.h"
+	<iostream>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\myset.h
+	"common.h"
+	"mystring.h"
+	"stream2string.h"
+	<iostream>
+	<set>
+
+1233229196 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\stream2string.h
+	<sstream>
+	<string>
+
+1233229197 o:\twk\doc\programming\iut2a\vortex-ee\src\mysqlpp\transaction.h
+	"common.h"
+
+1233138815 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\document.h
+	<string>
+	"Base.h"
+	<mysql++.h>
+	<stdio.h>
+
+1233138815 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\commentaire.h
+	"Utilisateur.h"
+	"Document.h"
+	"Base.h"
+	<mysql++.h>
+	<string>
+
+1233138815 o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\utilisateur.h
+	<string>
+	"Document.h"
+	"Base.h"
+	"Commentaire.h"
+
+1233138815 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\commentaire.cc
+	"Commentaire.h"
+	<mysql++.h>
+
+1233138815 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\document.cc
+	"Document.h"
+	<mysql++.h>
+
+1233138815 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\utilisateur.cc
+	"Utilisateur.h"
+	<mysql++.h>
+
+1233314861 source:o:\twk\doc\programming\iut2a\vortex-ee\src\vortex-server\ressources.rc
 
