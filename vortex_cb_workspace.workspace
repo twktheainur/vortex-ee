@@ -2,6 +2,7 @@
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
 		<Project filename="src\vortex-server\vortex-server.cbp" />
+		<Project filename="src\vortex-client\&lt;invalid path&gt;" />
 		<Project filename="src\vortex-client\vortex-client.cbp" active="1" />
 	</Workspace>
 </CodeBlocks_workspace_file>

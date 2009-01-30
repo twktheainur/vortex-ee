@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout">
-    <Widget type="Button" skin="ButtonSmall" position="575 656 93 38" layer="Main" name="buttonImageAfficher">
+    <Widget type="Button" skin="ButtonSmall" position="575 712 93 38" layer="Main" name="buttonImageAfficher">
         <Property key="Widget_Caption" value="Photo"/>
         <Property key="Widget_Alpha" value="95"/>
-		<Property key="Widget_Show" value="false"/>
+        <Property key="Widget_Show" value="false"/>
     </Widget>
-    <Widget type="Button" skin="ButtonSmall" position="696 656 93 38" layer="Main" name="buttonAudioAfficher">
+    <Widget type="Button" skin="ButtonSmall" position="728 712 93 38" layer="Main" name="buttonAudioAfficher">
         <Property key="Widget_Caption" value="Musique"/>
         <Property key="Widget_Alpha" value="95"/>
-		<Property key="Widget_Show" value="false"/>
+        <Property key="Widget_Show" value="false"/>
     </Widget>
-    <Widget type="Button" skin="ButtonSmall" position="822 656 93 38" layer="Main" name="buttonVideoAfficher">
+    <Widget type="Button" skin="ButtonSmall" position="886 712 93 38" layer="Main" name="buttonVideoAfficher">
         <Property key="Widget_Caption" value="Film"/>
         <Property key="Widget_Alpha" value="95"/>
-		<Property key="Widget_Show" value="false"/>
+        <Property key="Widget_Show" value="false"/>
     </Widget>
-    <Widget type="Widget" skin="Panel" position="555 664 380 40" layer="Back">
+    <Widget type="Widget" skin="Panel" position="520 728 511 40" layer="Back">
         <Property key="Widget_Alpha" value="70"/>
     </Widget>
 </MyGUI>

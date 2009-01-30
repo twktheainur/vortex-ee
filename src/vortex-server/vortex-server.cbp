@@ -14,11 +14,15 @@
 				<Compiler>
 					<Add option="-O3" />
 					<Add directory="..\pthread" />
+					<Add directory="..\mysqlserver" />
+					<Add directory="..\mysqlpp" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 					<Add option="-lws2_32" />
 					<Add library="..\..\lib\libpthreadGC2.a" />
+					<Add library="..\..\bin\mysqlpp.dll" />
+					<Add library="..\..\bin\libmysql.dll" />
 				</Linker>
 			</Target>
 		</Build>
@@ -51,14 +55,19 @@
 		<Unit filename="..\common\WorldManager.cpp" />
 		<Unit filename="..\common\WorldManager.h" />
 		<Unit filename="..\common\bitBuffer.h" />
+		<Unit filename="Base.cc" />
+		<Unit filename="Base.h" />
 		<Unit filename="ChatManager.cpp" />
 		<Unit filename="ChatManager.h" />
 		<Unit filename="ClientManager.cpp" />
 		<Unit filename="ClientManager.h" />
 		<Unit filename="Comment.h" />
+		<Unit filename="Commentaire.cc" />
+		<Unit filename="Commentaire.h" />
 		<Unit filename="ConnectionManager.cpp" />
 		<Unit filename="ConnectionManager.h" />
 		<Unit filename="DataBase.h" />
+		<Unit filename="Document.cc" />
 		<Unit filename="Document.h" />
 		<Unit filename="EventManager.cpp" />
 		<Unit filename="EventManager.h" />
@@ -68,6 +77,8 @@
 		<Unit filename="TCPServer.cpp" />
 		<Unit filename="TCPServer.h" />
 		<Unit filename="User.h" />
+		<Unit filename="Utilisateur.cc" />
+		<Unit filename="Utilisateur.h" />
 		<Unit filename="World.cpp" />
 		<Unit filename="World.h" />
 		<Unit filename="WorldManager.cpp" />
