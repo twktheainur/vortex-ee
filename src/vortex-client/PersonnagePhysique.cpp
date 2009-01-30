@@ -50,6 +50,8 @@ bool PersonnagePhysique::endroitInterdit(Vector3 coordPrecedentes, Vector3 coord
   || (coord.x < 138 && coordPrecedentes.x >= 138 && ( coordPrecedentes.y < 126 || coordPrecedentes.y > 194))//"niveau superieur" (on ne peut pas remonter par là, il faut prendre l'escalier ... && (min escalier || max esc)
   || (coord.x < 138 && coord.x > 64 && ( coord.y < 126 && coordPrecedentes.y >=126 || coord.y > 194 && coordPrecedentes.y <= 194) )//on est dans l'escalier et on essaye de remonter sur les bords (pas bien)
   || (coord.x > 118 && coord.x < 166 && coord.y > 342 && coord.y < 434)//"magnetoscope" (enfin, le truc en bois devant la télé)
+  || (coord.x > -10 && coord.x < 138 && coord.y < 2)//on interdit l'accès au grand escalier vite fait (c'est plus rapide que de calculer chaque marche)
+  || (coord.x > -54 && coord.x < 138 && coord.y < -54)//on interdit l'accès a l'escalier (2° rectangle d'interdiction)
    )
   {
     return true;
